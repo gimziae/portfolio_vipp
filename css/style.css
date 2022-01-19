@@ -1,0 +1,487 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@100&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  position: absolute;
+  left: -999999px;
+  top: 0;
+  opacity: 0;
+}
+
+#header {
+  width: 100%;
+  height: 50px;
+}
+#header .inner {
+  width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+#header .inner h1 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+#header .inner h1 a {
+  font: bold 30px/1 "DM Serif Display";
+  color: #333;
+  letter-spacing: 2px;
+}
+#header .inner #gnbWeb {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+}
+#header .inner #gnbWeb li {
+  float: left;
+  margin-left: 60px;
+}
+#header .inner #gnbWeb li a {
+  font: bold 12px/1 "arial";
+  color: #a0a0a0;
+}
+#header .inner #gnbWeb li:hover a {
+  color: #333;
+}
+#header .inner .util {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+#header .inner .util li {
+  float: left;
+  margin-left: 30px;
+}
+#header .inner .util li a {
+  font: normal 12px/1 "arial";
+  color: #999;
+}
+#header .inner .util li a i {
+  margin-right: 5px;
+  font-size: 15px;
+  transform: translateY(2px);
+}
+#header .inner .util li:hover a {
+  color: #333;
+}
+
+#intro {
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+#intro .swiper {
+  height: 100%;
+}
+#intro .swiper .swiper-wrapper .swiper-slide .inner {
+  width: 100%;
+  height: 100%;
+  background: #333;
+}
+#intro .swiper .swiper-wrapper .swiper-slide .inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#intro .swiper .swiper-wrapper .swiper-slide .inner .con {
+  width: 70vw;
+  height: 30vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 80px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+#intro .swiper .swiper-wrapper .swiper-slide .inner .con h2 {
+  font: normal 60px/1.1 "DM Serif Display";
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+#intro .swiper .swiper-wrapper .swiper-slide .inner .con p {
+  font: bold 18px/1.3 "Montserrat";
+  color: rgba(255, 255, 255, 0.8);
+}
+#intro .swiper .swiper-wrapper .swiper-slide:nth-of-type(1) .inner .con {
+  height: 40vh;
+}
+#intro .swiper .swiper-pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#intro .swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background: transparent;
+  border: 1px solid #fff;
+  opacity: 1;
+}
+#intro .swiper .swiper-pagination-bullet-active {
+  width: 40px;
+  transition: width 0.5s;
+  border-radius: 5px;
+  background: #fff;
+  border: 1px solid transparent;
+}
+
+#rooms {
+  width: 100%;
+  height: 500px;
+}
+#rooms .inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-size: 0;
+}
+#rooms .inner article {
+  float: left;
+  width: 33.3333333333%;
+  height: 100%;
+  overflow: hidden;
+}
+#rooms .inner article img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1.2s;
+  filter: brightness(0.7);
+}
+#rooms .inner article .con {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 33.3333333333%;
+  height: 400px;
+  padding: 100px 20px;
+  color: #fff;
+  text-align: center;
+}
+#rooms .inner article .con p {
+  font: normal 12px/1 "arial";
+  margin-bottom: 15px;
+}
+#rooms .inner article .con h2 {
+  font-size: 32px;
+  margin-bottom: 75px;
+}
+#rooms .inner article .con a {
+  display: inline-block;
+  width: 120px;
+  height: 35px;
+  border: 1px solid #fff;
+  font: bold 12px/35px "arial";
+  color: #fff;
+  transition: 0.75s;
+}
+#rooms .inner article .con a:hover {
+  background: #fff;
+  color: #333;
+  font-weight: normal;
+}
+#rooms .inner article:hover img {
+  transform: scale(1.05) rotate(0.001deg);
+}
+
+#video {
+  width: 100%;
+  height: 40vh;
+}
+#video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#faq {
+  width: 100%;
+  height: 800px;
+  background: #333;
+  position: relative;
+}
+#faq .inner {
+  width: 1180px;
+  height: 100%;
+  padding: 100px 0;
+  margin: 0 auto;
+  position: relative;
+}
+#faq .inner h2 {
+  width: 300px;
+  float: left;
+  font: normal 40px/1.1 "DM Serif Display";
+  letter-spacing: 1px;
+  color: #efefef;
+}
+#faq .inner .wrap {
+  width: 820px;
+  float: right;
+}
+#faq .inner .wrap li {
+  cursor: pointer;
+  transition: 1s;
+}
+#faq .inner .wrap li .con {
+  color: #efefef;
+  border-top: 1px solid #777;
+  padding: 30px 0;
+  transition: 1s;
+}
+#faq .inner .wrap li .con h3 {
+  font: 28px/1 "arial";
+}
+#faq .inner .wrap li .con h3::after {
+  display: none;
+}
+#faq .inner .wrap li .con h3 a {
+  display: block;
+  float: right;
+  color: #efefef;
+}
+#faq .inner .wrap li .con p {
+  display: none;
+}
+#faq .inner .wrap li:last-child {
+  border-bottom: 1px solid #777;
+}
+#faq .inner .wrap li.on .con h3 {
+  font-style: italic;
+}
+#faq .inner .wrap li.on .con h3 a {
+  transform: rotateX(-180deg);
+}
+#faq .inner .wrap li.on .con p {
+  display: block;
+  font: 15px/1.3 "arial";
+  margin-top: 30px;
+}
+
+#insta {
+  width: 100%;
+  height: 800px;
+  position: relative;
+  padding: 100px 0;
+}
+#insta .inner {
+  width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+}
+#insta .inner h2 {
+  font: normal 40px/1 "DM Serif Display";
+  margin-bottom: 20px;
+}
+#insta .inner p {
+  font: 15px/1 "arial";
+  margin-bottom: 30px;
+}
+#insta .inner .arrow {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+}
+#insta .inner .arrow::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #333;
+  position: absolute;
+  top: calc(50% - 0px);
+  right: 0;
+  transform: rotate(30deg);
+  transform-origin: right center;
+}
+#insta .inner .arrow::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #333;
+  position: absolute;
+  bottom: calc(50% - 0px);
+  right: 0;
+  transform: rotate(-30deg);
+  transform-origin: right center;
+}
+#insta .inner .wrap {
+  width: 100%;
+}
+#insta .inner .wrap .instaSwiper {
+  width: 100%;
+  height: 420px;
+}
+#insta .inner .wrap .instaSwiper .swiper-wrapper .swiper-slide img {
+  width: 280px;
+  height: 350px;
+  object-fit: cover;
+}
+#insta .inner .wrap .instaSwiper .swiper-pagination,
+#insta .inner .wrap .instaSwiper .swiper-pagination-progressbar,
+#insta .inner .wrap .instaSwiper .swiper-pagination-horizontal {
+  width: 100%;
+  height: 4px;
+  left: 0;
+  top: 95%;
+}
+#insta .inner .wrap .instaSwiper .swiper-pagination-progressbar {
+  width: 50%;
+}
+#insta .inner .wrap .instaSwiper .swiper-pagination-progressbar-fill {
+  background-color: #555;
+}
+
+#footer {
+  width: 100%;
+  height: 500px;
+  background: #efefef;
+}
+#footer::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#footer .inner {
+  width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 50px 0 50px;
+}
+#footer .inner h1 {
+  display: inline-block;
+  font: bold 30px/1 "DM Serif Display";
+  letter-spacing: 2px;
+  color: #333;
+  margin-bottom: 50px;
+}
+#footer .inner .wrap_util {
+  width: 600px;
+  height: 200px;
+  position: absolute;
+  top: 120px;
+  left: 5px;
+}
+#footer .inner .wrap_util::after {
+  content: "";
+  display: block;
+  width: 1180px;
+  height: 1px;
+  background: #777;
+  position: absolute;
+  bottom: -70px;
+  left: -10px;
+}
+#footer .inner .wrap_util ul {
+  float: left;
+  margin-right: 100px;
+}
+#footer .inner .wrap_util ul:last-child {
+  margin-right: 0;
+}
+#footer .inner .wrap_util ul li {
+  margin-bottom: 25px;
+}
+#footer .inner .wrap_util ul li a {
+  font: 15px/1 "arial";
+  color: #555;
+}
+#footer .inner .wrap_util ul li a:hover {
+  text-decoration: underline;
+}
+#footer .inner .wrap_news {
+  width: 350px;
+  height: 200px;
+  position: absolute;
+  top: 120px;
+  right: 0;
+}
+#footer .inner .wrap_news span {
+  display: block;
+  margin-bottom: 50px;
+  font: bold 15px/1 "arial";
+}
+#footer .inner .wrap_news span i {
+  font-size: 12px;
+  margin-right: 5px;
+}
+#footer .inner .wrap_news input {
+  width: 100%;
+  height: 30px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #999;
+  margin-bottom: 30px;
+}
+#footer .inner .wrap_news a {
+  display: block;
+  width: 150px;
+  height: 40px;
+  background: rgba(75, 105, 100, 0.85);
+  border-radius: 20px;
+  font: normal 15px/40px "arial";
+  text-align: center;
+  color: #fff;
+  transition: 0.5s;
+}
+#footer .inner .wrap_news a:hover {
+  background: #4b6964;
+}
+#footer .inner p {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#footer .inner .sns {
+  float: right;
+  width: 280px;
+  height: 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+}
+#footer .inner .sns span {
+  float: left;
+  margin-right: 50px;
+}
+#footer .inner .sns ul li {
+  float: left;
+  margin-right: 15px;
+  display: flex;
+}
+#footer .inner .sns ul li:last-child {
+  margin-right: 0;
+}
+#footer .inner .sns ul li a {
+  font-size: 20px;
+  color: rgba(51, 51, 51, 0.8);
+}
+#footer .inner .sns ul li:hover a {
+  color: #333;
+}
+
+/*# sourceMappingURL=style.css.map */
