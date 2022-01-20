@@ -10,6 +10,8 @@
     <script src="https://kit.fontawesome.com/4f772438c6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/main.js"></script>
+    <script defer src="js/skipnavi.js"></script>
+    
 </head>
 <body>
 <!-- header -->
@@ -20,6 +22,7 @@
                     <a href="#">Vipp</a>
                 </h1>
 
+                <!-- web메뉴 -->
                 <nav class="menuWeb">
                     <ul id="gnbWeb">
                         <li>
@@ -39,6 +42,11 @@
                         </li>
                     </ul>
                 </nav> 
+
+                <!-- mobile메뉴 -->
+                <nav class="gnbMo">
+
+                </nav>
 
                 <ul class="util">
                     <li>
@@ -125,7 +133,7 @@
         <div class="inner">
             <h2>FAQ about<br>Vipp Hotel</h2>
             <ul class="wrap">
-                <li class="on">
+                <li>
                     <div class="con">
                         <h3>Where is the Vipp hotel located?
                             <a href="#" class="btnMore">
@@ -172,7 +180,7 @@
                                 <i class="fas fa-chevron-down"></i>
                             </a>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil blanditiis consequuntur possimus adipisci reiciendis nulla, totam quae quos quaerat ad non dignissimos consequatur est fuga. Ad, at commodi. Iste, impedit.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil blanditiis <br>consequuntur possimus adipisci reiciendis nulla, totam quae quos quaerat ad non dignissimos <br>consequatur est fuga. Ad, at commodi. Iste, impedit.</p>
                     </div>
                 </li>
             </ul>
@@ -319,7 +327,8 @@
             pagination: {
             el: ".swiper-pagination",
             type: "progressbar",
-            }
+            },
+            mousewheel: true
         });
       </script>
 </body>

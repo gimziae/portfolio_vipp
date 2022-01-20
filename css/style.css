@@ -101,7 +101,7 @@ a {
 }
 #intro .swiper .swiper-wrapper .swiper-slide .inner .con {
   width: 70vw;
-  height: 30vh;
+  height: 30vw;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -121,7 +121,7 @@ a {
   color: rgba(255, 255, 255, 0.8);
 }
 #intro .swiper .swiper-wrapper .swiper-slide:nth-of-type(1) .inner .con {
-  height: 40vh;
+  height: 50%;
 }
 #intro .swiper .swiper-pagination {
   position: absolute;
@@ -217,18 +217,15 @@ a {
 #faq {
   width: 100%;
   height: 800px;
+  padding: 100px 0;
   background: #333;
-  position: relative;
 }
 #faq .inner {
   width: 1180px;
-  height: 100%;
-  padding: 100px 0;
   margin: 0 auto;
   position: relative;
 }
 #faq .inner h2 {
-  width: 300px;
   float: left;
   font: normal 40px/1.1 "DM Serif Display";
   letter-spacing: 1px;
@@ -240,13 +237,11 @@ a {
 }
 #faq .inner .wrap li {
   cursor: pointer;
-  transition: 1s;
 }
 #faq .inner .wrap li .con {
   color: #efefef;
   border-top: 1px solid #777;
   padding: 30px 0;
-  transition: 1s;
 }
 #faq .inner .wrap li .con h3 {
   font: 28px/1 "arial";
@@ -261,12 +256,10 @@ a {
 }
 #faq .inner .wrap li .con p {
   display: none;
+  transition: 1s;
 }
 #faq .inner .wrap li:last-child {
   border-bottom: 1px solid #777;
-}
-#faq .inner .wrap li.on .con h3 {
-  font-style: italic;
 }
 #faq .inner .wrap li.on .con h3 a {
   transform: rotateX(-180deg);
