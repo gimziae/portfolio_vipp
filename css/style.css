@@ -440,16 +440,6 @@ a {
   display: block;
 }
 
-#video {
-  width: 100%;
-  height: 40vh;
-}
-#video video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 #review {
   width: 100%;
   padding: 100px 0;
@@ -467,7 +457,7 @@ a {
 }
 #review .inner > p {
   color: #777;
-  font: nomarl 15px/1 "arial";
+  font: normal 15px/1 "arial";
   margin-bottom: 30px;
 }
 #review .inner .reviewSwiper {
@@ -502,6 +492,16 @@ a {
   color: #555;
   display: block;
   text-align: right;
+}
+
+#video {
+  width: 100%;
+  height: 40vh;
+}
+#video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #insta {
@@ -617,7 +617,7 @@ a {
   display: block;
   width: 1180px;
   height: 1px;
-  background: #777;
+  background: #ccc;
   position: absolute;
   bottom: -70px;
   left: -10px;
@@ -711,7 +711,7 @@ a {
   color: #333;
 }
 
-@media screen and (max-width: 1179px) {
+@media screen and (max-width: 999px) {
   #header {
     width: 100%;
     height: 50px;
@@ -719,10 +719,10 @@ a {
   #header .inner {
     width: 100%;
   }
-  #header .inner > h1 {
+  #header .inner h1 {
     left: 30px;
   }
-  #header .inner > h1 a {
+  #header .inner h1 a {
     font: bold 25px/1 "DM Serif Display";
   }
   #header .inner .menuWeb {
@@ -793,7 +793,7 @@ a {
     padding: 35px 30px;
     position: fixed;
     top: 0;
-    left: 0;
+    left: -270px;
     z-index: 3;
     position: relative;
   }
@@ -893,66 +893,17 @@ a {
     font: 11px/1.1 "arial";
   }
 
-  #intro {
-    width: 100%;
-    height: 80vh;
-    overflow: hidden;
-  }
-  #intro .swiper {
-    height: 100%;
-  }
-  #intro .swiper .swiper-wrapper .swiper-slide .inner {
-    width: 100%;
-    height: 100%;
-    background: #333;
-  }
-  #intro .swiper .swiper-wrapper .swiper-slide .inner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
   #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap {
-    width: 1000px;
-    padding: 80px 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.5);
-  }
-  #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap .con {
-    text-align: center;
+    width: 80vw;
+    padding: 50px 10px;
   }
   #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap .con h2 {
-    font: normal 60px/1.1 "DM Serif Display";
-    letter-spacing: 1px;
+    font: normal 32px/1.2 "DM Serif Display";
     margin-bottom: 20px;
-    color: #fff;
+    margin-top: 20px;
   }
   #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap .con p {
-    font: bold 18px/1.3 "Montserrat";
-    color: rgba(255, 255, 255, 0.8);
-  }
-  #intro .swiper .swiper-pagination {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  #intro .swiper .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    background: transparent;
-    border: 1px solid #fff;
-    opacity: 1;
-  }
-  #intro .swiper .swiper-pagination-bullet-active {
-    width: 40px;
-    transition: width 0.5s;
-    border-radius: 5px;
-    background: #fff;
-    border: 1px solid transparent;
+    font: bold 15px/1.5 "Montserrat";
   }
 
   #rooms {
@@ -1020,35 +971,20 @@ a {
     display: block;
   }
 
-  #video {
-    width: 100%;
-    height: 40vh;
-  }
-  #video video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
   #review {
-    width: 100%;
-    padding: 100px 0;
-    background: #e9e9e9;
+    padding: 100px 30px;
   }
   #review .inner {
-    width: 1200px;
-    margin: 0 auto;
-    position: relative;
+    width: 100%;
   }
   #review .inner h2 {
-    color: #333;
-    font: normal 40px/1 "DM Serif Display";
-    margin-bottom: 30px;
+    font: normal 30px/1 "DM Serif Display";
+    margin-bottom: 20px;
   }
   #review .inner > p {
     color: #777;
-    font: nomarl 15px/1 "arial";
-    margin-bottom: 30px;
+    font: normal 12px/1 "arial";
+    margin-bottom: 20px;
   }
   #review .inner .reviewSwiper {
     border: 3px solid blue;
@@ -1084,55 +1020,21 @@ a {
     text-align: right;
   }
 
+  #video {
+    height: 25vh;
+  }
+
   #insta {
-    width: 100%;
-    height: 800px;
-    position: relative;
-    padding: 100px 0;
+    padding: 100px 30px 100px;
   }
   #insta .inner {
-    width: 1180px;
-    height: 100%;
-    margin: 0 auto;
+    width: 100%;
   }
   #insta .inner h2 {
-    font: normal 40px/1 "DM Serif Display";
-    margin-bottom: 20px;
+    font: normal 30px/1 "DM Serif Display";
   }
   #insta .inner p {
     font: 15px/1 "arial";
-    margin-bottom: 30px;
-  }
-  #insta .inner .arrow {
-    position: relative;
-    display: block;
-    width: 50px;
-    height: 50px;
-    background: transparent;
-  }
-  #insta .inner .arrow::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    background: #333;
-    position: absolute;
-    top: calc(50% - 0px);
-    right: 0;
-    transform: rotate(30deg);
-    transform-origin: right center;
-  }
-  #insta .inner .arrow::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    background: #333;
-    position: absolute;
-    bottom: calc(50% - 0px);
-    right: 0;
-    transform: rotate(-30deg);
-    transform-origin: right center;
   }
   #insta .inner .wrap {
     width: 100%;
@@ -1140,10 +1042,11 @@ a {
   #insta .inner .wrap .instaSwiper {
     width: 100%;
     height: 420px;
+    border: 3px solid orange;
   }
   #insta .inner .wrap .instaSwiper .swiper-wrapper .swiper-slide img {
-    width: 280px;
-    height: 350px;
+    width: 200px;
+    height: 300px;
     object-fit: cover;
   }
   #insta .inner .wrap .instaSwiper .swiper-pagination,
@@ -1157,138 +1060,47 @@ a {
   #insta .inner .wrap .instaSwiper .swiper-pagination-progressbar {
     width: 50%;
   }
-  #insta .inner .wrap .instaSwiper .swiper-pagination-progressbar-fill {
-    background-color: #555;
-  }
 
   #footer {
     width: 100%;
-    height: 500px;
-    background: #e9e9e9;
-  }
-  #footer::after {
-    content: "";
-    display: block;
-    clear: both;
+    height: 450px;
+    overflow: hidden;
   }
   #footer .inner {
-    width: 1180px;
-    height: 100%;
-    margin: 0 auto;
-    position: relative;
-    padding: 50px 0 50px;
-  }
-  #footer .inner h1 {
-    display: inline-block;
-    font: bold 30px/1 "DM Serif Display";
-    letter-spacing: 2px;
-    color: #333;
-    margin-bottom: 50px;
+    width: 100%;
+    padding: 50px 30px 50px;
   }
   #footer .inner .wrap_util {
-    width: 600px;
+    width: 500px;
     height: 200px;
-    position: absolute;
     top: 120px;
-    left: 5px;
+    left: 30px;
   }
   #footer .inner .wrap_util::after {
-    content: "";
-    display: block;
-    width: 1180px;
-    height: 1px;
-    background: #777;
-    position: absolute;
-    bottom: -70px;
-    left: -10px;
+    width: 1000px;
+    bottom: -50px;
   }
   #footer .inner .wrap_util ul {
-    float: left;
-    margin-right: 100px;
-  }
-  #footer .inner .wrap_util ul:last-child {
-    margin-right: 0;
+    margin-right: 50px;
   }
   #footer .inner .wrap_util ul li {
     margin-bottom: 25px;
   }
   #footer .inner .wrap_util ul li a {
-    font: 15px/1 "arial";
-    color: #555;
-  }
-  #footer .inner .wrap_util ul li a:hover {
-    text-decoration: underline;
-  }
-  #footer .inner .wrap_news {
-    width: 350px;
-    height: 200px;
-    position: absolute;
-    top: 120px;
-    right: 0;
+    font: 12px/1 "arial";
   }
   #footer .inner .wrap_news span {
-    display: block;
-    margin-bottom: 50px;
-    font: bold 15px/1 "arial";
-  }
-  #footer .inner .wrap_news span i {
-    font-size: 12px;
-    margin-right: 5px;
+    margin-bottom: 40px;
   }
   #footer .inner .wrap_news input {
-    width: 100%;
-    height: 30px;
-    background: none;
-    border: none;
-    border-bottom: 1px solid #999;
-    margin-bottom: 30px;
+    width: 90%;
   }
   #footer .inner .wrap_news a {
-    display: block;
-    width: 150px;
-    height: 40px;
-    background: rgba(75, 105, 100, 0.85);
-    border-radius: 20px;
+    width: 120px;
     font: normal 15px/40px "arial";
-    text-align: center;
-    color: #fff;
-    transition: 0.5s;
   }
-  #footer .inner .wrap_news a:hover {
-    background: #4b6964;
-  }
-  #footer .inner p {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  #footer .inner .sns {
-    float: right;
-    width: 280px;
-    height: 20px;
-    position: absolute;
-    bottom: 40px;
-    right: 0;
-  }
-  #footer .inner .sns span {
-    float: left;
-    margin-right: 50px;
-  }
-  #footer .inner .sns ul li {
-    float: left;
-    margin-right: 15px;
-    display: flex;
-  }
-  #footer .inner .sns ul li:last-child {
-    margin-right: 0;
-  }
-  #footer .inner .sns ul li a {
-    font-size: 20px;
-    color: rgba(51, 51, 51, 0.8);
-  }
-  #footer .inner .sns ul li:hover a {
-    color: #333;
+  #footer .inner p, #footer .inner .sns {
+    bottom: 30px;
   }
 }
 
