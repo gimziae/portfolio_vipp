@@ -5,6 +5,13 @@ $mobile: 539px;
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@100&display=swap');
 
 @import "reset.scss";
+@import "sublayout.scss";
+@import "community.scss";
+@import "department.scss";
+@import "gallery.scss";
+@import "join.scss";
+@import "location.scss";
+@import "youtube.scss";
 
 // header------------------------------
 #header{
@@ -217,6 +224,7 @@ $mobile: 539px;
             }
 
             &:hover{
+
                 img{
                     transform: scale(1.05) rotate(.001deg);
                 }

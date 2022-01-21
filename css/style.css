@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@100&display=swap");
 * {
   margin: 0;
@@ -18,6 +19,227 @@ a {
   left: -999999px;
   top: 0;
   opacity: 0;
+}
+
+#header_sub {
+  width: 100%;
+  height: 50px;
+}
+#header_sub .inner {
+  width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+#header_sub .inner h1 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+#header_sub .inner h1 a {
+  font: bold 30px/1 "DM Serif Display";
+  color: #333;
+  letter-spacing: 2px;
+}
+#header_sub .inner #gnbWeb {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+}
+#header_sub .inner #gnbWeb li {
+  float: left;
+  margin-left: 60px;
+}
+#header_sub .inner #gnbWeb li a {
+  font: bold 12px/1 "arial";
+  color: #a0a0a0;
+}
+#header_sub .inner #gnbWeb li:hover a {
+  color: #333;
+}
+#header_sub .inner .util {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+#header_sub .inner .util li {
+  float: left;
+  margin-left: 30px;
+}
+#header_sub .inner .util li a {
+  font: normal 12px/1 "arial";
+  color: #999;
+}
+#header_sub .inner .util li a i {
+  margin-right: 5px;
+  font-size: 15px;
+  transform: translateY(2px);
+}
+#header_sub .inner .util li:hover a {
+  color: #333;
+}
+
+.content {
+  width: 100%;
+  padding: 0 0 150px;
+}
+.content .sub_visual {
+  width: 100%;
+  height: 250px;
+  background: #bbb;
+  margin-bottom: 100px;
+}
+.content .inner {
+  width: 1180px;
+  margin: 0 auto;
+  min-height: 500px;
+}
+.content .inner h1 {
+  font: normal 50px/1 "arial";
+  color: #000;
+  margin-bottom: 60px;
+}
+.content .inner h1 span {
+  font: normal 20px/1 "맑은 고딕";
+  color: #aaa;
+}
+.content .inner h1 span::before {
+  content: "/";
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+#footer_sub {
+  width: 100%;
+  height: 500px;
+  background: #e9e9e9;
+}
+#footer_sub::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#footer_sub .inner {
+  width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 50px 0 50px;
+}
+#footer_sub .inner h1 {
+  display: inline-block;
+  font: bold 30px/1 "DM Serif Display";
+  letter-spacing: 2px;
+  color: #333;
+  margin-bottom: 50px;
+}
+#footer_sub .inner .wrap_util {
+  width: 600px;
+  height: 200px;
+  position: absolute;
+  top: 120px;
+  left: 5px;
+}
+#footer_sub .inner .wrap_util::after {
+  content: "";
+  display: block;
+  width: 1180px;
+  height: 1px;
+  background: #777;
+  position: absolute;
+  bottom: -70px;
+  left: -10px;
+}
+#footer_sub .inner .wrap_util ul {
+  float: left;
+  margin-right: 100px;
+}
+#footer_sub .inner .wrap_util ul:last-child {
+  margin-right: 0;
+}
+#footer_sub .inner .wrap_util ul li {
+  margin-bottom: 25px;
+}
+#footer_sub .inner .wrap_util ul li a {
+  font: 15px/1 "arial";
+  color: #555;
+}
+#footer_sub .inner .wrap_util ul li a:hover {
+  text-decoration: underline;
+}
+#footer_sub .inner .wrap_news {
+  width: 350px;
+  height: 200px;
+  position: absolute;
+  top: 120px;
+  right: 0;
+}
+#footer_sub .inner .wrap_news span {
+  display: block;
+  margin-bottom: 50px;
+  font: bold 15px/1 "arial";
+}
+#footer_sub .inner .wrap_news span i {
+  font-size: 12px;
+  margin-right: 5px;
+}
+#footer_sub .inner .wrap_news input {
+  width: 100%;
+  height: 30px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #999;
+  margin-bottom: 30px;
+}
+#footer_sub .inner .wrap_news a {
+  display: block;
+  width: 150px;
+  height: 40px;
+  background: rgba(75, 105, 100, 0.85);
+  border-radius: 20px;
+  font: normal 15px/40px "arial";
+  text-align: center;
+  color: #fff;
+  transition: 0.5s;
+}
+#footer_sub .inner .wrap_news a:hover {
+  background: #4b6964;
+}
+#footer_sub .inner p {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#footer_sub .inner .sns {
+  float: right;
+  width: 280px;
+  height: 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+}
+#footer_sub .inner .sns span {
+  float: left;
+  margin-right: 50px;
+}
+#footer_sub .inner .sns ul li {
+  float: left;
+  margin-right: 15px;
+  display: flex;
+}
+#footer_sub .inner .sns ul li:last-child {
+  margin-right: 0;
+}
+#footer_sub .inner .sns ul li a {
+  font-size: 20px;
+  color: rgba(51, 51, 51, 0.8);
+}
+#footer_sub .inner .sns ul li:hover a {
+  color: #333;
 }
 
 #header {
