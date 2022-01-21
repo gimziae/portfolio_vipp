@@ -120,9 +120,6 @@ a {
   font: bold 18px/1.3 "Montserrat";
   color: rgba(255, 255, 255, 0.8);
 }
-#intro .swiper .swiper-wrapper .swiper-slide:nth-of-type(1) .inner .con {
-  height: 50%;
-}
 #intro .swiper .swiper-pagination {
   position: absolute;
   bottom: 20px;
@@ -214,60 +211,58 @@ a {
   object-fit: cover;
 }
 
-#faq {
+#review {
   width: 100%;
-  height: 800px;
   padding: 100px 0;
-  background: #333;
+  background: #e9e9e9;
 }
-#faq .inner {
-  width: 1180px;
+#review .inner {
+  width: 1200px;
   margin: 0 auto;
   position: relative;
 }
-#faq .inner h2 {
-  float: left;
-  font: normal 40px/1.1 "DM Serif Display";
-  letter-spacing: 1px;
-  color: #efefef;
+#review .inner h2 {
+  color: #333;
+  font: normal 40px/1 "DM Serif Display";
+  margin-bottom: 30px;
 }
-#faq .inner .wrap {
-  width: 820px;
-  float: right;
+#review .inner > p {
+  color: #777;
+  font: nomarl 15px/1 "arial";
+  margin-bottom: 30px;
 }
-#faq .inner .wrap li {
-  cursor: pointer;
+#review .inner .reviewSwiper {
+  border: 3px solid blue;
+  width: 100%;
 }
-#faq .inner .wrap li .con {
-  color: #efefef;
-  border-top: 1px solid #777;
-  padding: 30px 0;
+#review .inner .reviewSwiper .swiper-wrapper {
+  padding: 50px 0;
 }
-#faq .inner .wrap li .con h3 {
-  font: 28px/1 "arial";
+#review .inner .reviewSwiper .swiper-wrapper .swiper-slide {
+  width: 300px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 60px 30px 30px;
 }
-#faq .inner .wrap li .con h3::after {
-  display: none;
+#review .inner .reviewSwiper .swiper-wrapper .swiper-slide img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
 }
-#faq .inner .wrap li .con h3 a {
+#review .inner .reviewSwiper .swiper-wrapper .swiper-slide h4 {
+  margin: 15px 0;
+  font: bold 20px/1 "arial";
+}
+#review .inner .reviewSwiper .swiper-wrapper .swiper-slide p {
+  font: normal 15px/1.5 "arial";
+  color: #777;
+}
+#review .inner .reviewSwiper .swiper-wrapper .swiper-slide span {
+  font: normal 15px/1 "arial";
+  color: #555;
   display: block;
-  float: right;
-  color: #efefef;
-}
-#faq .inner .wrap li .con p {
-  display: none;
-  transition: 1s;
-}
-#faq .inner .wrap li:last-child {
-  border-bottom: 1px solid #777;
-}
-#faq .inner .wrap li.on .con h3 a {
-  transform: rotateX(-180deg);
-}
-#faq .inner .wrap li.on .con p {
-  display: block;
-  font: 15px/1.3 "arial";
-  margin-top: 30px;
+  text-align: right;
 }
 
 #insta {
@@ -350,7 +345,7 @@ a {
 #footer {
   width: 100%;
   height: 500px;
-  background: #efefef;
+  background: #e9e9e9;
 }
 #footer::after {
   content: "";
