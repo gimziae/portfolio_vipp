@@ -1,18 +1,22 @@
-const faq = document.querySelector("#faq");
-const lis = faq.querySelectorAll("li");
-const enableClick = true;
 
-lis.forEach((li,index)=>{
-    li.addEventListener("click", e=>{
-        e.preventDefault();
+// const sections = document.querySelectorAll("section");
+// const rooms_article = document.querySelector("#rooms .inner article");
+// let posArr = [];
+// const base = -300;
 
-        if(li.classList.contains("on")){
-            lis[index].classList.remove("on");
+// for(let el of sections){
+//     posArr.push(el.offsetTop);
+// }
+// console.log(posArr);
 
-        }else{
-            lis[index].classList.add("on");
-        }
-    })  
-})
+// window.addEventListener("scroll", e=>{
+//     let scroll = window.scrollY || window.pageYOffset;
+    
+//     rooms_article.style.display = ""
 
+//     sections.forEach((el, index)=>{
+//         if(scroll >= posArr[index] +base){
 
+//         }
+//     })
+// })

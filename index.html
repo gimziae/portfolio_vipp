@@ -17,7 +17,7 @@
         <div class="inner">
             <div class="wrap">
                 <h1>
-                    <a href="#">Vipp</a>
+                    <a href="index.html">Vipp</a>
                 </h1>
 
                 <!-- web메뉴 -->
@@ -39,22 +39,82 @@
                             <a href="location.html">LOCATION</a>
                         </li>
                     </ul>
+                    <ul class="util">
+                        <li>
+                            <a href="join.html">JOIN</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-user-circle"></i>SIGN IN</a>
+                        </li>
+                    </ul>    
                 </nav> 
 
+                <!-- 햄버거 버튼 & 모바일 메뉴 -->
+                <a href="#" class="btnCall">
+                    <span>메뉴호출</span>
+                </a>
                 <!-- mobile메뉴 -->
-                <nav class="gnbMo">
+                <nav class="menuMo">
+                    <h1>
+                        <a href="index.html">Vipp</a>    
+                    </h1>
+                    <ul id="gnbMo">
+                        <li>
+                            <a href="department.html">DEPARTMENT</a>
+                        </li>
+                        <li>
+                            <a href="youtube.html">YOUTUBE</a>
+                        </li>
+                        <li>
+                            <a href="community.html">COMMUNITY</a>
+                        </li>
+                        <li>
+                            <a href="gallery.html">GALLERY</a>
+                        </li>
+                        <li>
+                            <a href="location.html">LOCATION</a>
+                        </li>
+                      </ul>
 
+                    <ul class="utilMo">
+                        <li>
+                            <a href="join.html">JOIN</a>
+                        </li>
+                        <li>
+                            <a href="#">SIGN IN</a>
+                        </li>
+                    </ul>
+                    
+                    <span>find us on</span>
+                    <ul class="snsMo">
+                        
+                        <li>
+                            <a href="https://www.instagram.com/vipp/" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>  
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/vippdotcom/" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>                           
+                        </li>
+                        <li>
+                            <a href="https://www.pinterest.co.kr/vippdotcom/_created/" target="_blank">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/user/vippdesign" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>  
+                        </li>
+                    </ul>
+
+                    <p>&copy;2022 Vipp. <br>All rights reserved.</p>
+
+
+                    
                 </nav>
-
-                <ul class="util">
-                    <li>
-                        <a href="join.html">JOIN</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fas fa-user-circle"></i>SIGN IN</a>
-                    </li>
-                </ul>                
-                
             </div>
 
 
@@ -67,28 +127,35 @@
                 <div class="swiper-slide">
                     <div class="inner">
                         <img src="img/swiper1.jpg" alt="">
-                        <div class="con">
-                            <p>VIPP HOTEL</p>
-                            <h2>As soon as you check in at<br>the hotel it's fully booked</h2>
-                            <p>The Vipp Hotel is not a hotel in the traditional sense.<br>Instead of having many rooms in one location, we<br>offer unique rooms at various destinations.</p>
+                        <div class="wrap">
+                            <div class="con">
+                                <p>VIPP HOTEL</p>
+                                <h2>As soon as you check in at<br>the hotel it's fully booked</h2>
+                                <p>The Vipp Hotel is not a hotel in the traditional sense.<br>Instead of having many rooms in one location, we<br>offer unique rooms at various destinations.</p>
+                            </div>                            
                         </div>
+
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="inner">
                         <img src="img/swiper2.jpg" alt="">
-                        <div class="con">
-                            <h2>An untraditional hotel</h2>
-                            <p>Our rooms are spread out at various lacations, so we do not<br>have a reception or a concierge. You won't find a 24-hour<br>lobby, a gym, daily housekiiping or fitness facilities.</p>
+                        <div class="wrap">
+                            <div class="con">
+                                <h2>An untraditional hotel</h2>
+                                <p>Our rooms are spread out at various lacations, so we do not<br>have a reception or a concierge. You won't find a 24-hour<br>lobby, a gym, daily housekiiping or fitness facilities.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="inner">
                         <img src="img/swiper3.jpg" alt="">
-                        <div class="con">
-                            <h2>Fully Furnished</h2>
-                            <p>At the Vipp Hotel, we invite you to experience our philosophy of design in placss out of the ordinary.<br>our hotel is not like many others. Instead of having all our rooms in one place,<br> we offer a curaled selection of destination for unique experiences.</p>
+                        <div class="wrap">
+                            <div class="con">
+                                <h2>Fully Furnished</h2>
+                                <p>At the Vipp Hotel, we invite you to experience our philosophy of design in placss out of the ordinary.<br>our hotel is not like many others. Instead of having all our rooms in one place,<br> we offer a curaled selection of destination for unique experiences.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -104,6 +171,7 @@
                 <div class="con">
                     <p>COPENHAGEN, DENMARK</p>
                     <h2>Vipp Loft</h2>
+
                     <a href="#">VIEW ROOM</a>
                 </div>
             </article>
@@ -296,10 +364,10 @@
             centeredSlides: true,
             loop: true,
             effect: "fade",
-            autoplay: {
-            delay: 7000,
-            disableOnInteraction: false,
-            },
+            // autoplay: {
+            // delay: 7000,
+            // disableOnInteraction: false,
+            // },
             pagination: {
             el: ".swiper-pagination",
             clickable: true,
