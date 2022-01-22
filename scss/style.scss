@@ -17,6 +17,7 @@ $mobile: 539px;
 #header{
     width: 100%;
     height: 50px;
+    overflow: hidden;
 
     .inner{
         width: 1180px;
@@ -64,7 +65,7 @@ $mobile: 539px;
             .util{
                 position: absolute;
                 top: 50%;
-                right: 0;
+                right: 20px;
                 transform: translateY(-50%);
 
                 li{
@@ -173,68 +174,75 @@ $mobile: 539px;
     }
 
 }
+
 // rooms------------------------------
 #rooms{
     width: 100%;
     height: 500px;
+    overflow: hidden;
 
     .inner{
         width: 100%;
         height: 100%;
         position: relative;
-        font-size: 0;
+
         article{
             float: left;
             width: calc(100% / 3);
             height: 100%;
-            overflow: hidden;
-            
-            img{
+
+            .wrap{
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
-                transition: 1s;
-                filter: grayscale(0.7);
-                
-            }
-            .con{
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                width: calc(100% / 3);
-                height: 400px;
-                padding: 100px 20px;
-                //border: 5px solid orange;
-                color: #fff;
-                text-align: center;
-                display: none;
-                transition: 0.5s;
-            
-                p{
-                    font: normal 12px/1 'arial';
-                    margin-bottom: 15px;
+                border: 3px solid red;
+                position: relative;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: 1s;
+                    filter: grayscale(0.7);
                 }
-                h2{
-                    font-size: 32px;
-                    margin-bottom: 75px;
-                }
-                a{
-                    display: inline-block;
-                    width: 120px;
-                    height: 35px;
-                    border: 1px solid #fff;
-                    font: bold 12px/35px 'arial';
+                .con{
+                width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    padding: 100px 20px;
+                    border: 5px solid orange;
                     color: #fff;
-                    transition: 0.75s;
-
-                    &:hover{
-                        background: #fff;
-                        color: #333;
-                        font-weight: normal;
+                    text-align: center;
+                    display: block;
+                    transition: 0.5s;
+                
+                    p{
+                        font: normal 12px/1 'arial';
+                        margin-bottom: 15px;
                     }
-                }
+                    h2{
+                        font-size: 32px;
+                        margin-bottom: 75px;
+                    }
+                    a{
+                        display: inline-block;
+                        width: 120px;
+                        height: 35px;
+                        border: 1px solid #fff;
+                        font: bold 12px/35px 'arial';
+                        color: #fff;
+                        transition: 0.75s;
 
+                        &:hover{
+                            background: #fff;
+                            color: #333;
+                            font-weight: normal;
+                        }
+                    }
+                }                
             }
+
 
             &:hover{
                 img{
@@ -248,14 +256,16 @@ $mobile: 539px;
         }
     }
 }
+
 // review------------------------------
 #review{
     width: 100%;
     padding: 100px 0;
     background: #e9e9e9;
+    overflow: hidden;
     
     .inner{
-        width: 1200px;
+        width: 1180px;
         margin: 0 auto;
         position: relative;
         //border: 3px solid orange;
@@ -273,11 +283,12 @@ $mobile: 539px;
         .reviewSwiper{
             border: 3px solid blue;
             width: 100%;
+            padding: 0 10px;
 
             .swiper-wrapper{
                 padding: 50px 0;
                 .swiper-slide{
-                    //border: 3px solid rebeccapurple;
+                    border: 3px solid rebeccapurple;
                     width: 300px;
                     background: rgba(255, 255, 255, 0.6);
                     padding: 60px 30px 30px;
@@ -307,10 +318,12 @@ $mobile: 539px;
         }
     }
 }
+
 // video------------------------------
 #video{
     width: 100%;
     height: 40vh;
+    overflow: hidden;
 
     video{
         width: 100%;
@@ -318,12 +331,14 @@ $mobile: 539px;
         object-fit: cover;
     }
 }
+
 // insta------------------------------
 #insta{
     width: 100%;
     height: 800px;
     position: relative;
     padding: 100px 0;
+    overflow: hidden;
     //border: 3px solid orange;
 
     .inner{
@@ -420,6 +435,7 @@ $mobile: 539px;
     width: 100%;
     height: 500px;
     background: #e9e9e9;
+    overflow: hidden;
 
     &::after{
         content: '';
@@ -574,7 +590,7 @@ $mobile: 539px;
     }
 }
 
-@media screen and(max-width:999px){
+@media screen and(max-width:$tablet){
     #header{
         width: 100%;
         height: 50px;
@@ -587,7 +603,7 @@ $mobile: 539px;
                 a{ font: bold 25px/1 'DM Serif Display'; }
             }
 
-            .menuWeb{ display: none; }
+            .menuWeb{ display: block; }
     
             .btnCall {
                 position: absolute;
@@ -596,7 +612,7 @@ $mobile: 539px;
                 transform: translateY(-50%);
                 width: 20px;
                 height: 20px;
-                display: block;
+                display: none;
           
                 &::before {
                   content: '';
@@ -653,7 +669,7 @@ $mobile: 539px;
             }
 
             .menuMo{
-                display: block;
+                display: none;
                 width: 270px;
                 height: 100vh;
                 background: #fff;
@@ -1041,6 +1057,498 @@ $mobile: 539px;
     
         }
     }
+}
+
+@media screen and (max-width:949px){
+    #header{
+        height: 50px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #fff;
+        z-index: 2;
+
+        .inner{
+            .menuWeb{ display: none; }
+    
+            .btnCall {
+                position: absolute;
+                right: 30px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 20px;
+                display: block;
+          
+                &::before {
+                  content: '';
+                  display: block;
+                  width: 100%;
+                  height: 2px;
+                  background: #000;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  transition: top 0.5s 0s, transform 0.5s 0.5s;
+                }
+                &::after {
+                  content: '';
+                  display: block;
+                  width: 100%;
+                  height: 2px;
+                  background: #000;
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  transition: transform 0.5s 0.5s, bottom 0.5s 0s;
+                }
+          
+                span {
+                  display: block;
+                  width: 100%;
+                  height: 2px;
+                  background: #000;
+                  position: absolute;
+                  top: 50%;
+                  left: 0;
+                  margin-top: -1px;
+                  text-indent: -999999px;
+                  transition: all 1s;
+                }
+          
+                &.on {
+                  &::before {
+                    top: 50%;
+                    margin-top: -1px;
+                    transform: rotate(-135deg);
+                  }
+                  &::after {
+                    bottom: 50%;
+                    margin-bottom: -1px;
+                    transform: rotate(135deg);
+                  }
+                  & span {
+                    transform: scale(0);
+                    opacity: 0;
+                  }
+                }
+            }
+
+            .menuMo{
+                display: block;
+                width: 270px;
+                height: 100vh;
+                background: #fff;
+                padding: 35px 30px;
+                position: fixed;
+                top: 0;
+                left: -270px;
+                z-index: 3;
+
+                &.on{ left: 0; }
+
+                >h1{
+                    top: 60px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    //text-align: center;
+                   // border: 3px solid orange;
+
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 200px;
+                        height: 1px;
+                        background: #444;
+                        margin-top: 20px;
+                    }
+                }      
+                
+                #gnbMo {
+                    //border: 3px solid blue;
+                    margin-top: 100px;
+                    margin-left: 10px;
+
+                    li{
+                        transform-origin: left center;
+                        transition: 1s;
+                        &::after{
+                            content: '';
+                            display: block;
+                            width: 1px;
+                            height: 1px;
+                            background: #ccc;
+                            opacity: 0;
+                            transition: 0.5s;
+                            
+                        }
+
+                        a{
+                            //border: 1px solid red;
+                            display: block;
+                            width: 100%;
+                            padding: 20px 0;
+                            font: bold 14px/1 'arial';
+                            color: #555;
+
+                        }
+
+                        &:hover{
+                            transform: scaleX(1.1);
+                            &::after{ 
+                                width: 100px;
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                    
+                }
+
+                .utilMo{
+                    margin-top: 20px;
+                    margin-left: 10px;
+                    //border: 3px solid coral;
+                    
+                    li{
+                        transform-origin: left center;
+                        transition: 1s;
+                        &::after{
+                            content: '';
+                            display: block;
+                            width: 1px;
+                            height: 1px;
+                            background: #ccc;
+                            opacity: 0;
+                            transition: 0.5s;
+                            
+                        }
+                        a{
+                            display: block;
+                            width: 100%;
+                            padding: 20px 0;
+                            font: normal 14px/1 'arial';
+                            color: #777;
+                        }
+                        &:hover{
+                            transform: scaleX(1.1);
+                            &::after{ 
+                                width: 80px;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+
+                span{
+                    font: normal 14px/1 'arial';
+                    color: #777;
+                    display: block;
+                    margin-bottom: 20px;
+                    position: absolute;
+                    bottom: 150px;
+                    left: 50%;
+                    transform: translateX(calc(-50% ));
+                }
+                .snsMo{
+
+                    //border: 3px solid mediumpurple;
+                    position: absolute;
+                    bottom: 130px;
+                    padding: 0 20px;
+                    
+                    li{
+                        float: left;
+                        margin-right: 30px;
+                        text-align: center;
+
+                        &:last-child{ margin-right: 0; }
+
+                        a{
+                            font-size: 20px;
+                            color: #777;
+                            transition: 0.8s;
+                        }
+                        &:hover a{
+                            color: #333;
+                        }
+                    }
+                }
+                p{
+                    position: absolute;
+                    bottom: 60px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    text-align: center;
+                    font: 11px/1.1 'arial';
+                    color: #999;
+                }
+            }
+        }
+    }
+    
+    // intro------------------------------
+    #intro{
+        height: 60vh;
+        .swiper{
+            .swiper-wrapper{
+                .swiper-slide{
+                    .inner{
+                        .wrap{
+                            width: 80vw;
+                            padding: 50px 10px;
+    
+                            .con{
+                                h2{
+                                    font: normal 30px/1.2 'DM Serif Display';
+                                    margin-top: 0px;
+                                }
+                                p{
+                                    font: bold 14px/1.5 'Montserrat';
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // rooms------------------------------
+    #rooms{
+        height: 40vh;
+    
+        .inner{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            font-size: 0;
+
+            article{
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: 1s;
+                    filter: grayscale(0.7);
+                }
+                .wrap{
+                    width: 100%;
+                    height: 100%;
+                    border: 3px solid red;
+
+                    .con{
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: calc(100%);
+                        height: 100%;
+                        padding: 120px 20px;
+                        border: 5px solid orange;
+                        color: #fff;
+                        text-align: center;
+                        display: block;
+                        transition: 0.5s;
+                    
+                        p{
+                            font: normal 12px/1 'arial';
+                            margin-bottom: 15px;
+                        }
+                        h2{
+                            font-size: 20px;
+                            margin-bottom: 50px;
+                        }
+                        a{
+                            display: inline-block;
+                            width: 120px;
+                            height: 35px;
+                            border: 1px solid #fff;
+                            font: bold 12px/35px 'arial';
+                            color: #fff;
+                            transition: 0.75s;
+        
+                            &:hover{
+                                background: #fff;
+                                color: #333;
+                                font-weight: normal;
+                            }
+                        }
+        
+                    }                    
+                }
+
+    
+                &:hover{
+                    img{
+                        transform: scale(1.05) rotate(.001deg);
+                        filter: grayscale(0);
+                    }
+                    .con{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    // review------------------------------
+    #review{
+        padding: 100px 30px;
+        
+        .inner{
+            width: 100%;
+    
+            h2{
+                font: normal 30px/1 'DM Serif Display';
+                margin-bottom: 20px;
+            }
+            >p{
+                color: #777;
+                font: normal 12px/1 'arial';
+                margin-bottom: 20px;
+            }
+            // 여기 스와이퍼 랩퍼 바꾸기
+            .reviewSwiper{
+                border: 3px solid blue;
+                width: 100%;
+    
+                .swiper-wrapper{
+                    padding: 50px 0;
+                    .swiper-slide{
+                        //border: 3px solid rebeccapurple;
+                        width: 300px;
+                        background: rgba(255, 255, 255, 0.6);
+                        padding: 60px 30px 30px;
+                        img{
+                            width: 100px;
+                            height: 100px;
+                            border-radius: 50%;
+                            position: absolute;
+                            top: -50px;
+                        }
+                        h4{
+                            margin: 15px 0;
+                            font: bold 20px/1 'arial';
+                        }
+                        p{
+                            font: normal 15px/1.5 'arial';
+                            color: #777;
+                        }
+                        span{
+                            font: normal 15px/1 'arial';
+                            color: #555;
+                            display: block;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // video------------------------------
+    #video{
+        height: 25vh;
+    }
+    // insta------------------------------
+    // 사진 스와이퍼말고 사진첩 형식으로 변경!!!!
+    #insta{
+        padding: 100px 30px 100px;
+
+        .inner{
+            width: 100%;
+    
+            h2{ font: normal 30px/1 'DM Serif Display'; }
+            p{ font: 15px/1 'arial'; }
+            .wrap{
+                width: 100%;
+
+
+                .instaSwiper{
+                    width: 100%;
+                    height: 420px;
+                    border: 3px solid orange;
+                    .swiper-wrapper{
+                        .swiper-slide{
+                            img{
+                                width: 200px;
+                                height: 300px;
+                                object-fit: cover;
+                            }
+    
+                        }
+    
+                    }
+    
+                    .swiper-pagination, 
+                    .swiper-pagination-progressbar, 
+                    .swiper-pagination-horizontal{
+                        width: 100%;
+                        height: 4px;
+                        left: 0;
+                        top: 95%;
+                    }
+    
+                    .swiper-pagination-progressbar{
+                        width: 50%;
+    
+                    }
+
+                    }
+    
+                }
+    
+            }
+        }
+    
+    // footer------------------------------
+    #footer{
+        width: 100%;
+        height: 450px;
+        overflow: hidden;
+
+        .inner{
+            width: 100%;
+            padding: 50px 30px 50px;
+            
+            .wrap_util{
+                width: 500px;
+                height: 200px;
+                top: 120px;
+                left: 30px;
+
+                &::after{
+                    width: 1000px;
+                    bottom: -50px;
+                }
+    
+                ul{
+                    margin-right: 50px;
+    
+                    li{
+                        margin-bottom: 25px;
+                        
+                        a{ font: 12px/1 'arial'; }
+                    }
+                }
+            }
+            .wrap_news{
+                span{ margin-bottom: 40px; }
+                input{ width: 90%; }
+                a{
+                    width: 120px;
+                    font: normal 15px/40px 'arial';
+                }
+            }
+    
+            p, .sns{ bottom: 30px; }
+    
+        }
+    }
+}
+
+@media screen and (max-width:749px){
+
 }
 
 @media screen and(max-width:$mobile){

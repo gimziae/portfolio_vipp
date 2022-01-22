@@ -245,6 +245,7 @@ a {
 #header {
   width: 100%;
   height: 50px;
+  overflow: hidden;
 }
 #header .inner {
   width: 1180px;
@@ -287,7 +288,7 @@ a {
 #header .inner .menuWeb .util {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 20px;
   transform: translateY(-50%);
 }
 #header .inner .menuWeb .util li {
@@ -378,47 +379,53 @@ a {
 #rooms {
   width: 100%;
   height: 500px;
+  overflow: hidden;
 }
 #rooms .inner {
   width: 100%;
   height: 100%;
   position: relative;
-  font-size: 0;
 }
 #rooms .inner article {
   float: left;
   width: 33.3333333333%;
   height: 100%;
-  overflow: hidden;
 }
-#rooms .inner article img {
+#rooms .inner article .wrap {
+  width: 100%;
+  height: 100%;
+  border: 3px solid red;
+  position: relative;
+}
+#rooms .inner article .wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: 1s;
   filter: grayscale(0.7);
 }
-#rooms .inner article .con {
+#rooms .inner article .wrap .con {
+  width: 100%;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  width: 33.3333333333%;
-  height: 400px;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 100px 20px;
+  border: 5px solid orange;
   color: #fff;
   text-align: center;
-  display: none;
+  display: block;
   transition: 0.5s;
 }
-#rooms .inner article .con p {
+#rooms .inner article .wrap .con p {
   font: normal 12px/1 "arial";
   margin-bottom: 15px;
 }
-#rooms .inner article .con h2 {
+#rooms .inner article .wrap .con h2 {
   font-size: 32px;
   margin-bottom: 75px;
 }
-#rooms .inner article .con a {
+#rooms .inner article .wrap .con a {
   display: inline-block;
   width: 120px;
   height: 35px;
@@ -427,7 +434,7 @@ a {
   color: #fff;
   transition: 0.75s;
 }
-#rooms .inner article .con a:hover {
+#rooms .inner article .wrap .con a:hover {
   background: #fff;
   color: #333;
   font-weight: normal;
@@ -444,9 +451,10 @@ a {
   width: 100%;
   padding: 100px 0;
   background: #e9e9e9;
+  overflow: hidden;
 }
 #review .inner {
-  width: 1200px;
+  width: 1180px;
   margin: 0 auto;
   position: relative;
 }
@@ -463,11 +471,13 @@ a {
 #review .inner .reviewSwiper {
   border: 3px solid blue;
   width: 100%;
+  padding: 0 10px;
 }
 #review .inner .reviewSwiper .swiper-wrapper {
   padding: 50px 0;
 }
 #review .inner .reviewSwiper .swiper-wrapper .swiper-slide {
+  border: 3px solid rebeccapurple;
   width: 300px;
   background: rgba(255, 255, 255, 0.6);
   padding: 60px 30px 30px;
@@ -497,6 +507,7 @@ a {
 #video {
   width: 100%;
   height: 40vh;
+  overflow: hidden;
 }
 #video video {
   width: 100%;
@@ -509,6 +520,7 @@ a {
   height: 800px;
   position: relative;
   padding: 100px 0;
+  overflow: hidden;
 }
 #insta .inner {
   width: 1180px;
@@ -585,6 +597,7 @@ a {
   width: 100%;
   height: 500px;
   background: #e9e9e9;
+  overflow: hidden;
 }
 #footer::after {
   content: "";
@@ -711,7 +724,7 @@ a {
   color: #333;
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1179px) {
   #header {
     width: 100%;
     height: 50px;
@@ -726,7 +739,7 @@ a {
     font: bold 25px/1 "DM Serif Display";
   }
   #header .inner .menuWeb {
-    display: none;
+    display: block;
   }
   #header .inner .btnCall {
     position: absolute;
@@ -735,7 +748,7 @@ a {
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    display: block;
+    display: none;
   }
   #header .inner .btnCall::before {
     content: "";
@@ -786,7 +799,7 @@ a {
     opacity: 0;
   }
   #header .inner .menuMo {
-    display: block;
+    display: none;
     width: 270px;
     height: 100vh;
     background: #fff;
@@ -959,6 +972,416 @@ a {
     transition: 0.75s;
   }
   #rooms .inner article .con a:hover {
+    background: #fff;
+    color: #333;
+    font-weight: normal;
+  }
+  #rooms .inner article:hover img {
+    transform: scale(1.05) rotate(0.001deg);
+    filter: grayscale(0);
+  }
+  #rooms .inner article:hover .con {
+    display: block;
+  }
+
+  #review {
+    padding: 100px 30px;
+  }
+  #review .inner {
+    width: 100%;
+  }
+  #review .inner h2 {
+    font: normal 30px/1 "DM Serif Display";
+    margin-bottom: 20px;
+  }
+  #review .inner > p {
+    color: #777;
+    font: normal 12px/1 "arial";
+    margin-bottom: 20px;
+  }
+  #review .inner .reviewSwiper {
+    border: 3px solid blue;
+    width: 100%;
+  }
+  #review .inner .reviewSwiper .swiper-wrapper {
+    padding: 50px 0;
+  }
+  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide {
+    width: 300px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 60px 30px 30px;
+  }
+  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+  }
+  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide h4 {
+    margin: 15px 0;
+    font: bold 20px/1 "arial";
+  }
+  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide p {
+    font: normal 15px/1.5 "arial";
+    color: #777;
+  }
+  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide span {
+    font: normal 15px/1 "arial";
+    color: #555;
+    display: block;
+    text-align: right;
+  }
+
+  #video {
+    height: 25vh;
+  }
+
+  #insta {
+    padding: 100px 30px 100px;
+  }
+  #insta .inner {
+    width: 100%;
+  }
+  #insta .inner h2 {
+    font: normal 30px/1 "DM Serif Display";
+  }
+  #insta .inner p {
+    font: 15px/1 "arial";
+  }
+  #insta .inner .wrap {
+    width: 100%;
+  }
+  #insta .inner .wrap .instaSwiper {
+    width: 100%;
+    height: 420px;
+    border: 3px solid orange;
+  }
+  #insta .inner .wrap .instaSwiper .swiper-wrapper .swiper-slide img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+  }
+  #insta .inner .wrap .instaSwiper .swiper-pagination,
+#insta .inner .wrap .instaSwiper .swiper-pagination-progressbar,
+#insta .inner .wrap .instaSwiper .swiper-pagination-horizontal {
+    width: 100%;
+    height: 4px;
+    left: 0;
+    top: 95%;
+  }
+  #insta .inner .wrap .instaSwiper .swiper-pagination-progressbar {
+    width: 50%;
+  }
+
+  #footer {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+  }
+  #footer .inner {
+    width: 100%;
+    padding: 50px 30px 50px;
+  }
+  #footer .inner .wrap_util {
+    width: 500px;
+    height: 200px;
+    top: 120px;
+    left: 30px;
+  }
+  #footer .inner .wrap_util::after {
+    width: 1000px;
+    bottom: -50px;
+  }
+  #footer .inner .wrap_util ul {
+    margin-right: 50px;
+  }
+  #footer .inner .wrap_util ul li {
+    margin-bottom: 25px;
+  }
+  #footer .inner .wrap_util ul li a {
+    font: 12px/1 "arial";
+  }
+  #footer .inner .wrap_news span {
+    margin-bottom: 40px;
+  }
+  #footer .inner .wrap_news input {
+    width: 90%;
+  }
+  #footer .inner .wrap_news a {
+    width: 120px;
+    font: normal 15px/40px "arial";
+  }
+  #footer .inner p, #footer .inner .sns {
+    bottom: 30px;
+  }
+}
+@media screen and (max-width: 949px) {
+  #header {
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 2;
+  }
+  #header .inner .menuWeb {
+    display: none;
+  }
+  #header .inner .btnCall {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+  #header .inner .btnCall::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: top 0.5s 0s, transform 0.5s 0.5s;
+  }
+  #header .inner .btnCall::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: transform 0.5s 0.5s, bottom 0.5s 0s;
+  }
+  #header .inner .btnCall span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    text-indent: -999999px;
+    transition: all 1s;
+  }
+  #header .inner .btnCall.on::before {
+    top: 50%;
+    margin-top: -1px;
+    transform: rotate(-135deg);
+  }
+  #header .inner .btnCall.on::after {
+    bottom: 50%;
+    margin-bottom: -1px;
+    transform: rotate(135deg);
+  }
+  #header .inner .btnCall.on span {
+    transform: scale(0);
+    opacity: 0;
+  }
+  #header .inner .menuMo {
+    display: block;
+    width: 270px;
+    height: 100vh;
+    background: #fff;
+    padding: 35px 30px;
+    position: fixed;
+    top: 0;
+    left: -270px;
+    z-index: 3;
+  }
+  #header .inner .menuMo.on {
+    left: 0;
+  }
+  #header .inner .menuMo > h1 {
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #header .inner .menuMo > h1::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 1px;
+    background: #444;
+    margin-top: 20px;
+  }
+  #header .inner .menuMo #gnbMo {
+    margin-top: 100px;
+    margin-left: 10px;
+  }
+  #header .inner .menuMo #gnbMo li {
+    transform-origin: left center;
+    transition: 1s;
+  }
+  #header .inner .menuMo #gnbMo li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 1px;
+    background: #ccc;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  #header .inner .menuMo #gnbMo li a {
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    font: bold 14px/1 "arial";
+    color: #555;
+  }
+  #header .inner .menuMo #gnbMo li:hover {
+    transform: scaleX(1.1);
+  }
+  #header .inner .menuMo #gnbMo li:hover::after {
+    width: 100px;
+    opacity: 1;
+  }
+  #header .inner .menuMo .utilMo {
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  #header .inner .menuMo .utilMo li {
+    transform-origin: left center;
+    transition: 1s;
+  }
+  #header .inner .menuMo .utilMo li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 1px;
+    background: #ccc;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  #header .inner .menuMo .utilMo li a {
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    font: normal 14px/1 "arial";
+    color: #777;
+  }
+  #header .inner .menuMo .utilMo li:hover {
+    transform: scaleX(1.1);
+  }
+  #header .inner .menuMo .utilMo li:hover::after {
+    width: 80px;
+    opacity: 1;
+  }
+  #header .inner .menuMo span {
+    font: normal 14px/1 "arial";
+    color: #777;
+    display: block;
+    margin-bottom: 20px;
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #header .inner .menuMo .snsMo {
+    position: absolute;
+    bottom: 130px;
+    padding: 0 20px;
+  }
+  #header .inner .menuMo .snsMo li {
+    float: left;
+    margin-right: 30px;
+    text-align: center;
+  }
+  #header .inner .menuMo .snsMo li:last-child {
+    margin-right: 0;
+  }
+  #header .inner .menuMo .snsMo li a {
+    font-size: 20px;
+    color: #777;
+    transition: 0.8s;
+  }
+  #header .inner .menuMo .snsMo li:hover a {
+    color: #333;
+  }
+  #header .inner .menuMo p {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font: 11px/1.1 "arial";
+    color: #999;
+  }
+
+  #intro {
+    height: 60vh;
+  }
+  #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap {
+    width: 80vw;
+    padding: 50px 10px;
+  }
+  #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap .con h2 {
+    font: normal 30px/1.2 "DM Serif Display";
+    margin-top: 0px;
+  }
+  #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap .con p {
+    font: bold 14px/1.5 "Montserrat";
+  }
+
+  #rooms {
+    height: 40vh;
+  }
+  #rooms .inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-size: 0;
+  }
+  #rooms .inner article img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+    filter: grayscale(0.7);
+  }
+  #rooms .inner article .wrap {
+    width: 100%;
+    height: 100%;
+    border: 3px solid red;
+  }
+  #rooms .inner article .wrap .con {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 100%;
+    padding: 120px 20px;
+    border: 5px solid orange;
+    color: #fff;
+    text-align: center;
+    display: block;
+    transition: 0.5s;
+  }
+  #rooms .inner article .wrap .con p {
+    font: normal 12px/1 "arial";
+    margin-bottom: 15px;
+  }
+  #rooms .inner article .wrap .con h2 {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+  #rooms .inner article .wrap .con a {
+    display: inline-block;
+    width: 120px;
+    height: 35px;
+    border: 1px solid #fff;
+    font: bold 12px/35px "arial";
+    color: #fff;
+    transition: 0.75s;
+  }
+  #rooms .inner article .wrap .con a:hover {
     background: #fff;
     color: #333;
     font-weight: normal;
