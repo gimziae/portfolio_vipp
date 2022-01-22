@@ -281,30 +281,32 @@ a {
 #header .inner .menuWeb #gnbWeb li a {
   font: bold 12px/1 "arial";
   color: #a0a0a0;
+  transition: 0.25s;
 }
 #header .inner .menuWeb #gnbWeb li:hover a {
   color: #333;
 }
-#header .inner .menuWeb .util {
+#header .inner .menuWeb .joinWeb {
   position: absolute;
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
 }
-#header .inner .menuWeb .util li {
+#header .inner .menuWeb .joinWeb li {
   float: left;
   margin-left: 30px;
 }
-#header .inner .menuWeb .util li a {
+#header .inner .menuWeb .joinWeb li a {
   font: normal 12px/1 "arial";
   color: #999;
+  transition: 0.5s;
 }
-#header .inner .menuWeb .util li a i {
+#header .inner .menuWeb .joinWeb li a i {
   margin-right: 5px;
   font-size: 15px;
   transform: translateY(2px);
 }
-#header .inner .menuWeb .util li:hover a {
+#header .inner .menuWeb .joinWeb li:hover a {
   color: #333;
 }
 #header .inner .btnCall {
@@ -379,7 +381,6 @@ a {
 #rooms {
   width: 100%;
   height: 500px;
-  overflow: hidden;
 }
 #rooms .inner {
   width: 100%;
@@ -394,15 +395,16 @@ a {
 #rooms .inner article .wrap {
   width: 100%;
   height: 100%;
-  border: 3px solid red;
   position: relative;
+  overflow: hidden;
+  transition: 1s;
 }
 #rooms .inner article .wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: 1s;
-  filter: grayscale(0.7);
+  filter: grayscale(0.6);
 }
 #rooms .inner article .wrap .con {
   width: 100%;
@@ -410,20 +412,19 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 100px 20px;
-  border: 5px solid orange;
-  color: #fff;
   text-align: center;
-  display: block;
-  transition: 0.5s;
+  transition: 1s;
+  opacity: 0.7;
 }
 #rooms .inner article .wrap .con p {
   font: normal 12px/1 "arial";
   margin-bottom: 15px;
+  color: #ddd;
 }
 #rooms .inner article .wrap .con h2 {
   font-size: 32px;
-  margin-bottom: 75px;
+  margin-bottom: 50px;
+  color: #fff;
 }
 #rooms .inner article .wrap .con a {
   display: inline-block;
@@ -439,12 +440,13 @@ a {
   color: #333;
   font-weight: normal;
 }
-#rooms .inner article:hover img {
+#rooms .inner article:hover .wrap img {
   transform: scale(1.05) rotate(0.001deg);
   filter: grayscale(0);
 }
-#rooms .inner article:hover .con {
-  display: block;
+#rooms .inner article:hover .wrap .con {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
 }
 
 #review {
@@ -725,10 +727,6 @@ a {
 }
 
 @media screen and (max-width: 1179px) {
-  #header {
-    width: 100%;
-    height: 50px;
-  }
   #header .inner {
     width: 100%;
   }
@@ -736,176 +734,31 @@ a {
     left: 30px;
   }
   #header .inner h1 a {
-    font: bold 25px/1 "DM Serif Display";
+    font-size: 25px;
   }
-  #header .inner .menuWeb {
-    display: block;
+  #header .inner .menuWeb #gnbWeb {
+    top: 60%;
   }
-  #header .inner .btnCall {
-    position: absolute;
-    right: 30px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    display: none;
-  }
-  #header .inner .btnCall::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: top 0.5s 0s, transform 0.5s 0.5s;
-  }
-  #header .inner .btnCall::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #000;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: transform 0.5s 0.5s, bottom 0.5s 0s;
-  }
-  #header .inner .btnCall span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #000;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    margin-top: -1px;
-    text-indent: -999999px;
-    transition: all 1s;
-  }
-  #header .inner .btnCall.on::before {
-    top: 50%;
-    margin-top: -1px;
-    transform: rotate(-225deg);
-  }
-  #header .inner .btnCall.on::after {
-    bottom: 50%;
-    margin-bottom: -1px;
-    transform: rotate(225deg);
-  }
-  #header .inner .btnCall.on span {
-    transform: scale(0);
-    opacity: 0;
-  }
-  #header .inner .menuMo {
-    display: none;
-    width: 270px;
-    height: 100vh;
-    background: #fff;
-    padding: 35px 30px;
-    position: fixed;
-    top: 0;
-    left: -270px;
-    z-index: 3;
-    position: relative;
-  }
-  #header .inner .menuMo.on {
-    left: 0;
-  }
-  #header .inner .menuMo > h1 {
-    top: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  #header .inner .menuMo > h1::after {
-    content: "";
-    display: block;
-    width: 200px;
-    height: 1px;
-    background: #444;
-    margin-top: 20px;
-  }
-  #header .inner .menuMo #gnbMo {
-    margin-top: 100px;
-    margin-left: 10px;
-  }
-  #header .inner .menuMo #gnbMo li {
-    transform-origin: left center;
-    transition: 1s;
-  }
-  #header .inner .menuMo #gnbMo li::after {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 2px;
-    background: coral;
-    opacity: 0;
-    transition: 0.5s;
-  }
-  #header .inner .menuMo #gnbMo li a {
-    display: block;
-    width: 100%;
-    padding: 20px 0;
-    font: bold 14px/1 "arial";
-    color: #555;
-  }
-  #header .inner .menuMo #gnbMo li:hover {
-    transform: scaleX(1.1);
-  }
-  #header .inner .menuMo #gnbMo li:hover::after {
-    width: 100px;
-    opacity: 1;
-  }
-  #header .inner .menuMo .utilMo {
-    margin-top: 20px;
-    margin-left: 10px;
-  }
-  #header .inner .menuMo .utilMo li a {
-    display: block;
-    padding: 20px 0;
-    font: normal 14px/1 "arial";
-    color: #777;
-  }
-  #header .inner .menuMo span {
-    font: normal 14px/1 "arial";
-    color: #777;
-    display: block;
-    margin-bottom: 20px;
-    position: absolute;
-    bottom: 150px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  #header .inner .menuMo .snsMo {
-    position: absolute;
-    bottom: 130px;
-    padding: 0 20px;
-  }
-  #header .inner .menuMo .snsMo li {
+  #header .inner .menuWeb #gnbWeb li {
     float: left;
-    margin-right: 30px;
-    text-align: center;
+    margin-left: 30px;
   }
-  #header .inner .menuMo .snsMo li:last-child {
-    margin-right: 0;
+  #header .inner .menuWeb #gnbWeb li a {
+    font-size: 11px;
   }
-  #header .inner .menuMo .snsMo li a {
-    font-size: 20px;
-    color: #777;
+  #header .inner .menuWeb .joinWeb {
+    top: 60%;
   }
-  #header .inner .menuMo .snsMo li:hover a {
-    color: #333;
+  #header .inner .menuWeb .joinWeb li {
+    margin-left: 20px;
   }
-  #header .inner .menuMo p {
-    position: absolute;
-    bottom: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    font: 11px/1.1 "arial";
+  #header .inner .menuWeb .joinWeb li a {
+    font-size: 11px;
   }
 
+  #intro {
+    height: 70vh;
+  }
   #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap {
     width: 80vw;
     padding: 50px 10px;
@@ -913,75 +766,26 @@ a {
   #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap .con h2 {
     font: normal 32px/1.2 "DM Serif Display";
     margin-bottom: 20px;
-    margin-top: 20px;
   }
   #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap .con p {
     font: bold 15px/1.5 "Montserrat";
   }
 
   #rooms {
-    width: 100%;
-    height: 500px;
-  }
-  #rooms .inner {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    font-size: 0;
-  }
-  #rooms .inner article {
-    float: left;
-    width: 33.3333333333%;
-    height: 100%;
-    overflow: hidden;
-  }
-  #rooms .inner article img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 1s;
-    filter: grayscale(0.7);
-  }
-  #rooms .inner article .con {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 33.3333333333%;
     height: 400px;
-    padding: 100px 20px;
-    color: #fff;
-    text-align: center;
-    display: none;
-    transition: 0.5s;
   }
-  #rooms .inner article .con p {
-    font: normal 12px/1 "arial";
-    margin-bottom: 15px;
+  #rooms .inner article .wrap .con p {
+    font-size: 10px;
   }
-  #rooms .inner article .con h2 {
-    font-size: 32px;
-    margin-bottom: 75px;
+  #rooms .inner article .wrap .con h2 {
+    font-size: 25px;
+    margin-bottom: 30px;
   }
-  #rooms .inner article .con a {
+  #rooms .inner article .wrap .con a {
     display: inline-block;
-    width: 120px;
-    height: 35px;
-    border: 1px solid #fff;
-    font: bold 12px/35px "arial";
-    color: #fff;
-    transition: 0.75s;
-  }
-  #rooms .inner article .con a:hover {
-    background: #fff;
-    color: #333;
-    font-weight: normal;
-  }
-  #rooms .inner article:hover img {
-    transform: scale(1.05) rotate(0.001deg);
-    filter: grayscale(0);
-  }
-  #rooms .inner article:hover .con {
-    display: block;
+    width: 100px;
+    height: 30px;
+    font: bold 10px/30px "arial";
   }
 
   #review {
@@ -1125,6 +929,9 @@ a {
     background: #fff;
     z-index: 2;
   }
+  #header .inner > h1 a {
+    font-size: 25px;
+  }
   #header .inner .menuWeb {
     display: none;
   }
@@ -1133,9 +940,10 @@ a {
     right: 30px;
     top: 50%;
     transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     display: block;
+    z-index: 4;
   }
   #header .inner .btnCall::before {
     content: "";
@@ -1174,12 +982,12 @@ a {
   #header .inner .btnCall.on::before {
     top: 50%;
     margin-top: -1px;
-    transform: rotate(-135deg);
+    transform: rotate(-225deg);
   }
   #header .inner .btnCall.on::after {
     bottom: 50%;
     margin-bottom: -1px;
-    transform: rotate(135deg);
+    transform: rotate(225deg);
   }
   #header .inner .btnCall.on span {
     transform: scale(0);
@@ -1187,34 +995,35 @@ a {
   }
   #header .inner .menuMo {
     display: block;
-    width: 270px;
-    height: 100vh;
-    background: #fff;
-    padding: 35px 30px;
     position: fixed;
     top: 0;
     left: -270px;
-    z-index: 3;
+    width: 270px;
+    height: 100vh;
+    background: #fff;
+    padding: 35px;
+    z-index: 5;
+    transition: 1s;
   }
   #header .inner .menuMo.on {
     left: 0;
   }
   #header .inner .menuMo > h1 {
-    top: 60px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 80px;
+    margin-left: 10px;
   }
   #header .inner .menuMo > h1::after {
     content: "";
     display: block;
     width: 200px;
     height: 1px;
-    background: #444;
-    margin-top: 20px;
+    background: #999;
+    margin-top: 10px;
+    margin-left: -10px;
   }
   #header .inner .menuMo #gnbMo {
-    margin-top: 100px;
-    margin-left: 10px;
+    margin-top: 75px;
+    margin-left: 5px;
   }
   #header .inner .menuMo #gnbMo li {
     transform-origin: left center;
@@ -1225,7 +1034,7 @@ a {
     display: block;
     width: 1px;
     height: 1px;
-    background: #ccc;
+    background: #ddd;
     opacity: 0;
     transition: 0.5s;
   }
@@ -1243,80 +1052,65 @@ a {
     width: 100px;
     opacity: 1;
   }
-  #header .inner .menuMo .utilMo {
-    margin-top: 20px;
-    margin-left: 10px;
+  #header .inner .menuMo .joinMo {
+    margin-left: 5px;
   }
-  #header .inner .menuMo .utilMo li {
-    transform-origin: left center;
-    transition: 1s;
-  }
-  #header .inner .menuMo .utilMo li::after {
-    content: "";
+  #header .inner .menuMo .joinMo li a {
     display: block;
-    width: 1px;
-    height: 1px;
-    background: #ccc;
-    opacity: 0;
-    transition: 0.5s;
-  }
-  #header .inner .menuMo .utilMo li a {
-    display: block;
-    width: 100%;
     padding: 20px 0;
     font: normal 14px/1 "arial";
     color: #777;
   }
-  #header .inner .menuMo .utilMo li:hover {
-    transform: scaleX(1.1);
+  #header .inner .menuMo .joinMo li a:hover {
+    color: #111;
   }
-  #header .inner .menuMo .utilMo li:hover::after {
-    width: 80px;
-    opacity: 1;
+  #header .inner .menuMo .snsMo {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+    text-align: center;
   }
-  #header .inner .menuMo span {
+  #header .inner .menuMo .snsMo span {
     font: normal 14px/1 "arial";
     color: #777;
     display: block;
-    margin-bottom: 20px;
-    position: absolute;
-    bottom: 150px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-bottom: 15px;
   }
-  #header .inner .menuMo .snsMo {
-    position: absolute;
-    bottom: 130px;
-    padding: 0 20px;
+  #header .inner .menuMo .snsMo ul {
+    width: 60%;
+    height: 30px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
   }
-  #header .inner .menuMo .snsMo li {
+  #header .inner .menuMo .snsMo ul li {
     float: left;
     margin-right: 30px;
-    text-align: center;
+    line-height: 30px;
   }
-  #header .inner .menuMo .snsMo li:last-child {
+  #header .inner .menuMo .snsMo ul li:last-child {
     margin-right: 0;
   }
-  #header .inner .menuMo .snsMo li a {
+  #header .inner .menuMo .snsMo ul li a {
     font-size: 20px;
     color: #777;
-    transition: 0.8s;
+    transition: 0.25s;
   }
-  #header .inner .menuMo .snsMo li:hover a {
+  #header .inner .menuMo .snsMo ul li a:hover {
     color: #333;
   }
   #header .inner .menuMo p {
     position: absolute;
-    bottom: 60px;
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
     font: 11px/1.1 "arial";
-    color: #999;
   }
 
   #intro {
-    height: 60vh;
+    height: 50vh;
   }
   #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap {
     width: 80vw;
@@ -1327,71 +1121,28 @@ a {
     margin-top: 0px;
   }
   #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap .con p {
-    font: bold 14px/1.5 "Montserrat";
+    font: bold 12px/1.5 "Montserrat";
   }
 
   #rooms {
-    height: 40vh;
+    height: calc(100vh - 50px);
   }
-  #rooms .inner {
+  #rooms .inner article {
     width: 100%;
-    height: 100%;
-    position: relative;
-    font-size: 0;
-  }
-  #rooms .inner article img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 1s;
-    filter: grayscale(0.7);
-  }
-  #rooms .inner article .wrap {
-    width: 100%;
-    height: 100%;
-    border: 3px solid red;
-  }
-  #rooms .inner article .wrap .con {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    height: 100%;
-    padding: 120px 20px;
-    border: 5px solid orange;
-    color: #fff;
-    text-align: center;
-    display: block;
-    transition: 0.5s;
+    height: 33.3333333333%;
   }
   #rooms .inner article .wrap .con p {
-    font: normal 12px/1 "arial";
-    margin-bottom: 15px;
+    font-size: 10px;
   }
   #rooms .inner article .wrap .con h2 {
-    font-size: 20px;
-    margin-bottom: 50px;
+    font-size: 25px;
+    margin-bottom: 30px;
   }
   #rooms .inner article .wrap .con a {
     display: inline-block;
-    width: 120px;
-    height: 35px;
-    border: 1px solid #fff;
-    font: bold 12px/35px "arial";
-    color: #fff;
-    transition: 0.75s;
-  }
-  #rooms .inner article .wrap .con a:hover {
-    background: #fff;
-    color: #333;
-    font-weight: normal;
-  }
-  #rooms .inner article:hover img {
-    transform: scale(1.05) rotate(0.001deg);
-    filter: grayscale(0);
-  }
-  #rooms .inner article:hover .con {
-    display: block;
+    width: 100px;
+    height: 30px;
+    font: bold 10px/30px "arial";
   }
 
   #review {
