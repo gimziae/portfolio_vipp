@@ -32,9 +32,6 @@ btnCall.addEventListener("click", e=>{
 
     btnCall.classList.toggle("on");
     menuMo.classList.toggle("on");
-    
-    if(btnCall.classList.contains("on")){
-        body.style.opacity = "0.6";
-    }else body.style.opacity = "1";
+
     
 })

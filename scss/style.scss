@@ -220,7 +220,7 @@ $mobile: 539px;
                     p{
                         font: normal 12px/1 'arial';
                         margin-bottom: 15px;
-                        color: #ddd;
+                        color: #fff;
                     }
                     h2{
                         font-size: 32px;
@@ -923,7 +923,7 @@ $mobile: 539px;
                 z-index: 5;
                 transition: 1s;
 
-                &.on{  left: 0; }
+                &.on{ left: 0; }
 
                 >h1{
                     top: 80px;
@@ -1108,8 +1108,9 @@ $mobile: 539px;
     }
 
     // review------------------------------
+    //생각해보기...
     #review{
-        padding: 100px 30px;
+        padding: 50px 20px;
         
         .inner{
             width: 100%;
@@ -1131,8 +1132,7 @@ $mobile: 539px;
                 .swiper-wrapper{
                     padding: 50px 0;
                     .swiper-slide{
-                        //border: 3px solid rebeccapurple;
-                        width: 300px;
+                        width: 100%;
                         background: rgba(255, 255, 255, 0.6);
                         padding: 60px 30px 30px;
                         img{
@@ -1168,10 +1168,11 @@ $mobile: 539px;
     // insta------------------------------
     // 사진 스와이퍼말고 사진첩 형식으로 변경!!!!
     #insta{
-        padding: 100px 30px 100px;
+        padding: 50px 30px;
 
         .inner{
             width: 100%;
+            height: 0px;
     
             h2{ font: normal 30px/1 'DM Serif Display'; }
             p{ font: 15px/1 'arial'; }
@@ -1181,7 +1182,7 @@ $mobile: 539px;
 
                 .instaSwiper{
                     width: 100%;
-                    height: 420px;
+                    height: 350px;
                     border: 3px solid orange;
                     .swiper-wrapper{
                         .swiper-slide{
@@ -1219,7 +1220,7 @@ $mobile: 539px;
     // footer------------------------------
     #footer{
         width: 100%;
-        height: 450px;
+        height: 350px;
         overflow: hidden;
 
         .inner{
@@ -1232,32 +1233,32 @@ $mobile: 539px;
                 top: 120px;
                 left: 30px;
 
-                &::after{
-                    width: 1000px;
-                    bottom: -50px;
-                }
+                &::after{ display: none; }
     
                 ul{
                     margin-right: 50px;
     
                     li{
-                        margin-bottom: 25px;
+                        margin-bottom: 20px;
+
                         
                         a{ font: 12px/1 'arial'; }
                     }
                 }
             }
             .wrap_news{
-                span{ margin-bottom: 40px; }
-                input{ width: 90%; }
+                width: 300px ;
+                span{ margin-bottom: 30px; }
+                input{ margin-bottom: 20px; }
                 a{
-                    width: 120px;
-                    font: normal 15px/40px 'arial';
+                    width: 80px;
+                    height: 30px;
+                    font: normal 12px/30px 'arial';
                 }
             }
     
-            p, .sns{ bottom: 30px; }
-    
+            p, .sns{ display: none; }
+     
         }
     }
 }
