@@ -257,6 +257,64 @@ a {
   color: #333;
 }
 
+.join .sub_visual {
+  background: #efefef;
+}
+.join .inner h2 {
+  font: bold 20px/1 "arial";
+  color: #555;
+  margin-bottom: 20px;
+}
+.join .inner #member {
+  border: none;
+}
+.join .inner #member #terms {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  padding: 5px 15px;
+}
+.join .inner #member .agreement {
+  text-align: right;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+.join .inner #member .agreement #agree {
+  margin-right: 5px;
+}
+.join .inner #member table {
+  width: 100%;
+}
+.join .inner #member table > p {
+  font: 15px/1 "arial";
+  color: saddlebrown;
+}
+.join .inner #member table th {
+  text-align: left;
+  width: 20%;
+  font: bold 14px/1 "arial";
+  color: #666;
+  padding: 20px 30px;
+}
+.join .inner #member table th:last-child {
+  background: none;
+  border-right: none;
+  text-align: center;
+}
+.join .inner #member table th input[type=reset], .join .inner #member table th input[type=submit] {
+  width: 150px;
+  height: 40px;
+  border: none;
+  background: #444;
+  margin: 0 10px;
+  font: bold 14px/1 "arial";
+  color: #eee;
+  letter-spacing: 1px;
+}
+.join .inner #member table td {
+  padding: 20px 30px;
+}
+
 .youtube .inner .vidList {
   width: 100%;
 }
@@ -287,6 +345,26 @@ a {
 .youtube .inner .vidList article .con h2 {
   font: bold 25px/1 "DM Serif Display";
   letter-spacing: 1px;
+}
+.youtube .inner figure.pop {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.youtube .inner figure.pop .btnClose {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  color: #fff;
+  cursor: pointer;
 }
 
 #header {

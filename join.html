@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vipp hotel | vipp.com portfolio</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <title>Vipp hotel | JOIN</title>
     <script src="https://kit.fontawesome.com/4f772438c6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/main.js"></script>
+    <script defer src="js/validation.js"></script>
 </head>
 <body>
 <!-- header -->
@@ -118,11 +117,121 @@
         </div>
     </header>
 <!-- main -->
-    <section class="content">
-        <div class="sub_visual"></div>
+    <section class="content join">
+        <div class="sub_visual"></div>  
         <div class="inner">
             <h1>Join <span>join</span></h1>
-            <!-- 컨텐츠 들어가는 부분 -->
+            <form action="result" method="post" id="member">
+                <fieldset>
+                    <legend class="hidden">회원가입 양식폼</legend>
+                    <!-- 약관 동의 -->
+                    <h2><label for="terms">Terms & Policy</label></h2>
+                    <textarea name="terms" id="terms"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores reiciendis enim fugiat deserunt iste iusto assumenda dignissimos soluta labore ad quam vel cupiditate cumque ea, laudantium, consequuntur eius nesciunt dolor sequi officiis ullam a quas fugit eligendi! Sapiente perferendis praesentium omnis nostrum, consequuntur unde, reprehenderit deserunt asperiores vero culpa ipsam. Culpa illo, consequatur, provident totam rem est sint accusamus quam quos veritatis ad hic unde! Nobis voluptatum illum in! Illum facere tenetur nisi quis vero commodi laborum fugit officiis at expedita atque voluptatum natus sunt ratione, ipsum aut odit et tempora, quia similique. Iste a blanditiis, dolore alias eum molestiae accusamus tenetur voluptatum cupiditate esse quo nemo necessitatibus voluptatem nulla. Odit consequatur quidem animi non iste magnam temporibus, ullam quam ea vitae sunt aut magni neque illo perferendis, eveniet labore. Minus, est iste impedit similique eligendi doloremque ea explicabo neque labore dolorem officiis ipsa nam perferendis id ut illo totam obcaecati ex. Necessitatibus laboriosam quisquam ipsam similique est, fuga suscipit iure amet porro ullam aperiam voluptates pariatur, fugiat sunt aspernatur odit quae. Itaque voluptatem, voluptas nisi expedita tenetur a distinctio commodi, quod cumque sit perferendis! Consequuntur praesentium explicabo architecto dolorum eaque? Maiores provident ullam ducimus dolores necessitatibus fugiat hic doloremque.
+                    </textarea>
+                    <div class="agreement">
+                        <input type="checkbox" name="agree" id="agree">
+                        <label for="agree">agree</label>
+                    </div>
+
+                    <!-- 개인정보 입력란 -->
+                    <h2><label for="personal information">Member Information</label></h2>
+
+                    <table>
+                        <caption class="hidden">회원정보 입력양식 테이블</caption>
+                        <p>필수사항 *</p>
+
+                        <!-- 이름 -->
+                        <tr>
+                            <th><label for="name">NAME *</label></th>
+                            <td colspan="2">
+                                <input type="text" name="family" id="family" placeholder="Family Name">
+                                <input type="text" name="first" id="first" placeholder="First Name">
+                            </td>
+                        </tr>
+                        <!-- 아이디 -->
+                        <tr>
+                            <th><label for="id">ID *</label></th>
+                            <td>
+                                <input type="text" name="id" id="id" placeholder="Enter user id">
+                            </td>
+                        </tr>
+                        <!-- 비밀번호 -->
+                        <tr>
+                            <th><label for="pwd">PASSWORD *</label></th>
+                            <td><input type="password" name="pwd" id="pwd" placeholder="Enter user password"></td>
+                        </tr>
+                        <tr>
+                            <th><label for="pwdCk">CONFIRM PASSWORD *</label></th>
+                            <td><input type="password" name="pwdCk" id="pwdCk" placeholder="Please check user password"></td>
+                        </tr>
+                        <!-- 국가 -->
+                        <tr>
+                            <th><label for="nationality">NATIONALITY *</label></th>
+                            <td>
+                                <select name="national" id="national">
+                                    <option value="kor">South Korea</option>
+                                    <option value="us">USA</option>
+                                    <option value="jpn">Japan</option>
+                                    <option value="cn">China</option>
+                                    <option value="uk">United Kingdom</option>
+                                    <option value="fra">France</option>
+                                    <option value="ger">Germany</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!-- 주소 -->
+                        <tr>
+                            <th rowspan="3">ADDRESS *</th>
+                            <td>
+                                <label for="home">
+                                    <input type="radio" name="address" id="home" value="home">HOME
+                                </label>
+                                <label for="company">
+                                    <input type="radio" name="address" id="company" value="company">COMPANY
+                                </label>                     
+                            </td>
+                            <tr>
+                                <td>
+                                <input type="text" id="zipcode" placeholder="Enter zipcode">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                <input type="text" id="address" placeholder="Enter user address">
+                                </td>
+                            </tr>
+                        </tr>
+                        <!-- 이메일 -->
+                        <tr>
+                            <th><label for="email">E-MAIL *</label></th>
+                            <td>
+                                <input type="email" name="email" id="email">@
+                                <select name="domain" id="domain">
+                                    <option value="">직접입력</option>
+                                    <option value="gmail">gmail.com</option>
+                                    <option value="naver">naver.com</option>
+                                    <option value="daum">daum.net</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!-- 프로모션 코드 -->
+                        <tr>
+                            <th><label for="promocode">PROMOTION CODE</label></th>
+                            <td>
+                                <input type="text" name="promocode" id="promocode" placeholder="Enter promotioncode">
+                            </td>
+                        </tr>
+                        <!-- 취소 제출버튼 -->
+                        <tr>
+                            <th colspan="2">
+                                <input type="reset" value="CANCLE">
+                                <input type="submit" value="SUBMIT">
+                            </th>
+                        </tr>
+                    </table>
+
+                </fieldset>
+            </form>
         </div>
     </section>
 <!-- footer -->

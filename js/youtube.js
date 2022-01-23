@@ -35,3 +35,16 @@ fetch(url)
 
     vidList.innerHTML = result;
 })
+
+vidList.addEventListener("click", ()=>{
+    e.preventDefault();
+
+    const vidId = e.target.closest("a").getAttribute("href");
+    let pop = document.createElement("figure");
+    pop.classList.add("pop");
+    pop.innerHTML = `
+                    <iframe width="560" height="315" src="${vidId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <span class=btnClose>CLOSE</span>
+                    `;
+    vidList.append(pop);
+})
