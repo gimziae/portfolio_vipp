@@ -312,7 +312,7 @@ fieldset {
   width: 120px;
   height: 40px;
   border: none;
-  background: #555;
+  background: rgba(75, 105, 100, 0.85);
   margin: 0 20px;
   font: normal 14px/1 "arial";
   color: #eee;
@@ -320,9 +320,7 @@ fieldset {
   transition: 0.8s;
 }
 .join .inner #member table th input[type=reset]:hover, .join .inner #member table th input[type=submit]:hover {
-  background: transparent;
-  border: 1px solid #555;
-  color: #555;
+  background: #4b6964;
 }
 .join .inner #member table td {
   padding: 20px 30px;

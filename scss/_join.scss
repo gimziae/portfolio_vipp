@@ -55,7 +55,7 @@
                         width: 120px;
                         height: 40px;
                         border: none;
-                        background: #555;
+                        background: rgba(75, 105, 100, 0.85);
                         margin: 0 20px;
                         font: normal 14px/1 'arial';
                         color: #eee;
@@ -63,9 +63,7 @@
                         transition: 0.8s;
 
                         &:hover{
-                            background: transparent;
-                            border: 1px solid #555;
-                            color: #555;
+                            background: rgba(75, 105, 100, 1);
                         }
                     }
                 }
