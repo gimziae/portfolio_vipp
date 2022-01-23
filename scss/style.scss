@@ -596,7 +596,7 @@ $mobile: 539px;
 
 @media screen and(max-width:1179px){
     // header------------------------------
-    #header{    
+    #header, #header_sub{    
         .inner{
             width: 100%;
             h1{
@@ -787,7 +787,7 @@ $mobile: 539px;
         }
     
     // footer------------------------------
-    #footer{
+    #footer, #footer_sub{
         width: 100%;
         height: 450px;
         overflow: hidden;
@@ -834,7 +834,7 @@ $mobile: 539px;
 
 @media screen and (max-width:$tablet){
     // header------------------------------
-    #header{
+    #header, #header_sub{
         height: 50px;
         position: fixed;
         top: 0;
@@ -1218,7 +1218,7 @@ $mobile: 539px;
         }
     
     // footer------------------------------
-    #footer{
+    #footer, #footer_sub{
         width: 100%;
         height: 350px;
         overflow: hidden;
