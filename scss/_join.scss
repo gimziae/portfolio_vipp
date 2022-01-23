@@ -4,9 +4,10 @@
     }
     .inner{
         h2{
-            font: bold 20px/1 'arial';
-            color: #555;
-            margin-bottom: 20px;
+            font: normal 30px/1 'DM Serif Display';
+            letter-spacing: 1px;
+            color: #333;
+            margin-bottom: 30px;
         }
         #member{
             border: none;
@@ -14,56 +15,106 @@
             // 약관동의
             #terms{
                 width: 100%;
-                height: 150px;
+                height: 200px;
                 resize: none;
                 padding: 5px 15px;
+                margin-bottom: 10px;
             }
             .agreement{
                 text-align: right;
-                margin-top: 10px;
                 margin-right: 20px;
+                margin-bottom: 50px;
                 #agree{
                     margin-right: 5px;
-
                 }
             }
-
+            p{
+                font: bold 12px/1 'arial';
+                color: red;
+                margin-left: 32px;
+                margin: 32px 32px 0;
+                
+            }
             // 개인정보 입력 테이블
             table{
                 width: 100%;
-
-                >p{
-                    font: 15px/1 'arial';
-                    color: saddlebrown;
-                    
-                }
-
+                
                 th{
                     text-align: left;
                     width: 20%;
                     font: bold 14px/1 'arial';
-                    color: #666;
+                    color: #555;
                     padding: 20px 30px;
 
+                    //reset,submit btn
                     &:last-child{
-                        background: none;
-                        border-right: none;
                         text-align: center;
+                        padding: 50px 30px;
                     }
                     input[type=reset], input[type=submit]{
-                        width: 150px;
+                        width: 120px;
                         height: 40px;
                         border: none;
-                        background: #444;
-                        margin: 0 10px;
-                        font: bold 14px/1 'arial';
+                        background: #555;
+                        margin: 0 20px;
+                        font: normal 14px/1 'arial';
                         color: #eee;
                         letter-spacing: 1px;
+                        transition: 0.8s;
+
+                        &:hover{
+                            background: transparent;
+                            border: 1px solid #555;
+                            color: #555;
+                        }
                     }
                 }
                 td{
-padding: 20px 30px;
+                    padding: 20px 30px;
+
+                    //텍스트 칸 레이아웃 설정
+                    input[type="text"], input[type="password"], input[type="email"], select{
+                        width: 30%;
+                        height: 30px;
+                        border: none;
+                        border-bottom: 1px solid #ccc;
+                        color: #777;
+                        text-indent: 5px;
+                        font: normal 12px/1 'arial';
+                    }
+
+                    //이름
+                    #first,#family{
+                        width: 20%;
+                        margin-right: 10px;
+                    }
+                    //체크박스
+                    input[type=checkbox], input[type=radio]{
+                        margin-right: 5px;
+
+                    }
+                    //주소
+                    label[for=home],label[for=company]{
+                        font-size: 14px;
+                        margin-right: 20px;
+                    }
+
+                    //이메일 칸
+                    #domain{
+                        text-align: center;
+                        width: 20%;
+                        color: #777;
+                    }
+                    span{
+                        color: #555;
+                        font-size: 12px;
+                    }
+
+                    
                 }
+                &:nth-of-type(6){
+                        padding: 20px 30px 0;
+                    }
 
             }
             
