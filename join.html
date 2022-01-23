@@ -120,7 +120,6 @@
     <section class="content join">
         <div class="sub_visual"></div>  
         <div class="inner">
-            <h1>Join <span>join</span></h1>
             <form action="result" method="post" id="member">
                 <fieldset>
                     <legend class="hidden">회원가입 양식폼</legend>
@@ -130,7 +129,7 @@
                     </textarea>
                     <div class="agreement">
                         <input type="checkbox" name="agree" id="agree">
-                        <label for="agree">agree</label>
+                        <label for="agree">agree *</label>
                     </div>
 
                     <!-- 개인정보 입력란 -->
@@ -166,7 +165,8 @@
                         <tr>
                             <th><label for="nationality">NATIONALITY *</label></th>
                             <td>
-                                <select name="national" id="national">
+                                <select name="nationality" id="nationality">
+                                    <option value="">Select your a country</option>
                                     <option value="kor">South Korea</option>
                                     <option value="us">USA</option>
                                     <option value="jpn">Japan</option>
@@ -190,12 +190,13 @@
                             </td>
                             <tr>
                                 <td>
-                                <input type="text" id="zipcode" placeholder="Enter zipcode">
+                                <input type="text" name="zipcode"
+                                id="zipcode" placeholder="Enter zipcode">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                <input type="text" id="address" placeholder="Enter user address">
+                                <input type="text" name="detail_address" id="address" placeholder="Enter user address">
                                 </td>
                             </tr>
                         </tr>
@@ -204,7 +205,7 @@
                             <th><label for="email">E-MAIL *</label></th>
                             <td>
                                 <input type="email" name="email" id="email">
-                                <span>@</span> 
+                                <label for="@">@
                                 <select name="domain" id="domain">
                                     <option value="">직접입력</option>
                                     <option value="gmail">gmail.com</option>

@@ -27,8 +27,14 @@
                 #agree{
                     margin-right: 5px;
                 }
+                p{
+                    font: 11px/1 'arial';
+                    color: red;
+                    margin-top: 5px;
+                    margin-right: -5px;
+                }
             }
-            p{
+            >p{
                 font: bold 12px/1 'arial';
                 color: red;
                 margin-left: 32px;
@@ -57,7 +63,7 @@
                         border: none;
                         background: rgba(75, 105, 100, 0.85);
                         margin: 0 20px;
-                        font: normal 14px/1 'arial';
+                        font: normal 12px/1 'arial';
                         color: #eee;
                         letter-spacing: 1px;
                         transition: 0.8s;
@@ -79,6 +85,9 @@
                         color: #777;
                         text-indent: 5px;
                         font: normal 12px/1 'arial';
+                    }
+                    input::placeholder{
+                        color: 777;
                     }
 
                     //이름
@@ -103,11 +112,15 @@
                         width: 20%;
                         color: #777;
                     }
-                    span{
-                        color: #555;
-                        font-size: 12px;
+                    >p, span{
+                        font: normal 11px/1 'arial';
+                        color: rgba(250, 0, 0, 0.7);
+                        margin-top: 5px;
+                        margin-left: 5px;
                     }
-
+                    span{
+                        display: block;
+                    }
                     
                 }
                 &:nth-of-type(6){
