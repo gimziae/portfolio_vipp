@@ -1,0 +1,34 @@
+.notice{
+    .inner{
+        h1{
+            font: 50px/1 'DM Serif Display';
+            text-align: center;
+        }
+        table{
+            width: 100%;
+            padding: 20px;
+            th{
+                text-align: left;
+                font: 30px/1'DM Serif Display';
+                color: #444;
+                padding: 20px 0;
+
+                .arrow{
+                    
+                }
+            }
+            td{
+                text-align: left;
+                font: 15px/1.5 'arial';
+                color: #777;
+                padding: 0 20px;
+                display: none;
+                border: 3px solid chocolate;
+
+                &.on{
+                    display: block;
+                }
+            }
+        }
+    }
+}

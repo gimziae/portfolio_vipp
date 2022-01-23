@@ -261,6 +261,32 @@ fieldset {
   color: #333;
 }
 
+.notice .inner h1 {
+  font: 50px/1 "DM Serif Display";
+  text-align: center;
+}
+.notice .inner table {
+  width: 100%;
+  padding: 20px;
+}
+.notice .inner table th {
+  text-align: left;
+  font: 30px/1 "DM Serif Display";
+  color: #444;
+  padding: 20px 0;
+}
+.notice .inner table td {
+  text-align: left;
+  font: 15px/1.5 "arial";
+  color: #777;
+  padding: 0 20px;
+  display: none;
+  border: 3px solid chocolate;
+}
+.notice .inner table td.on {
+  display: block;
+}
+
 .join .sub_visual {
   background: #efefef;
 }
@@ -288,13 +314,13 @@ fieldset {
 .join .inner #member .agreement #agree {
   margin-right: 5px;
 }
-.join .inner #member .agreement p {
+.join .inner #member .agreement > p {
   font: 11px/1 "arial";
   color: red;
   margin-top: 5px;
   margin-right: -5px;
 }
-.join .inner #member > p {
+.join .inner #member p {
   font: bold 12px/1 "arial";
   color: red;
   margin-left: 32px;
@@ -653,7 +679,6 @@ fieldset {
   margin-bottom: 30px;
 }
 #review .inner .reviewSwiper {
-  border: 3px solid blue;
   width: 100%;
   padding: 0 10px;
 }
@@ -661,7 +686,6 @@ fieldset {
   padding: 50px 0;
 }
 #review .inner .reviewSwiper .swiper-wrapper .swiper-slide {
-  border: 3px solid rebeccapurple;
   width: 300px;
   background: rgba(255, 255, 255, 0.6);
   padding: 60px 30px 30px;
@@ -673,19 +697,27 @@ fieldset {
   position: absolute;
   top: -50px;
 }
-#review .inner .reviewSwiper .swiper-wrapper .swiper-slide h4 {
+#review .inner .reviewSwiper .swiper-wrapper .swiper-slide .con {
+  width: 100%;
+  height: 200px;
+}
+#review .inner .reviewSwiper .swiper-wrapper .swiper-slide .con h4 {
   margin: 15px 0;
   font: bold 20px/1 "arial";
 }
-#review .inner .reviewSwiper .swiper-wrapper .swiper-slide p {
+#review .inner .reviewSwiper .swiper-wrapper .swiper-slide .con p {
   font: normal 15px/1.5 "arial";
   color: #777;
+  margin-bottom: 20px;
 }
-#review .inner .reviewSwiper .swiper-wrapper .swiper-slide span {
-  font: normal 15px/1 "arial";
+#review .inner .reviewSwiper .swiper-wrapper .swiper-slide .con span {
+  font: normal 12px/1 "arial";
   color: #555;
   display: block;
   text-align: right;
+}
+#review .inner .reviewMo {
+  display: none;
 }
 
 #video {
@@ -986,7 +1018,6 @@ fieldset {
     margin-bottom: 20px;
   }
   #review .inner .reviewSwiper {
-    border: 3px solid blue;
     width: 100%;
   }
   #review .inner .reviewSwiper .swiper-wrapper {
@@ -995,28 +1026,36 @@ fieldset {
   #review .inner .reviewSwiper .swiper-wrapper .swiper-slide {
     width: 300px;
     background: rgba(255, 255, 255, 0.6);
-    padding: 60px 30px 30px;
+    padding: 60px 20px 10px;
   }
   #review .inner .reviewSwiper .swiper-wrapper .swiper-slide img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     position: absolute;
-    top: -50px;
+    top: -40px;
   }
-  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide h4 {
-    margin: 15px 0;
+  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide .con {
+    width: 100%;
+    height: 180px;
+  }
+  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide .con h4 {
+    margin: 14px 0;
     font: bold 20px/1 "arial";
   }
-  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide p {
-    font: normal 15px/1.5 "arial";
+  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide .con p {
+    font: normal 13px/1.3 "arial";
     color: #777;
+    margin-bottom: 20px;
   }
-  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide span {
-    font: normal 15px/1 "arial";
+  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide .con span {
+    font: normal 11px/1 "arial";
     color: #555;
     display: block;
     text-align: right;
+  }
+  #review .inner .reviewMo {
+    display: none;
   }
 
   #video {
@@ -1041,7 +1080,6 @@ fieldset {
   #insta .inner .wrap .instaSwiper {
     width: 100%;
     height: 420px;
-    border: 3px solid orange;
   }
   #insta .inner .wrap .instaSwiper .swiper-wrapper .swiper-slide img {
     width: 200px;
@@ -1329,6 +1367,7 @@ fieldset {
 
   #review {
     padding: 50px 20px;
+    height: 100vh;
   }
   #review .inner {
     width: 100%;
@@ -1343,37 +1382,83 @@ fieldset {
     margin-bottom: 20px;
   }
   #review .inner .reviewSwiper {
-    border: 3px solid blue;
+    display: none;
+  }
+  #review .inner .reviewMo {
+    display: block;
     width: 100%;
+    padding: 20px 0;
+    position: relative;
   }
-  #review .inner .reviewSwiper .swiper-wrapper {
-    padding: 50px 0;
-  }
-  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide {
+  #review .inner .reviewMo article {
     width: 100%;
-    background: rgba(255, 255, 255, 0.6);
-    padding: 60px 30px 30px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.904);
+    margin-bottom: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   }
-  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide img {
+  #review .inner .reviewMo article img {
     width: 100px;
     height: 100px;
+    object-fit: cover;
     border-radius: 50%;
-    position: absolute;
-    top: -50px;
   }
-  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide h4 {
-    margin: 15px 0;
-    font: bold 20px/1 "arial";
+  #review .inner .reviewMo article .con {
+    width: calc(100% - 130px);
   }
-  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide p {
-    font: normal 15px/1.5 "arial";
-    color: #777;
-  }
-  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide span {
-    font: normal 15px/1 "arial";
+  #review .inner .reviewMo article .con h4 {
+    font: normal 18px/1 "dm serif display";
+    letter-spacing: 1px;
     color: #555;
+    margin-bottom: 10px;
+  }
+  #review .inner .reviewMo article .con p {
+    font: normal 14px/1.4 "arial";
+    color: #777;
+    margin-bottom: 20px;
+  }
+  #review .inner .reviewMo article .con span {
     display: block;
     text-align: right;
+    font: 10px/1 "arial";
+    color: #999;
+    margin-right: 20px;
+  }
+  #review .inner .reviewMo a {
+    font: bold 20px/1 "arial";
+    color: #555;
+    line-height: 100px;
+    display: flex;
+  }
+  #review .inner .reviewMo a span {
+    border: 1px solid red;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+  }
+  #review .inner .reviewMo a span::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #555;
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    transform: translate(45deg);
+  }
+  #review .inner .reviewMo a span::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #555;
+    position: absolute;
+    bottom: calc(50% - 1px);
+    left: 0;
   }
 
   #video {
@@ -1399,7 +1484,6 @@ fieldset {
   #insta .inner .wrap .instaSwiper {
     width: 100%;
     height: 350px;
-    border: 3px solid orange;
   }
   #insta .inner .wrap .instaSwiper .swiper-wrapper .swiper-slide img {
     width: 200px;
