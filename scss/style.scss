@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-$tablet: 949px;
-$mobile: 539px;
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@100&display=swap');
 
 @import "reset.scss";
@@ -607,7 +605,7 @@ $mobile: 539px;
 
 @media screen and(max-width:1179px){
     // header------------------------------
-    #header, #header_sub{    
+    #header{    
         .inner{
             width: 100%;
             h1{
@@ -854,7 +852,7 @@ $mobile: 539px;
 
 @media screen and (max-width:949px){
     // header------------------------------
-    #header, #header_sub{
+    #header{
         height: 50px;
         position: fixed;
         top: 0;
@@ -1131,7 +1129,6 @@ $mobile: 539px;
     //생각해보기...
     #review{
         padding: 50px 20px;
-        height: 100vh;
         
         .inner{
             width: 100%;
@@ -1149,7 +1146,7 @@ $mobile: 539px;
             .reviewMo{
                 display: block;
                 width: 100%;
-                padding: 20px 0;
+                padding: 50px 0;
                 position: relative;
 
                 article{
@@ -1177,9 +1174,10 @@ $mobile: 539px;
                             margin-bottom: 10px;
                         }
                         p{
-                            font: normal 14px/1.4 'arial';
+                            font: normal 12px/1.5 'arial';
                             color: #777;
-                            margin-bottom: 20px;
+                            margin-bottom: 10px;
+                            width: 80%;
                         }
                         span{
                             display: block;
@@ -1192,40 +1190,22 @@ $mobile: 539px;
                 }
 
                 a{
-                    font: bold 20px/1 'arial';
-                    color: #555;
-                    line-height: 100px;
-                    display: flex;
-                    //justify-content: space-between;
+                    font: 12px/1 'arial';
+                    text-align: center;
+                    color: #fff;
+                    line-height: 30px;
+                    display: block;
+                    width: 100px;
+                    height: 30px;
+                    background: rgba(75, 105, 100, 0.8);
+                    position: absolute;
+                    bottom: 10px;
+                    right: 30px;
+                    transition: 0.5s;
 
-                    span{
-                        border: 1px solid red;
-                        width: 100px;
-                        height: 100px;
-                        position: absolute;
-
-                        &::before{
-                            content: '';
-                            display: block;
-                            width: 100%;
-                            height: 2px;
-                            background: #555;
-                            position: absolute;
-                            top: calc(50% - 1px);
-                            left: 0;
-                            transform: translate(45deg);
-                            
-                        }
-                        &::after{
-                            content: '';
-                            display: block;
-                            width: 100%;
-                            height: 2px;
-                            background: #555;
-                            position: absolute;
-                            bottom: calc(50% - 1px);
-                            left: 0;
-                        }
+                    &:hover{
+                        background: rgba(75, 105, 100, 1);
+                        font-size: 13px;
                     }
                 }
             }
@@ -1236,29 +1216,29 @@ $mobile: 539px;
         height: 25vh;
     }
     // insta------------------------------
-    // 사진 스와이퍼말고 사진첩 형식으로 변경!!!!
+    // 사진 스와이퍼말고 사진첩 형식으로 변경?..
     #insta{
+        height: 600px;
         padding: 50px 30px;
 
         .inner{
             width: 100%;
             height: 0px;
-    
+            
             h2{ font: normal 30px/1 'DM Serif Display'; }
             p{ font: 15px/1 'arial'; }
             .wrap{
                 width: 100%;
-
+               // border: 3px solid orange;
 
                 .instaSwiper{
                     width: 100%;
                     height: 350px;
-                   // border: 3px solid orange;
                     .swiper-wrapper{
                         .swiper-slide{
                             img{
-                                width: 200px;
-                                height: 300px;
+                                width: 20vw;
+                                height: 250px;
                                 object-fit: cover;
                             }
     
@@ -1290,17 +1270,18 @@ $mobile: 539px;
     // footer------------------------------
     #footer, #footer_sub{
         width: 100%;
-        height: 350px;
+        height: 230px;
         overflow: hidden;
 
         .inner{
             width: 100%;
-            padding: 50px 30px 50px;
+            padding: 30px;
+            h1{ display: none; }
             
             .wrap_util{
-                width: 500px;
+                width: 60%;
                 height: 200px;
-                top: 120px;
+                top: 40px;
                 left: 30px;
 
                 &::after{ display: none; }
@@ -1317,13 +1298,16 @@ $mobile: 539px;
                 }
             }
             .wrap_news{
-                width: 300px ;
-                span{ margin-bottom: 30px; }
-                input{ margin-bottom: 20px; }
+                width: 40% ;
+                position: absolute;
+                top: 50px;
+                span{ font-size: 14px;
+                margin-bottom: 20px;}
+                input::placeholder{ font-size: 10px; }
                 a{
-                    width: 80px;
-                    height: 30px;
-                    font: normal 12px/30px 'arial';
+                    width: 70px;
+                    height: 25px;
+                    font: normal 10px/25px 'arial';
                 }
             }
     
@@ -1334,9 +1318,287 @@ $mobile: 539px;
 }
 
 @media screen and (max-width:749px){
+    // header------------------------------
+    #header{
+        height: 35px;
 
+        .inner{
+            h1{
+                a{ font-size: 18px; }
+            }
+    
+            .btnCall {
+                width: 15px;
+                height: 15px;
+
+                &::before, &::after{ height: 1px; }
+                span{ 
+                    margin-top: 0; 
+                    height: 1px;
+                }
+            }
+            .menuMo{   
+                
+                #gnbMo {
+                    li{
+                        a{ font-size: 12px; }
+                    }
+                }
+
+                .joinMo{     
+                    margin-left: 5px;                   
+                    li{
+                        a{ font-size: 12px;}
+                    }
+                }
+
+                .snsMo{
+                    span{
+                        font: normal 12px/1 'arial';
+                    }
+                    ul{
+                        justify-content: space-around;
+
+                        li{
+                            a{ font-size: 15px; } 
+                        }
+                        
+                    }                        
+                }
+
+                p{
+                    font: 10px/1.1 'arial';
+                    color: #555;
+                }                    
+
+
+            }
+        }
+    }
+    
+    // intro------------------------------
+    #intro{
+        height: 50vh;
+        .swiper{
+            .swiper-wrapper{
+                .swiper-slide{
+                    .inner{
+                        .wrap{
+                            width: 80vw;
+                            padding: 50px 10px;
+    
+                            .con{
+                                h2{
+                                    font: normal 30px/1.2 'DM Serif Display';
+                                    margin-top: 0px;
+                                }
+                                p{
+                                    font: bold 12px/1.5 'Montserrat';
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // rooms------------------------------
+    #rooms{
+        height: calc(100vh - 50px);
+    
+        .inner{  
+            article{
+                width: 100%;
+                height: calc(100% / 3);
+                .wrap{
+                    float: left;
+                    .img{
+                        width: 50%;
+                        height: 100%;
+                    }
+                    .con{
+                        width: 50%;
+                        p{ font-size: 10px; }
+                        h2{
+                            font-size: 25px;
+                            margin-bottom: 30px;
+                        }
+                        a{
+                            display: inline-block;
+                            width: 100px;
+                            height: 30px;
+                            font: bold 10px/30px 'arial';
+                        }
+                    }                
+                }
+            }
+        }
+    }
+
+    // review------------------------------
+    //생각해보기...
+    #review{
+        padding: 50px 20px;
+        
+        .inner{
+            width: 100%;
+    
+            h2{ font-size: 25px; }
+            >p{
+                color: #777;
+                font: normal 12px/1 'arial';
+                margin-bottom: 20px;
+            }
+            .reviewMo{
+                display: block;
+                width: 100%;
+                padding: 30px 0;
+                position: relative;
+
+                article{
+                    width: 100%;
+                    padding: 30px 10px 20px 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background: rgba(255, 255, 255, 0.904);
+                    margin-bottom: 30px;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+                    img{
+                        width: 100px;
+                        height: 100px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        
+                    }
+                    .con{
+                        width: calc(100% - 130px);
+                        h4{
+                            font: normal 18px/1 'dm serif display';
+                            letter-spacing: 1px;
+                            color: #555;
+                            margin-bottom: 10px;
+                        }
+                        p{
+                            width: 80%;
+                            font: normal 14px/1.4 'arial';
+                            color: #777;
+                            margin-bottom: 20px;
+                            display:-webkit-box; word-wrap:break-word; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; text-overflow:ellipsis; line-height:18px; height:54px; 
+                        }
+                        span{
+                            display: block;
+                            text-align: right;
+                            font: 10px/1 'arial';
+                            color: #999;
+                            margin-right: 20px;
+                        }
+                    }
+                }
+
+                a{
+                    font: 12px/1 'arial';
+                    text-align: center;
+                    color: #fff;
+                    line-height: 30px;
+                    display: block;
+                    width: 100px;
+                    height: 30px;
+                    background: rgba(75, 105, 100, 0.8);
+                    position: absolute;
+                    bottom: 10px;
+                    right: 30px;
+                    transition: 0.5s;
+
+                    &:hover{
+                        background: rgba(75, 105, 100, 1);
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+    // video------------------------------
+    #video{
+        height: 25vh;
+    }
+    // insta------------------------------
+    // 사진 스와이퍼말고 사진첩 형식으로 변경?..
+    #insta{
+        height: 600px;
+        padding: 50px 30px;
+
+        .inner{
+            width: 100%;
+            height: 0px;
+            
+            h2{ font: normal 30px/1 'DM Serif Display'; }
+            p{ font: 15px/1 'arial'; }
+            .wrap{
+                width: 100%;
+               // border: 3px solid orange;
+
+                .instaSwiper{
+                    width: 100%;
+                    height: 350px;
+                    .swiper-wrapper{
+                        .swiper-slide{
+                            img{
+                                width: 20vw;
+                                height: 250px;
+                                object-fit: cover;
+                            }
+    
+                        }
+    
+                    }
+    
+                    .swiper-pagination, 
+                    .swiper-pagination-progressbar, 
+                    .swiper-pagination-horizontal{
+                        width: 100%;
+                        height: 4px;
+                        left: 0;
+                        top: 95%;
+                    }
+    
+                    .swiper-pagination-progressbar{
+                        width: 50%;
+    
+                    }
+
+                    }
+    
+                }
+    
+            }
+        }
+    
+    // footer------------------------------
+    #footer, #footer_sub{
+        .inner{
+            .wrap_util{
+                width: 50%;
+
+                ul{
+                    &:nth-of-type(2){ display: none;}
+                    margin-right: 40px;
+    
+                    li{
+                        a{ font: 11px/1 'arial'; }
+                    }
+                }
+            }
+            .wrap_news{
+                width: 50%;
+                span{ font-size: 12px;}
+            }
+        }
+    }
 }
 
-@media screen and(max-width:$mobile){
+@media screen and(max-width:539px){
     
 }

@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vipp hotel | LOCATION</title>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=79c0df25605b0f7facb1369d9be6fe68"></script>
     <script src="https://kit.fontawesome.com/4f772438c6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/main.js"></script>
+    <script defer src="js/location.js"></script>
 </head>
 <body>
 <!-- header -->
-    <header id="header_sub">
+    <header id="header">
         <div class="inner">
             <div class="wrap">
                 <h1>
@@ -64,7 +66,7 @@
                             <a href="youtube.html">YOUTUBE</a>
                         </li>
                         <li>
-                            <a href="community.html">COMMUNITY</a>
+                            <a href="notice.html">NOTICE</a>
                         </li>
                         <li>
                             <a href="gallery.html">GALLERY</a>
@@ -115,14 +117,29 @@
 
         </div>
     </header>
+
 <!-- main -->
-    <section class="content">
+    <section class="content location">
         <div class="sub_visual"></div>
         <div class="inner">
-            <h1>location <span>location</span></h1>
-            <!-- 컨텐츠 들어가는 부분 -->
+            <h1>location</h1>
+            <div class="map"></div>
+            <ul class="traffic">
+                <li>
+                    <a href="#">교통정보 보기</a>
+                </li>
+                <li class="on">
+                    <a href="#">교통정보 끄기</a>
+                </li>
+            </ul>
+            <ul class="branch">
+                <li class="on" data-index="0"><a href="#">본점</a></li>
+                <li data-index="1"><a href="#">지점1</a></li>
+                <li data-index="2"><a href="#">지점2</a></li>
+            </ul>            
         </div>
     </section>
+
 <!-- footer -->
     <footer id="footer_sub">
         <div class="inner">

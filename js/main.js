@@ -25,6 +25,7 @@ const body = document.querySelector("body");
 const header = document.querySelector("#header")
 const btnCall = header.querySelector(".btnCall");
 const menuMo = header.querySelector(".menuMo");
+
 console.log(menuMo);
 
 btnCall.addEventListener("click", e=>{

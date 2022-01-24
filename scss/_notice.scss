@@ -1,25 +1,28 @@
 .notice{
-    .inner{
+    .sub_visual{
+        background:#eee;
+        position: relative;
+        padding: 50px;
         h1{
-            font: 50px/1 'DM Serif Display';
-            text-align: center;
+            font: 30px/1 'DM Serif Display';
+            position: absolute;
+            bottom: 20px;
         }
+    }
+    .inner{
+        
         table{
             width: 100%;
             padding: 20px;
             th{
                 text-align: left;
-                font: 30px/1'DM Serif Display';
+                font: 20px/1 'arial';
                 color: #444;
                 padding: 20px 0;
-
-                .arrow{
-                    
-                }
             }
             td{
                 text-align: left;
-                font: 15px/1.5 'arial';
+                font: 12px/1.5 'arial';
                 color: #777;
                 padding: 0 20px;
                 display: none;

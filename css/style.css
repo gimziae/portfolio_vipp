@@ -25,77 +25,77 @@ fieldset {
   border: none;
 }
 
-#header_sub {
+#header {
   width: 100%;
   height: 50px;
   overflow: hidden;
 }
-#header_sub .inner {
+#header .inner {
   width: 1180px;
   height: 100%;
   margin: 0 auto;
   position: relative;
 }
-#header_sub .inner h1 {
+#header .inner h1 {
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
 }
-#header_sub .inner h1 a {
+#header .inner h1 a {
   font: bold 30px/1 "DM Serif Display";
   color: #333;
   letter-spacing: 2px;
 }
-#header_sub .inner .menuWeb {
+#header .inner .menuWeb {
   display: block;
 }
-#header_sub .inner .menuWeb #gnbWeb {
+#header .inner .menuWeb #gnbWeb {
   position: absolute;
   top: 50%;
   left: 100px;
   transform: translateY(-50%);
   display: block;
 }
-#header_sub .inner .menuWeb #gnbWeb li {
+#header .inner .menuWeb #gnbWeb li {
   float: left;
   margin-left: 60px;
 }
-#header_sub .inner .menuWeb #gnbWeb li a {
+#header .inner .menuWeb #gnbWeb li a {
   font: bold 12px/1 "arial";
   color: #a0a0a0;
   transition: 0.25s;
 }
-#header_sub .inner .menuWeb #gnbWeb li:hover a {
+#header .inner .menuWeb #gnbWeb li:hover a {
   color: #333;
 }
-#header_sub .inner .menuWeb .joinWeb {
+#header .inner .menuWeb .joinWeb {
   position: absolute;
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
 }
-#header_sub .inner .menuWeb .joinWeb li {
+#header .inner .menuWeb .joinWeb li {
   float: left;
   margin-left: 30px;
 }
-#header_sub .inner .menuWeb .joinWeb li a {
+#header .inner .menuWeb .joinWeb li a {
   font: normal 12px/1 "arial";
   color: #999;
   transition: 0.5s;
 }
-#header_sub .inner .menuWeb .joinWeb li a i {
+#header .inner .menuWeb .joinWeb li a i {
   margin-right: 5px;
   font-size: 15px;
   transform: translateY(2px);
 }
-#header_sub .inner .menuWeb .joinWeb li:hover a {
+#header .inner .menuWeb .joinWeb li:hover a {
   color: #333;
 }
-#header_sub .inner .btnCall {
+#header .inner .btnCall {
   display: none;
 }
-#header_sub .inner .menuMo {
+#header .inner .menuMo {
   display: none;
 }
 
@@ -107,7 +107,6 @@ fieldset {
 .content .sub_visual {
   width: 100%;
   height: 200px;
-  background: #bbb;
   margin-bottom: 50px;
 }
 .content .inner {
@@ -261,9 +260,15 @@ fieldset {
   color: #333;
 }
 
-.notice .inner h1 {
-  font: 50px/1 "DM Serif Display";
-  text-align: center;
+.notice .sub_visual {
+  background: #eee;
+  position: relative;
+  padding: 50px;
+}
+.notice .sub_visual h1 {
+  font: 30px/1 "DM Serif Display";
+  position: absolute;
+  bottom: 20px;
 }
 .notice .inner table {
   width: 100%;
@@ -271,13 +276,13 @@ fieldset {
 }
 .notice .inner table th {
   text-align: left;
-  font: 30px/1 "DM Serif Display";
+  font: 20px/1 "arial";
   color: #444;
   padding: 20px 0;
 }
 .notice .inner table td {
   text-align: left;
-  font: 15px/1.5 "arial";
+  font: 12px/1.5 "arial";
   color: #777;
   padding: 0 20px;
   display: none;
@@ -398,36 +403,108 @@ fieldset {
   padding: 20px 30px 0;
 }
 
+.location::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.location .inner #map {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+}
+.location .inner .traffic {
+  float: left;
+}
+.location .inner .traffic li {
+  float: left;
+  margin-right: 20px;
+}
+.location .inner .traffic li a {
+  display: block;
+  width: 200px;
+  height: 40px;
+  background: #555;
+  font: bold 12px/40px "맑은 고딕";
+  color: #fff;
+  text-align: center;
+  border: 1px solid #555;
+}
+.location .inner .traffic li.on a {
+  background: #333;
+}
+.location .inner .branch {
+  float: right;
+}
+.location .inner .branch li {
+  float: left;
+  margin-left: 10px;
+}
+.location .inner .branch li a {
+  display: block;
+  width: 100px;
+  height: 40px;
+  background: #555;
+  font: bold 12px/40px "맑은 고딕";
+  color: #fff;
+  text-align: center;
+  border: 1px solid #555;
+  border-radius: 20px;
+}
+.location .inner .branch li.on a {
+  background: #fff;
+  color: #333;
+}
+
+.youtube .sub_visual {
+  background: #eee;
+}
+.youtube .sub_visual > .inner {
+  width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.youtube .sub_visual > .inner h1 {
+  font: 40px/1 "DM Serif Display";
+}
 .youtube .inner .vidList {
   width: 100%;
 }
 .youtube .inner .vidList article {
-  width: 100%;
-  padding: 30px 50px;
+  width: 580px;
+  padding: 50px 0;
+  margin-right: 20px;
   border-bottom: 1px solid #ddd;
-  display: flex;
-  justify-items: space-between;
-  align-items: flex-start;
+  float: left;
+}
+.youtube .inner .vidList article:nth-of-type(2n) {
+  margin-right: 0;
 }
 .youtube .inner .vidList article .pic {
-  width: 50%;
-  height: 60%;
+  width: 100%;
   display: block;
-  border: 3px solid red;
-  margin-right: 30px;
+  padding: 30px;
+  border: 1px solid #eee;
+  margin-bottom: 10px;
+  filter: grayscale(0.7);
+  transition: 0.5s;
 }
 .youtube .inner .vidList article .pic .thumb {
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
+.youtube .inner .vidList article .pic:hover {
+  filter: grayscale(0);
+}
 .youtube .inner .vidList article .con {
-  border: 3px solid green;
-  width: 50%;
+  width: 100%;
+  padding: 10px 30px;
 }
 .youtube .inner .vidList article .con h2 {
-  font: bold 25px/1 "DM Serif Display";
-  letter-spacing: 1px;
+  font: bold 20px/1 "arial";
+  text-align: center;
 }
 .youtube .inner figure.pop {
   width: 100%;
@@ -941,32 +1018,32 @@ fieldset {
 }
 
 @media screen and (max-width: 1179px) {
-  #header .inner, #header_sub .inner {
+  #header .inner {
     width: 100%;
   }
-  #header .inner h1, #header_sub .inner h1 {
+  #header .inner h1 {
     left: 30px;
   }
-  #header .inner h1 a, #header_sub .inner h1 a {
+  #header .inner h1 a {
     font-size: 25px;
   }
-  #header .inner .menuWeb #gnbWeb, #header_sub .inner .menuWeb #gnbWeb {
+  #header .inner .menuWeb #gnbWeb {
     top: 60%;
   }
-  #header .inner .menuWeb #gnbWeb li, #header_sub .inner .menuWeb #gnbWeb li {
+  #header .inner .menuWeb #gnbWeb li {
     float: left;
     margin-left: 30px;
   }
-  #header .inner .menuWeb #gnbWeb li a, #header_sub .inner .menuWeb #gnbWeb li a {
+  #header .inner .menuWeb #gnbWeb li a {
     font-size: 11px;
   }
-  #header .inner .menuWeb .joinWeb, #header_sub .inner .menuWeb .joinWeb {
+  #header .inner .menuWeb .joinWeb {
     top: 60%;
   }
-  #header .inner .menuWeb .joinWeb li, #header_sub .inner .menuWeb .joinWeb li {
+  #header .inner .menuWeb .joinWeb li {
     margin-left: 20px;
   }
-  #header .inner .menuWeb .joinWeb li a, #header_sub .inner .menuWeb .joinWeb li a {
+  #header .inner .menuWeb .joinWeb li a {
     font-size: 11px;
   }
 
@@ -1141,7 +1218,7 @@ fieldset {
   }
 }
 @media screen and (max-width: 949px) {
-  #header, #header_sub {
+  #header {
     height: 50px;
     position: fixed;
     top: 0;
@@ -1149,13 +1226,13 @@ fieldset {
     background: #fff;
     z-index: 2;
   }
-  #header .inner > h1 a, #header_sub .inner > h1 a {
+  #header .inner > h1 a {
     font-size: 25px;
   }
-  #header .inner .menuWeb, #header_sub .inner .menuWeb {
+  #header .inner .menuWeb {
     display: none;
   }
-  #header .inner .btnCall, #header_sub .inner .btnCall {
+  #header .inner .btnCall {
     position: absolute;
     right: 30px;
     top: 50%;
@@ -1165,7 +1242,7 @@ fieldset {
     display: block;
     z-index: 4;
   }
-  #header .inner .btnCall::before, #header_sub .inner .btnCall::before {
+  #header .inner .btnCall::before {
     content: "";
     display: block;
     width: 100%;
@@ -1176,7 +1253,7 @@ fieldset {
     left: 0;
     transition: top 0.5s 0s, transform 0.5s 0.5s;
   }
-  #header .inner .btnCall::after, #header_sub .inner .btnCall::after {
+  #header .inner .btnCall::after {
     content: "";
     display: block;
     width: 100%;
@@ -1187,7 +1264,7 @@ fieldset {
     left: 0;
     transition: transform 0.5s 0.5s, bottom 0.5s 0s;
   }
-  #header .inner .btnCall span, #header_sub .inner .btnCall span {
+  #header .inner .btnCall span {
     display: block;
     width: 100%;
     height: 2px;
@@ -1199,21 +1276,21 @@ fieldset {
     text-indent: -999999px;
     transition: all 1s;
   }
-  #header .inner .btnCall.on::before, #header_sub .inner .btnCall.on::before {
+  #header .inner .btnCall.on::before {
     top: 50%;
     margin-top: -1px;
     transform: rotate(-225deg);
   }
-  #header .inner .btnCall.on::after, #header_sub .inner .btnCall.on::after {
+  #header .inner .btnCall.on::after {
     bottom: 50%;
     margin-bottom: -1px;
     transform: rotate(225deg);
   }
-  #header .inner .btnCall.on span, #header_sub .inner .btnCall.on span {
+  #header .inner .btnCall.on span {
     transform: scale(0);
     opacity: 0;
   }
-  #header .inner .menuMo, #header_sub .inner .menuMo {
+  #header .inner .menuMo {
     display: block;
     position: fixed;
     top: 0;
@@ -1225,14 +1302,14 @@ fieldset {
     z-index: 5;
     transition: 1s;
   }
-  #header .inner .menuMo.on, #header_sub .inner .menuMo.on {
+  #header .inner .menuMo.on {
     left: 0;
   }
-  #header .inner .menuMo > h1, #header_sub .inner .menuMo > h1 {
+  #header .inner .menuMo > h1 {
     top: 80px;
     margin-left: 10px;
   }
-  #header .inner .menuMo > h1::after, #header_sub .inner .menuMo > h1::after {
+  #header .inner .menuMo > h1::after {
     content: "";
     display: block;
     width: 200px;
@@ -1241,15 +1318,15 @@ fieldset {
     margin-top: 10px;
     margin-left: -10px;
   }
-  #header .inner .menuMo #gnbMo, #header_sub .inner .menuMo #gnbMo {
+  #header .inner .menuMo #gnbMo {
     margin-top: 75px;
     margin-left: 5px;
   }
-  #header .inner .menuMo #gnbMo li, #header_sub .inner .menuMo #gnbMo li {
+  #header .inner .menuMo #gnbMo li {
     transform-origin: left center;
     transition: 1s;
   }
-  #header .inner .menuMo #gnbMo li::after, #header_sub .inner .menuMo #gnbMo li::after {
+  #header .inner .menuMo #gnbMo li::after {
     content: "";
     display: block;
     width: 1px;
@@ -1258,69 +1335,69 @@ fieldset {
     opacity: 0;
     transition: 0.5s;
   }
-  #header .inner .menuMo #gnbMo li a, #header_sub .inner .menuMo #gnbMo li a {
+  #header .inner .menuMo #gnbMo li a {
     display: block;
     width: 100%;
     padding: 20px 0;
     font: bold 14px/1 "arial";
     color: #555;
   }
-  #header .inner .menuMo #gnbMo li:hover, #header_sub .inner .menuMo #gnbMo li:hover {
+  #header .inner .menuMo #gnbMo li:hover {
     transform: scaleX(1.1);
   }
-  #header .inner .menuMo #gnbMo li:hover::after, #header_sub .inner .menuMo #gnbMo li:hover::after {
+  #header .inner .menuMo #gnbMo li:hover::after {
     width: 100px;
     opacity: 1;
   }
-  #header .inner .menuMo .joinMo, #header_sub .inner .menuMo .joinMo {
+  #header .inner .menuMo .joinMo {
     margin-left: 5px;
   }
-  #header .inner .menuMo .joinMo li a, #header_sub .inner .menuMo .joinMo li a {
+  #header .inner .menuMo .joinMo li a {
     display: block;
     padding: 20px 0;
     font: normal 14px/1 "arial";
     color: #777;
   }
-  #header .inner .menuMo .joinMo li a:hover, #header_sub .inner .menuMo .joinMo li a:hover {
+  #header .inner .menuMo .joinMo li a:hover {
     color: #111;
   }
-  #header .inner .menuMo .snsMo, #header_sub .inner .menuMo .snsMo {
+  #header .inner .menuMo .snsMo {
     width: 100%;
     position: absolute;
     left: 0;
     bottom: 100px;
     text-align: center;
   }
-  #header .inner .menuMo .snsMo span, #header_sub .inner .menuMo .snsMo span {
+  #header .inner .menuMo .snsMo span {
     font: normal 14px/1 "arial";
     color: #777;
     display: block;
     margin-bottom: 15px;
   }
-  #header .inner .menuMo .snsMo ul, #header_sub .inner .menuMo .snsMo ul {
+  #header .inner .menuMo .snsMo ul {
     width: 60%;
     height: 30px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
   }
-  #header .inner .menuMo .snsMo ul li, #header_sub .inner .menuMo .snsMo ul li {
+  #header .inner .menuMo .snsMo ul li {
     float: left;
     margin-right: 30px;
     line-height: 30px;
   }
-  #header .inner .menuMo .snsMo ul li:last-child, #header_sub .inner .menuMo .snsMo ul li:last-child {
+  #header .inner .menuMo .snsMo ul li:last-child {
     margin-right: 0;
   }
-  #header .inner .menuMo .snsMo ul li a, #header_sub .inner .menuMo .snsMo ul li a {
+  #header .inner .menuMo .snsMo ul li a {
     font-size: 20px;
     color: #777;
     transition: 0.25s;
   }
-  #header .inner .menuMo .snsMo ul li a:hover, #header_sub .inner .menuMo .snsMo ul li a:hover {
+  #header .inner .menuMo .snsMo ul li a:hover {
     color: #333;
   }
-  #header .inner .menuMo p, #header_sub .inner .menuMo p {
+  #header .inner .menuMo p {
     position: absolute;
     bottom: 50px;
     left: 50%;
@@ -1367,7 +1444,6 @@ fieldset {
 
   #review {
     padding: 50px 20px;
-    height: 100vh;
   }
   #review .inner {
     width: 100%;
@@ -1387,7 +1463,7 @@ fieldset {
   #review .inner .reviewMo {
     display: block;
     width: 100%;
-    padding: 20px 0;
+    padding: 50px 0;
     position: relative;
   }
   #review .inner .reviewMo article {
@@ -1416,9 +1492,10 @@ fieldset {
     margin-bottom: 10px;
   }
   #review .inner .reviewMo article .con p {
-    font: normal 14px/1.4 "arial";
+    font: normal 12px/1.5 "arial";
     color: #777;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    width: 80%;
   }
   #review .inner .reviewMo article .con span {
     display: block;
@@ -1428,37 +1505,22 @@ fieldset {
     margin-right: 20px;
   }
   #review .inner .reviewMo a {
-    font: bold 20px/1 "arial";
-    color: #555;
-    line-height: 100px;
-    display: flex;
-  }
-  #review .inner .reviewMo a span {
-    border: 1px solid red;
+    font: 12px/1 "arial";
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+    display: block;
     width: 100px;
-    height: 100px;
+    height: 30px;
+    background: rgba(75, 105, 100, 0.8);
     position: absolute;
+    bottom: 10px;
+    right: 30px;
+    transition: 0.5s;
   }
-  #review .inner .reviewMo a span::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #555;
-    position: absolute;
-    top: calc(50% - 1px);
-    left: 0;
-    transform: translate(45deg);
-  }
-  #review .inner .reviewMo a span::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #555;
-    position: absolute;
-    bottom: calc(50% - 1px);
-    left: 0;
+  #review .inner .reviewMo a:hover {
+    background: #4b6964;
+    font-size: 13px;
   }
 
   #video {
@@ -1466,6 +1528,7 @@ fieldset {
   }
 
   #insta {
+    height: 600px;
     padding: 50px 30px;
   }
   #insta .inner {
@@ -1486,8 +1549,8 @@ fieldset {
     height: 350px;
   }
   #insta .inner .wrap .instaSwiper .swiper-wrapper .swiper-slide img {
-    width: 200px;
-    height: 300px;
+    width: 20vw;
+    height: 250px;
     object-fit: cover;
   }
   #insta .inner .wrap .instaSwiper .swiper-pagination,
@@ -1504,17 +1567,20 @@ fieldset {
 
   #footer, #footer_sub {
     width: 100%;
-    height: 350px;
+    height: 230px;
     overflow: hidden;
   }
   #footer .inner, #footer_sub .inner {
     width: 100%;
-    padding: 50px 30px 50px;
+    padding: 30px;
+  }
+  #footer .inner h1, #footer_sub .inner h1 {
+    display: none;
   }
   #footer .inner .wrap_util, #footer_sub .inner .wrap_util {
-    width: 500px;
+    width: 60%;
     height: 200px;
-    top: 120px;
+    top: 40px;
     left: 30px;
   }
   #footer .inner .wrap_util::after, #footer_sub .inner .wrap_util::after {
@@ -1530,21 +1596,257 @@ fieldset {
     font: 12px/1 "arial";
   }
   #footer .inner .wrap_news, #footer_sub .inner .wrap_news {
-    width: 300px;
+    width: 40%;
+    position: absolute;
+    top: 50px;
   }
   #footer .inner .wrap_news span, #footer_sub .inner .wrap_news span {
-    margin-bottom: 30px;
-  }
-  #footer .inner .wrap_news input, #footer_sub .inner .wrap_news input {
+    font-size: 14px;
     margin-bottom: 20px;
   }
+  #footer .inner .wrap_news input::placeholder, #footer_sub .inner .wrap_news input::placeholder {
+    font-size: 10px;
+  }
   #footer .inner .wrap_news a, #footer_sub .inner .wrap_news a {
-    width: 80px;
-    height: 30px;
-    font: normal 12px/30px "arial";
+    width: 70px;
+    height: 25px;
+    font: normal 10px/25px "arial";
   }
   #footer .inner p, #footer .inner .sns, #footer_sub .inner p, #footer_sub .inner .sns {
     display: none;
+  }
+}
+@media screen and (max-width: 749px) {
+  #header {
+    height: 35px;
+  }
+  #header .inner h1 a {
+    font-size: 18px;
+  }
+  #header .inner .btnCall {
+    width: 15px;
+    height: 15px;
+  }
+  #header .inner .btnCall::before, #header .inner .btnCall::after {
+    height: 1px;
+  }
+  #header .inner .btnCall span {
+    margin-top: 0;
+    height: 1px;
+  }
+  #header .inner .menuMo #gnbMo li a {
+    font-size: 12px;
+  }
+  #header .inner .menuMo .joinMo {
+    margin-left: 5px;
+  }
+  #header .inner .menuMo .joinMo li a {
+    font-size: 12px;
+  }
+  #header .inner .menuMo .snsMo span {
+    font: normal 12px/1 "arial";
+  }
+  #header .inner .menuMo .snsMo ul {
+    justify-content: space-around;
+  }
+  #header .inner .menuMo .snsMo ul li a {
+    font-size: 15px;
+  }
+  #header .inner .menuMo p {
+    font: 10px/1.1 "arial";
+    color: #555;
+  }
+
+  #intro {
+    height: 50vh;
+  }
+  #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap {
+    width: 80vw;
+    padding: 50px 10px;
+  }
+  #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap .con h2 {
+    font: normal 30px/1.2 "DM Serif Display";
+    margin-top: 0px;
+  }
+  #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap .con p {
+    font: bold 12px/1.5 "Montserrat";
+  }
+
+  #rooms {
+    height: calc(100vh - 50px);
+  }
+  #rooms .inner article {
+    width: 100%;
+    height: 33.3333333333%;
+  }
+  #rooms .inner article .wrap {
+    float: left;
+  }
+  #rooms .inner article .wrap .img {
+    width: 50%;
+    height: 100%;
+  }
+  #rooms .inner article .wrap .con {
+    width: 50%;
+  }
+  #rooms .inner article .wrap .con p {
+    font-size: 10px;
+  }
+  #rooms .inner article .wrap .con h2 {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  #rooms .inner article .wrap .con a {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    font: bold 10px/30px "arial";
+  }
+
+  #review {
+    padding: 50px 20px;
+  }
+  #review .inner {
+    width: 100%;
+  }
+  #review .inner h2 {
+    font-size: 25px;
+  }
+  #review .inner > p {
+    color: #777;
+    font: normal 12px/1 "arial";
+    margin-bottom: 20px;
+  }
+  #review .inner .reviewMo {
+    display: block;
+    width: 100%;
+    padding: 30px 0;
+    position: relative;
+  }
+  #review .inner .reviewMo article {
+    width: 100%;
+    padding: 30px 10px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.904);
+    margin-bottom: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  #review .inner .reviewMo article img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  #review .inner .reviewMo article .con {
+    width: calc(100% - 130px);
+  }
+  #review .inner .reviewMo article .con h4 {
+    font: normal 18px/1 "dm serif display";
+    letter-spacing: 1px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  #review .inner .reviewMo article .con p {
+    width: 80%;
+    font: normal 14px/1.4 "arial";
+    color: #777;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    word-wrap: break-word;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 18px;
+    height: 54px;
+  }
+  #review .inner .reviewMo article .con span {
+    display: block;
+    text-align: right;
+    font: 10px/1 "arial";
+    color: #999;
+    margin-right: 20px;
+  }
+  #review .inner .reviewMo a {
+    font: 12px/1 "arial";
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+    display: block;
+    width: 100px;
+    height: 30px;
+    background: rgba(75, 105, 100, 0.8);
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+    transition: 0.5s;
+  }
+  #review .inner .reviewMo a:hover {
+    background: #4b6964;
+    font-size: 13px;
+  }
+
+  #video {
+    height: 25vh;
+  }
+
+  #insta {
+    height: 600px;
+    padding: 50px 30px;
+  }
+  #insta .inner {
+    width: 100%;
+    height: 0px;
+  }
+  #insta .inner h2 {
+    font: normal 30px/1 "DM Serif Display";
+  }
+  #insta .inner p {
+    font: 15px/1 "arial";
+  }
+  #insta .inner .wrap {
+    width: 100%;
+  }
+  #insta .inner .wrap .instaSwiper {
+    width: 100%;
+    height: 350px;
+  }
+  #insta .inner .wrap .instaSwiper .swiper-wrapper .swiper-slide img {
+    width: 20vw;
+    height: 250px;
+    object-fit: cover;
+  }
+  #insta .inner .wrap .instaSwiper .swiper-pagination,
+#insta .inner .wrap .instaSwiper .swiper-pagination-progressbar,
+#insta .inner .wrap .instaSwiper .swiper-pagination-horizontal {
+    width: 100%;
+    height: 4px;
+    left: 0;
+    top: 95%;
+  }
+  #insta .inner .wrap .instaSwiper .swiper-pagination-progressbar {
+    width: 50%;
+  }
+
+  #footer .inner .wrap_util, #footer_sub .inner .wrap_util {
+    width: 50%;
+  }
+  #footer .inner .wrap_util ul, #footer_sub .inner .wrap_util ul {
+    margin-right: 40px;
+  }
+  #footer .inner .wrap_util ul:nth-of-type(2), #footer_sub .inner .wrap_util ul:nth-of-type(2) {
+    display: none;
+  }
+  #footer .inner .wrap_util ul li a, #footer_sub .inner .wrap_util ul li a {
+    font: 11px/1 "arial";
+  }
+  #footer .inner .wrap_news, #footer_sub .inner .wrap_news {
+    width: 50%;
+  }
+  #footer .inner .wrap_news span, #footer_sub .inner .wrap_news span {
+    font-size: 12px;
   }
 }
 
