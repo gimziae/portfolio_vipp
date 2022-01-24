@@ -5,7 +5,7 @@
 @import "reset.scss";
 @import "sublayout.scss";
 @import "notice.scss";
-@import "department.scss";
+@import "about.scss";
 @import "gallery.scss";
 @import "join.scss";
 @import "location.scss";
@@ -102,7 +102,7 @@
 // intro------------------------------
 #intro{
     width: 100%;
-    height: 80vh;
+    height: calc(100vh - 50px);
     overflow: hidden;
     .swiper{
         height: 100%;
