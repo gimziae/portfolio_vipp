@@ -351,6 +351,7 @@ fieldset {
   left: 50%;
   transform: translate(-25%, -50%);
   z-index: 2;
+  border-top-left-radius: 40px;
 }
 .about .inner .about .wrap article > .con h3 {
   font: bold 25px/1 "arial";
@@ -392,6 +393,8 @@ fieldset {
   top: 50%;
   left: 50%;
   transform: translate(-75%, -50%);
+  border-top-left-radius: 0px;
+  border-top-right-radius: 40px;
 }
 .about .inner .about .wrap:nth-of-type(2) article > .con h3 {
   text-align: right;
@@ -457,16 +460,19 @@ fieldset {
   margin-bottom: 50px;
 }
 .about .inner .service .wrap article {
-  width: 380px;
+  width: 360px;
   height: 400px;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   float: left;
-  margin-right: 20px;
+  margin-right: 50px;
   position: relative;
   transition: 0.5s;
 }
 .about .inner .service .wrap article:hover {
   border-color: coral;
+}
+.about .inner .service .wrap article:hover .con h4 {
+  color: #ff7c4d;
 }
 .about .inner .service .wrap article:last-child {
   margin-right: 0;
@@ -476,7 +482,7 @@ fieldset {
   height: 200px;
   border: 1px solid black;
   border-radius: 50%;
-  margin-left: 90px;
+  margin-left: 80px;
   margin-top: 30px;
   margin-bottom: 10px;
 }
@@ -488,9 +494,11 @@ fieldset {
 .about .inner .service .wrap article .con h4 {
   font: bold 25px/1 "arial";
   margin-bottom: 10px;
+  color: #777;
+  transition: 0.5s;
 }
 .about .inner .service .wrap article .con p {
-  font: normal 14px/1.4 "arial";
+  font: normal 12px/1.4 "arial";
   color: #aaa;
 }
 .about .inner > h3 {
@@ -1097,11 +1105,47 @@ fieldset {
   width: 100%;
   height: 40vh;
   overflow: hidden;
+  position: relative;
 }
 #video video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+#video .con {
+  width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 100px 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#video .con h1 {
+  font: normal 40px/1 "DM Serif Display";
+  color: #fff;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+#video .con p {
+  font: normal 15px/1.5 "arial";
+  color: #eee;
+  margin-bottom: 50px;
+}
+#video .con a {
+  display: inline-block;
+  width: 300px;
+  height: 30px;
+  border: 1px solid #ddd;
+  font: normal 12px/30px "arial";
+  color: #ddd;
+  transition: 0.5s;
+}
+#video .con a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
 }
 
 #insta {

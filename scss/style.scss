@@ -341,12 +341,46 @@
     width: 100%;
     height: 40vh;
     overflow: hidden;
-
+    position: relative;
 
     video{
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+    .con{
+        width: 1180px; height: 100%;
+        margin: 0 auto;
+        padding: 100px 200px;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        h1{
+            font: normal 40px/1 'DM Serif Display';
+            color: #fff;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+        }
+        p{
+            font: normal 15px/1.5 'arial';
+            color: #eee;
+            margin-bottom: 50px;
+        }
+        a{
+            display: inline-block;
+            width: 300px; height: 30px;
+            border: 1px solid #ddd;
+            font: normal 12px/30px 'arial';
+            color: #ddd;
+            transition: .5s;
+
+            &:hover{
+                background: rgba(255, 255, 255, .3);
+                color: #fff;
+            }
+        }
     }
 }
 
