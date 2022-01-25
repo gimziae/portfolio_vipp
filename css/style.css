@@ -279,7 +279,7 @@ fieldset {
 
 .about .sub_visual {
   width: 100%;
-  height: 50vh;
+  height: 40vh;
   background: url(../img/history.jpeg) no-repeat center/cover fixed;
 }
 .about .sub_visual > .wrap {
@@ -303,8 +303,8 @@ fieldset {
   margin-bottom: 20px;
 }
 .about .sub_visual > .wrap .con p {
-  color: #eee;
-  font: normal 14px/1.4 "arial";
+  color: #ddd;
+  font: normal 13px/1.4 "arial";
   letter-spacing: 1px;
 }
 .about .inner .about {
@@ -355,7 +355,7 @@ fieldset {
   font: bold 25px/1 "arial";
   letter-spacing: 1px;
   margin-bottom: 20px;
-  color: #555;
+  color: #444;
   transition: 0.7s;
 }
 .about .inner .about .wrap article > .con h3::after {
@@ -370,7 +370,7 @@ fieldset {
 }
 .about .inner .about .wrap article > .con p {
   font: normal 14px/1.5 "arial";
-  color: #666;
+  color: #777;
   text-align: left;
 }
 .about .inner .about .wrap article > .con p::before {
@@ -774,6 +774,9 @@ fieldset {
   font: bold 12px/1 "arial";
   color: #a0a0a0;
   transition: 0.25s;
+}
+#header .inner .menuWeb #gnbWeb li.on a {
+  color: #333;
 }
 #header .inner .menuWeb #gnbWeb li:hover a {
   color: #333;

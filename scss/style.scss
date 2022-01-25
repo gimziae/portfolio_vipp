@@ -55,8 +55,13 @@
                         transition: 0.25s;
                     }
 
+                    &.on{
+                        a{
+                            color: #333;
+                        }
+                    }
                     &:hover a{
-                    color: #333;
+                        color: #333;
                     }
                 }
             }
