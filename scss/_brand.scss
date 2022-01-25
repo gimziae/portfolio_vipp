@@ -1,0 +1,91 @@
+.brand{
+    .sub_visual{
+        background: url(../img/youtube.jpeg) no-repeat center/cover fixed;
+    }
+    .inner{
+        width: 1180px;
+        margin: 0 auto;
+
+        .story{
+            width: 100%;
+            height: 50vh;
+            background: #ddd;
+        }
+
+        .vidList{
+            width: 100%;
+            padding: 100px 0;
+            article{
+                width: 280px;
+                height: 280px;
+                padding: 20px;
+                margin-right: 20px;
+                margin-bottom: 50px;
+                border-top: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+                float: left;
+
+                &:nth-of-type(4n){
+                    margin-right: 0;
+                }
+
+                .pic{
+                    width: 100%;
+                    display: block;
+                    margin-bottom: 10px;
+                    filter: grayscale(0.7);
+                    transition: 0.5s;
+
+
+                    .thumb{
+                        width: 100%;
+                        object-fit: cover;
+                    }
+
+                    &:hover{
+                        filter: grayscale(0);
+
+                    }
+                }
+                .con{
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid red;
+                    h2{
+                        font: bold 14px/1 'arial';
+                        color: #555;
+                    }
+                    p{
+                        font: normal 11px/1.2 'arial';
+                        color: #777;
+                    }
+                }
+            }
+
+            .pop{
+                width: 100%; height: 100vh;
+                position: fixed;
+                top: 0; left: 0;
+                background: rgba(0,0,0,0.5);
+                padding: 5vw;
+                overflow-x: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 5;
+
+                .vidPlay{
+                    width: 80vw;
+                    height: 80vh;
+                }
+                .btnClose{
+                    position: absolute;
+                    top: 50px;
+                    right: 50px;
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }   
+        }
+    }
+}    
