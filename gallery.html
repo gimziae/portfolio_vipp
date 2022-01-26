@@ -9,6 +9,7 @@
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/main.js"></script>
+    <script defer src="js/flickr.js"></script>
 </head>
 <body>
 <!-- header -->
@@ -121,14 +122,30 @@
         <div class="sub_visual">
             <div class="wrap">
                 <div class="con">
-                    <h2>Gallery</h2>
-                    <p>sub title</p>
+                    <h2>GALLERY</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, veritatis.</p>
                 </div>
             </div>
         </div>
         <div class="inner">
+            <article id="searchBox">
+                <input type="text" id="search" placeholder="Enter a word to search.">
+                <button class="btnSearch">Search</button>
+            </article>
 
-            <!-- 컨텐츠 들어가는 부분 -->
+            <article id="wrap">
+                <img src="img/loading.gif" class="loading" alt="">
+                <ul id="list">
+                <!-- <li class="item">
+                        <div>
+                            <a href="큰이미지주소">
+                                <img src="썸네일 이미지 주소" alt="">
+                            </a>
+                            <p>이미지 제목</p>
+                        </div>
+                    </li> -->
+                </ul>
+            </article>
         </div>
     </section>
 <!-- footer -->

@@ -611,7 +611,72 @@ fieldset {
 }
 
 .gallery .sub_visual {
-  background: url(../img/youtube.jpeg) no-repeat center/cover fixed;
+  background: url(../img/about.jpg) no-repeat center/cover fixed;
+}
+.gallery .inner {
+  width: 1180px;
+  margin: 0 auto;
+  padding: 50px 0 100px 0;
+}
+.gallery .inner #searchBox {
+  width: 100%;
+  padding: 0 30px;
+}
+.gallery .inner #wrap {
+  width: 100%;
+}
+.gallery .inner #wrap .loading {
+  width: 100px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  transition: 1s;
+}
+.gallery .inner #wrap .loading.off {
+  opacity: 0;
+}
+.gallery .inner #wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.gallery .inner #wrap #list {
+  width: 100%;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1s;
+}
+.gallery .inner #wrap #list.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+.gallery .inner #wrap #list .item {
+  float: left;
+  width: 25%;
+  padding: 20px;
+}
+.gallery .inner #wrap #list .item div {
+  width: 100%;
+  padding: 10px;
+  float: left;
+  border-bottom: 2px solid #ddd;
+}
+.gallery .inner #wrap #list .item div a img {
+  border: 1px solid #aaa;
+  width: 100%;
+  padding: 10px;
+  filter: blur(0.5);
+}
+.gallery .inner #wrap #list .item div p {
+  font: 12px/1 "arial";
+  letter-spacing: 1px;
+  color: #777;
+  margin-top: 10px;
+  text-align: center;
+}
+.gallery .inner #wrap #list .item div:hover a > img {
+  filter: grayscale(0);
 }
 
 .join .inner {
@@ -792,7 +857,7 @@ fieldset {
 .brand .inner h3 {
   font: normal 30px/1 "DM Serif display";
   letter-spacing: 1px;
-  padding: 50px 0 0 0;
+  padding: 50px 0 20px 0;
   color: #333;
 }
 .brand .inner h3 span {
@@ -888,7 +953,7 @@ fieldset {
   height: 600px;
   background: #efefef;
   margin-bottom: 100px;
-  padding: 30px;
+  padding: 50px;
   position: relative;
 }
 .brand .inner .kitchen .wrap {
@@ -914,15 +979,15 @@ fieldset {
   right: 0;
 }
 .brand .inner .kitchen .con {
-  width: 45%;
+  width: 40%;
   height: 80%;
   float: right;
-  padding: 50px;
+  padding: 70px;
   background: rgba(255, 255, 255, 0.7);
   text-align: center;
   position: absolute;
   top: 50%;
-  right: 30px;
+  right: 70px;
   transform: translateY(-50%);
 }
 .brand .inner .kitchen .con h4 {
@@ -939,7 +1004,7 @@ fieldset {
   display: inline-block;
   font: normal 11px/30px "arial";
   color: #fff;
-  margin-top: 80px;
+  margin-top: 50px;
   background: rgba(75, 105, 100, 0.85);
   transition: 1s;
 }
@@ -950,11 +1015,11 @@ fieldset {
   width: 100%;
   height: 600px;
   background: #efefef;
-  padding: 30px;
+  padding: 50px;
   position: relative;
 }
 .brand .inner .furniture .con {
-  width: 45%;
+  width: 40%;
   height: 60%;
   float: left;
   padding: 50px;
@@ -962,7 +1027,7 @@ fieldset {
   text-align: center;
   position: absolute;
   top: 50%;
-  left: 30px;
+  left: 70px;
   transform: translateY(-50%);
 }
 .brand .inner .furniture .con h4 {

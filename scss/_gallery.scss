@@ -1,5 +1,83 @@
 .gallery{
     .sub_visual{
-        background: url(../img/youtube.jpeg) no-repeat center/cover fixed;
+        background: url(../img/about.jpg) no-repeat center/cover fixed;
+    }
+    .inner{
+        width: 1180px;
+        margin: 0 auto;
+        padding: 50px 0 100px 0;
+        #searchBox{
+            width: 100%;
+            padding: 0 30px;
+        }
+        #wrap{
+            width: 100%;
+
+            .loading{
+                width: 100px;
+                position: fixed;
+                top: 50%; 
+                left: 50%;
+                transform: translate(-50%, 10%);
+                transition: 1s;
+
+                &.off{
+                    opacity: 0;
+                }
+            }
+    
+            &::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            #list{
+                width: 100%;
+                opacity: 0;
+                transform: translateY(100px);
+                transition: 1s;
+
+                &.on{
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+    
+                .item{
+                    float: left;
+                    width: calc(100% / 4);
+                    padding: 20px;
+    
+                    div{
+                        width: 100%;
+                        padding: 10px;
+                        float: left;
+                        //border-top: 2px solid #ddd;
+                        border-bottom: 2px solid #ddd;
+    
+                        a{
+                            
+                            img{
+                                border: 1px solid #aaa;
+                                width: 100%;
+                                padding: 10px;
+                                filter: blur(0.5);
+                            }
+                        }
+                        p{
+                            font: 12px/1 'arial';
+                            letter-spacing: 1px;
+                            color: #777;
+                            margin-top: 10px;
+                            text-align: center;
+                        }
+                        &:hover a{
+                            >img{
+                                filter: grayscale(0);
+                            }
+                        }   
+                    }
+                }
+            }
+        } 
     }
 }
