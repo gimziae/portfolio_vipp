@@ -787,55 +787,75 @@ fieldset {
 .brand .inner {
   width: 1180px;
   margin: 0 auto;
+  position: relative;
 }
-.brand .inner .story {
-  width: 100%;
-  height: 50vh;
-  background: #ddd;
+.brand .inner h3 {
+  font: normal 30px/1 "DM Serif display";
+  letter-spacing: 1px;
+  padding: 50px 0 0 0;
+  color: #333;
+}
+.brand .inner h3 span {
+  font: normal 15px/1 "arial";
+  margin-left: 10px;
+  color: #999;
 }
 .brand .inner .vidList {
   width: 100%;
-  padding: 100px 0;
+  height: 400px;
+  padding: 30px 0 50px;
 }
 .brand .inner .vidList article {
   width: 280px;
-  height: 280px;
-  padding: 20px;
+  height: 250px;
+  padding: 10px;
   margin-right: 20px;
   margin-bottom: 50px;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
   float: left;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .brand .inner .vidList article:nth-of-type(4n) {
   margin-right: 0;
 }
 .brand .inner .vidList article .pic {
+  width: 260px;
+  height: 145px;
+}
+.brand .inner .vidList article .pic:hover a {
+  filter: grayscale(0);
+}
+.brand .inner .vidList article .pic a {
   width: 100%;
+  height: 100%;
   display: block;
-  margin-bottom: 10px;
-  filter: grayscale(0.7);
+  filter: grayscale(0.8);
   transition: 0.5s;
 }
 .brand .inner .vidList article .pic .thumb {
   width: 100%;
   object-fit: cover;
 }
-.brand .inner .vidList article .pic:hover {
-  filter: grayscale(0);
-}
 .brand .inner .vidList article .con {
   width: 100%;
-  padding: 10px;
-  border: 1px solid red;
+  position: relative;
+}
+.brand .inner .vidList article .con::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #aaa;
+  position: absolute;
+  top: -10px;
 }
 .brand .inner .vidList article .con h2 {
-  font: bold 14px/1 "arial";
+  font: normal 14px/1.3 "arial";
   color: #555;
-}
-.brand .inner .vidList article .con p {
-  font: normal 11px/1.2 "arial";
-  color: #777;
+  text-align: center;
 }
 .brand .inner .vidList .pop {
   width: 100%;
@@ -861,6 +881,132 @@ fieldset {
   right: 50px;
   color: #fff;
   cursor: pointer;
+  font-size: 25px;
+}
+.brand .inner .kitchen {
+  width: 100%;
+  height: 600px;
+  background: #efefef;
+  margin-bottom: 100px;
+  padding: 30px;
+  position: relative;
+}
+.brand .inner .kitchen .wrap {
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+.brand .inner .kitchen .wrap img {
+  object-fit: cover;
+  position: absolute;
+}
+.brand .inner .kitchen .wrap img:nth-of-type(1) {
+  width: 60%;
+  height: 80%;
+  top: 0;
+  left: 0;
+}
+.brand .inner .kitchen .wrap img:nth-of-type(2) {
+  width: 60%;
+  height: 80%;
+  top: 20%;
+  right: 0;
+}
+.brand .inner .kitchen .con {
+  width: 45%;
+  height: 80%;
+  float: right;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+}
+.brand .inner .kitchen .con h4 {
+  font: normal 30px/1 "dm serif display";
+  margin-bottom: 30px;
+}
+.brand .inner .kitchen .con p {
+  font: normal 12px/1.5 "arial";
+  color: #999;
+}
+.brand .inner .kitchen .con a {
+  width: 60%;
+  height: 30px;
+  display: inline-block;
+  font: normal 11px/30px "arial";
+  color: #fff;
+  margin-top: 80px;
+  background: rgba(75, 105, 100, 0.85);
+  transition: 1s;
+}
+.brand .inner .kitchen .con a:hover {
+  background: #4b6964;
+}
+.brand .inner .furniture {
+  width: 100%;
+  height: 600px;
+  background: #efefef;
+  padding: 30px;
+  position: relative;
+}
+.brand .inner .furniture .con {
+  width: 45%;
+  height: 60%;
+  float: left;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+}
+.brand .inner .furniture .con h4 {
+  font: normal 30px/1 "dm serif display";
+  margin-bottom: 30px;
+}
+.brand .inner .furniture .con p {
+  font: normal 12px/1.5 "arial";
+  color: #999;
+}
+.brand .inner .furniture .con a {
+  width: 60%;
+  height: 30px;
+  display: inline-block;
+  font: normal 11px/30px "arial";
+  color: #fff;
+  margin-top: 40px;
+  background: rgba(75, 105, 100, 0.85);
+  transition: 1s;
+}
+.brand .inner .furniture .con a:hover {
+  background: #4b6964;
+}
+.brand .inner .furniture .wrap {
+  width: 50%;
+  height: 100%;
+  float: right;
+  position: relative;
+}
+.brand .inner .furniture .wrap img {
+  object-fit: cover;
+  position: absolute;
+}
+.brand .inner .furniture .wrap img:nth-of-type(1) {
+  width: 55%;
+  height: 70%;
+  top: 25%;
+  left: 5%;
+}
+.brand .inner .furniture .wrap img:nth-of-type(2) {
+  width: 55%;
+  height: 70%;
+  top: 5%;
+  right: 0;
 }
 
 #header {

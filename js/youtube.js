@@ -26,8 +26,8 @@ fetch(url)
     items.map(item=>{
 
         let title = item.snippet.title;
-        if(title.length > 40){
-            title = title.substr(0, 40)+"...";
+        if(title.length > 60){
+            title = title.substr(0, 60)+"...";
         }
 
         let description = item.snippet.description;
@@ -37,12 +37,13 @@ fetch(url)
 
         result += `
                 <article>
-                    <a href="${item.snippet.resourceId.videoId}" class="pic">
-                        <img src="${item.snippet.thumbnails.medium.url}" class="thumb">        
-                    </a>
+                    <div class="pic">
+                        <a href="${item.snippet.resourceId.videoId}">
+                            <img src="${item.snippet.thumbnails.medium.url}" class="thumb">        
+                        </a>
+                    </div>
                     <div class="con">
                         <h2>${title}</h2>
-                        <span></span
                     </div>
                     
                 </article>
@@ -62,7 +63,7 @@ vidList.addEventListener("click", e=>{
     pop.classList.add("pop"); 
     pop.innerHTML = `
                     <iframe src="https://www.youtube.com/embed/${vidId}" frameborder="0" allowfullscreen class="vidPlay"></iframe>
-                    <span class="btnClose">close</span>
+                    <span class="btnClose"><i class="far fa-window-close"></i></span>
                     `; 
 
     vidList.append(pop); 
