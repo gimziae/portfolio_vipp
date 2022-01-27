@@ -5,7 +5,7 @@
     .inner{
         width: 1180px;
         margin: 0 auto;
-        padding: 50px 0 100px 0;
+        padding: 30px 0 100px 0;
         #searchBox{
             width: 100%;
             padding: 0 30px;
@@ -46,6 +46,7 @@
                     float: left;
                     width: calc(100% / 4);
                     padding: 20px;
+                    
     
                     div{
                         width: 100%;
@@ -53,14 +54,13 @@
                         float: left;
                         //border-top: 2px solid #ddd;
                         border-bottom: 2px solid #ddd;
+                        box-shadow: 5px 5px 10px rgba(102, 102, 102, 0.1);
     
                         a{
-                            
                             img{
-                                border: 1px solid #aaa;
+                                border: 1px solid #ccc;
                                 width: 100%;
                                 padding: 10px;
-                                filter: blur(0.5);
                             }
                         }
                         p{
@@ -69,15 +69,64 @@
                             color: #777;
                             margin-top: 10px;
                             text-align: center;
-                        }
-                        &:hover a{
-                            >img{
-                                filter: grayscale(0);
-                            }
                         }   
                     }
                 }
             }
         } 
+    }
+}
+
+@media screen and (max-width:1179px){
+    .gallery{
+        .inner{
+            width: 100%;
+            padding: 30px 0 100px 0;
+
+            #wrap{
+                width: 100%;
+
+                #list{
+                    .item{
+                        width: calc(100% / 3);
+                        padding: 20px;
+        
+                        div{
+                            p{ font: 11px/1 'arial'; }
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+@media screen and (max-width:949px){
+    
+}
+@media screen and (max-width:749px){
+    .gallery{
+        .inner{
+            #wrap{
+                #list{
+                    .item{
+                        width: calc(100% / 2);
+                        padding: 10px;
+                    }
+                }
+            } 
+        }
+    }
+}
+@media screen and (max-width:449px){
+    .gallery{
+        .inner{
+            #wrap{
+                #list{
+                    .item{
+                        width: calc(100% / 1);
+                    }
+                }
+            } 
+        }
     }
 }

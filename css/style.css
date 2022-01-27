@@ -616,7 +616,7 @@ fieldset {
 .gallery .inner {
   width: 1180px;
   margin: 0 auto;
-  padding: 50px 0 100px 0;
+  padding: 30px 0 100px 0;
 }
 .gallery .inner #searchBox {
   width: 100%;
@@ -661,12 +661,12 @@ fieldset {
   padding: 10px;
   float: left;
   border-bottom: 2px solid #ddd;
+  box-shadow: 5px 5px 10px rgba(102, 102, 102, 0.1);
 }
 .gallery .inner #wrap #list .item div a img {
-  border: 1px solid #aaa;
+  border: 1px solid #ccc;
   width: 100%;
   padding: 10px;
-  filter: blur(0.5);
 }
 .gallery .inner #wrap #list .item div p {
   font: 12px/1 "arial";
@@ -675,10 +675,34 @@ fieldset {
   margin-top: 10px;
   text-align: center;
 }
-.gallery .inner #wrap #list .item div:hover a > img {
-  filter: grayscale(0);
-}
 
+@media screen and (max-width: 1179px) {
+  .gallery .inner {
+    width: 100%;
+    padding: 30px 0 100px 0;
+  }
+  .gallery .inner #wrap {
+    width: 100%;
+  }
+  .gallery .inner #wrap #list .item {
+    width: 33.3333333333%;
+    padding: 20px;
+  }
+  .gallery .inner #wrap #list .item div p {
+    font: 11px/1 "arial";
+  }
+}
+@media screen and (max-width: 749px) {
+  .gallery .inner #wrap #list .item {
+    width: 50%;
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 449px) {
+  .gallery .inner #wrap #list .item {
+    width: 100%;
+  }
+}
 .join .inner {
   width: 1180px;
   margin: 0 auto;
