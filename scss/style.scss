@@ -109,6 +109,7 @@
     width: 100%;
     height: calc(100vh - 50px);
     overflow: hidden;
+
     .swiper{
         height: 100%;
         .swiper-wrapper{
@@ -673,7 +674,7 @@
     
     // intro------------------------------
     #intro{
-        height: 70vh;
+        height: calc(100vh - 50px);
         .swiper{
             .swiper-wrapper{
                 .swiper-slide{
@@ -789,7 +790,47 @@
 
     // video------------------------------
     #video{
-        height: 25vh;
+        height: 30vh;
+  
+        video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .con{
+            width: 100%; height: 100%;
+            margin: 0 auto;
+            padding: 50px 150px;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+    
+            h1{
+                font: normal 30px/1 'DM Serif Display';
+                color: #fff;
+                letter-spacing: 3px;
+                margin-bottom: 30px;
+            }
+            p{
+                font: normal 15px/1.5 'arial';
+                color: #eee;
+                margin-bottom: 30px;
+            }
+            a{
+                display: inline-block;
+                width: 300px; height: 25px;
+                border: 1px solid #ddd;
+                font: normal 11px/25px 'arial';
+                color: #ddd;
+                transition: .5s;
+    
+                &:hover{
+                    background: rgba(255, 255, 255, .3);
+                    color: #fff;
+                }
+            }
+        }
     }
 
     // insta------------------------------
@@ -1111,7 +1152,7 @@
     
     // intro------------------------------
     #intro{
-        height: 50vh;
+        height: 100vh;
         .swiper{
             .swiper-wrapper{
                 .swiper-slide{
@@ -1139,7 +1180,7 @@
     
     // rooms------------------------------
     #rooms{
-        height: calc(100vh - 50px);
+        height: 100vh;
     
         .inner{  
             article{
@@ -1252,7 +1293,13 @@
     }
     // video------------------------------
     #video{
-        height: 25vh;
+        .con{
+            padding: 50px 100px;
+    
+            h1{ font: normal 30px/1 'DM Serif Display'; }
+            p{ font: normal 12px/1.5 'arial'; }
+            a{ font: normal 10px/25px 'arial'; }
+        }
     }
     // insta------------------------------
     // 사진 스와이퍼말고 사진첩 형식으로 변경?..
@@ -1417,7 +1464,7 @@
     
     // intro------------------------------
     #intro{
-        height: 50vh;
+        height: 100vh;
         .swiper{
             .swiper-wrapper{
                 .swiper-slide{
@@ -1445,7 +1492,7 @@
     
     // rooms------------------------------
     #rooms{
-        height: calc(100vh - 50px);
+        height: 100vh;
     
         .inner{  
             article{
@@ -1561,7 +1608,11 @@
     }
     // video------------------------------
     #video{
-        height: 25vh;
+        .con{
+            padding: 100px 100px;
+    
+            p{ display: none;}
+        }
     }
     // insta------------------------------
     // 사진 스와이퍼말고 사진첩 형식으로 변경?..

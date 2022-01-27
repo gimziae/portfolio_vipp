@@ -108,15 +108,18 @@ fieldset {
   width: 100%;
   height: 40vh;
   background: url(../img/swiper1.jpg);
+  position: relative;
 }
 .content .sub_visual .wrap {
   width: 1180px;
-  height: 100%;
-  margin: 0 auto;
-  position: relative;
+  padding: 40px 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .content .sub_visual .wrap .con {
-  width: 50%;
+  width: 60%;
   padding: 30px;
   position: absolute;
   top: 50%;
@@ -294,35 +297,7 @@ fieldset {
 }
 
 .about .sub_visual {
-  width: 100%;
-  height: 40vh;
   background: url(../img/history.jpeg) no-repeat center/cover fixed;
-}
-.about .sub_visual > .wrap {
-  width: 1180px;
-  height: 100%;
-  margin: 0 auto;
-  position: relative;
-}
-.about .sub_visual > .wrap .con {
-  width: 50%;
-  padding: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.about .sub_visual > .wrap .con h2 {
-  font: normal 40px/1 "DM Serif Display";
-  letter-spacing: 5px;
-  color: #fff;
-  margin-bottom: 20px;
-}
-.about .sub_visual > .wrap .con p {
-  color: #efefef;
-  font: normal 13px/1.4 "arial";
-  letter-spacing: 1px;
 }
 .about .inner .about {
   width: 1180px;
@@ -1658,7 +1633,7 @@ fieldset {
   }
 
   #intro {
-    height: 70vh;
+    height: calc(100vh - 50px);
   }
   #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap {
     width: 80vw;
@@ -1746,7 +1721,47 @@ fieldset {
   }
 
   #video {
-    height: 25vh;
+    height: 30vh;
+  }
+  #video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #video .con {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 50px 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  #video .con h1 {
+    font: normal 30px/1 "DM Serif Display";
+    color: #fff;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+  }
+  #video .con p {
+    font: normal 15px/1.5 "arial";
+    color: #eee;
+    margin-bottom: 30px;
+  }
+  #video .con a {
+    display: inline-block;
+    width: 300px;
+    height: 25px;
+    border: 1px solid #ddd;
+    font: normal 11px/25px "arial";
+    color: #ddd;
+    transition: 0.5s;
+  }
+  #video .con a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
   }
 
   #insta {
@@ -2017,7 +2032,7 @@ fieldset {
   }
 
   #intro {
-    height: 50vh;
+    height: 100vh;
   }
   #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap {
     width: 80vw;
@@ -2032,7 +2047,7 @@ fieldset {
   }
 
   #rooms {
-    height: calc(100vh - 50px);
+    height: 100vh;
   }
   #rooms .inner article {
     width: 100%;
@@ -2133,8 +2148,17 @@ fieldset {
     font-size: 13px;
   }
 
-  #video {
-    height: 25vh;
+  #video .con {
+    padding: 50px 100px;
+  }
+  #video .con h1 {
+    font: normal 30px/1 "DM Serif Display";
+  }
+  #video .con p {
+    font: normal 12px/1.5 "arial";
+  }
+  #video .con a {
+    font: normal 10px/25px "arial";
   }
 
   #insta {
@@ -2268,7 +2292,7 @@ fieldset {
   }
 
   #intro {
-    height: 50vh;
+    height: 100vh;
   }
   #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap {
     width: 80vw;
@@ -2283,7 +2307,7 @@ fieldset {
   }
 
   #rooms {
-    height: calc(100vh - 50px);
+    height: 100vh;
   }
   #rooms .inner article {
     width: 100%;
@@ -2398,8 +2422,11 @@ fieldset {
     font-size: 13px;
   }
 
-  #video {
-    height: 25vh;
+  #video .con {
+    padding: 100px 100px;
+  }
+  #video .con p {
+    display: none;
   }
 
   #insta {
