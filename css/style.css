@@ -106,7 +106,7 @@ fieldset {
 }
 .content .sub_visual {
   width: 100%;
-  height: 40vh;
+  height: 30vh;
   background: url(../img/swiper1.jpg);
   position: relative;
 }
