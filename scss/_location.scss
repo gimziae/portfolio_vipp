@@ -7,15 +7,19 @@
         clear: both;
     }
     .inner{
+        width: 1180px;
+        margin-top: 50px;
+
         #map{
             width: 100%;
             height: 500px;
-            border: 1px solid #000;
-            margin-bottom: 20px;
+            border: 1px solid #000;            
         }
         
-        .traffic{
+        .branch{
             float: left;
+            margin-bottom: 20px;
+            
 
             li{
                 float: left;
@@ -23,42 +27,18 @@
 
                 a{
                     display: block;
-                    width: 200px;
-                    height: 40px;
-                    background: #555;
-                    font: bold 12px/40px '맑은 고딕';
+                    width: 120px;
+                    height: 30px;
+                    background: rgba(75, 105, 100, 0.85);
+                    font: normal 12px/30px 'arial';
+                    letter-spacing: 2px;
                     color: #fff;
                     text-align: center;
-                    border: 1px solid #555;
+                    border: 1px solid rgba(75, 105, 100, 1);
                 }
 
                 &.on a{
-                    background: #333;
-                }
-            }
-        }
-        .branch{
-            float: right;
-
-            li{
-                float: left;
-                margin-left: 10px;
-
-                a{
-                    display: block;
-                    width: 100px;
-                    height: 40px;
-                    background: #555;
-                    font: bold 12px/40px '맑은 고딕';
-                    color: #fff;
-                    text-align: center;
-                    border: 1px solid #555;
-                    border-radius: 20px;
-                }
-
-                &.on a{
-                    background: #fff;
-                    color: #333;
+                    background: rgba(75, 105, 100, 1);
                 }
             }
         }
