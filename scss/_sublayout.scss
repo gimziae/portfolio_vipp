@@ -281,3 +281,59 @@
 
     }
 }
+
+@media screen and(max-width:1179px){
+// sub content------------------------------
+    .content{
+        .sub_visual{
+            .wrap{
+                width: 100%;
+            }
+        }
+    }
+}
+@media screen and(max-width:949px){
+// sub content------------------------------
+    .content{
+        padding: 35px 0 100px;
+
+
+        .sub_visual{
+            height: 15vh;
+            background: #efefef;
+
+            .wrap{
+                width: 100%;
+                padding: 40px 100px;
+                position: absolute;
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+                
+                .con{
+                    width: 60%;
+                    padding: 30px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+
+                    h2{
+                        font: normal 40px/1 'DM Serif Display';
+                        letter-spacing: 5px;
+                        color: #fff;
+                        margin-bottom: 20px;
+                    }
+                    p{ display: none; }                
+                }
+
+            }
+        }
+    }
+}
+@media screen and(max-width:749px){
+    
+}
+@media screen and(max-width:539px){
+    
+}

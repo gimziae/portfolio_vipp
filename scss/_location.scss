@@ -1,5 +1,7 @@
 .location{
-    .sub_visual{}
+    .sub_visual{
+        background: url(../img/location.jpg) no-repeat center/cover fixed;
+    }
 
     &::after{
         content: '';
@@ -8,26 +10,21 @@
     }
     .inner{
         width: 1180px;
-        margin-top: 50px;
+        padding: 30px 10px;
+        position: relative;
 
-        #map{
-            width: 100%;
-            height: 500px;
-            border: 1px solid #000;            
-        }
-        
         .branch{
             float: left;
             margin-bottom: 20px;
-            
+            position: relative;
 
             li{
                 float: left;
                 margin-right: 20px;
-
+                width: 200px;
                 a{
                     display: block;
-                    width: 120px;
+                    width: 100%;
                     height: 30px;
                     background: rgba(75, 105, 100, 0.85);
                     font: normal 12px/30px 'arial';
@@ -37,10 +34,163 @@
                     border: 1px solid rgba(75, 105, 100, 1);
                 }
 
-                &.on a{
-                    background: rgba(75, 105, 100, 1);
+                &.on a{ background: rgba(75, 105, 100, 1); }
+            }
+        }
+
+        #branchInfo{
+            width: 28%;
+            height: 400px;
+            float: right;
+            background: #f9f9f9;
+            padding: 20px;
+            position: relative;
+            top: 80px;
+            right: 20px;
+
+            article{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: none;
+                border: 1px solid rgba(75, 105, 100, 0.5);
+                padding: 40px;
+                width: 120%;
+                text-align: center;
+
+                &.on{ display: block; }
+
+                h3{
+                    font: bold 20px/1 'arial';
+                    color: #555;
+                    margin-bottom: 20px;
+                }
+                p{
+                    font: normal 16px/1.6 'roboto';
+                    color: #555;
+                }
+                em{ 
+                    font: normal 14px/1 'roboto'; 
+                    color: #777;
+                }
+
+
+            }
+
+        }
+        #map{
+            width: 60%;
+            height: 500px;
+            border: 1px solid #000;   
+            float: left;         
+        }
+
+    }
+}
+@media screen and(max-width:1179px){
+    .location{
+        .sub_visual{
+            background: url(../img/location.jpg) no-repeat center/cover fixed;
+        }
+        .inner{
+            width: 100%;
+            padding: 30px;
+    
+            .branch{    
+                li{ width: 150px; }
+            }
+
+            #branchInfo{
+                top: 50px;
+    
+                article{
+                    p{ font-size: 14px; }
+    
+                }
+            }    
+            #map{ height: 400px; }
+
+        }
+    }
+}
+@media screen and(max-width:949px){
+    .location{
+        .sub_visual{
+            background: url(../img/location.jpg) no-repeat center/cover fixed;
+        }
+        .inner{
+            .branch{
+                li{
+                    width: 120px;
+
+                    a{ 
+                        font-size: 11px;
+                    }
+                }
+            }
+            #branchInfo{
+                width: 100%;
+                height: 250px;
+                top: 0; right: 0;
+                margin-bottom: 20px;
+    
+                article{
+                    border: none;
+                    padding: 20px;
+                    width: 100%;
+
+                    h3{ font-size: 18px; }
+                    p{ font-size: 14px; }
+                    em{ font-size: 14px; }
+                }
+    
+            }
+            #map{ width: 100%; }
+
+        }
+    }  
+}
+@media screen and(max-width:749px){
+    .location{
+        .sub_visual{
+            background: url(../img/location.jpg) no-repeat center/cover fixed;
+        }
+        .inner{
+            .branch{
+                li{
+                    width: 100px;
+
+                    a{ font-size: 10px; }
+                }
+            }
+            #branchInfo{
+                article{
+
+                    h3{ font-size: 14px; }
+                    p{ font-size: 12px; }
+                    em{ font-size: 12px; }
+                }
+    
+            }
+            #map{ height: 400px; }
+        }
+    }   
+}
+@media screen and(max-width:539px){
+    .location{
+        .sub_visual{
+            background: url(../img/location.jpg) no-repeat center/cover fixed;
+        }
+        .inner{
+            .branch{
+                li{
+                    width: 80px;
+                    margin-right: 10px;
+
+                    a{ letter-spacing: 1px; }
                 }
             }
         }
-    }
+    }   
 }

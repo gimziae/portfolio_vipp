@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@100&family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@100&family=Roboto:wght@100;300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -263,6 +263,46 @@ fieldset {
   color: #333;
 }
 
+@media screen and (max-width: 1179px) {
+  .content .sub_visual .wrap {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 949px) {
+  .content {
+    padding: 35px 0 100px;
+  }
+  .content .sub_visual {
+    height: 15vh;
+    background: #efefef;
+  }
+  .content .sub_visual .wrap {
+    width: 100%;
+    padding: 40px 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .content .sub_visual .wrap .con {
+    width: 60%;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .content .sub_visual .wrap .con h2 {
+    font: normal 40px/1 "DM Serif Display";
+    letter-spacing: 5px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .content .sub_visual .wrap .con p {
+    display: none;
+  }
+}
 .notice .inner table {
   width: 100%;
   padding: 20px;
@@ -802,6 +842,9 @@ fieldset {
   padding: 20px 30px 0;
 }
 
+.location .sub_visual {
+  background: url(../img/location.jpg) no-repeat center/cover fixed;
+}
 .location::after {
   content: "";
   display: block;
@@ -809,24 +852,22 @@ fieldset {
 }
 .location .inner {
   width: 1180px;
-  margin-top: 50px;
-}
-.location .inner #map {
-  width: 100%;
-  height: 500px;
-  border: 1px solid #000;
+  padding: 30px 10px;
+  position: relative;
 }
 .location .inner .branch {
   float: left;
   margin-bottom: 20px;
+  position: relative;
 }
 .location .inner .branch li {
   float: left;
   margin-right: 20px;
+  width: 200px;
 }
 .location .inner .branch li a {
   display: block;
-  width: 120px;
+  width: 100%;
   height: 30px;
   background: rgba(75, 105, 100, 0.85);
   font: normal 12px/30px "arial";
@@ -838,7 +879,141 @@ fieldset {
 .location .inner .branch li.on a {
   background: #4b6964;
 }
+.location .inner #branchInfo {
+  width: 28%;
+  height: 400px;
+  float: right;
+  background: #f9f9f9;
+  padding: 20px;
+  position: relative;
+  top: 80px;
+  right: 20px;
+}
+.location .inner #branchInfo article {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  border: 1px solid rgba(75, 105, 100, 0.5);
+  padding: 40px;
+  width: 120%;
+  text-align: center;
+}
+.location .inner #branchInfo article.on {
+  display: block;
+}
+.location .inner #branchInfo article h3 {
+  font: bold 20px/1 "arial";
+  color: #555;
+  margin-bottom: 20px;
+}
+.location .inner #branchInfo article p {
+  font: normal 16px/1.6 "roboto";
+  color: #555;
+}
+.location .inner #branchInfo article em {
+  font: normal 14px/1 "roboto";
+  color: #777;
+}
+.location .inner #map {
+  width: 60%;
+  height: 500px;
+  border: 1px solid #000;
+  float: left;
+}
 
+@media screen and (max-width: 1179px) {
+  .location .sub_visual {
+    background: url(../img/location.jpg) no-repeat center/cover fixed;
+  }
+  .location .inner {
+    width: 100%;
+    padding: 30px;
+  }
+  .location .inner .branch li {
+    width: 150px;
+  }
+  .location .inner #branchInfo {
+    top: 50px;
+  }
+  .location .inner #branchInfo article p {
+    font-size: 14px;
+  }
+  .location .inner #map {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 949px) {
+  .location .sub_visual {
+    background: url(../img/location.jpg) no-repeat center/cover fixed;
+  }
+  .location .inner .branch li {
+    width: 120px;
+  }
+  .location .inner .branch li a {
+    font-size: 11px;
+  }
+  .location .inner #branchInfo {
+    width: 100%;
+    height: 250px;
+    top: 0;
+    right: 0;
+    margin-bottom: 20px;
+  }
+  .location .inner #branchInfo article {
+    border: none;
+    padding: 20px;
+    width: 100%;
+  }
+  .location .inner #branchInfo article h3 {
+    font-size: 18px;
+  }
+  .location .inner #branchInfo article p {
+    font-size: 14px;
+  }
+  .location .inner #branchInfo article em {
+    font-size: 14px;
+  }
+  .location .inner #map {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 749px) {
+  .location .sub_visual {
+    background: url(../img/location.jpg) no-repeat center/cover fixed;
+  }
+  .location .inner .branch li {
+    width: 100px;
+  }
+  .location .inner .branch li a {
+    font-size: 10px;
+  }
+  .location .inner #branchInfo article h3 {
+    font-size: 14px;
+  }
+  .location .inner #branchInfo article p {
+    font-size: 12px;
+  }
+  .location .inner #branchInfo article em {
+    font-size: 12px;
+  }
+  .location .inner #map {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 539px) {
+  .location .sub_visual {
+    background: url(../img/location.jpg) no-repeat center/cover fixed;
+  }
+  .location .inner .branch li {
+    width: 80px;
+    margin-right: 10px;
+  }
+  .location .inner .branch li a {
+    letter-spacing: 1px;
+  }
+}
 .brand .sub_visual {
   background: url(../img/youtube.jpeg) no-repeat center/cover fixed;
 }
@@ -1783,46 +1958,23 @@ fieldset {
     width: 50%;
   }
 
-  #footer, #footer_sub {
+  #footer .inner {
     width: 100%;
-    height: 450px;
-    overflow: hidden;
   }
-  #footer .inner, #footer_sub .inner {
-    width: 100%;
-    padding: 50px 30px 50px;
-  }
-  #footer .inner .wrap_util, #footer_sub .inner .wrap_util {
+  #footer .inner .wrap_util {
     width: 500px;
-    height: 200px;
-    top: 120px;
-    left: 30px;
+    left: 50px;
   }
-  #footer .inner .wrap_util::after, #footer_sub .inner .wrap_util::after {
-    width: 1000px;
-    bottom: -50px;
+  #footer .inner .wrap_util::after {
+    width: 100vw;
+    left: -50px;
   }
-  #footer .inner .wrap_util ul, #footer_sub .inner .wrap_util ul {
-    margin-right: 50px;
+  #footer .inner .wrap_util ul {
+    margin-right: 80px;
   }
-  #footer .inner .wrap_util ul li, #footer_sub .inner .wrap_util ul li {
-    margin-bottom: 25px;
-  }
-  #footer .inner .wrap_util ul li a, #footer_sub .inner .wrap_util ul li a {
-    font: 12px/1 "arial";
-  }
-  #footer .inner .wrap_news span, #footer_sub .inner .wrap_news span {
-    margin-bottom: 40px;
-  }
-  #footer .inner .wrap_news input, #footer_sub .inner .wrap_news input {
-    width: 90%;
-  }
-  #footer .inner .wrap_news a, #footer_sub .inner .wrap_news a {
-    width: 120px;
-    font: normal 15px/40px "arial";
-  }
-  #footer .inner p, #footer .inner .sns, #footer_sub .inner p, #footer_sub .inner .sns {
-    bottom: 30px;
+  #footer .inner .wrap_news {
+    width: 300px;
+    right: 50px;
   }
 }
 @media screen and (max-width: 949px) {
@@ -2182,54 +2334,27 @@ fieldset {
     width: 50%;
   }
 
-  #footer, #footer_sub {
+  #footer {
+    height: 250px;
+  }
+  #footer .inner {
     width: 100%;
-    height: 230px;
-    overflow: hidden;
   }
-  #footer .inner, #footer_sub .inner {
-    width: 100%;
-    padding: 30px;
-  }
-  #footer .inner h1, #footer_sub .inner h1 {
-    display: none;
-  }
-  #footer .inner .wrap_util, #footer_sub .inner .wrap_util {
-    width: 60%;
-    height: 200px;
-    top: 40px;
+  #footer .inner .wrap_util {
+    width: 500px;
     left: 30px;
   }
-  #footer .inner .wrap_util::after, #footer_sub .inner .wrap_util::after {
+  #footer .inner .wrap_util::after {
     display: none;
   }
-  #footer .inner .wrap_util ul, #footer_sub .inner .wrap_util ul {
+  #footer .inner .wrap_util ul {
     margin-right: 50px;
   }
-  #footer .inner .wrap_util ul li, #footer_sub .inner .wrap_util ul li {
-    margin-bottom: 20px;
+  #footer .inner .wrap_news {
+    width: 230px;
+    right: 30px;
   }
-  #footer .inner .wrap_util ul li a, #footer_sub .inner .wrap_util ul li a {
-    font: 12px/1 "arial";
-  }
-  #footer .inner .wrap_news, #footer_sub .inner .wrap_news {
-    width: 40%;
-    position: absolute;
-    top: 50px;
-  }
-  #footer .inner .wrap_news span, #footer_sub .inner .wrap_news span {
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-  #footer .inner .wrap_news input::placeholder, #footer_sub .inner .wrap_news input::placeholder {
-    font-size: 10px;
-  }
-  #footer .inner .wrap_news a, #footer_sub .inner .wrap_news a {
-    width: 70px;
-    height: 25px;
-    font: normal 10px/25px "arial";
-  }
-  #footer .inner p, #footer .inner .sns, #footer_sub .inner p, #footer_sub .inner .sns {
+  #footer .inner p, #footer .inner .sns {
     display: none;
   }
 }
@@ -2450,23 +2575,55 @@ fieldset {
     width: 50%;
   }
 
-  #footer .inner .wrap_util, #footer_sub .inner .wrap_util {
-    width: 50%;
+  #footer {
+    height: 240px;
   }
-  #footer .inner .wrap_util ul, #footer_sub .inner .wrap_util ul {
-    margin-right: 40px;
+  #footer .inner {
+    width: 100%;
   }
-  #footer .inner .wrap_util ul:nth-of-type(2), #footer_sub .inner .wrap_util ul:nth-of-type(2) {
+  #footer .inner .wrap_util {
+    width: 500px;
+    left: 30px;
+  }
+  #footer .inner .wrap_util::after {
     display: none;
   }
-  #footer .inner .wrap_util ul li a, #footer_sub .inner .wrap_util ul li a {
-    font: 11px/1 "arial";
+  #footer .inner .wrap_util ul {
+    margin-right: 40px;
   }
-  #footer .inner .wrap_news, #footer_sub .inner .wrap_news {
-    width: 50%;
+  #footer .inner .wrap_util ul:nth-of-type(2) {
+    display: none;
   }
-  #footer .inner .wrap_news span, #footer_sub .inner .wrap_news span {
-    font-size: 12px;
+  #footer .inner .wrap_util ul li {
+    margin-bottom: 20px;
+  }
+  #footer .inner .wrap_util ul li a {
+    font: normal 12px/1 "arial";
+  }
+  #footer .inner .wrap_news {
+    width: 200px;
+  }
+  #footer .inner .wrap_news span {
+    margin-bottom: 40px;
+    font: bold 12px/1 "arial";
+  }
+  #footer .inner .wrap_news input {
+    width: 100%;
+    height: 30px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #999;
+    margin-bottom: 30px;
+  }
+  #footer .inner .wrap_news a {
+    display: block;
+    width: 100px;
+    height: 25px;
+    background: rgba(75, 105, 100, 0.85);
+    font: normal 11px/25px "arial";
+  }
+  #footer .inner p, #footer .inner .sns {
+    display: none;
   }
 }
 
