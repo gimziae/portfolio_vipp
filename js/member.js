@@ -1,4 +1,4 @@
-const frame = document.querySelector(".member");
+const frame = document.querySelector(".member_info");
 
 console.log(frame);
 
