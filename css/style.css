@@ -439,13 +439,14 @@ fieldset {
 }
 .about .inner #service {
   width: 100%;
+  height: 800px;
   padding: 100px 0;
   background: #F9F9F9;
   margin-bottom: 100px;
 }
 .about .inner #service .wrap {
   width: 1180px;
-  height: 550px;
+  height: 100%;
   margin: 0 auto;
 }
 .about .inner #service .wrap h3 {
@@ -664,9 +665,11 @@ fieldset {
   .about .inner #about .wrap:nth-of-type(2) article > .con h3::after {
     top: 60px;
   }
+  .about .inner #service {
+    height: 700px;
+  }
   .about .inner #service .wrap {
     width: 100%;
-    height: 500px;
     padding: 0 30px;
   }
   .about .inner #service .wrap h3 {
@@ -724,6 +727,7 @@ fieldset {
     margin-bottom: 30px;
   }
   .about .inner #service {
+    height: 650px;
     padding: 80px 0;
     margin-bottom: 50px;
   }
@@ -752,6 +756,241 @@ fieldset {
   }
   .about .inner #member .member_info article p {
     font-size: 12px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .about .sub_visual {
+    background: url(../img/history.jpeg) no-repeat center/cover fixed;
+  }
+  .about .inner {
+    padding: 50px 0;
+  }
+  .about .inner #about .wrap {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 30px;
+  }
+  .about .inner #about .wrap article:hover .con h3 {
+    color: #fff;
+  }
+  .about .inner #about .wrap article:hover .con h3::after {
+    width: 50%;
+  }
+  .about .inner #about .wrap article img {
+    width: 100%;
+  }
+  .about .inner #about .wrap article > .con {
+    width: 90%;
+    height: 85%;
+    background: rgba(17, 17, 17, 0.5);
+    top: 15%;
+    left: 10%;
+    transform: translate(0%, 0%);
+  }
+  .about .inner #about .wrap article > .con h3 {
+    font: bold 20px/1 "arial";
+    color: #fff;
+  }
+  .about .inner #about .wrap article > .con h3::after {
+    background: rgba(238, 238, 238, 0.8);
+    width: 50%;
+    top: 60px;
+  }
+  .about .inner #about .wrap article > .con p {
+    font: normal 12px/1.5 "arial";
+    color: #ddd;
+  }
+  .about .inner #about .wrap:nth-of-type(2) article:hover .con h3::after {
+    width: 50%;
+  }
+  .about .inner #about .wrap:nth-of-type(2) article > .con {
+    float: left;
+    top: 15%;
+    left: 0;
+    transform: translate(0, 0);
+  }
+  .about .inner #about .wrap:nth-of-type(2) article > .con h3::after {
+    background: rgba(238, 238, 238, 0.8);
+    width: 50%;
+    top: 60px;
+    right: 30px;
+  }
+  .about .inner #service {
+    padding: 80px 0;
+    margin-bottom: 50px;
+    height: auto;
+    height: 880px;
+  }
+  .about .inner #service .wrap h3 {
+    font-size: 25px;
+  }
+  .about .inner #service .wrap h3::before {
+    font-size: 28px;
+  }
+  .about .inner #service .wrap article {
+    width: 100%;
+    height: 180px;
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+  .about .inner #service .wrap article .box {
+    width: 150px;
+    height: 150px;
+    float: left;
+    top: 50%;
+    left: 25px;
+    transform: translateY(-50%);
+  }
+  .about .inner #service .wrap article .con {
+    width: calc(100% - 175px);
+    padding: 30px;
+    right: 0;
+    bottom: 50%;
+    transform: translateY(50%);
+    text-align: left;
+  }
+  .about .inner #service .wrap article .con h4 {
+    font: bold 20px/1 "arial";
+    margin-bottom: 15px;
+  }
+  .about .inner #service .wrap article .con p {
+    font: normal 12px/1.4 "arial";
+    text-align: left;
+  }
+  .about .inner #member {
+    height: 500px;
+  }
+  .about .inner #member .member_title .wrap > h3 {
+    font-size: 25px;
+  }
+  .about .inner #member .member_title .wrap > h3::before {
+    font-size: 28px;
+  }
+  .about .inner #member .member_title .wrap p {
+    font-size: 12px;
+  }
+  .about .inner #member .member_info article {
+    height: 300px;
+    width: calc((100% - 20px) / 2);
+  }
+  .about .inner #member .member_info article:nth-of-type(2n) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 539px) {
+  .about .sub_visual {
+    background: url(../img/history.jpeg) no-repeat center/cover fixed;
+  }
+  .about .inner {
+    padding: 30px 0;
+  }
+  .about .inner #about {
+    padding: 0 20px;
+    height: 1000px;
+    margin-bottom: 20px;
+  }
+  .about .inner #about .wrap {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 30px;
+  }
+  .about .inner #about .wrap article img {
+    width: 100%;
+  }
+  .about .inner #about .wrap article > .con p {
+    font-size: 11px;
+  }
+  .about .inner #service {
+    padding: 60px 0;
+    margin-bottom: 0px;
+    height: 900px;
+  }
+  .about .inner #service .wrap {
+    padding: 0 20px;
+  }
+  .about .inner #service .wrap h3 {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+  .about .inner #service .wrap h3::before {
+    font-size: 22px;
+  }
+  .about .inner #service .wrap h3::after {
+    bottom: -30px;
+  }
+  .about .inner #service .wrap > p {
+    display: none;
+  }
+  .about .inner #service .wrap article {
+    width: 100%;
+    height: 220px;
+  }
+  .about .inner #service .wrap article .box {
+    width: 180px;
+    height: 120px;
+    border-radius: 60px;
+    float: left;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .about .inner #service .wrap article .con {
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    right: 0;
+    bottom: 0%;
+    transform: translateY(0%);
+    text-align: center;
+  }
+  .about .inner #service .wrap article .con h4 {
+    font: bold 20px/1 "arial";
+    margin-bottom: 15px;
+    color: #5f8c8c;
+  }
+  .about .inner #service .wrap article .con p {
+    display: none;
+  }
+  .about .inner #member {
+    height: auto;
+    padding: 20px;
+    margin-top: 0;
+  }
+  .about .inner #member .member_title {
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  .about .inner #member .member_title .wrap > h3 {
+    width: 100%;
+    font-size: 20px;
+  }
+  .about .inner #member .member_title .wrap > h3::before {
+    font-size: 22px;
+  }
+  .about .inner #member .member_title .wrap > h3::after {
+    bottom: -30px;
+  }
+  .about .inner #member .member_title .wrap p {
+    display: none;
+  }
+  .about .inner #member .member_info article {
+    height: 300px;
+    width: 100%;
+  }
+  .about .inner #member .member_info article:nth-of-type(n) {
+    margin-right: 0;
+  }
+  .about .inner #member .member_info article img {
+    filter: grayscale(0);
+  }
+  .about .inner #member .member_info article h2 {
+    font: bold 16px/1 "arial";
+    color: #555;
+    margin: 20px 0;
+    position: relative;
+  }
+  .about .inner #member .member_info article h2::after {
+    width: 80px;
   }
 }
 .gallery .sub_visual {
