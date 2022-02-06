@@ -195,7 +195,7 @@
             float: left;
             width: calc(100% / 3);
             height: 100%;
-            background: #efefef;
+            background: rgba(255, 255, 255, 0.7);
             position: relative;
 
             &:nth-of-type(2){ 
@@ -254,7 +254,7 @@
                     opacity: 0.7;
                     span{
                         font: bold 16px/1 'arial';
-
+                        letter-spacing: 1px;
                     }
                     p{
                         font: normal 14px/1.4 'arial';
@@ -268,7 +268,7 @@
                         background: rgba(60, 95, 90, 0.85);
                         font: normal 11px/30px 'arial';
                         letter-spacing: 1px;
-                        color: rgba(255, 255, 255, 0.85);
+                        color: rgb(255, 255, 255);
                         transition: 0.75s;
 
                         &:hover{
@@ -704,25 +704,23 @@
         }
     }
     
+
     // rooms------------------------------
     #rooms{
-        height: 400px;
-    
-        .inner{  
+        height: 600px;
+
+        .inner{
             article{
                 .wrap{
-                    .con{
-                        p{ font-size: 10px; }
-                        h2{
-                            font-size: 25px;
-                            margin-bottom: 30px;
-                        }
-                        a{
-                            display: inline-block;
-                            width: 100px;
-                            height: 30px;
-                            font: bold 10px/30px 'arial';
-                        }
+                    .con1{
+                        p{ font-size: 11px; }
+                        h2{ font-size: 30px; }                    
+                    }
+                    img{ width: 70%; }
+                    .con2{
+                        span{ display: block;}
+                        p{ display: none;}
+                        a{ margin-top: 30px; }
                     }                
                 }
             }
@@ -1135,25 +1133,21 @@
     
     // rooms------------------------------
     #rooms{
-        height: 100vh;
+        height: 700px;
     
-        .inner{  
+        .inner{
             article{
                 width: 100%;
-                height: calc(100% / 3);
+    
                 .wrap{
-                    .con{
-                        p{ font-size: 10px; }
-                        h2{
-                            font-size: 25px;
-                            margin-bottom: 30px;
-                        }
-                        a{
-                            display: inline-block;
-                            width: 100px;
-                            height: 30px;
-                            font: bold 10px/30px 'arial';
-                        }
+                    .con1{ top: 60px; }
+                    img{
+                        height: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+                    .con2{
+                        bottom: 60px;
+                        padding: 0 10px;           
                     }                
                 }
             }
@@ -1420,32 +1414,11 @@
     
     // rooms------------------------------
     #rooms{
-        height: 100vh;
-    
-        .inner{  
+        height: 600px;
+        .inner{
             article{
-                width: 100%;
-                height: calc(100% / 3);
                 .wrap{
-                    float: left;
-                    .img{
-                        width: 50%;
-                        height: 100%;
-                    }
-                    .con{
-                        width: 50%;
-                        p{ font-size: 10px; }
-                        h2{
-                            font-size: 25px;
-                            margin-bottom: 30px;
-                        }
-                        a{
-                            display: inline-block;
-                            width: 100px;
-                            height: 30px;
-                            font: bold 10px/30px 'arial';
-                        }
-                    }                
+                    img{ height: 40%; }             
                 }
             }
         }
@@ -1648,6 +1621,273 @@
 }
 
 @media screen and(max-width:539px){
+    // header------------------------------
+    #header{
+        height: 35px;
+
+        .inner{
+            h1{ left: 15px; }
+            .btnCall { right: 15px; }
+            .menuMo{   
+                #gnbMo {
+                    li{
+                        a{ font-size: 12px; }
+                    }
+                }
+
+                .joinMo{     
+                    margin-left: 5px;                   
+                    li{
+                        a{ font-size: 12px;}
+                    }
+                }
+
+                .snsMo{
+                    span{
+                        font: normal 12px/1 'arial';
+                    }
+                    ul{
+                        justify-content: space-around;
+
+                        li{
+                            a{ font-size: 15px; } 
+                        }
+                        
+                    }                        
+                }
+
+                p{
+                    font: 10px/1.1 'arial';
+                    color: #555;
+                }                    
+
+
+            }
+        }
+    }
     
+    // rooms------------------------------
+    #rooms{
+        height: 500px;
+        .inner{
+            article{
+                .wrap{
+                    .con1{ 
+                        h2{ font-size: 25px;}
+                    }
+                    img{ height: 40%; }     
+                    .con2{
+                        bottom: 40px;
+                        span{ font-size: 15px;}
+                        a{
+                            width: 100px; 
+                            font-size: 10px;
+                        }
+                    }        
+                }
+            }
+        }
+    }
+
+    // video------------------------------
+    #video{ display: none; }
+    
+    // review------------------------------
+    //생각해보기...
+    #review{
+        padding: 30px 20px;
+        
+        .inner{
+            width: 100%;
+    
+            h2{ font-size: 25px; }
+            >p{
+                color: #777;
+                font: normal 12px/1 'arial';
+                margin-bottom: 20px;
+            }
+            .reviewMo{
+                display: block;
+                width: 100%;
+                padding: 30px 0;
+                position: relative;
+
+                article{
+                    width: 100%;
+                    padding: 30px 10px 20px 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background: rgba(255, 255, 255, 0.904);
+                    margin-bottom: 30px;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+                    img{
+                        width: 100px;
+                        height: 100px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        
+                    }
+                    .con{
+                        width: calc(100% - 130px);
+                        h4{
+                            font: normal 18px/1 'dm serif display';
+                            letter-spacing: 1px;
+                            color: #555;
+                            margin-bottom: 10px;
+                        }
+                        p{
+                            width: 80%;
+                            font: normal 14px/1.4 'arial';
+                            color: #777;
+                            margin-bottom: 20px;
+                            display:-webkit-box; word-wrap:break-word; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; text-overflow:ellipsis; line-height:18px; height:54px; 
+                        }
+                        span{
+                            display: block;
+                            text-align: right;
+                            font: 10px/1 'arial';
+                            color: #999;
+                            margin-right: 20px;
+                        }
+                    }
+                }
+
+                a{
+                    font: 12px/1 'arial';
+                    text-align: center;
+                    color: #fff;
+                    line-height: 30px;
+                    display: block;
+                    width: 100px;
+                    height: 30px;
+                    background: rgba(75, 105, 100, 0.8);
+                    position: absolute;
+                    bottom: 0px;
+                    right: 10px;
+                    transition: 0.5s;
+
+                    &:hover{
+                        background: rgba(75, 105, 100, 1);
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+
+    // insta------------------------------
+    // 사진 스와이퍼말고 사진첩 형식으로 변경?..
+    #insta{
+        height: 600px;
+        padding: 50px 30px;
+
+        .inner{
+            width: 100%;
+            height: 0px;
+            
+            h2{ font: normal 30px/1 'DM Serif Display'; }
+            p{ font: 15px/1 'arial'; }
+            .wrap{
+                width: 100%;
+               // border: 3px solid orange;
+
+                .instaSwiper{
+                    width: 100%;
+                    height: 350px;
+                    .swiper-wrapper{
+                        .swiper-slide{
+                            img{
+                                width: 20vw;
+                                height: 250px;
+                                object-fit: cover;
+                            }
+    
+                        }
+    
+                    }
+    
+                    .swiper-pagination, 
+                    .swiper-pagination-progressbar, 
+                    .swiper-pagination-horizontal{
+                        width: 100%;
+                        height: 4px;
+                        left: 0;
+                        top: 95%;
+                    }
+    
+                    .swiper-pagination-progressbar{
+                        width: 50%;
+    
+                    }
+
+                    }
+    
+                }
+    
+            }
+        }
+    
+    // footer------------------------------
+    #footer{
+        height: 300px;
+        .inner{
+            width: 100%;
+            padding: 20px;
+
+            .wrap_util{
+                width: 100%;
+                top: 30px;
+                left: 20px;
+
+    
+                &::after{ display: none; }
+                ul{ 
+                    width: 100;
+                    margin-right: 40px; 
+                    float: auto;
+
+                    &:nth-of-type(2){ display: none;}
+                    li{ 
+                        float: left;
+                        margin-right: 20px;
+                        margin-bottom: 20px;
+                        a{
+                          font: normal 12px/1 'arial';  
+                        }
+                    }                    
+                }
+            }
+
+            .wrap_news{
+                width: 100%;
+                height: 50%;
+
+                top: auto;
+                left: 20px;
+                bottom: 20px;
+
+                span{
+                    margin-bottom: 40px;
+                    font: bold 12px/1 'arial';
+                }
+                input{
+                    width: 60%;
+                    height: 30px;
+                    background: none;
+                    border: none;
+                    border-bottom: 1px solid #999; margin-bottom: 30px;
+                }
+                a{
+                    display: block;
+                    width: 100px;
+                    height: 25px;
+                    background: rgba(75, 105, 100, 0.85);
+                    font: normal 11px/25px 'arial';
+                }
+    
+            }
+        }
+    }   
 }
 
