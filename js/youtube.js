@@ -27,24 +27,30 @@ fetch(url)
     items.map(item=>{
 
         let title = item.snippet.title;
-        if(title.length > 60){
-            title = title.substr(0, 60)+"...";
+        if(title.length > 50){
+            title = title.substr(0, 50)+"...";
         }
 
         let description = item.snippet.description;
-        if(description.length > 100){
-            description = description.substr(0, 100)+"...";
+        if(description.length > 250){
+            description = description.substr(0, 250)+"  ... more";
         }
+
+        let date = item.snippet.publishedAt;
+        date = date.split("T")[0];
 
         result += `
                 <article>
                     <div class="pic">
                         <a href="${item.snippet.resourceId.videoId}">
-                            <img src="${item.snippet.thumbnails.medium.url}" class="thumb">        
+                            <img src="${item.snippet.thumbnails.medium.url}" class="thumb">    
+                            <span><i class="fas fa-play"></i></span>
                         </a>
                     </div>
                     <div class="con">
                         <h2>${title}</h2>
+                        <p>${description}</p>
+                        <span>${date}</span>
                     </div>
                     
                 </article>

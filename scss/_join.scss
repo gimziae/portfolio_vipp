@@ -1,5 +1,6 @@
 .join{
     .sub_visual{
+        background: url(../img/insta6.PNG) no-repeat center/cover;
     }
     .inner{
         width: 1180px;
@@ -138,14 +139,103 @@
 }
 
 @media screen and(max-width:1179px){
-    
+    .join{
+        .inner{
+            width: 100%;
+            padding: 50px 20px;
+        }
+    }    
 }
 @media screen and(max-width:949px){
+    .join{
+        .inner{
+            #member{
+                // 개인정보 입력 테이블
+                table{
+                    width: 100%;
+                    
+                    th{ width: 30%; }
+                    td{
+                        padding: 20px 30px;
     
+                        //텍스트 칸 레이아웃 설정
+                        input[type="text"], input[type="password"], input[type="email"], select{ width: 50%; }
+    
+                        //이름
+                        #first,#family{ width: 30%; }
+
+                        //이메일 칸
+                        #domain{ width: 30%; }   
+                    }
+                }
+            }    
+        }
+    }   
 }
+
 @media screen and(max-width:749px){
+    .join{
+        .sub_visual{
+            background: url(../img/insta6.PNG) no-repeat center/cover;
+        }
+        .inner{
+            width: 100%;
+            padding: 50px 20px;
+            #member{
+                // 개인정보 입력 테이블
+                table{
+                    width: 100%;
+                    
+                    th{ width: 40%; }
+                    td{
+                        padding: 20px 30px;
     
+                        //텍스트 칸 레이아웃 설정
+                        input[type="text"], input[type="password"], input[type="email"], select{ width: 50%; }
+    
+                        //이름
+                        #first,#family{ width: 40%; }
+
+                        //이메일 칸
+                        #promocode{ width: 60%; }   
+                    }
+                }
+            }  
+        }
+    }        
 }
 @media screen and(max-width:539px){
+    .join{
+        .sub_visual{
+            background: url(../img/insta6.PNG) no-repeat center/cover;
+        }
+        .inner{
+            width: 100%;
+            padding: 50px 20px;
+            #member{
+                // 개인정보 입력 테이블
+                p{
+                    margin: 25px 0;
+                    
+                }
+                table{
+                    width: 100%;
+                    
+                    th{ display: none; }
+                    td{
+                        padding: 20px 0;
     
+                        //텍스트 칸 레이아웃 설정
+                        input[type="text"], input[type="password"], input[type="email"], select{ width: 50%; }
+    
+                        //이름
+                        #first,#family{ width: 40%; }
+
+                        //이메일 칸
+                        #promocode{ width: 60%; }   
+                    }
+                }
+            }  
+        }
+    }  
 }

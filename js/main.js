@@ -36,3 +36,23 @@ btnCall.addEventListener("click", e=>{
 
     
 })
+
+const rooms = document.querySelector("#rooms");
+const roomImg = rooms.querySelectorAll("img");
+const roomNav = rooms.querySelectorAll(".room li");
+const roomInfo = rooms.querySelectorAll(".roomInfo");
+console.log(roomInfo);
+
+for(i=0; i<roomNav.length; i++){
+
+    roomNav[i].addEventListener("click", e=>{
+        e.preventDefault;
+
+        for(let k=0; k<roomImg.length; k++){
+            roomImg[k].classList.remove("on");
+        }
+
+        roomNav[i].classList.add("on");
+        
+    })
+}

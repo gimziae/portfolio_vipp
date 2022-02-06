@@ -106,6 +106,9 @@
             width: 100%;
             padding: 30px 0 100px 0;
 
+            #searchBox{  
+                #search{ width: 250px;}
+            }
             #wrap{
                 width: 100%;
 
@@ -129,6 +132,10 @@
 @media screen and (max-width:749px){
     .gallery{
         .inner{
+            #searchBox{
+                padding: 20px 30px 0 20px;
+                #search{ width: 200px; }
+            }
             #wrap{
                 #list{
                     .item{
@@ -143,6 +150,10 @@
 @media screen and (max-width:449px){
     .gallery{
         .inner{
+            #searchBox{
+                padding: 20px 30px 0 20px;
+                #search{ width: 180px; }
+            }
             #wrap{
                 #list{
                     .item{

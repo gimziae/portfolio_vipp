@@ -1,42 +1,304 @@
 .notice{
     .sub_visual{
+        background: url(../img/insta9.jpg);
     }
     .inner{
-        
+        width: 1180px;
+        margin: 0 auto;
+        position: relative;
+        padding: 50px 0;
+
+        .checkBox{
+            text-align: right;
+            padding: 10px;
+        }
         table{
             width: 100%;
-            padding: 20px;
-            th{
-                text-align: left;
-                font: 20px/1 'arial';
-                color: #444;
-                padding: 20px 0;
-            }
-            td{
-                text-align: left;
-                font: 12px/1.5 'arial';
-                color: #777;
-                padding: 0 20px;
-                display: none;
-                border: 3px solid chocolate;
+            margin-bottom: 50px;
+            border-bottom: 1px solid #ddd;
+            border-top: 1px double #ddd;
+            border-collapse: collapse;
 
-                &.on{
-                    display: block;
+            tr{
+                th{
+                    text-align: center;
+                    font: normal 14px/1 'arial';
+                    letter-spacing: 2px;
+                    background: rgba(75, 105, 100, 0.7);
+                    color: #fff;
+                    padding: 15px 0;
+
+                    &:nth-of-type(1){
+                        width: 10%;
+                    }
+                    &:nth-of-type(3){
+                        width: 15%;
+                    }
+                    &:nth-of-type(4){
+                        width: 15%;
+                    }
+                }    
+                
+                td{
+                    font: 16px/1.5 'arial';
+                    color: #777;
+                    padding: 10px 20px;
+                    text-align: center;
+                    border-bottom: 1px solid #ddd;
+
+                    &:nth-of-type(1){
+                        text-align: center;
+                        color: #999;
+                    }
+                    &:nth-of-type(2){ 
+                        text-align: left;
+                        a{
+                            font: normal 14px/1 'arial';
+                            color: #555;
+                        }
+                    }
+                    &:nth-of-type(3){
+                        text-align: center;
+                        color: #999;
+                    }
+                    &:nth-of-type(4){
+                        text-align: center;
+                        color: #999;
+                    }
+                }   
+
+                &:hover{
+                    background: rgba(221, 221, 221, 0.6);
+                }     
+            }
+        }
+
+        .pagenation{
+            width: 100%;
+            text-align: center;
+
+            &::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            .prev{
+                float: left;
+                margin-left: 300px;
+                display: block;
+                width: 30px;
+                height: 30px;
+                font-size: 20px;
+                line-height: 30px;
+                color: #fff;
+                text-align: center;
+                background: rgba(75, 105, 100, 0.7);
+            }
+
+            .next{
+                float: right;
+                margin-right: 300px;
+                display: block;
+                width: 30px;
+                height: 30px;
+                font-size: 20px;
+                line-height: 30px;
+                color: #fff;
+                text-align: center;
+                background: rgba(75, 105, 100, 0.7);
+            }
+
+            .numbers{
+                display: inline-block;
+                text-align: center;
+                font-size: 0;
+                margin: 0 5px;
+                transition: 0.5s;
+
+                a{
+                    border: 1px solid #999;
+                    display: inline-block;
+                    width: 30px;
+                    height: 30px;
+                    font: 11px/30px 'arial';
+                    color: #666;
+                    margin: 0 5px;
+                    transition: 0.5s;
+
+                    &:hover{
+                        background: rgba(75, 105, 100, 0.2);
+                        color: #fff;
+                    }
                 }
             }
+
         }
     }
 }
 
 @media screen and(max-width:1179px){
+    .notice{
+        .sub_visual{
+            background: url(../img/insta9.jpg);
+        }
+        .inner{
+            width: 100%;
+            padding: 50px 20px;
     
+            .checkBox{
+                text-align: right;
+                padding: 10px;
+            }
+            table{
+                width: 100%;
+                margin-bottom: 50px;
+                border-bottom: 1px solid #ddd;
+                border-top: 1px double #ddd;
+                border-collapse: collapse;
+    
+                tr{
+                    th{
+                        text-align: center;
+                        font: normal 14px/1 'arial';
+                        letter-spacing: 2px;
+                        background: rgba(75, 105, 100, 0.7);
+                        color: #fff;
+                        padding: 15px 0;
+    
+                        &:nth-of-type(1){
+                            width: 10%;
+                        }
+                        &:nth-of-type(3){
+                            width: 15%;
+                        }
+                        &:nth-of-type(4){
+                            width: 15%;
+                        }
+                    }    
+                    
+                    td{
+                        font: 16px/1.5 'arial';
+                        color: #777;
+                        padding: 10px 20px;
+                        text-align: center;
+                        border-bottom: 1px solid #ddd;
+    
+                        &:nth-of-type(1){
+                            text-align: center;
+                            color: #999;
+                        }
+                        &:nth-of-type(2){ 
+                            text-align: left;
+                            a{
+                                font: normal 14px/1 'arial';
+                                color: #555;
+                            }
+                        }
+                        &:nth-of-type(3){
+                            text-align: center;
+                            color: #999;
+                        }
+                        &:nth-of-type(4){
+                            text-align: center;
+                            color: #999;
+                        }
+                    }   
+    
+                    &:hover{
+                        background: rgba(221, 221, 221, 0.6);
+                    }     
+                }
+            }
+    
+            .pagenation{
+                .prev{ margin-left: 200px;}
+                .next{ margin-right: 200px;}
+            }
+        }
+    }    
 }
 @media screen and(max-width:949px){
+    .notice{
+        .sub_visual{
+            background: url(../img/insta9.jpg);
+        }
+        .inner{
+            padding: 20px;
+            table{
+                margin-bottom: 30px;
+                tr{
+                    th{ 
+                        &:nth-of-type(4){ display: none; }
+                    }    
+                    
+                    td{
+                        &:nth-of-type(4){ display: none; }
+                    }   
+                }
+            }
     
+            .pagenation{
+                .prev{ margin-left: 100px;}
+                .next{ margin-right: 100px;}
+                .numbers{
+                    a{
+                        @for $i from 6 through 10{
+                            &:nth-of-type(#{$i}){
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }     
 }
 @media screen and(max-width:749px){
-    
+    .notice{
+        .sub_visual{
+            background: url(../img/insta9.jpg);
+        }
+        .inner{
+            table{
+                tr{
+                    th{
+                        font: normal 12px/1 'arial';
+                        &:nth-of-type(1){ display: none; }
+                    }    
+                    
+                    td{
+                        font: 14px/1.5 'arial'; 
+                        &:nth-of-type(1){ display: none; }
+                    }      
+                }
+            }
+        }
+    }   
 }
 @media screen and(max-width:539px){
-    
+    .notice{
+        .sub_visual{
+            background: url(../img/insta9.jpg);
+        }
+        .inner{
+            table{
+                margin-bottom: 20px;
+                tr{
+                    th{
+                        &:nth-of-type(3){ display: none; }
+                    }    
+                    
+                    td{
+                        font: 12px/1.2 'arial'; 
+                        &:nth-of-type(3){ display: none; }
+                    }      
+                }
+            }
+            .pagenation{
+                .prev{ margin-left: 0px;}
+                .next{ margin-right: 0px;}
+            }
+        }
+    }    
 }

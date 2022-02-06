@@ -303,28 +303,277 @@ fieldset {
     display: none;
   }
 }
+.notice .sub_visual {
+  background: url(../img/insta9.jpg);
+}
+.notice .inner {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+  padding: 50px 0;
+}
+.notice .inner .checkBox {
+  text-align: right;
+  padding: 10px;
+}
 .notice .inner table {
   width: 100%;
-  padding: 20px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px double #ddd;
+  border-collapse: collapse;
 }
-.notice .inner table th {
-  text-align: left;
-  font: 20px/1 "arial";
-  color: #444;
-  padding: 20px 0;
+.notice .inner table tr th {
+  text-align: center;
+  font: normal 14px/1 "arial";
+  letter-spacing: 2px;
+  background: rgba(75, 105, 100, 0.7);
+  color: #fff;
+  padding: 15px 0;
 }
-.notice .inner table td {
-  text-align: left;
-  font: 12px/1.5 "arial";
+.notice .inner table tr th:nth-of-type(1) {
+  width: 10%;
+}
+.notice .inner table tr th:nth-of-type(3) {
+  width: 15%;
+}
+.notice .inner table tr th:nth-of-type(4) {
+  width: 15%;
+}
+.notice .inner table tr td {
+  font: 16px/1.5 "arial";
   color: #777;
-  padding: 0 20px;
-  display: none;
-  border: 3px solid chocolate;
+  padding: 10px 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
 }
-.notice .inner table td.on {
+.notice .inner table tr td:nth-of-type(1) {
+  text-align: center;
+  color: #999;
+}
+.notice .inner table tr td:nth-of-type(2) {
+  text-align: left;
+}
+.notice .inner table tr td:nth-of-type(2) a {
+  font: normal 14px/1 "arial";
+  color: #555;
+}
+.notice .inner table tr td:nth-of-type(3) {
+  text-align: center;
+  color: #999;
+}
+.notice .inner table tr td:nth-of-type(4) {
+  text-align: center;
+  color: #999;
+}
+.notice .inner table tr:hover {
+  background: rgba(221, 221, 221, 0.6);
+}
+.notice .inner .pagenation {
+  width: 100%;
+  text-align: center;
+}
+.notice .inner .pagenation::after {
+  content: "";
   display: block;
+  clear: both;
+}
+.notice .inner .pagenation .prev {
+  float: left;
+  margin-left: 300px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  background: rgba(75, 105, 100, 0.7);
+}
+.notice .inner .pagenation .next {
+  float: right;
+  margin-right: 300px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  background: rgba(75, 105, 100, 0.7);
+}
+.notice .inner .pagenation .numbers {
+  display: inline-block;
+  text-align: center;
+  font-size: 0;
+  margin: 0 5px;
+  transition: 0.5s;
+}
+.notice .inner .pagenation .numbers a {
+  border: 1px solid #999;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  font: 11px/30px "arial";
+  color: #666;
+  margin: 0 5px;
+  transition: 0.5s;
+}
+.notice .inner .pagenation .numbers a:hover {
+  background: rgba(75, 105, 100, 0.2);
+  color: #fff;
 }
 
+@media screen and (max-width: 1179px) {
+  .notice .sub_visual {
+    background: url(../img/insta9.jpg);
+  }
+  .notice .inner {
+    width: 100%;
+    padding: 50px 20px;
+  }
+  .notice .inner .checkBox {
+    text-align: right;
+    padding: 10px;
+  }
+  .notice .inner table {
+    width: 100%;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px double #ddd;
+    border-collapse: collapse;
+  }
+  .notice .inner table tr th {
+    text-align: center;
+    font: normal 14px/1 "arial";
+    letter-spacing: 2px;
+    background: rgba(75, 105, 100, 0.7);
+    color: #fff;
+    padding: 15px 0;
+  }
+  .notice .inner table tr th:nth-of-type(1) {
+    width: 10%;
+  }
+  .notice .inner table tr th:nth-of-type(3) {
+    width: 15%;
+  }
+  .notice .inner table tr th:nth-of-type(4) {
+    width: 15%;
+  }
+  .notice .inner table tr td {
+    font: 16px/1.5 "arial";
+    color: #777;
+    padding: 10px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  .notice .inner table tr td:nth-of-type(1) {
+    text-align: center;
+    color: #999;
+  }
+  .notice .inner table tr td:nth-of-type(2) {
+    text-align: left;
+  }
+  .notice .inner table tr td:nth-of-type(2) a {
+    font: normal 14px/1 "arial";
+    color: #555;
+  }
+  .notice .inner table tr td:nth-of-type(3) {
+    text-align: center;
+    color: #999;
+  }
+  .notice .inner table tr td:nth-of-type(4) {
+    text-align: center;
+    color: #999;
+  }
+  .notice .inner table tr:hover {
+    background: rgba(221, 221, 221, 0.6);
+  }
+  .notice .inner .pagenation .prev {
+    margin-left: 200px;
+  }
+  .notice .inner .pagenation .next {
+    margin-right: 200px;
+  }
+}
+@media screen and (max-width: 949px) {
+  .notice .sub_visual {
+    background: url(../img/insta9.jpg);
+  }
+  .notice .inner {
+    padding: 20px;
+  }
+  .notice .inner table {
+    margin-bottom: 30px;
+  }
+  .notice .inner table tr th:nth-of-type(4) {
+    display: none;
+  }
+  .notice .inner table tr td:nth-of-type(4) {
+    display: none;
+  }
+  .notice .inner .pagenation .prev {
+    margin-left: 100px;
+  }
+  .notice .inner .pagenation .next {
+    margin-right: 100px;
+  }
+  .notice .inner .pagenation .numbers a:nth-of-type(6) {
+    display: none;
+  }
+  .notice .inner .pagenation .numbers a:nth-of-type(7) {
+    display: none;
+  }
+  .notice .inner .pagenation .numbers a:nth-of-type(8) {
+    display: none;
+  }
+  .notice .inner .pagenation .numbers a:nth-of-type(9) {
+    display: none;
+  }
+  .notice .inner .pagenation .numbers a:nth-of-type(10) {
+    display: none;
+  }
+}
+@media screen and (max-width: 749px) {
+  .notice .sub_visual {
+    background: url(../img/insta9.jpg);
+  }
+  .notice .inner table tr th {
+    font: normal 12px/1 "arial";
+  }
+  .notice .inner table tr th:nth-of-type(1) {
+    display: none;
+  }
+  .notice .inner table tr td {
+    font: 14px/1.5 "arial";
+  }
+  .notice .inner table tr td:nth-of-type(1) {
+    display: none;
+  }
+}
+@media screen and (max-width: 539px) {
+  .notice .sub_visual {
+    background: url(../img/insta9.jpg);
+  }
+  .notice .inner table {
+    margin-bottom: 20px;
+  }
+  .notice .inner table tr th:nth-of-type(3) {
+    display: none;
+  }
+  .notice .inner table tr td {
+    font: 12px/1.2 "arial";
+  }
+  .notice .inner table tr td:nth-of-type(3) {
+    display: none;
+  }
+  .notice .inner .pagenation .prev {
+    margin-left: 0px;
+  }
+  .notice .inner .pagenation .next {
+    margin-right: 0px;
+  }
+}
 .about .sub_visual {
   background: url(../img/history.jpeg) no-repeat center/cover fixed;
 }
@@ -653,6 +902,9 @@ fieldset {
   .about .inner #about .wrap {
     width: 100%;
   }
+  .about .inner #about .wrap article > .con {
+    z-index: 3;
+  }
   .about .inner #about .wrap article > .con h3 {
     font-size: 20px;
   }
@@ -692,6 +944,7 @@ fieldset {
   }
   .about .inner #service .wrap article .con {
     padding: 20px 30px;
+    z-index: 3;
   }
   .about .inner #member {
     width: 100%;
@@ -1086,6 +1339,9 @@ fieldset {
     width: 100%;
     padding: 30px 0 100px 0;
   }
+  .gallery .inner #searchBox #search {
+    width: 250px;
+  }
   .gallery .inner #wrap {
     width: 100%;
   }
@@ -1098,15 +1354,30 @@ fieldset {
   }
 }
 @media screen and (max-width: 749px) {
+  .gallery .inner #searchBox {
+    padding: 20px 30px 0 20px;
+  }
+  .gallery .inner #searchBox #search {
+    width: 200px;
+  }
   .gallery .inner #wrap #list .item {
     width: 50%;
     padding: 10px;
   }
 }
 @media screen and (max-width: 449px) {
+  .gallery .inner #searchBox {
+    padding: 20px 30px 0 20px;
+  }
+  .gallery .inner #searchBox #search {
+    width: 180px;
+  }
   .gallery .inner #wrap #list .item {
     width: 100%;
   }
+}
+.join .sub_visual {
+  background: url(../img/insta6.PNG) no-repeat center/cover;
 }
 .join .inner {
   width: 1180px;
@@ -1221,6 +1492,89 @@ fieldset {
   padding: 20px 30px 0;
 }
 
+@media screen and (max-width: 1179px) {
+  .join .inner {
+    width: 100%;
+    padding: 50px 20px;
+  }
+}
+@media screen and (max-width: 949px) {
+  .join .inner #member table {
+    width: 100%;
+  }
+  .join .inner #member table th {
+    width: 30%;
+  }
+  .join .inner #member table td {
+    padding: 20px 30px;
+  }
+  .join .inner #member table td input[type=text], .join .inner #member table td input[type=password], .join .inner #member table td input[type=email], .join .inner #member table td select {
+    width: 50%;
+  }
+  .join .inner #member table td #first, .join .inner #member table td #family {
+    width: 30%;
+  }
+  .join .inner #member table td #domain {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 749px) {
+  .join .sub_visual {
+    background: url(../img/insta6.PNG) no-repeat center/cover;
+  }
+  .join .inner {
+    width: 100%;
+    padding: 50px 20px;
+  }
+  .join .inner #member table {
+    width: 100%;
+  }
+  .join .inner #member table th {
+    width: 40%;
+  }
+  .join .inner #member table td {
+    padding: 20px 30px;
+  }
+  .join .inner #member table td input[type=text], .join .inner #member table td input[type=password], .join .inner #member table td input[type=email], .join .inner #member table td select {
+    width: 50%;
+  }
+  .join .inner #member table td #first, .join .inner #member table td #family {
+    width: 40%;
+  }
+  .join .inner #member table td #promocode {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 539px) {
+  .join .sub_visual {
+    background: url(../img/insta6.PNG) no-repeat center/cover;
+  }
+  .join .inner {
+    width: 100%;
+    padding: 50px 20px;
+  }
+  .join .inner #member p {
+    margin: 25px 0;
+  }
+  .join .inner #member table {
+    width: 100%;
+  }
+  .join .inner #member table th {
+    display: none;
+  }
+  .join .inner #member table td {
+    padding: 20px 0;
+  }
+  .join .inner #member table td input[type=text], .join .inner #member table td input[type=password], .join .inner #member table td input[type=email], .join .inner #member table td select {
+    width: 50%;
+  }
+  .join .inner #member table td #first, .join .inner #member table td #family {
+    width: 40%;
+  }
+  .join .inner #member table td #promocode {
+    width: 60%;
+  }
+}
 .location .sub_visual {
   background: url(../img/location.jpg) no-repeat center/cover fixed;
 }
@@ -1393,83 +1747,95 @@ fieldset {
     letter-spacing: 1px;
   }
 }
-.brand .sub_visual {
+.youtube .sub_visual {
   background: url(../img/youtube.jpeg) no-repeat center/cover fixed;
 }
-.brand .inner {
+.youtube .inner {
   width: 1180px;
   margin: 0 auto;
   position: relative;
 }
-.brand .inner h3 {
-  font: normal 30px/1 "DM Serif display";
-  letter-spacing: 1px;
-  padding: 50px 0 20px 0;
-  color: #333;
-}
-.brand .inner h3 span {
-  font: normal 15px/1 "arial";
-  margin-left: 10px;
-  color: #999;
-}
-.brand .inner .vidList {
+.youtube .inner .vidList {
   width: 100%;
-  height: 1200px;
-  padding: 30px 0 50px;
+  padding: 50px 0;
 }
-.brand .inner .vidList article {
-  width: 380px;
-  height: 300px;
-  padding: 10px;
-  margin-right: 20px;
+.youtube .inner .vidList article {
+  width: 100%;
+  height: 280px;
   margin-bottom: 50px;
+  background: #f7f7f7;
+}
+.youtube .inner .vidList article .pic {
+  width: 40%;
+  height: 100%;
   float: left;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
-.brand .inner .vidList article:nth-of-type(3n) {
-  margin-right: 0;
-}
-.brand .inner .vidList article .pic {
-  width: 360px;
-  height: 185px;
-}
-.brand .inner .vidList article .pic:hover a {
+.youtube .inner .vidList article .pic:hover a {
   filter: grayscale(0);
 }
-.brand .inner .vidList article .pic a {
+.youtube .inner .vidList article .pic a {
   width: 100%;
   height: 100%;
   display: block;
   filter: grayscale(0.5);
   transition: 0.5s;
 }
-.brand .inner .vidList article .pic .thumb {
+.youtube .inner .vidList article .pic a .thumb {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.brand .inner .vidList article .con {
-  width: 100%;
+.youtube .inner .vidList article .pic a span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.youtube .inner .vidList article .con {
+  width: calc(60% - 40px);
+  height: 240px;
+  position: relative;
+  padding: 30px;
+  float: right;
+  background: rgba(255, 255, 255, 0.9);
+  border-top-left-radius: 50px;
+  top: 20px;
+  right: 20px;
+}
+.youtube .inner .vidList article .con h2 {
+  font: bold 20px/1.2 "arial";
+  color: rgba(75, 105, 100, 0.9);
+  text-align: center;
+  margin-bottom: 20px;
   position: relative;
 }
-.brand .inner .vidList article .con::before {
+.youtube .inner .vidList article .con h2::after {
   content: "";
   display: block;
   width: 100%;
   height: 1px;
-  background: #aaa;
+  background: rgba(75, 105, 100, 0.85);
   position: absolute;
-  top: -10px;
+  bottom: -10px;
 }
-.brand .inner .vidList article .con h2 {
-  font: normal 14px/1.1 "arial";
-  color: #555;
-  text-align: center;
+.youtube .inner .vidList article .con p {
+  font: normal 14px/1.6 "arial";
+  color: #777;
+  text-indent: 10px;
+  padding: 0 20px;
 }
-.brand .inner .vidList .pop {
+.youtube .inner .vidList article .con span {
+  font: normal 12px/1 "arial";
+  color: #999;
+  position: absolute;
+  bottom: 30px;
+  right: 60px;
+  letter-spacing: 1px;
+}
+.youtube .inner .vidList .pop {
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -1483,11 +1849,11 @@ fieldset {
   align-items: center;
   z-index: 5;
 }
-.brand .inner .vidList .pop .vidPlay {
+.youtube .inner .vidList .pop .vidPlay {
   width: 80vw;
   height: 80vh;
 }
-.brand .inner .vidList .pop .btnClose {
+.youtube .inner .vidList .pop .btnClose {
   position: absolute;
   top: 50px;
   right: 50px;
@@ -1495,132 +1861,120 @@ fieldset {
   cursor: pointer;
   font-size: 25px;
 }
-.brand .inner .kitchen {
-  width: 100%;
-  height: 600px;
-  background: #efefef;
-  margin-bottom: 100px;
-  padding: 50px;
-  position: relative;
-}
-.brand .inner .kitchen .wrap {
-  width: 50%;
-  height: 100%;
-  float: left;
-  position: relative;
-}
-.brand .inner .kitchen .wrap img {
-  object-fit: cover;
-  position: absolute;
-}
-.brand .inner .kitchen .wrap img:nth-of-type(1) {
-  width: 60%;
-  height: 80%;
-  top: 0;
-  left: 0;
-}
-.brand .inner .kitchen .wrap img:nth-of-type(2) {
-  width: 60%;
-  height: 80%;
-  top: 20%;
-  right: 0;
-}
-.brand .inner .kitchen .con {
-  width: 40%;
-  height: 80%;
-  float: right;
-  padding: 70px;
-  background: rgba(255, 255, 255, 0.7);
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  right: 70px;
-  transform: translateY(-50%);
-}
-.brand .inner .kitchen .con h4 {
-  font: normal 30px/1 "dm serif display";
-  margin-bottom: 30px;
-}
-.brand .inner .kitchen .con p {
-  font: normal 12px/1.5 "arial";
-  color: #999;
-}
-.brand .inner .kitchen .con a {
-  width: 60%;
-  height: 30px;
-  display: inline-block;
-  font: normal 11px/30px "arial";
-  color: #fff;
-  margin-top: 50px;
-  background: rgba(75, 105, 100, 0.85);
-  transition: 1s;
-}
-.brand .inner .kitchen .con a:hover {
-  background: #4b6964;
-}
-.brand .inner .furniture {
-  width: 100%;
-  height: 600px;
-  background: #efefef;
-  padding: 50px;
-  position: relative;
-}
-.brand .inner .furniture .con {
-  width: 40%;
-  height: 60%;
-  float: left;
-  padding: 50px;
-  background: rgba(255, 255, 255, 0.7);
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 70px;
-  transform: translateY(-50%);
-}
-.brand .inner .furniture .con h4 {
-  font: normal 30px/1 "dm serif display";
-  margin-bottom: 30px;
-}
-.brand .inner .furniture .con p {
-  font: normal 12px/1.5 "arial";
-  color: #999;
-}
-.brand .inner .furniture .con a {
-  width: 60%;
-  height: 30px;
-  display: inline-block;
-  font: normal 11px/30px "arial";
-  color: #fff;
-  margin-top: 40px;
-  background: rgba(75, 105, 100, 0.85);
-  transition: 1s;
-}
-.brand .inner .furniture .con a:hover {
-  background: #4b6964;
-}
-.brand .inner .furniture .wrap {
-  width: 50%;
-  height: 100%;
-  float: right;
-  position: relative;
-}
-.brand .inner .furniture .wrap img {
-  object-fit: cover;
-  position: absolute;
-}
-.brand .inner .furniture .wrap img:nth-of-type(1) {
-  width: 55%;
-  height: 70%;
-  top: 25%;
-  left: 5%;
-}
-.brand .inner .furniture .wrap img:nth-of-type(2) {
-  width: 55%;
-  height: 70%;
-  top: 5%;
-  right: 0;
-}
 
+@media screen and (max-width: 1179px) {
+  .youtube .inner {
+    width: 100%;
+    padding: 0 30px;
+  }
+  .youtube .inner .vidList article .pic {
+    width: 45%;
+  }
+  .youtube .inner .vidList article .con {
+    width: calc(55% - 40px);
+    padding: 30px 20px;
+  }
+  .youtube .inner .vidList article .con h2 {
+    font: bold 18px/1.2 "arial";
+  }
+  .youtube .inner .vidList article .con p {
+    font: normal 14px/1.4 "arial";
+    color: #777;
+    text-indent: 10px;
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 949px) {
+  .youtube .sub_visual {
+    background: url(../img/youtube.jpeg) no-repeat center/cover fixed;
+  }
+  .youtube .inner {
+    width: 100%;
+  }
+  .youtube .inner .vidList {
+    position: relative;
+  }
+  .youtube .inner .vidList article {
+    width: 100%;
+    height: 600px;
+    padding: 20px;
+  }
+  .youtube .inner .vidList article .pic {
+    width: 100%;
+    height: 60%;
+  }
+  .youtube .inner .vidList article .con {
+    width: 100%;
+    height: calc(40% - 20px);
+    top: 20px;
+    right: auto;
+  }
+  .youtube .inner .vidList article .con p {
+    padding: 0 20px;
+  }
+  .youtube .inner .vidList article .con span {
+    bottom: 20px;
+    right: 40px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .youtube .sub_visual {
+    background: url(../img/youtube.jpeg) no-repeat center/cover fixed;
+  }
+  .youtube .inner .vidList article {
+    height: 400px;
+  }
+  .youtube .inner .vidList article .pic {
+    width: 100%;
+    height: 80%;
+  }
+  .youtube .inner .vidList article .con {
+    width: 100%;
+    height: 20%;
+    padding: 0;
+    float: left;
+    background: transparent;
+    border-top-left-radius: 0px;
+  }
+  .youtube .inner .vidList article .con h2 {
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .youtube .inner .vidList article .con h2::after {
+    display: none;
+  }
+  .youtube .inner .vidList article .con p {
+    display: none;
+  }
+  .youtube .inner .vidList article .con span {
+    bottom: 30px;
+    right: 20px;
+  }
+}
+@media screen and (max-width: 539px) {
+  .youtube .sub_visual {
+    background: url(../img/youtube.jpeg) no-repeat center/cover fixed;
+  }
+  .youtube .inner {
+    padding: 20px;
+  }
+  .youtube .inner .vidList {
+    padding: 0;
+  }
+  .youtube .inner .vidList article {
+    height: 300px;
+    margin-bottom: 30px;
+  }
+  .youtube .inner .vidList article .con h2 {
+    font-size: 14px;
+  }
+  .youtube .inner .vidList article .con span {
+    display: none;
+  }
+}
 #header {
   width: 100%;
   height: 50px;
@@ -1762,7 +2116,7 @@ fieldset {
 
 #rooms {
   width: 100%;
-  height: 500px;
+  height: 800px;
 }
 #rooms .inner {
   width: 100%;
@@ -1773,6 +2127,17 @@ fieldset {
   float: left;
   width: 33.3333333333%;
   height: 100%;
+  background: #efefef;
+  position: relative;
+}
+#rooms .inner article:nth-of-type(2) {
+  background: #222;
+}
+#rooms .inner article:nth-of-type(2) .wrap .con1 {
+  color: #eee;
+}
+#rooms .inner article:nth-of-type(2) .wrap .con2 {
+  color: #fff;
 }
 #rooms .inner article .wrap {
   width: 100%;
@@ -1781,54 +2146,112 @@ fieldset {
   overflow: hidden;
   transition: 1s;
 }
+#rooms .inner article .wrap .con1 {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 80px;
+  color: #333;
+}
+#rooms .inner article .wrap .con1 p {
+  font: normal 12px/1 "arial";
+  margin-bottom: 15px;
+}
+#rooms .inner article .wrap .con1 h2 {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
 #rooms .inner article .wrap img {
+  border: 1px solid #aaa;
+  padding: 10px;
+  width: 60%;
+  height: 40%;
+  object-fit: cover;
+  transition: 1s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  filter: grayscale(0.6);
+}
+#rooms .inner article .wrap .con2 {
+  width: 100%;
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 0 60px;
+  transition: 1s;
+  opacity: 0.7;
+}
+#rooms .inner article .wrap .con2 span {
+  font: bold 16px/1 "arial";
+}
+#rooms .inner article .wrap .con2 p {
+  font: normal 14px/1.4 "arial";
+  margin: 25px 0;
+}
+#rooms .inner article .wrap .con2 a {
+  display: inline-block;
+  width: 120px;
+  height: 30px;
+  background: rgba(60, 95, 90, 0.85);
+  font: normal 11px/30px "arial";
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.85);
+  transition: 0.75s;
+}
+#rooms .inner article .wrap .con2 a:hover {
+  color: #fff;
+  background: #3c5f5a;
+}
+
+#video {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+#video video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: 1s;
-  filter: grayscale(0.6);
 }
-#rooms .inner article .wrap .con {
-  width: 100%;
+#video .con {
+  width: 1180px;
+  height: 90%;
+  margin: 0 auto;
+  padding: 80px 200px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  transition: 1s;
-  opacity: 0.7;
 }
-#rooms .inner article .wrap .con p {
-  font: normal 12px/1 "arial";
-  margin-bottom: 15px;
+#video .con h1 {
+  font: normal 40px/1 "DM Serif Display";
   color: #fff;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
 }
-#rooms .inner article .wrap .con h2 {
-  font-size: 32px;
+#video .con p {
+  font: normal 15px/1.5 "arial";
+  color: #eee;
   margin-bottom: 50px;
-  color: #fff;
 }
-#rooms .inner article .wrap .con a {
+#video .con a {
   display: inline-block;
-  width: 120px;
-  height: 35px;
-  border: 1px solid #fff;
-  font: bold 12px/35px "arial";
+  width: 300px;
+  height: 30px;
+  border: 1px solid #ddd;
+  font: normal 12px/30px "arial";
+  color: #ddd;
+  transition: 0.5s;
+}
+#video .con a:hover {
+  background: rgba(255, 255, 255, 0.3);
   color: #fff;
-  transition: 0.75s;
-}
-#rooms .inner article .wrap .con a:hover {
-  background: #fff;
-  color: #333;
-  font-weight: normal;
-}
-#rooms .inner article:hover .wrap img {
-  transform: scale(1.05) rotate(0.001deg);
-  filter: grayscale(0);
-}
-#rooms .inner article:hover .wrap .con {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1.1);
 }
 
 #review {
@@ -1892,53 +2315,6 @@ fieldset {
 }
 #review .inner .reviewMo {
   display: none;
-}
-
-#video {
-  width: 100%;
-  height: 40vh;
-  overflow: hidden;
-  position: relative;
-}
-#video video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-#video .con {
-  width: 1180px;
-  height: 100%;
-  margin: 0 auto;
-  padding: 100px 200px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-#video .con h1 {
-  font: normal 40px/1 "DM Serif Display";
-  color: #fff;
-  letter-spacing: 3px;
-  margin-bottom: 30px;
-}
-#video .con p {
-  font: normal 15px/1.5 "arial";
-  color: #eee;
-  margin-bottom: 50px;
-}
-#video .con a {
-  display: inline-block;
-  width: 300px;
-  height: 30px;
-  border: 1px solid #ddd;
-  font: normal 12px/30px "arial";
-  color: #ddd;
-  transition: 0.5s;
-}
-#video .con a:hover {
-  background: rgba(255, 255, 255, 0.3);
-  color: #fff;
 }
 
 #insta {
@@ -2201,6 +2577,24 @@ fieldset {
     font: bold 10px/30px "arial";
   }
 
+  #video {
+    height: 300px;
+  }
+  #video .con {
+    width: 100%;
+    padding: 50px 200px;
+  }
+  #video .con h1 {
+    font: normal 30px/1 "DM Serif Display";
+  }
+  #video .con p {
+    font: normal 12px/1.5 "arial";
+  }
+  #video .con a {
+    height: 25px;
+    font: normal 11px/25px "arial";
+  }
+
   #review {
     padding: 100px 30px;
   }
@@ -2255,50 +2649,6 @@ fieldset {
   }
   #review .inner .reviewMo {
     display: none;
-  }
-
-  #video {
-    height: 30vh;
-  }
-  #video video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  #video .con {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    padding: 50px 150px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  #video .con h1 {
-    font: normal 30px/1 "DM Serif Display";
-    color: #fff;
-    letter-spacing: 3px;
-    margin-bottom: 30px;
-  }
-  #video .con p {
-    font: normal 15px/1.5 "arial";
-    color: #eee;
-    margin-bottom: 30px;
-  }
-  #video .con a {
-    display: inline-block;
-    width: 300px;
-    height: 25px;
-    border: 1px solid #ddd;
-    font: normal 11px/25px "arial";
-    color: #ddd;
-    transition: 0.5s;
-  }
-  #video .con a:hover {
-    background: rgba(255, 255, 255, 0.3);
-    color: #fff;
   }
 
   #insta {
@@ -2438,11 +2788,12 @@ fieldset {
     height: 100vh;
     background: #fff;
     padding: 35px;
-    z-index: 5;
+    z-index: 10;
     transition: 1s;
   }
   #header .inner .menuMo.on {
     left: 0;
+    z-index: 10;
   }
   #header .inner .menuMo > h1 {
     top: 80px;
@@ -2581,6 +2932,20 @@ fieldset {
     font: bold 10px/30px "arial";
   }
 
+  #video .con {
+    padding: 50px 100px;
+  }
+  #video .con h1 {
+    font: normal 30px/1 "DM Serif Display";
+  }
+  #video .con p {
+    font: normal 12px/1.5 "arial";
+    margin-bottom: 30px;
+  }
+  #video .con a {
+    font: normal 10px/25px "arial";
+  }
+
   #review {
     padding: 50px 20px;
   }
@@ -2660,19 +3025,6 @@ fieldset {
   #review .inner .reviewMo a:hover {
     background: #4b6964;
     font-size: 13px;
-  }
-
-  #video .con {
-    padding: 50px 100px;
-  }
-  #video .con h1 {
-    font: normal 30px/1 "DM Serif Display";
-  }
-  #video .con p {
-    font: normal 12px/1.5 "arial";
-  }
-  #video .con a {
-    font: normal 10px/25px "arial";
   }
 
   #insta {
@@ -2824,6 +3176,13 @@ fieldset {
     font: bold 10px/30px "arial";
   }
 
+  #video .con {
+    padding: 80px 50px;
+  }
+  #video .con p {
+    display: none;
+  }
+
   #review {
     padding: 50px 20px;
   }
@@ -2907,13 +3266,6 @@ fieldset {
   #review .inner .reviewMo a:hover {
     background: #4b6964;
     font-size: 13px;
-  }
-
-  #video .con {
-    padding: 100px 100px;
-  }
-  #video .con p {
-    display: none;
   }
 
   #insta {

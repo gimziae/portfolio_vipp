@@ -371,6 +371,7 @@
 
                     article{
                         >.con{
+                            z-index: 3;
                             h3{ 
                                 font-size: 20px; 
                                 &::after{ top: 60px; }
@@ -406,7 +407,10 @@
                         margin-right: 40px;
 
                         .box{ width: 150px;height: 150px; }
-                        .con{ padding: 20px 30px; }
+                        .con{ 
+                            padding: 20px 30px; 
+                            z-index: 3;
+                        }
                     }
                 }
             }

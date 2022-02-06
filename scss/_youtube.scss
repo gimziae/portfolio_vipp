@@ -1,0 +1,258 @@
+.youtube{
+    .sub_visual{
+        background: url(../img/youtube.jpeg) no-repeat center/cover fixed;
+    }
+    .inner{
+        width: 1180px;
+        margin: 0 auto;
+        position: relative;
+
+        .vidList{
+            width: 100%;
+            padding: 50px 0;
+
+            article{
+                width: 100%;
+                height: 280px;
+                margin-bottom: 50px;
+                background: #f7f7f7;
+
+                .pic{
+                    width: 40%;
+                    height: 100%;
+                    float: left;
+                    position: relative;
+
+                    &:hover a{
+                        filter: grayscale(0);
+                    }
+
+                    a{
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        filter: grayscale(0.5);
+                        transition: 0.5s;
+                        .thumb{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }    
+                        span{
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                            font-size: 80px;
+                            color: rgba(255, 255, 255, 0.8);
+                        }                    
+                    }
+
+
+                }
+                .con{
+                    width: calc(60% - 40px);
+                    height: 240px;
+                    position: relative;
+                    padding: 30px;
+                    float: right;
+                    background: rgba(255, 255, 255, 0.9);
+                    border-top-left-radius: 50px;
+                    top: 20px; right: 20px;
+
+                    h2{
+                        font: bold 20px/1.2 'arial';
+                        color: rgba(75, 105, 100, 0.9);
+                        text-align: center;
+                        margin-bottom: 20px;
+                        position: relative;
+
+                        &::after{
+                            content: '';
+                            display: block;
+                            width: 100%;
+                            height: 1px;
+                            background: rgba(75, 105, 100, 0.85);
+                            position: absolute;
+                            bottom: -10px;
+                        }
+                    }
+                    p{
+                        font: normal 14px/1.6 'arial';
+                        color: #777;
+                        text-indent: 10px;
+                        padding: 0 20px;
+                    }
+                    span{
+                        font: normal 12px/1 'arial';
+                        color: #999;
+                        position: absolute;
+                        bottom: 30px;
+                        right: 60px;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+
+            .pop{
+                width: 100%; height: 100vh;
+                position: fixed;
+                top: 0; left: 0;
+                background: rgba(0,0,0,0.5);
+                padding: 5vw;
+                overflow-x: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 5;
+
+                .vidPlay{
+                    width: 80vw;
+                    height: 80vh;
+                }
+                .btnClose{
+                    position: absolute;
+                    top: 50px;
+                    right: 50px;
+                    color: #fff;
+                    cursor: pointer;
+                    font-size: 25px;
+                }
+            }   
+        }
+
+    }
+}  
+
+@media screen and(max-width:1179px){
+    .youtube{
+        .inner{
+            width: 100%;
+            padding: 0 30px;
+    
+            .vidList{
+                article{
+                    .pic{ width: 45%;}
+                    .con{
+                        width: calc(55% - 40px);
+                        padding: 30px 20px;
+    
+                        h2{
+                            font: bold 18px/1.2 'arial';
+                        }
+                        p{
+                            font: normal 14px/1.4 'arial';
+                            color: #777;
+                            text-indent: 10px;
+                            padding: 0 15px;
+                        }
+                    }
+                } 
+            }
+    
+        }
+    }  
+}
+@media screen and(max-width:949px){
+    .youtube{
+        .sub_visual{
+            background: url(../img/youtube.jpeg) no-repeat center/cover fixed;
+        }
+        .inner{
+            width: 100%;
+
+            .vidList{
+                position: relative;
+                article{
+                    width: 100%;
+                    height: 600px;
+                    padding: 20px;
+    
+                    .pic{
+                        width: 100%;
+                        height: 60%;
+                        
+                    }
+                    .con{
+                        width: 100%;
+                        height: calc(40% - 20px);
+                        top: 20px; right: auto;
+    
+                        p{ padding: 0 20px; }
+                        span{
+                            bottom: 20px;
+                            right: 40px;
+                        }
+                    }
+                }  
+            }
+    
+        }
+    }       
+}
+@media screen and(max-width:749px){
+    .youtube{
+        .sub_visual{
+            background: url(../img/youtube.jpeg) no-repeat center/cover fixed;
+        }
+        .inner{
+            .vidList{
+                article{
+                    height: 400px;
+
+                    .pic{
+                        width: 100%;
+                        height: 80%;
+
+                    }
+                    .con{
+                        width: 100%;
+                        height: 20%;
+                        padding: 0;
+                        float: left;
+                        background: transparent;
+                        border-top-left-radius: 0px;
+    
+                        h2{
+                            font-size: 16px;
+                            color: #333;
+                            text-align: left;
+                            margin-bottom: 10px;
+                            position: relative;
+    
+                            &::after{ display: none; }
+                        }
+                        p{ display: none; }
+                        span{
+                            bottom: 30px;
+                            right: 20px;
+                        }
+                    }
+                }  
+            }
+    
+        }
+    }     
+}
+@media screen and(max-width:539px){
+    .youtube{
+        .sub_visual{
+            background: url(../img/youtube.jpeg) no-repeat center/cover fixed;
+        }
+        .inner{ 
+            padding: 20px;
+            .vidList{
+               padding: 0;
+                article{
+                    height: 300px;
+                    margin-bottom: 30px;
+                    .con{
+                        h2{font-size: 14px; }
+                        span{ display: none; }
+                    }
+                }  
+            }
+    
+        }
+    }     
+}

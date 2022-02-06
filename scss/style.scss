@@ -9,7 +9,7 @@
 @import "gallery.scss";
 @import "join.scss";
 @import "location.scss";
-@import "brand.scss";
+@import "youtube.scss";
 
 // header------------------------------
 #header{
@@ -184,7 +184,7 @@
 // rooms------------------------------
 #rooms{
     width: 100%;
-    height: 500px;
+    height: 800px;
 
     .inner{
         width: 100%;
@@ -195,6 +195,16 @@
             float: left;
             width: calc(100% / 3);
             height: 100%;
+            background: #efefef;
+            position: relative;
+
+            &:nth-of-type(2){ 
+                background: #222; 
+                .wrap{
+                    .con1{color: #eee;}
+                    .con2{color: #fff;}
+                }
+            }
 
             .wrap{
                 width: 100%;
@@ -202,64 +212,119 @@
                 position: relative;
                 overflow: hidden;
                 transition: 1s;
-
-
-                img{
+                .con1{
                     width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    transition: 1s;
-                    filter: grayscale(0.6);
-                }
-                .con{
-                    width: 100%;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
                     text-align: center;
-                    transition: 1s;
-                    opacity: 0.7;
-                
+                    position: absolute;
+                    top: 80px;
+                    color: #333;
+
                     p{
                         font: normal 12px/1 'arial';
                         margin-bottom: 15px;
-                        color: #fff;
+
                     }
                     h2{
-                        font-size: 32px;
+                        font-size: 30px;
                         margin-bottom: 50px;
-                        color: #fff;
+
+                    }                    
+                }
+                img{
+                    border: 1px solid #aaa;
+                    padding: 10px;
+                    width: 60%;
+                    height: 40%;
+                    object-fit: cover;
+                    transition: 1s;
+                    position: absolute;
+                    top: 50%; left: 50%;
+                    transform: translate(-50%,-60%);
+                    filter: grayscale(0.6);
+                }
+                .con2{
+                    width: 100%;
+                    position: absolute;
+                    bottom: 80px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    text-align: center;
+                    padding: 0 60px;
+                    transition: 1s;
+                    opacity: 0.7;
+                    span{
+                        font: bold 16px/1 'arial';
+
                     }
+                    p{
+                        font: normal 14px/1.4 'arial';
+                        margin: 25px 0;
+                    }
+
                     a{
                         display: inline-block;
                         width: 120px;
-                        height: 35px;
-                        border: 1px solid #fff;
-                        font: bold 12px/35px 'arial';
-                        color: #fff;
+                        height: 30px;
+                        background: rgba(60, 95, 90, 0.85);
+                        font: normal 11px/30px 'arial';
+                        letter-spacing: 1px;
+                        color: rgba(255, 255, 255, 0.85);
                         transition: 0.75s;
 
                         &:hover{
-                            background: #fff;
-                            color: #333;
-                            font-weight: normal;
+                            color: #fff;
+                            background: rgba(60, 95, 90, 1);
                         }
                     }
                 }                
             }
+        }
+    }
+}
+
+// video------------------------------
+#video{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+
+    video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .con{
+        width: 1180px; height: 90%;
+        margin: 0 auto;
+        padding: 80px 200px;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        h1{
+            font: normal 40px/1 'DM Serif Display';
+            color: #fff;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+        }
+        p{
+            font: normal 15px/1.5 'arial';
+            color: #eee;
+            margin-bottom: 50px;
+        }
+        a{
+            display: inline-block;
+            width: 300px; height: 30px;
+            border: 1px solid #ddd;
+            font: normal 12px/30px 'arial';
+            color: #ddd;
+            transition: .5s;
 
             &:hover{
-                .wrap{
-                    img{
-                        transform: scale(1.05) rotate(.001deg);
-                        filter: grayscale(0);
-                    }
-                    .con{
-                        opacity: 1;
-                        transform: translate(-50%, -50%) scale(1.1);
-                    }                    
-                }
+                background: rgba(255, 255, 255, .3);
+                color: #fff;
             }
         }
     }
@@ -333,54 +398,6 @@
         }
         .reviewMo{
             display: none;
-        }
-    }
-}
-
-// video------------------------------
-#video{
-    width: 100%;
-    height: 40vh;
-    overflow: hidden;
-    position: relative;
-
-    video{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .con{
-        width: 1180px; height: 100%;
-        margin: 0 auto;
-        padding: 100px 200px;
-        position: absolute;
-        top: 50%; left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-
-        h1{
-            font: normal 40px/1 'DM Serif Display';
-            color: #fff;
-            letter-spacing: 3px;
-            margin-bottom: 30px;
-        }
-        p{
-            font: normal 15px/1.5 'arial';
-            color: #eee;
-            margin-bottom: 50px;
-        }
-        a{
-            display: inline-block;
-            width: 300px; height: 30px;
-            border: 1px solid #ddd;
-            font: normal 12px/30px 'arial';
-            color: #ddd;
-            transition: .5s;
-
-            &:hover{
-                background: rgba(255, 255, 255, .3);
-                color: #fff;
-            }
         }
     }
 }
@@ -712,6 +729,22 @@
         }
     }
 
+    // video------------------------------
+    #video{
+        height: 300px;
+        .con{
+            width: 100%;           
+            padding: 50px 200px;
+    
+            h1{ font: normal 30px/1 'DM Serif Display'; }
+            p{ font: normal 12px/1.5 'arial'; }
+            a{
+                height: 25px;
+                font: normal 11px/25px 'arial';
+            }
+        }
+    }
+
     // review------------------------------
     #review{
         padding: 100px 30px;
@@ -772,51 +805,6 @@
             }
             .reviewMo{
                 display: none;
-            }
-        }
-    }
-
-    // video------------------------------
-    #video{
-        height: 30vh;
-  
-        video{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .con{
-            width: 100%; height: 100%;
-            margin: 0 auto;
-            padding: 50px 150px;
-            position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-    
-            h1{
-                font: normal 30px/1 'DM Serif Display';
-                color: #fff;
-                letter-spacing: 3px;
-                margin-bottom: 30px;
-            }
-            p{
-                font: normal 15px/1.5 'arial';
-                color: #eee;
-                margin-bottom: 30px;
-            }
-            a{
-                display: inline-block;
-                width: 300px; height: 25px;
-                border: 1px solid #ddd;
-                font: normal 11px/25px 'arial';
-                color: #ddd;
-                transition: .5s;
-    
-                &:hover{
-                    background: rgba(255, 255, 255, .3);
-                    color: #fff;
-                }
             }
         }
     }
@@ -985,10 +973,10 @@
                 height: 100vh;
                 background: #fff;
                 padding: 35px;
-                z-index: 5;
+                z-index: 10;
                 transition: 1s;
 
-                &.on{ left: 0; }
+                &.on{ left: 0; z-index: 10;}
 
                 >h1{
                     top: 80px;
@@ -1172,6 +1160,17 @@
         }
     }
 
+    // video------------------------------
+    #video{
+        .con{
+            padding: 50px 100px;
+    
+            h1{ font: normal 30px/1 'DM Serif Display'; }
+            p{ font: normal 12px/1.5 'arial'; margin-bottom: 30px;}
+            a{ font: normal 10px/25px 'arial'; }
+        }
+    }
+
     // review------------------------------
     //생각해보기...
     #review{
@@ -1258,16 +1257,7 @@
             }
         }
     }
-    // video------------------------------
-    #video{
-        .con{
-            padding: 50px 100px;
-    
-            h1{ font: normal 30px/1 'DM Serif Display'; }
-            p{ font: normal 12px/1.5 'arial'; }
-            a{ font: normal 10px/25px 'arial'; }
-        }
-    }
+
     // insta------------------------------
     // 사진 스와이퍼말고 사진첩 형식으로 변경?..
     #insta{
@@ -1461,6 +1451,15 @@
         }
     }
 
+    // video------------------------------
+    #video{
+        .con{
+            padding: 80px 50px;
+    
+            p{ display: none;}
+        }
+    }
+    
     // review------------------------------
     //생각해보기...
     #review{
@@ -1544,14 +1543,7 @@
             }
         }
     }
-    // video------------------------------
-    #video{
-        .con{
-            padding: 100px 100px;
-    
-            p{ display: none;}
-        }
-    }
+
     // insta------------------------------
     // 사진 스와이퍼말고 사진첩 형식으로 변경?..
     #insta{
