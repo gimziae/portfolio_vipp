@@ -25,9 +25,8 @@
 
         h1{
             position: absolute;
-            top: 50%;
+            bottom: 5px;
             left: 0;
-            transform: translateY(-50%);
 
             a{
                 font: bold 30px/1 'DM Serif Display';
@@ -40,9 +39,8 @@
 
             #gnbWeb{
                 position: absolute;
-                top: 50%;
+                bottom: 10px;
                 left: 100px;
-                transform: translateY(-50%);
                 display: block;
                 
                 li{
@@ -68,9 +66,8 @@
 
             .joinWeb{
                 position: absolute;
-                top: 50%;
+                bottom: 10px;
                 right: 20px;
-                transform: translateY(-50%);
 
                 li{
                     float: left;
@@ -654,20 +651,18 @@
         .inner{
             width: 100%;
             h1{
-                left: 30px;
+                left: 3vw;
                 a{ font-size: 25px;}
             }
             .menuWeb{
                 #gnbWeb{
-                    top: 60%;
                     li{
-                        float: left;
                         margin-left: 30px;
                         a{ font-size: 11px; }
                     }
                 }
                 .joinWeb{
-                    top: 60%;
+                    right: 3vw;
                     li{
                         margin-left: 20px;
                         a{ font-size: 11px; }
@@ -886,28 +881,21 @@
 @media screen and (max-width:949px){
     // header------------------------------
     #header{
-        height: 50px;
         position: fixed;
-        top: 0;
-        left: 0;
         background: #fff;
         z-index: 2;
 
         .inner{
-            >h1{
-                a{ font-size: 25px; }
-            }
             .menuWeb{ display: none; }
     
             .btnCall {
                 position: absolute;
-                right: 30px;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 18px;
-                height: 18px;
+                bottom: 10px;                
+                right: 3vw;
+                width: 15px;
+                height: 15px;
                 display: block;
-                z-index: 4;
+                z-index: 5;
 
                 &::before {
                   content: '';
@@ -971,13 +959,15 @@
                 height: 100vh;
                 background: #fff;
                 padding: 35px;
-                z-index: 10;
+                z-index: 100;
                 transition: 1s;
 
                 &.on{ left: 0; z-index: 10;}
 
                 >h1{
-                    top: 80px;
+                    top: 60px;
+                    height: 30px;
+                    border: 1px solid red;
                     margin-left: 10px;
 
                     &::after{
@@ -992,7 +982,6 @@
                 }      
                 
                 #gnbMo {
-                    //border: 3px solid blue;
                     margin-top: 75px;
                     margin-left: 5px;
 
@@ -1017,7 +1006,7 @@
                             padding: 20px 0;
                             font: bold 14px/1 'arial';
                             color: #555;
-
+                            cursor: pointer;
                         }
 
                         &:hover{
@@ -1040,6 +1029,7 @@
                             padding: 20px 0;
                             font: normal 14px/1 'arial';
                             color: #777;
+                            cursor: pointer;
 
                             &:hover{
                                 color: #111;
@@ -1078,6 +1068,7 @@
                                 font-size: 20px;
                                 color: #777;
                                 transition: 0.25s;
+                                cursor: pointer;
 
                                 &:hover{
                                     color: #333;
@@ -1332,18 +1323,33 @@
 
         .inner{
             h1{
+                bottom: 0;
                 a{ font-size: 18px; }
             }
     
             .btnCall {
-                width: 15px;
-                height: 15px;
-
+                bottom: 8px;  
                 &::before, &::after{ height: 1px; }
                 span{ 
-                    margin-top: 0; 
+                    margin-top: -1px; 
                     height: 1px;
                 }
+                &.on {
+                    &::before {
+                      top: 50%;
+                      margin-top: 0px;
+                      transform: rotate(-135deg);
+                    }
+                    &::after {
+                      bottom: 50%;
+                      margin-bottom: -1px;
+                      transform: rotate(135deg);
+                    }
+                    & span {
+                      transform: scale(0);
+                      opacity: 0;
+                    }
+                  }
             }
             .menuMo{   
                 
@@ -1623,45 +1629,10 @@
 @media screen and(max-width:539px){
     // header------------------------------
     #header{
-        height: 35px;
-
         .inner{
-            h1{ left: 15px; }
-            .btnCall { right: 15px; }
+            .btnCall { bottom: 5px; }
             .menuMo{   
-                #gnbMo {
-                    li{
-                        a{ font-size: 12px; }
-                    }
-                }
-
-                .joinMo{     
-                    margin-left: 5px;                   
-                    li{
-                        a{ font-size: 12px;}
-                    }
-                }
-
-                .snsMo{
-                    span{
-                        font: normal 12px/1 'arial';
-                    }
-                    ul{
-                        justify-content: space-around;
-
-                        li{
-                            a{ font-size: 15px; } 
-                        }
-                        
-                    }                        
-                }
-
-                p{
-                    font: 10px/1.1 'arial';
-                    color: #555;
-                }                    
-
-
+                >h1{ margin-left: 30px; }
             }
         }
     }

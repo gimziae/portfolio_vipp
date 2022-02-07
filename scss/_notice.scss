@@ -1,13 +1,7 @@
 .notice{
     .sub_visual{
-        background: url(../img/insta9.jpg);
     }
     .inner{
-        width: 1180px;
-        margin: 0 auto;
-        position: relative;
-        padding: 50px 0;
-
         .checkBox{
             text-align: right;
             padding: 10px;
@@ -139,9 +133,6 @@
 
 @media screen and(max-width:1179px){
     .notice{
-        .sub_visual{
-            background: url(../img/insta9.jpg);
-        }
         .inner{
             width: 100%;
             padding: 50px 20px;
@@ -220,9 +211,6 @@
 }
 @media screen and(max-width:949px){
     .notice{
-        .sub_visual{
-            background: url(../img/insta9.jpg);
-        }
         .inner{
             padding: 20px;
             table{
@@ -256,9 +244,6 @@
 }
 @media screen and(max-width:749px){
     .notice{
-        .sub_visual{
-            background: url(../img/insta9.jpg);
-        }
         .inner{
             table{
                 tr{
@@ -278,9 +263,6 @@
 }
 @media screen and(max-width:539px){
     .notice{
-        .sub_visual{
-            background: url(../img/insta9.jpg);
-        }
         .inner{
             table{
                 margin-bottom: 20px;

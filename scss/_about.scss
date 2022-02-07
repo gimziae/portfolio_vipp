@@ -1,13 +1,13 @@
 .about{
     .sub_visual{
-        background: url(../img/history.jpeg) no-repeat center/cover fixed;
+
     }
     .inner{
-        padding: 50px 0;
+        width: 100%;
         #about{
             width: 1180px;
-            height: 900px;
             margin: 0 auto;
+            height: 900px;
             margin-bottom: 100px;
 
             .wrap{
@@ -144,6 +144,7 @@
                 width: 1180px;
                 height: 100%;
                 margin: 0 auto;
+                
 
                 h3{
                     font: bold 35px/1 'arial';
@@ -356,9 +357,6 @@
 
 @media screen and(max-width:1179px){
     .about{
-        .sub_visual{
-            background: url(../img/history.jpeg) no-repeat center/cover fixed;
-        }
         .inner{
             width: 100%;
 
@@ -440,9 +438,6 @@
 
 @media screen and(max-width:949px){
     .about{
-        .sub_visual{
-            background: url(../img/history.jpeg) no-repeat center/cover fixed;
-        }
         .inner{
             padding: 50px 0;
             #about{
@@ -487,9 +482,6 @@
 
 @media screen and(max-width:749px){
     .about{
-        .sub_visual{
-            background: url(../img/history.jpeg) no-repeat center/cover fixed;
-        }
         .inner{
             padding: 50px 0;
             #about{
@@ -635,9 +627,6 @@
 
 @media screen and(max-width:539px){
     .about{
-        .sub_visual{
-            background: url(../img/history.jpeg) no-repeat center/cover fixed;
-        }
         .inner{
             padding: 30px 0;
             #about{

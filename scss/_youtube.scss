@@ -1,15 +1,10 @@
 .youtube{
     .sub_visual{
-        background: url(../img/youtube.jpeg) no-repeat center/cover fixed;
     }
     .inner{
-        width: 1180px;
-        margin: 0 auto;
-        position: relative;
 
         .vidList{
             width: 100%;
-            padding: 50px 0;
 
             article{
                 width: 100%;
@@ -155,9 +150,6 @@
 }
 @media screen and(max-width:949px){
     .youtube{
-        .sub_visual{
-            background: url(../img/youtube.jpeg) no-repeat center/cover fixed;
-        }
         .inner{
             width: 100%;
 
@@ -192,9 +184,6 @@
 }
 @media screen and(max-width:749px){
     .youtube{
-        .sub_visual{
-            background: url(../img/youtube.jpeg) no-repeat center/cover fixed;
-        }
         .inner{
             .vidList{
                 article{
@@ -236,9 +225,6 @@
 }
 @media screen and(max-width:539px){
     .youtube{
-        .sub_visual{
-            background: url(../img/youtube.jpeg) no-repeat center/cover fixed;
-        }
         .inner{ 
             padding: 20px;
             .vidList{

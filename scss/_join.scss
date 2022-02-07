@@ -1,11 +1,7 @@
 .join{
     .sub_visual{
-        background: url(../img/insta6.PNG) no-repeat center/cover;
     }
     .inner{
-        width: 1180px;
-        margin: 0 auto;
-        padding: 50px 0;
         h2{
             font: normal 30px/1 'DM Serif Display';
             letter-spacing: 1px;
@@ -175,9 +171,6 @@
 
 @media screen and(max-width:749px){
     .join{
-        .sub_visual{
-            background: url(../img/insta6.PNG) no-repeat center/cover;
-        }
         .inner{
             width: 100%;
             padding: 50px 20px;
@@ -207,9 +200,6 @@
 }
 @media screen and(max-width:539px){
     .join{
-        .sub_visual{
-            background: url(../img/insta6.PNG) no-repeat center/cover;
-        }
         .inner{
             width: 100%;
             padding: 30px 20px;

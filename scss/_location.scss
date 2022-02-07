@@ -1,6 +1,5 @@
 .location{
     .sub_visual{
-        background: url(../img/location.jpg) no-repeat center/cover fixed;
     }
 
     &::after{
@@ -9,10 +8,6 @@
         clear: both;
     }
     .inner{
-        width: 1180px;
-        padding: 30px 10px;
-        position: relative;
-
         .branch{
             float: left;
             margin-bottom: 20px;
@@ -90,9 +85,6 @@
 }
 @media screen and(max-width:1179px){
     .location{
-        .sub_visual{
-            background: url(../img/location.jpg) no-repeat center/cover fixed;
-        }
         .inner{
             width: 100%;
             padding: 30px;
@@ -116,9 +108,6 @@
 }
 @media screen and(max-width:949px){
     .location{
-        .sub_visual{
-            background: url(../img/location.jpg) no-repeat center/cover fixed;
-        }
         .inner{
             .branch{
                 li{
@@ -153,9 +142,6 @@
 }
 @media screen and(max-width:749px){
     .location{
-        .sub_visual{
-            background: url(../img/location.jpg) no-repeat center/cover fixed;
-        }
         .inner{
             .branch{
                 li{
@@ -179,9 +165,6 @@
 }
 @media screen and(max-width:539px){
     .location{
-        .sub_visual{
-            background: url(../img/location.jpg) no-repeat center/cover fixed;
-        }
         .inner{
             .branch{
                 li{
