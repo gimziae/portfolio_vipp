@@ -9,3 +9,12 @@ btnCallSub.addEventListener("click", e=>{
     btnCallSub.classList.toggle("on");
     menuMoSub.classList.toggle("on");
 })
+
+
+const subTitle = document.querySelector(".sub_visual .wrap");
+console.log(subTitle);
+
+window.addEventListener("load",()=>{
+
+    subTitle.classList.add("on");
+})

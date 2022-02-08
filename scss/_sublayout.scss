@@ -3,9 +3,7 @@
     width: 100%;
     height: 50px;
     overflow: hidden;
-    background: #f8f8f8;
-    position: fixed;
-    z-index: 5;
+    background: #f9f9f9;
 
     .inner{
         width: 1180px;
@@ -36,15 +34,36 @@
                 li{
                     float: left;
                     margin-left: 60px;
+                    position: relative;
+
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 0%;
+                        height: 5px;
+                        background: rgba(75, 105, 100, 0.7);
+                        position: absolute;
+                        bottom: -7px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        transform-origin: center;
+                        transition: .5s;
+
+                    }
                     
                     a{
                         font: bold 12px/1 'arial';
-                        color: #a0a0a0;
+                        color: #999;
                         transition: 0.25s;
                     }
 
-                    &:hover a{
-                    color: #333;
+                    &:hover, &.on{
+                        &::after{
+                            width: 100%;
+                        }
+                        a{
+                            color: #333;
+                        }
                     }
                 }
             }
@@ -57,6 +76,7 @@
                 li{
                     float: left;
                     margin-left: 30px;
+                    position: relative;
                     
                     a{
                         font: normal 12px/1 'arial';
@@ -70,8 +90,8 @@
                         }
                     }
 
-                    &:hover a{
-                    color: #333;
+                    &:hover, &.on{
+                        a{ color: #333; }
                     }
                 }
             }            
@@ -88,14 +108,14 @@
 // sub content------------------------------
 .content{
     width: 100%;
-    padding: 50px 0 ;
+    padding: 0 ;
     overflow: hidden;
     min-height: 100vh;
 
     .sub_visual{
         width: 100%;
-        height: 300px;
-        background: #f8f8f8;
+        height: 350px;
+        background: #f9f9f9;
 
         .wrap{
             width: 1180px;
@@ -103,44 +123,52 @@
             margin: 0 auto;
             position: relative;
 
-            opacity: 0;
-            transform: translateY(-30vh);
-            transition: 1s;
-
             &.on{
-                opacity: 1;
-                transform: translateY(0);
+                .pic{
+                    opacity: 1;
+                    top: 50%;
+                }
+                .con{
+                    opacity: 1;
+                    right: 20%;
+                }
             }
 
             .pic{
                 width: 400px;
                 height: 200px;
-                background: #ccc;
+                background: #aaa;
                 position: absolute;
-                top: 50%;
+                top: 40%;
                 left: 10%;
                 transform: translateY(-50%);
+                opacity: 0; 
+                transition: .8s;
             }
             
             .con{
-                width: 50%;
-                padding: 10px;
+                min-width: 550px;
+                padding: 30px;
                 position: absolute;
                 top: 50%;
-                right: 20%;
-                transform: translateY(-50%);
-                border: 1px solid red;
+                right: 10%;
+                transform: translateY(-40%);
+                
+                opacity: 0;
+                transition: 1s;
+                border: 1px solid rgba(60, 90, 80, 1);
 
                 h2{
                     font: normal 30px/1 'DM Serif Display';
                     letter-spacing: 5px;
                     color: #333;
-                    margin-bottom: 10px;
+                    margin-bottom: 15px;
                 }
                 p{
                     color:#777;
-                    font: normal 14px/1.4 'arial';
+                    font: normal 14px/1.6 'arial';
                     letter-spacing: 1px;     
+                    padding: 0 20px;
                 }                
             }
 
@@ -344,6 +372,8 @@
 @media screen and(max-width:949px){
 // header------------------------------
     #header_sub{
+        position: fixed;
+        z-index: 5;
         .inner{
             .menuWeb{ display: none; }
             .btnCall {

@@ -43,9 +43,32 @@
                         <li>
                             <a href="join.html">JOIN</a>
                         </li>
-                        <li>
+                        <li class="login">
                             <a href="#"><i class="fas fa-user-circle"></i>SIGN IN</a>
                         </li>
+                        <div class="popup">
+                            <table>
+                                <caption class="hidden">로그인창</caption>
+                                <!-- 아이디 -->
+                                <tr>
+                                    <th><label for="id">ID</label></th>
+                                    <td>
+                                        <input type="text" name="id" id="id" placeholder="Enter user id">
+                                    </td>
+                                </tr>
+                                <!-- 비밀번호 -->
+                                <tr>
+                                    <th><label for="pwd">PASSWORD</label></th>
+                                    <td><input type="password" name="pwd" id="pwd" placeholder="Enter user password "></td>
+                                </tr>
+                                <!-- 제출버튼 -->
+                                <tr>
+                                    <th colspan="2">
+                                        <input type="submit" value="sign in">
+                                    </th>
+                                </tr>
+                            </table>
+                        </div>
                     </ul>    
                 </nav> 
 
@@ -222,66 +245,92 @@
 <!-- review -->
 <section id="review">
     <div class="inner">
-        <h2>Traveller's Experiences</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, adipisci.</p>
-        <!-- Swiper -->
+        <div class="con">
+            <h2>Traveller's Experiences</h2>    
+            <p>Lorem ipsum dolor sit amet.</p>      
+            <div class="swiper-next">
+                <span></span>
+            </div>
+            <div class="swiper-prev">
+                <span></span>
+            </div>
+        </div>
+        <!-- 리뷰 Swiper -->
         <div class="swiper reviewSwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="img/review1.jpg" alt="">
-                    <div class="con">
-                        <h4>Vipp Shelter</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem excepturi, magnam repudiandae earum tenetur minima omnis eos.</p>
-                        <span>Feb 2021, James Eter</span>             
+                    <div class="txt">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem excepturi, magnam repudiandae earum tenetur minima omnis eos. Consectetur adipisicing elit. Delectus, sed!</p>                             
+                    </div>
+                    <div class="profile">
+                        <img src="img/review1.jpg" alt="">
+                        <h4>Vipp Shelter<br><span>Feb 2021, James Eter</span></h4>                             
+                        
                     </div>  
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/review2.jpg" alt="">
-                    <div class="con">
-                        <h4>Vipp Chimney House</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem excepturi, magnam repudiandae earum tenetur minima omnis eos.</p>
-                        <span>Jan 2022, James Eter</span>
+                    <div class="txt">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem excepturi, magnam repudiandae earum tenetur minima omnis eos.</p>                             
                     </div>
+                    <div class="profile">
+                        <img src="img/review2.jpg" alt="">
+                        <h4>Vipp Chimney House<br><span>Jan 2022, James Eter</span></h4>      
+                          
+                    </div>  
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/review3.jpg" alt="">
-                    <div class="con">
-                        <h4>Vipp loft</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem excepturi, magnam repudiandae earum tenetur minima omnis eos.</p>
-                        <span>Aug 2021, James Eter</span>
+                    <div class="txt">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem excepturi, magnam repudiandae earum tenetur minima omnis eos.</p>                             
                     </div>
+                    <div class="profile">
+                        <img src="img/review3.jpg" alt="">
+                        <h4>Vipp Loft<br><span>Aug 2021, James Eter</span></h4>                             
+                        
+                    </div>  
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/review4.jpg" alt="">
-                    <div class="con">
-                        <h4>Vipp loft</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem excepturi, ullam voluptatem dolorum magnam repudiandae earum tenetur minima omnis eos.</p>
-                        <span>Dec 2020, James Eter</span>
+                    <div class="txt">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem excepturi, magnam repudiandae earum tenetur minima omnis eos. Consectetur adipisicing elit. Delectus, sed!</p>                              
                     </div>
+                    <div class="profile">
+                        <img src="img/review4.jpg" alt="">
+                        <h4>Vipp Loft<br><span>Feb 2021, James Eter</span></h4>                             
+                        
+                    </div>  
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/review5.jpg" alt="">
-                    <div class="con">
-                        <h4>Vipp Shelter</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem excepturi, ullam voluptatem dolorum magnam repudiandae earum tenetur minima omnis eos.</p>
-                        <span>Mar 2021, James Eter</span>
+                    <div class="txt">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem excepturi, magnam  tenetur minima omnis eos. Consectetur adipisicing elit. Delectus, sed!</p>                              
                     </div>
+                    <div class="profile">
+                        <img src="img/review5.jpg" alt="">
+                        <h4>Vipp Shelter<br><span>Feb 2021, James Eter</span></h4>                             
+                        
+                    </div>  
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/review6.png" alt="">
-                    <div class="con">
-                        <h4>Vipp Chimney House</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem excepturi, ullam voluptatem dolorum magnam repudiandae earum tenetur minima omnis eos.</p>
-                        <span>Sep 2019, James Eter</span>
+                    <div class="txt">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem excepturi, magnam repudiandae earum tenetur minima omnis eos.</p>                             
                     </div>
+                    <div class="profile">
+                        <img src="img/review6.png" alt="">
+                        <h4>Vipp Shelter<br><span>Feb 2021, James Eter</span></h4>                             
+                        
+                    </div>  
                 </div>
             </div>
         </div>
-
+        <!-- 리뷰 모바일 버전 -->
         <div class="reviewMo">
             <article>
                 <img src="img/review1.jpg" alt="">
-                <div class="con">
+                <div class="txt">
                     <h4>Vipp Shelter</h4>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem excepturi, ullam voluptatem dolorum magnam repudiandae earum tenetur minima omnis eos.</p>
                     <span>Feb 2021, James Eter</span>             
@@ -289,8 +338,8 @@
             </article>
 
             <article>
-                <img src="img/review4.jpg" alt="">
-                <div class="con">
+                <img src="img/review3.jpg" alt="">
+                <div class="txt">
                     <h4>Vipp Chimney House</h4>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem excepturi, ullam voluptatem dolorum magnam repudiandae earum tenetur minima omnis eos.
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, animi.</p>
@@ -299,16 +348,15 @@
             </article>
 
             <article>
-                <img src="img/review3.jpg" alt="">
-                <div class="con">
+                <img src="img/review4.jpg" alt="">
+                <div class="txt">
                     <h4>Vipp loft</h4>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem excepturi, ullam voluptatem dolorum magnam repudiandae earum tenetur minima omnis eos. Lorem ipsum dolor sit amet.
                     </p>
                     <span>Aug 2021, James Eter</span>
                 </div>
             </article>
-
-            <a href="#">view more ></a>
+            <a href="#">VIEW MORE <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
 </section>
@@ -316,9 +364,11 @@
 <!-- insta -->
     <section id="insta">
         <div class="inner">
-            <h2>Our latest<br>Instagrams</h2>
-            <p>Go to account</p>
-            <!-- <span class="arrow"></span> -->
+            <div class="title">
+                <h2>Our latest<br>Instagrams</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, autem?</p>              
+            </div>
+
             <div class="wrap">
                 <div class="swiper instaSwiper">
                     <div class="swiper-wrapper">
@@ -352,7 +402,6 @@
                     </div>
 
                     <div class="swiper-pagination"></div>
-                    </div>
             </div>
         </div>
     </section>
@@ -451,15 +500,16 @@
         });
 
         var swiper = new Swiper(".reviewSwiper", {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 30,
            // slidesPerGroup: 4,
             loop: true,
             loopFillGroupWithBlank: true,
             navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-next",
+            prevEl: ".swiper-prev",
             },
+
          });
       </script>
 </body>
