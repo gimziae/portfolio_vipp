@@ -8,7 +8,9 @@
             width: 1180px;
             margin: 0 auto;
             height: 500px;
-            padding: 50px 0;
+            padding-top: 50px;
+            padding-bottom: 100px;
+            border-bottom: 1px solid #efefef;
             //border: 1px solid red;
             &::after{
                 content: '';
@@ -279,7 +281,7 @@
         #about{
             width: 1180px;
             margin: 0 auto;
-            padding: 100px 0;
+            padding-top: 100px;
 
             .wrap{
                 width: 100%;  
@@ -482,7 +484,7 @@
             }
             #about{
                 width: 100%;
-                padding: 100px 30px;
+                padding: 100px 30px 0px 30px;
 
                 .wrap{
                     width: 100%;  
@@ -745,14 +747,14 @@
     
             #welcome{
                 width: 100%;
-                height: 380px;
+                height: 500px;
                 padding: 20px;
-                .pic{width: 100%; height: 50%;}
+                .pic{width: 100%; height: 70%;}
                 .txt{
                     width: 100%;
-                    height: 50%;
-                    padding: 40px 0 10px 20px;
-
+                    height: 30%;
+                    padding: 30px 0 30px 30px;
+x
                     span{font-size: 10px;}
                     >h2{ font-size: 22px; line-height: 1.2;}
                     p{ display: none; }

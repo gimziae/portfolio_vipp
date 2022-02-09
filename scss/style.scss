@@ -4,7 +4,7 @@
 
 @import "reset.scss";
 @import "sublayout.scss";
-@import "notice.scss";
+@import "community.scss";
 @import "about.scss";
 @import "gallery.scss";
 @import "join.scss";
@@ -265,7 +265,7 @@
 // rooms------------------------------
 #rooms{
     width: 100%;
-    height: 800px;
+    height: 650px;
 
     .inner{
         width: 100%;
@@ -280,10 +280,12 @@
             position: relative;
 
             &:nth-of-type(2){ 
-                background: #222; 
+                background: #333; 
                 .wrap{
-                    .con1{color: #eee;}
-                    .con2{color: #fff;}
+                    .con1{
+                        p{color: #cdcdcd;}
+                        h2{color: #fff;}
+                    }
                 }
             }
 
@@ -303,61 +305,71 @@
                     p{
                         font: normal 12px/1 'arial';
                         margin-bottom: 15px;
-
+                        color: #777;
                     }
-                    h2{
-                        font-size: 30px;
+                    >h2{
+                        font: bold 30px/1 'arial';
                         margin-bottom: 50px;
-
+                        letter-spacing: 1px;
+                        color: #333;
                     }                    
                 }
-                img{
-                    border: 1px solid #aaa;
-                    padding: 10px;
-                    width: 60%;
-                    height: 40%;
-                    object-fit: cover;
-                    transition: 1s;
+                .pic{
+                    width: 70%;
+                    height: 280px;                        
                     position: absolute;
                     top: 50%; left: 50%;
-                    transform: translate(-50%,-60%);
-                    filter: grayscale(0.6);
+                    transform: translate(-50%,-50%);
+                    overflow: hidden;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+                    &:hover{ .txt{bottom: 0%;}}
+                    img{    
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: .5s;
+                    }             
+                    .txt{
+                        width: 100%;
+                        height: 50%;
+                        color: #f9f9f9;
+                        background: rgba(0, 0, 0, 0.4);
+                        padding: 30px;
+                        position: absolute;
+                        bottom: -100%;
+                        transition: 1s;
+                        text-align: center;
+                        span{
+                            font: bold 16px/1 'arial';
+                            letter-spacing: 1px;
+                            display: block;
+                            text-align: center;
+                        }
+                        p{
+                            padding: 15px 0;
+                            font: normal 12px/1.4 'arial';
+                        }
+                    }       
                 }
-                .con2{
-                    width: 100%;
+                >a{
+                    width: 40%;
+                    height: 30px;
                     position: absolute;
-                    bottom: 80px;
-                    left: 50%;
+                    bottom: 80px; left: 50%;
                     transform: translateX(-50%);
                     text-align: center;
-                    padding: 0 60px;
-                    transition: 1s;
-                    opacity: 0.7;
-                    span{
-                        font: bold 16px/1 'arial';
-                        letter-spacing: 1px;
+                    transition: .5s;
+                    display: inline-block;
+                    background: rgba(75, 105, 100, 0.85);
+                    font: normal 11px/30px 'arial';
+                    letter-spacing: 1px;
+                    color: rgba(255, 255, 255, 0.9);
+                    &:hover{
+                        color: #fff;
+                        background: rgba(75, 105, 100, 1);
                     }
-                    p{
-                        font: normal 14px/1.4 'arial';
-                        margin: 25px 0;
-                    }
-
-                    a{
-                        display: inline-block;
-                        width: 120px;
-                        height: 30px;
-                        background: rgba(60, 95, 90, 0.85);
-                        font: normal 11px/30px 'arial';
-                        letter-spacing: 1px;
-                        color: rgb(255, 255, 255);
-                        transition: 0.75s;
-
-                        &:hover{
-                            color: #fff;
-                            background: rgba(60, 95, 90, 1);
-                        }
-                    }
-                }                
+                }
+                              
             }
         }
     }
@@ -866,20 +878,24 @@
     // rooms------------------------------
     #rooms{
         height: 600px;
-
         .inner{
             article{
                 .wrap{
                     .con1{
-                        p{ font-size: 11px; }
-                        h2{ font-size: 30px; }                    
+                        p{ font-size: 10px; }
+                        h2{ font-size: 24px; }                    
                     }
-                    img{ width: 70%; }
-                    .con2{
-                        span{ display: block;}
-                        p{ display: none;}
-                        a{ margin-top: 30px; }
-                    }                
+                    .pic{
+                        .txt{
+                            padding: 30px 20px;
+                            span{ font: bold 14px/1 'arial'; }
+                            p{
+                                padding: 10px;
+                                font: normal 11px/1.3 'arial';
+                                word-break: break-all;
+                            }                           
+                        }
+                    }
                 }
             }
         }
@@ -1346,7 +1362,7 @@
     
     // rooms------------------------------
     #rooms{
-        height: 700px;
+        height: 500px;
     
         .inner{
             article{
@@ -1354,14 +1370,15 @@
     
                 .wrap{
                     .con1{ top: 60px; }
-                    img{
-                        height: 50%;
-                        transform: translate(-50%,-50%);
-                    }
-                    .con2{
-                        bottom: 60px;
-                        padding: 0 10px;           
-                    }                
+                    .pic{
+                        width: 60%;
+                        height: 240px;
+                        .txt{
+                            padding: 30px 60px;
+                            p{ padding:10px;}
+                        }  
+                    }    
+                    a{bottom: 60px;}    
                 }
             }
         }
@@ -1630,18 +1647,6 @@
         }
     }
     
-    // rooms------------------------------
-    #rooms{
-        height: 600px;
-        .inner{
-            article{
-                .wrap{
-                    img{ height: 40%; }             
-                }
-            }
-        }
-    }
-
     // video------------------------------
     #video{
         .con{
@@ -1854,22 +1859,15 @@
     
     // rooms------------------------------
     #rooms{
-        height: 500px;
         .inner{
             article{
                 .wrap{
-                    .con1{ 
-                        h2{ font-size: 25px;}
+                    .pic{
+                        .txt{
+                            padding:20px 10px;
+                            p{ padding:10px;}
+                        }  
                     }
-                    img{ height: 40%; }     
-                    .con2{
-                        bottom: 40px;
-                        span{ font-size: 15px;}
-                        a{
-                            width: 100px; 
-                            font-size: 10px;
-                        }
-                    }        
                 }
             }
         }

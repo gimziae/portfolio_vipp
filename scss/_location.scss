@@ -12,77 +12,138 @@
         clear: both;
     }
     .inner{
-        .branch{
-            float: left;
-            margin-bottom: 20px;
+        padding: 100px 0;
+        .wrap{
+            width: 100%;
             position: relative;
 
-            li{
-                float: left;
-                margin-right: 20px;
-                width: 200px;
-                a{
+            .branch{
+                margin-bottom: 30px;
+                position: relative;
+                width: 100%;
+                height: 50px;
+
+                li{
+                    float: left;
+                    margin-right: 20px;
+                    width: 200px;
+                    height: 40px;
+
+                    a{
+                        display: block;
+                        width: 100%;
+                        height: 40px;
+                        background: rgba(75, 105, 100, 0.85);
+                        font: normal 12px/40px 'arial';
+                        letter-spacing: 2px;
+                        color: #fff;
+                        text-align: center;
+                        border: 1px solid rgba(75, 105, 100, 1);
+                        transition: .5s;
+                    }
+
+                    &.on a{ background: rgba(75, 105, 100, 1); }
+                }
+            }
+            .sub_con{
+                width: 100%;
+                height: 380px;
+                box-shadow: 10px 10px 20px rgba(0,0,0,.1);
+                padding: 50px 100px;
+                margin-bottom: 50px;
+                background: #f7f7f7;
+
+                &::after{
+                    content: '';
                     display: block;
-                    width: 100%;
-                    height: 30px;
-                    background: rgba(75, 105, 100, 0.85);
-                    font: normal 12px/30px 'arial';
-                    letter-spacing: 2px;
-                    color: #fff;
-                    text-align: center;
-                    border: 1px solid rgba(75, 105, 100, 1);
+                    clear: both;
+                }
+                .box{
+                    width: 60%;
+                    height: 100%;
+                    float: right;
+                    padding: 0 100px;
+                    h2{
+                        font: bold 20px/1 'arial';
+                        margin-bottom: 20px;
+                        color: #333;
+                    }
+                    input[type=text],[type=email]{
+                        width: 100%;
+                        height: 30px;
+                        margin-bottom: 20px;
+                        border: none;
+                        border-bottom: 1px solid #aaa;
+                        text-indent: 10px;
+                        background: transparent;
+
+                        &::placeholder{color: #888;}
+                    }
+                    label{
+                        color: #888;
+
+                    }
+                    input[type=submit]{
+                        margin-top: 20px;
+                        width: 150px;
+                        height: 40px;
+                        border: none;
+                        background: rgba(75, 105, 100, .5);
+                        font: 12px/40px 'arial';
+                        letter-spacing: 2px;
+                        color: #fff;
+                        transition: .5s;
+                        &:hover{ background: rgba(75, 105, 100, 0.85);}
+                    }
+                }
+                #branchInfo{
+                    width: 40%;
+                    height: 100%;
+                    float: left;
+                    position: relative;
+                    border-right: 1px solid #ddd;
+
+                    article{
+                        display: none;
+                        width: 100%;
+                        text-align: left;
+
+                        &.on{ display: block; }
+
+                        h3{
+                            font: bold 20px/1 'arial';
+                            color: #333;
+                            margin-bottom: 20px;
+                        }
+                        p{
+                            font: normal 16px/1.6 'arial';
+                            color: #777;
+                        }
+                        em{ 
+                            font: normal 14px/1 'arial'; 
+                            color: #888;
+                        }
+
+
+                    }
+
                 }
 
-                &.on a{ background: rgba(75, 105, 100, 1); }
             }
-        }
-
-        #branchInfo{
-            width: 28%;
-            height: 400px;
-            float: right;
-            background: #f9f9f9;
-            padding: 20px;
-            position: relative;
-            top: 80px;
-            right: 20px;
-
-            article{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                display: none;
-                border: 1px solid rgba(75, 105, 100, 0.5);
-                padding: 40px;
-                width: 120%;
-                text-align: center;
-
-                &.on{ display: block; }
-
-                h3{
-                    font: bold 20px/1 'arial';
-                    color: #555;
-                    margin-bottom: 20px;
-                }
-                p{
-                    font: normal 16px/1.6 'roboto';
-                    color: #555;
-                }
-                em{ 
-                    font: normal 14px/1 'roboto'; 
-                    color: #777;
-                }
 
 
-            }
 
-        }
-        #map{
-            width: 60%;
-            height: 500px;
-            border: 1px solid #000;   
-            float: left;         
+            #map{
+                width: 100%;
+                height: 700px;
+                border: none;  
+                z-index: -1;
+      
+            }            
+
+
+
+
         }
 
     }
@@ -92,54 +153,56 @@
         .inner{
             width: 100%;
             padding: 30px;
-    
-            .branch{    
-                li{ width: 150px; }
-            }
-
-            #branchInfo{
-                top: 50px;
-    
-                article{
-                    p{ font-size: 14px; }
-    
+            .wrap{
+                .branch{    
+                    li{ width: 150px; }
                 }
-            }    
-            #map{ height: 400px; }
 
+                #branchInfo{
+                    top: 50px;
+        
+                    article{
+                        p{ font-size: 14px; }
+        
+                    }
+                }    
+                #map{ height: 400px; }
+            }
         }
     }
 }
 @media screen and(max-width:949px){
     .location{
         .inner{
-            .branch{
-                li{
-                    width: 120px;
+            .wrap{
+                .branch{
+                    li{
+                        width: 120px;
 
-                    a{ 
-                        font-size: 11px;
+                        a{ 
+                            font-size: 11px;
+                        }
                     }
                 }
-            }
-            #branchInfo{
-                width: 100%;
-                height: 250px;
-                top: 0; right: 0;
-                margin-bottom: 20px;
-    
-                article{
-                    border: none;
-                    padding: 20px;
+                #branchInfo{
                     width: 100%;
+                    height: 250px;
+                    top: 0; right: 0;
+                    margin-bottom: 20px;
+        
+                    article{
+                        border: none;
+                        padding: 20px;
+                        width: 100%;
 
-                    h3{ font-size: 18px; }
-                    p{ font-size: 14px; }
-                    em{ font-size: 14px; }
+                        h3{ font-size: 18px; }
+                        p{ font-size: 14px; }
+                        em{ font-size: 14px; }
+                    }
+        
                 }
-    
+                #map{ width: 100%; }
             }
-            #map{ width: 100%; }
 
         }
     }  
@@ -147,37 +210,45 @@
 @media screen and(max-width:749px){
     .location{
         .inner{
-            .branch{
-                li{
-                    width: 100px;
+            .wrap{
 
-                    a{ font-size: 10px; }
-                }
-            }
-            #branchInfo{
-                article{
+                .branch{
+                    li{
+                        width: 100px;
 
-                    h3{ font-size: 14px; }
-                    p{ font-size: 12px; }
-                    em{ font-size: 12px; }
+                        a{ font-size: 10px; }
+                    }
                 }
-    
+                #branchInfo{
+                    article{
+
+                        h3{ font-size: 14px; }
+                        p{ font-size: 12px; }
+                        em{ font-size: 12px; }
+                    }
+        
+                }
+                #map{ height: 400px; }                
             }
-            #map{ height: 400px; }
+
         }
     }   
 }
 @media screen and(max-width:539px){
     .location{
         .inner{
-            .branch{
-                li{
-                    width: 80px;
-                    margin-right: 10px;
+            .wrap{
 
-                    a{ letter-spacing: 1px; }
-                }
+                .branch{
+                    li{
+                        width: 80px;
+                        margin-right: 10px;
+
+                        a{ letter-spacing: 1px; }
+                    }
+                }                
             }
+
         }
     }   
 }

@@ -108,7 +108,7 @@
 // sub content------------------------------
 .content{
     width: 100%;
-    padding: 0 ;
+    padding-bottom: 100px ;
     overflow: hidden;
     min-height: 100vh;
 
@@ -130,14 +130,14 @@
                 }
                 .con{
                     opacity: 1;
-                    right: 20%;
+                    right: 30%;
                 }
             }
 
             .pic{
                 width: 400px;
                 height: 200px;
-                background: #aaa;
+                background: #fff;
                 position: absolute;
                 top: 40%;
                 left: 10%;
@@ -158,8 +158,8 @@
                 border: 1px solid rgba(60, 90, 80, 1);
 
                 h2{
-                    font: bold 30px/1 'DM Serif Display';
-                    letter-spacing: 5px;
+                    font: bold 30px/1 'arial';
+                    letter-spacing: 3px;
                     color: #333;
                     margin-bottom: 15px;
                 }

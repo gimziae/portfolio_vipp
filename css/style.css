@@ -116,7 +116,7 @@ fieldset {
 
 .content {
   width: 100%;
-  padding: 0;
+  padding-bottom: 100px;
   overflow: hidden;
   min-height: 100vh;
 }
@@ -137,12 +137,12 @@ fieldset {
 }
 .content .sub_visual .wrap.on .con {
   opacity: 1;
-  right: 20%;
+  right: 30%;
 }
 .content .sub_visual .wrap .pic {
   width: 400px;
   height: 200px;
-  background: #aaa;
+  background: #fff;
   position: absolute;
   top: 40%;
   left: 10%;
@@ -162,8 +162,8 @@ fieldset {
   border: 1px solid #3c5a50;
 }
 .content .sub_visual .wrap .con h2 {
-  font: bold 30px/1 "DM Serif Display";
-  letter-spacing: 5px;
+  font: bold 30px/1 "arial";
+  letter-spacing: 3px;
   color: #333;
   margin-bottom: 15px;
 }
@@ -646,18 +646,145 @@ fieldset {
     display: none;
   }
 }
-.notice .inner .checkBox {
+.community {
+  padding-bottom: 50px;
+}
+.community .inner {
+  padding: 50px 0;
+}
+.community .inner article {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 100px;
+  position: relative;
+}
+.community .inner article i {
+  position: absolute;
+  font-size: 40px;
+  color: rgba(75, 105, 100, 0.8);
+}
+.community .inner article i:nth-of-type(1) {
+  top: 10px;
+  left: 25%;
+}
+.community .inner article i:nth-of-type(2) {
+  top: 25px;
+  right: 25%;
+}
+.community .inner article .con {
+  width: 100%;
+  padding: 50px 0;
+  position: relative;
+  text-align: center;
+}
+.community .inner article .con h2 {
+  font: normal 35px/1.2 "arial";
+  margin-bottom: 20px;
+  z-index: 2;
+}
+.community .inner article .con h2 strong {
+  font-size: 45px;
+}
+.community .inner article .con p {
+  font: normal 16px/1.4 "arial";
+  padding: 0 200px;
+  color: #999;
+}
+.community .inner #tab {
+  width: 100%;
+  margin: 0 auto;
+  height: 1200px;
+  padding: 100px 0;
+  position: relative;
+}
+.community .inner #tab dt {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 60px;
+  border: 1px solid #ddd;
+}
+.community .inner #tab dt:nth-of-type(1) {
+  left: 0%;
+}
+.community .inner #tab dt:nth-of-type(2) {
+  left: 50%;
+}
+.community .inner #tab dt a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #f9f9f9;
+  font: bold 18px/60px "arial";
+  letter-spacing: 2px;
+  color: #ccc;
+  text-align: center;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.community .inner #tab dt.on a {
+  background: rgba(75, 105, 100, 0.9);
+  border: 1px solid #4b6964;
+  color: #fff;
+}
+.community .inner #tab dd {
+  display: block;
+  width: 100%;
+  opacity: 0;
+  height: 900px;
+  transform: translateY(15vh);
+  transition: 0.5s ease-out;
+  margin-top: 100px;
+  opacity: 0;
+  position: absolute;
+}
+.community .inner #tab dd h2 {
+  text-align: center;
+  font: bold 40px/1 "arial";
+  color: #333;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.community .inner #tab dd h2::before {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 1px;
+  background: #ddd;
+  position: absolute;
+  top: 50%;
+}
+.community .inner #tab dd h2::after {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 1px;
+  background: #ddd;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+.community .inner #tab dd.on {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 2;
+}
+.community .inner #tab .tab_notice {
+  width: 100%;
+}
+.community .inner #tab .tab_notice .checkBox {
   text-align: right;
   padding: 10px;
 }
-.notice .inner table {
+.community .inner #tab .tab_notice table {
   width: 100%;
   margin-bottom: 50px;
   border-bottom: 1px solid #ddd;
   border-top: 1px double #ddd;
-  border-collapse: collapse;
 }
-.notice .inner table tr th {
+.community .inner #tab .tab_notice table tr th {
   text-align: center;
   font: normal 14px/1 "arial";
   letter-spacing: 2px;
@@ -665,54 +792,54 @@ fieldset {
   color: #fff;
   padding: 15px 0;
 }
-.notice .inner table tr th:nth-of-type(1) {
+.community .inner #tab .tab_notice table tr th:nth-of-type(1) {
   width: 10%;
 }
-.notice .inner table tr th:nth-of-type(3) {
+.community .inner #tab .tab_notice table tr th:nth-of-type(3) {
   width: 15%;
 }
-.notice .inner table tr th:nth-of-type(4) {
+.community .inner #tab .tab_notice table tr th:nth-of-type(4) {
   width: 15%;
 }
-.notice .inner table tr td {
+.community .inner #tab .tab_notice table tr td {
   font: 16px/1.5 "arial";
   color: #777;
   padding: 10px 20px;
   text-align: center;
   border-bottom: 1px solid #ddd;
 }
-.notice .inner table tr td:nth-of-type(1) {
+.community .inner #tab .tab_notice table tr td:nth-of-type(1) {
   text-align: center;
   color: #999;
 }
-.notice .inner table tr td:nth-of-type(2) {
+.community .inner #tab .tab_notice table tr td:nth-of-type(2) {
   text-align: left;
 }
-.notice .inner table tr td:nth-of-type(2) a {
+.community .inner #tab .tab_notice table tr td:nth-of-type(2) a {
   font: normal 14px/1 "arial";
   color: #555;
 }
-.notice .inner table tr td:nth-of-type(3) {
+.community .inner #tab .tab_notice table tr td:nth-of-type(3) {
   text-align: center;
   color: #999;
 }
-.notice .inner table tr td:nth-of-type(4) {
+.community .inner #tab .tab_notice table tr td:nth-of-type(4) {
   text-align: center;
   color: #999;
 }
-.notice .inner table tr:hover {
+.community .inner #tab .tab_notice table tr:hover {
   background: rgba(221, 221, 221, 0.6);
 }
-.notice .inner .pagenation {
+.community .inner #tab .tab_notice .pagenation {
   width: 100%;
   text-align: center;
 }
-.notice .inner .pagenation::after {
+.community .inner #tab .tab_notice .pagenation::after {
   content: "";
   display: block;
   clear: both;
 }
-.notice .inner .pagenation .prev {
+.community .inner #tab .tab_notice .pagenation .prev {
   float: left;
   margin-left: 300px;
   display: block;
@@ -724,7 +851,7 @@ fieldset {
   text-align: center;
   background: rgba(75, 105, 100, 0.7);
 }
-.notice .inner .pagenation .next {
+.community .inner #tab .tab_notice .pagenation .next {
   float: right;
   margin-right: 300px;
   display: block;
@@ -736,14 +863,14 @@ fieldset {
   text-align: center;
   background: rgba(75, 105, 100, 0.7);
 }
-.notice .inner .pagenation .numbers {
+.community .inner #tab .tab_notice .pagenation .numbers {
   display: inline-block;
   text-align: center;
   font-size: 0;
   margin: 0 5px;
   transition: 0.5s;
 }
-.notice .inner .pagenation .numbers a {
+.community .inner #tab .tab_notice .pagenation .numbers a {
   border: 1px solid #999;
   display: inline-block;
   width: 30px;
@@ -753,28 +880,121 @@ fieldset {
   margin: 0 5px;
   transition: 0.5s;
 }
-.notice .inner .pagenation .numbers a:hover {
+.community .inner #tab .tab_notice .pagenation .numbers a:hover {
   background: rgba(75, 105, 100, 0.2);
   color: #fff;
 }
+.community .inner #tab .tab_faq {
+  width: 100%;
+}
+.community .inner #tab .tab_faq > ul {
+  width: 100%;
+  padding: 30px 50px;
+}
+.community .inner #tab .tab_faq > ul li {
+  border-bottom: 1px solid #bbb;
+  font: bold 20px/1 "arial";
+  color: rgba(85, 85, 85, 0.8);
+  padding: 30px;
+  transition: 0.5s;
+}
+.community .inner #tab .tab_faq > ul li:last-child {
+  border-bottom: none;
+}
+.community .inner #tab .tab_faq > ul li.on {
+  background: #f9f9f9bb;
+  color: #333;
+}
+.community .inner #tab .tab_faq > ul li.on .open {
+  display: none;
+  opacity: 0;
+}
+.community .inner #tab .tab_faq > ul li.on .close {
+  display: inline-block;
+  opacity: 1;
+}
+.community .inner #tab .tab_faq > ul li.on p {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+.community .inner #tab .tab_faq > ul li a i {
+  margin-right: 20px;
+  color: #66978f;
+  display: block;
+  transition: 0.5s;
+}
+.community .inner #tab .tab_faq > ul li .open {
+  display: inline-block;
+  opacity: 1;
+  transition: 0.5s;
+}
+.community .inner #tab .tab_faq > ul li .close {
+  display: none;
+  opacity: 0;
+  transition: 0.5s;
+}
+.community .inner #tab .tab_faq > ul li p {
+  display: none;
+  font: normal 14px/2 "arial";
+  color: #777;
+  padding: 30px;
+  padding-bottom: 0px;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: 0.5s;
+}
 
 @media screen and (max-width: 1179px) {
-  .notice .inner {
+  .community .inner {
     width: 100%;
     padding: 50px 20px;
   }
-  .notice .inner .checkBox {
+  .community .inner #tab dt {
+    position: absolute;
+    width: 50%;
+    height: 60px;
+    top: 0;
+    border: 1px solid #ddd;
+  }
+  .community .inner #tab dt:nth-of-type(1) {
+    left: 0%;
+  }
+  .community .inner #tab dt:nth-of-type(2) {
+    left: 50%;
+  }
+  .community .inner #tab dt a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #f9f9f9;
+    font: bold 18px/60px "arial";
+    letter-spacing: 2px;
+    color: #ccc;
+    text-align: center;
+    transition: 1s;
+    cursor: pointer;
+  }
+  .community .inner #tab dt.on a {
+    background: rgba(75, 105, 100, 0.9);
+    color: #fff;
+  }
+  .community .inner #tab dd {
+    margin-top: 50px;
+    height: 900px;
+  }
+  .community .inner #tab dd .checkBox {
     text-align: right;
     padding: 10px;
   }
-  .notice .inner table {
+  .community .inner #tab dd table {
     width: 100%;
     margin-bottom: 50px;
     border-bottom: 1px solid #ddd;
     border-top: 1px double #ddd;
     border-collapse: collapse;
   }
-  .notice .inner table tr th {
+  .community .inner #tab dd table tr th {
     text-align: center;
     font: normal 14px/1 "arial";
     letter-spacing: 2px;
@@ -782,117 +1002,117 @@ fieldset {
     color: #fff;
     padding: 15px 0;
   }
-  .notice .inner table tr th:nth-of-type(1) {
+  .community .inner #tab dd table tr th:nth-of-type(1) {
     width: 10%;
   }
-  .notice .inner table tr th:nth-of-type(3) {
+  .community .inner #tab dd table tr th:nth-of-type(3) {
     width: 15%;
   }
-  .notice .inner table tr th:nth-of-type(4) {
+  .community .inner #tab dd table tr th:nth-of-type(4) {
     width: 15%;
   }
-  .notice .inner table tr td {
+  .community .inner #tab dd table tr td {
     font: 16px/1.5 "arial";
     color: #777;
     padding: 10px 20px;
     text-align: center;
     border-bottom: 1px solid #ddd;
   }
-  .notice .inner table tr td:nth-of-type(1) {
+  .community .inner #tab dd table tr td:nth-of-type(1) {
     text-align: center;
     color: #999;
   }
-  .notice .inner table tr td:nth-of-type(2) {
+  .community .inner #tab dd table tr td:nth-of-type(2) {
     text-align: left;
   }
-  .notice .inner table tr td:nth-of-type(2) a {
+  .community .inner #tab dd table tr td:nth-of-type(2) a {
     font: normal 14px/1 "arial";
     color: #555;
   }
-  .notice .inner table tr td:nth-of-type(3) {
+  .community .inner #tab dd table tr td:nth-of-type(3) {
     text-align: center;
     color: #999;
   }
-  .notice .inner table tr td:nth-of-type(4) {
+  .community .inner #tab dd table tr td:nth-of-type(4) {
     text-align: center;
     color: #999;
   }
-  .notice .inner table tr:hover {
+  .community .inner #tab dd table tr:hover {
     background: rgba(221, 221, 221, 0.6);
   }
-  .notice .inner .pagenation .prev {
+  .community .inner #tab dd .pagenation .prev {
     margin-left: 200px;
   }
-  .notice .inner .pagenation .next {
+  .community .inner #tab dd .pagenation .next {
     margin-right: 200px;
   }
 }
 @media screen and (max-width: 949px) {
-  .notice .inner {
+  .community .inner {
     padding: 20px;
   }
-  .notice .inner table {
+  .community .inner #tab dd table {
     margin-bottom: 30px;
   }
-  .notice .inner table tr th:nth-of-type(4) {
+  .community .inner #tab dd table tr th:nth-of-type(4) {
     display: none;
   }
-  .notice .inner table tr td:nth-of-type(4) {
+  .community .inner #tab dd table tr td:nth-of-type(4) {
     display: none;
   }
-  .notice .inner .pagenation .prev {
+  .community .inner #tab dd .pagenation .prev {
     margin-left: 100px;
   }
-  .notice .inner .pagenation .next {
+  .community .inner #tab dd .pagenation .next {
     margin-right: 100px;
   }
-  .notice .inner .pagenation .numbers a:nth-of-type(6) {
+  .community .inner #tab dd .pagenation .numbers a:nth-of-type(6) {
     display: none;
   }
-  .notice .inner .pagenation .numbers a:nth-of-type(7) {
+  .community .inner #tab dd .pagenation .numbers a:nth-of-type(7) {
     display: none;
   }
-  .notice .inner .pagenation .numbers a:nth-of-type(8) {
+  .community .inner #tab dd .pagenation .numbers a:nth-of-type(8) {
     display: none;
   }
-  .notice .inner .pagenation .numbers a:nth-of-type(9) {
+  .community .inner #tab dd .pagenation .numbers a:nth-of-type(9) {
     display: none;
   }
-  .notice .inner .pagenation .numbers a:nth-of-type(10) {
+  .community .inner #tab dd .pagenation .numbers a:nth-of-type(10) {
     display: none;
   }
 }
 @media screen and (max-width: 749px) {
-  .notice .inner table tr th {
+  .community .inner #tab dd table tr th {
     font: normal 12px/1 "arial";
   }
-  .notice .inner table tr th:nth-of-type(1) {
+  .community .inner #tab dd table tr th:nth-of-type(1) {
     display: none;
   }
-  .notice .inner table tr td {
+  .community .inner #tab dd table tr td {
     font: 14px/1.5 "arial";
   }
-  .notice .inner table tr td:nth-of-type(1) {
+  .community .inner #tab dd table tr td:nth-of-type(1) {
     display: none;
   }
 }
 @media screen and (max-width: 539px) {
-  .notice .inner table {
+  .community .inner #tab dd table {
     margin-bottom: 20px;
   }
-  .notice .inner table tr th:nth-of-type(3) {
+  .community .inner #tab dd table tr th:nth-of-type(3) {
     display: none;
   }
-  .notice .inner table tr td {
+  .community .inner #tab dd table tr td {
     font: 12px/1.2 "arial";
   }
-  .notice .inner table tr td:nth-of-type(3) {
+  .community .inner #tab dd table tr td:nth-of-type(3) {
     display: none;
   }
-  .notice .inner .pagenation .prev {
+  .community .inner #tab dd .pagenation .prev {
     margin-left: 0px;
   }
-  .notice .inner .pagenation .next {
+  .community .inner #tab dd .pagenation .next {
     margin-right: 0px;
   }
 }
@@ -903,7 +1123,9 @@ fieldset {
   width: 1180px;
   margin: 0 auto;
   height: 500px;
-  padding: 50px 0;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  border-bottom: 1px solid #efefef;
 }
 .about > .inner #welcome::after {
   content: "";
@@ -1157,7 +1379,7 @@ fieldset {
 .about > .inner #about {
   width: 1180px;
   margin: 0 auto;
-  padding: 100px 0;
+  padding-top: 100px;
 }
 .about > .inner #about .wrap {
   width: 100%;
@@ -1335,7 +1557,7 @@ fieldset {
   }
   .about .inner #about {
     width: 100%;
-    padding: 100px 30px;
+    padding: 100px 30px 0px 30px;
   }
   .about .inner #about .wrap {
     width: 100%;
@@ -1570,19 +1792,19 @@ fieldset {
   }
   .about .inner #welcome {
     width: 100%;
-    height: 380px;
+    height: 500px;
     padding: 20px;
   }
   .about .inner #welcome .pic {
     width: 100%;
-    height: 50%;
+    height: 70%;
   }
   .about .inner #welcome .txt {
     width: 100%;
-    height: 50%;
-    padding: 40px 0 10px 20px;
+    height: 30%;
+    padding: 30px 0 30px 30px;
   }
-  .about .inner #welcome .txt span {
+  .about .inner #welcome .txt x span {
     font-size: 10px;
   }
   .about .inner #welcome .txt > h2 {
@@ -2018,72 +2240,126 @@ fieldset {
   display: block;
   clear: both;
 }
-.location .inner .branch {
-  float: left;
-  margin-bottom: 20px;
+.location .inner {
+  padding: 100px 0;
+}
+.location .inner .wrap {
+  width: 100%;
   position: relative;
 }
-.location .inner .branch li {
+.location .inner .wrap .branch {
+  margin-bottom: 30px;
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+.location .inner .wrap .branch li {
   float: left;
   margin-right: 20px;
   width: 200px;
+  height: 40px;
 }
-.location .inner .branch li a {
+.location .inner .wrap .branch li a {
   display: block;
   width: 100%;
-  height: 30px;
+  height: 40px;
   background: rgba(75, 105, 100, 0.85);
-  font: normal 12px/30px "arial";
+  font: normal 12px/40px "arial";
   letter-spacing: 2px;
   color: #fff;
   text-align: center;
   border: 1px solid #4b6964;
+  transition: 0.5s;
 }
-.location .inner .branch li.on a {
+.location .inner .wrap .branch li.on a {
   background: #4b6964;
 }
-.location .inner #branchInfo {
-  width: 28%;
-  height: 400px;
+.location .inner .wrap .sub_con {
+  width: 100%;
+  height: 380px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 50px 100px;
+  margin-bottom: 50px;
+  background: #f7f7f7;
+}
+.location .inner .wrap .sub_con::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.location .inner .wrap .sub_con .box {
+  width: 60%;
+  height: 100%;
   float: right;
-  background: #f9f9f9;
-  padding: 20px;
+  padding: 0 100px;
+}
+.location .inner .wrap .sub_con .box h2 {
+  font: bold 20px/1 "arial";
+  margin-bottom: 20px;
+  color: #333;
+}
+.location .inner .wrap .sub_con .box input[type=text], .location .inner .wrap .sub_con .box [type=email] {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  text-indent: 10px;
+  background: transparent;
+}
+.location .inner .wrap .sub_con .box input[type=text]::placeholder, .location .inner .wrap .sub_con .box [type=email]::placeholder {
+  color: #888;
+}
+.location .inner .wrap .sub_con .box label {
+  color: #888;
+}
+.location .inner .wrap .sub_con .box input[type=submit] {
+  margin-top: 20px;
+  width: 150px;
+  height: 40px;
+  border: none;
+  background: rgba(75, 105, 100, 0.5);
+  font: 12px/40px "arial";
+  letter-spacing: 2px;
+  color: #fff;
+  transition: 0.5s;
+}
+.location .inner .wrap .sub_con .box input[type=submit]:hover {
+  background: rgba(75, 105, 100, 0.85);
+}
+.location .inner .wrap .sub_con #branchInfo {
+  width: 40%;
+  height: 100%;
+  float: left;
   position: relative;
-  top: 80px;
-  right: 20px;
+  border-right: 1px solid #ddd;
 }
-.location .inner #branchInfo article {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.location .inner .wrap .sub_con #branchInfo article {
   display: none;
-  border: 1px solid rgba(75, 105, 100, 0.5);
-  padding: 40px;
-  width: 120%;
-  text-align: center;
+  width: 100%;
+  text-align: left;
 }
-.location .inner #branchInfo article.on {
+.location .inner .wrap .sub_con #branchInfo article.on {
   display: block;
 }
-.location .inner #branchInfo article h3 {
+.location .inner .wrap .sub_con #branchInfo article h3 {
   font: bold 20px/1 "arial";
-  color: #555;
+  color: #333;
   margin-bottom: 20px;
 }
-.location .inner #branchInfo article p {
-  font: normal 16px/1.6 "roboto";
-  color: #555;
-}
-.location .inner #branchInfo article em {
-  font: normal 14px/1 "roboto";
+.location .inner .wrap .sub_con #branchInfo article p {
+  font: normal 16px/1.6 "arial";
   color: #777;
 }
-.location .inner #map {
-  width: 60%;
-  height: 500px;
-  border: 1px solid #000;
-  float: left;
+.location .inner .wrap .sub_con #branchInfo article em {
+  font: normal 14px/1 "arial";
+  color: #888;
+}
+.location .inner .wrap #map {
+  width: 100%;
+  height: 700px;
+  border: none;
+  z-index: -1;
 }
 
 @media screen and (max-width: 1179px) {
@@ -2091,77 +2367,77 @@ fieldset {
     width: 100%;
     padding: 30px;
   }
-  .location .inner .branch li {
+  .location .inner .wrap .branch li {
     width: 150px;
   }
-  .location .inner #branchInfo {
+  .location .inner .wrap #branchInfo {
     top: 50px;
   }
-  .location .inner #branchInfo article p {
+  .location .inner .wrap #branchInfo article p {
     font-size: 14px;
   }
-  .location .inner #map {
+  .location .inner .wrap #map {
     height: 400px;
   }
 }
 @media screen and (max-width: 949px) {
-  .location .inner .branch li {
+  .location .inner .wrap .branch li {
     width: 120px;
   }
-  .location .inner .branch li a {
+  .location .inner .wrap .branch li a {
     font-size: 11px;
   }
-  .location .inner #branchInfo {
+  .location .inner .wrap #branchInfo {
     width: 100%;
     height: 250px;
     top: 0;
     right: 0;
     margin-bottom: 20px;
   }
-  .location .inner #branchInfo article {
+  .location .inner .wrap #branchInfo article {
     border: none;
     padding: 20px;
     width: 100%;
   }
-  .location .inner #branchInfo article h3 {
+  .location .inner .wrap #branchInfo article h3 {
     font-size: 18px;
   }
-  .location .inner #branchInfo article p {
+  .location .inner .wrap #branchInfo article p {
     font-size: 14px;
   }
-  .location .inner #branchInfo article em {
+  .location .inner .wrap #branchInfo article em {
     font-size: 14px;
   }
-  .location .inner #map {
+  .location .inner .wrap #map {
     width: 100%;
   }
 }
 @media screen and (max-width: 749px) {
-  .location .inner .branch li {
+  .location .inner .wrap .branch li {
     width: 100px;
   }
-  .location .inner .branch li a {
+  .location .inner .wrap .branch li a {
     font-size: 10px;
   }
-  .location .inner #branchInfo article h3 {
+  .location .inner .wrap #branchInfo article h3 {
     font-size: 14px;
   }
-  .location .inner #branchInfo article p {
+  .location .inner .wrap #branchInfo article p {
     font-size: 12px;
   }
-  .location .inner #branchInfo article em {
+  .location .inner .wrap #branchInfo article em {
     font-size: 12px;
   }
-  .location .inner #map {
+  .location .inner .wrap #map {
     height: 400px;
   }
 }
 @media screen and (max-width: 539px) {
-  .location .inner .branch li {
+  .location .inner .wrap .branch li {
     width: 80px;
     margin-right: 10px;
   }
-  .location .inner .branch li a {
+  .location .inner .wrap .branch li a {
     letter-spacing: 1px;
   }
 }
@@ -2586,7 +2862,7 @@ fieldset {
 
 #rooms {
   width: 100%;
-  height: 800px;
+  height: 650px;
 }
 #rooms .inner {
   width: 100%;
@@ -2601,12 +2877,12 @@ fieldset {
   position: relative;
 }
 #rooms .inner article:nth-of-type(2) {
-  background: #222;
+  background: #333;
 }
-#rooms .inner article:nth-of-type(2) .wrap .con1 {
-  color: #eee;
+#rooms .inner article:nth-of-type(2) .wrap .con1 p {
+  color: #cdcdcd;
 }
-#rooms .inner article:nth-of-type(2) .wrap .con2 {
+#rooms .inner article:nth-of-type(2) .wrap .con1 h2 {
   color: #fff;
 }
 #rooms .inner article .wrap {
@@ -2626,56 +2902,72 @@ fieldset {
 #rooms .inner article .wrap .con1 p {
   font: normal 12px/1 "arial";
   margin-bottom: 15px;
+  color: #777;
 }
-#rooms .inner article .wrap .con1 h2 {
-  font-size: 30px;
+#rooms .inner article .wrap .con1 > h2 {
+  font: bold 30px/1 "arial";
   margin-bottom: 50px;
+  letter-spacing: 1px;
+  color: #333;
 }
-#rooms .inner article .wrap img {
-  border: 1px solid #aaa;
-  padding: 10px;
-  width: 60%;
-  height: 40%;
-  object-fit: cover;
-  transition: 1s;
+#rooms .inner article .wrap .pic {
+  width: 70%;
+  height: 280px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -60%);
-  filter: grayscale(0.6);
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
-#rooms .inner article .wrap .con2 {
+#rooms .inner article .wrap .pic:hover .txt {
+  bottom: 0%;
+}
+#rooms .inner article .wrap .pic img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+#rooms .inner article .wrap .pic .txt {
+  width: 100%;
+  height: 50%;
+  color: #f9f9f9;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  position: absolute;
+  bottom: -100%;
+  transition: 1s;
+  text-align: center;
+}
+#rooms .inner article .wrap .pic .txt span {
+  font: bold 16px/1 "arial";
+  letter-spacing: 1px;
+  display: block;
+  text-align: center;
+}
+#rooms .inner article .wrap .pic .txt p {
+  padding: 15px 0;
+  font: normal 12px/1.4 "arial";
+}
+#rooms .inner article .wrap > a {
+  width: 40%;
+  height: 30px;
   position: absolute;
   bottom: 80px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  padding: 0 60px;
-  transition: 1s;
-  opacity: 0.7;
-}
-#rooms .inner article .wrap .con2 span {
-  font: bold 16px/1 "arial";
-  letter-spacing: 1px;
-}
-#rooms .inner article .wrap .con2 p {
-  font: normal 14px/1.4 "arial";
-  margin: 25px 0;
-}
-#rooms .inner article .wrap .con2 a {
+  transition: 0.5s;
   display: inline-block;
-  width: 120px;
-  height: 30px;
-  background: rgba(60, 95, 90, 0.85);
+  background: rgba(75, 105, 100, 0.85);
   font: normal 11px/30px "arial";
   letter-spacing: 1px;
-  color: white;
-  transition: 0.75s;
+  color: rgba(255, 255, 255, 0.9);
 }
-#rooms .inner article .wrap .con2 a:hover {
+#rooms .inner article .wrap > a:hover {
   color: #fff;
-  background: #3c5f5a;
+  background: #4b6964;
 }
 
 #video {
@@ -3114,22 +3406,21 @@ fieldset {
     height: 600px;
   }
   #rooms .inner article .wrap .con1 p {
-    font-size: 11px;
+    font-size: 10px;
   }
   #rooms .inner article .wrap .con1 h2 {
-    font-size: 30px;
+    font-size: 24px;
   }
-  #rooms .inner article .wrap img {
-    width: 70%;
+  #rooms .inner article .wrap .pic .txt {
+    padding: 30px 20px;
   }
-  #rooms .inner article .wrap .con2 span {
-    display: block;
+  #rooms .inner article .wrap .pic .txt span {
+    font: bold 14px/1 "arial";
   }
-  #rooms .inner article .wrap .con2 p {
-    display: none;
-  }
-  #rooms .inner article .wrap .con2 a {
-    margin-top: 30px;
+  #rooms .inner article .wrap .pic .txt p {
+    padding: 10px;
+    font: normal 11px/1.3 "arial";
+    word-break: break-all;
   }
 
   #video {
@@ -3530,7 +3821,7 @@ fieldset {
   }
 
   #rooms {
-    height: 700px;
+    height: 500px;
   }
   #rooms .inner article {
     width: 100%;
@@ -3538,13 +3829,18 @@ fieldset {
   #rooms .inner article .wrap .con1 {
     top: 60px;
   }
-  #rooms .inner article .wrap img {
-    height: 50%;
-    transform: translate(-50%, -50%);
+  #rooms .inner article .wrap .pic {
+    width: 60%;
+    height: 240px;
   }
-  #rooms .inner article .wrap .con2 {
+  #rooms .inner article .wrap .pic .txt {
+    padding: 30px 60px;
+  }
+  #rooms .inner article .wrap .pic .txt p {
+    padding: 10px;
+  }
+  #rooms .inner article .wrap a {
     bottom: 60px;
-    padding: 0 10px;
   }
 
   #video .con {
@@ -3759,13 +4055,6 @@ fieldset {
     font: bold 12px/1.5 "Montserrat";
   }
 
-  #rooms {
-    height: 600px;
-  }
-  #rooms .inner article .wrap img {
-    height: 40%;
-  }
-
   #video .con {
     padding: 80px 50px;
   }
@@ -3951,24 +4240,11 @@ fieldset {
     margin-left: 30px;
   }
 
-  #rooms {
-    height: 500px;
+  #rooms .inner article .wrap .pic .txt {
+    padding: 20px 10px;
   }
-  #rooms .inner article .wrap .con1 h2 {
-    font-size: 25px;
-  }
-  #rooms .inner article .wrap img {
-    height: 40%;
-  }
-  #rooms .inner article .wrap .con2 {
-    bottom: 40px;
-  }
-  #rooms .inner article .wrap .con2 span {
-    font-size: 15px;
-  }
-  #rooms .inner article .wrap .con2 a {
-    width: 100px;
-    font-size: 10px;
+  #rooms .inner article .wrap .pic .txt p {
+    padding: 10px;
   }
 
   #video {
