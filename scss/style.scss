@@ -486,7 +486,7 @@
                         height: 1px;
                         background: #777;
                         position: absolute;
-                        top: calc(50% - 0px); right: 0px;
+                        top: calc(50% - 1px); right: 0px;
                         transform: rotate(30deg);
                         transform-origin: right center; 
                     }
@@ -497,7 +497,7 @@
                         height: 1px;
                         background: #777;
                         position: absolute;
-                        top: calc(50% - 0px); right: 0px;
+                        top: calc(50% - 1px); right: 0px;
                         transform: rotate(-30deg);
                         transform-origin: right center;
                     }
@@ -526,7 +526,7 @@
                         height: 1px;
                         background: #777;
                         position: absolute;
-                        top: calc(50% - 0px);
+                        top: calc(50% - 1px);
                         transform: rotate(30deg);
                         transform-origin: left center;
                     }
@@ -537,7 +537,7 @@
                         height: 1px;
                         background: #777;
                         position: absolute;
-                        top: calc(50% - 0px);
+                        top: calc(50% - 1px);
                         transform: rotate(-30deg);
                         transform-origin: left center;
                     }
