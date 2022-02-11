@@ -6,8 +6,11 @@ const menuMo = header.querySelector(".menuMo");
 const joinWeb = header.querySelector(".menuWeb .joinWeb");
 const logIn = joinWeb.querySelector(".login");
 const logPop = joinWeb.querySelector(".popup");
+
+const introTxt = document.querySelector("#intro>.inner");
 console.log(logPop);
 console.log(logIn);
+console.log(introTxt);
 
 btnCall.addEventListener("click", e=>{
 
@@ -20,4 +23,8 @@ logIn.addEventListener("click", e=>{
 })
 logIn.addEventListener("mouseenter", e=>{
     logPop.classList.toggle("on");
+})
+
+window.addEventListener("load", ()=>{
+    introTxt.classList.add("on");
 })
