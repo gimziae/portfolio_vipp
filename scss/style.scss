@@ -609,6 +609,7 @@
         height: 100%;
         margin: 0 auto;
         .title{
+            width: 100%;
             h2{
                 font: normal 40px/1 'Cantata One';
                 margin-bottom: 20px;
@@ -625,17 +626,18 @@
             .instaSwiper{
                 width: 100%;
                 height: 420px;
-                //border: 3px solid orange;
                 .swiper-wrapper{
+                    width: 25%;
+                    height: 100%;
                     .swiper-slide{
+                        width: 100%;
+                        height: 80%;
                         img{
-                            width: 280px;
-                            height: 350px;
+                            width: 100%;
+                            height: 100%;
                             object-fit: cover;
                         }
-
                     }
-
                 }
 
                 .swiper-pagination, 
@@ -652,7 +654,7 @@
 
                 }
                 .swiper-pagination-progressbar-fill{
-                    background-color: #555;
+                    background-color: rgb(102, 133, 127);
                 }
 
             }
@@ -944,9 +946,8 @@
     }
 
     // insta------------------------------
-    // 사진 스와이퍼말고 사진첩 형식으로 변경!!!!
     #insta{
-        padding: 100px 30px 100px;
+        padding: 100px 30px;
 
         .inner{
             width: 100%;
@@ -955,45 +956,13 @@
             }
 
             .wrap{
-                width: 100%;
-
-
                 .instaSwiper{
-                    width: 100%;
-                    height: 420px;
-                  //  border: 3px solid orange;
-                    .swiper-wrapper{
-                        .swiper-slide{
-                            img{
-                                width: 200px;
-                                height: 300px;
-                                object-fit: cover;
-                            }
-    
-                        }
-    
-                    }
-    
-                    .swiper-pagination, 
-                    .swiper-pagination-progressbar, 
-                    .swiper-pagination-horizontal{
-                        width: 100%;
-                        height: 4px;
-                        left: 0;
-                        top: 95%;
-                    }
-    
-                    .swiper-pagination-progressbar{
-                        width: 50%;
-    
-                    }
-
-                    }
-    
+                    .swiper-wrapper{ width: 33%; }
                 }
     
             }
         }
+    }
     
     // footer------------------------------
     #footer{
@@ -1084,7 +1053,6 @@
     }
 
     // review------------------------------
-    //생각해보기...
     #review{
         height: 550px;
         padding: 50px 0;
@@ -1118,59 +1086,10 @@
     }
 
     // insta------------------------------
-    // 사진 스와이퍼말고 사진첩 형식으로 변경?..
     #insta{
-        height: 600px;
         padding: 50px 30px;
-
-        .inner{
-            width: 100%;
-            height: 0px;
-            
-            .title{
-                h2{ font: normal 30px/1 'Cantata One'; }
-                p{ font: 12px/1 'arial'; }                
-            }
-
-            .wrap{
-                width: 100%;
-               // border: 3px solid orange;
-
-                .instaSwiper{
-                    width: 100%;
-                    height: 350px;
-                    .swiper-wrapper{
-                        .swiper-slide{
-                            img{
-                                width: 20vw;
-                                height: 250px;
-                                object-fit: cover;
-                            }
-    
-                        }
-    
-                    }
-    
-                    .swiper-pagination, 
-                    .swiper-pagination-progressbar, 
-                    .swiper-pagination-horizontal{
-                        width: 100%;
-                        height: 4px;
-                        left: 0;
-                        top: 95%;
-                    }
-    
-                    .swiper-pagination-progressbar{
-                        width: 50%;
-    
-                    }
-
-                    }
-    
-                }
-    
-            }
-        }
+        height: 700px;
+    }
     
     // footer------------------------------
     #footer{
@@ -1499,56 +1418,15 @@
     }
 
     // insta------------------------------
-    // 사진 스와이퍼말고 사진첩 형식으로 변경?..
     #insta{
-        height: 600px;
-        padding: 50px 30px;
-
         .inner{
-            width: 100%;
-            height: 0px;
-            
-            h2{ font: normal 30px/1 'Cantata One'; }
-            p{ font: 15px/1 'arial'; }
             .wrap{
-                width: 100%;
-               // border: 3px solid orange;
-
                 .instaSwiper{
-                    width: 100%;
-                    height: 350px;
-                    .swiper-wrapper{
-                        .swiper-slide{
-                            img{
-                                width: 20vw;
-                                height: 250px;
-                                object-fit: cover;
-                            }
-    
-                        }
-    
-                    }
-    
-                    .swiper-pagination, 
-                    .swiper-pagination-progressbar, 
-                    .swiper-pagination-horizontal{
-                        width: 100%;
-                        height: 4px;
-                        left: 0;
-                        top: 95%;
-                    }
-    
-                    .swiper-pagination-progressbar{
-                        width: 50%;
-    
-                    }
-
-                    }
-    
+                    .swiper-wrapper{ width: 100%; }
                 }
-    
             }
         }
+    }
     
     // footer------------------------------
     #footer{
@@ -1675,7 +1553,7 @@
     
     // review------------------------------
     #review{
-        padding: 30px 0;
+        padding: 50px 0;
         
         .inner{
             >.con{
@@ -1702,56 +1580,39 @@
     }
 
     // insta------------------------------
-    // 사진 스와이퍼말고 사진첩 형식으로 변경?..
     #insta{
-        height: 600px;
-        padding: 50px 30px;
+        height: 500px;
 
         .inner{
-            width: 100%;
-            height: 0px;
-            
-            h2{ font: normal 30px/1 'Cantata One'; }
-            p{ font: 15px/1 'arial'; }
-            .wrap{
-                width: 100%;
-               // border: 3px solid orange;
+            .title{
+                h2{ font-size: 25px; }
+                p{ 
+                    font-size: 10px;
+                    margin-bottom: 20px;
+                }                
+            }
 
+            .wrap{
                 .instaSwiper{
-                    width: 100%;
                     height: 350px;
                     .swiper-wrapper{
                         .swiper-slide{
-                            img{
-                                width: 20vw;
-                                height: 250px;
-                                object-fit: cover;
-                            }
-    
+                            img{ height: 250px; }
                         }
-    
                     }
     
+                    // 스와이퍼 네비게이션
                     .swiper-pagination, 
                     .swiper-pagination-progressbar, 
-                    .swiper-pagination-horizontal{
-                        width: 100%;
-                        height: 4px;
-                        left: 0;
-                        top: 95%;
-                    }
-    
-                    .swiper-pagination-progressbar{
-                        width: 50%;
-    
-                    }
+                    .swiper-pagination-horizontal{ top:80%;}
+                    // 프로그레스바 너비
+                    .swiper-pagination-progressbar{ width: 60%; }
 
-                    }
-    
+                    
                 }
-    
             }
         }
+    }
     
     // footer------------------------------
     #footer{
