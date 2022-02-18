@@ -26,7 +26,7 @@ fieldset {
 
 #header_sub {
   width: 100%;
-  height: 50px;
+  height: 80px;
   overflow: hidden;
   background: #f9f9f9;
 }
@@ -38,10 +38,11 @@ fieldset {
 }
 #header_sub .inner h1 {
   position: absolute;
-  bottom: 5px;
-  left: 0;
+  bottom: 50%;
+  left: 2vw;
+  transform: translateY(50%);
 }
-#header_sub .inner h1 a {
+#header_sub .inner h1 > a {
   font: bold 30px/1 "Cantata One";
   color: #333;
   letter-spacing: 2px;
@@ -51,7 +52,7 @@ fieldset {
 }
 #header_sub .inner .menuWeb #gnbWeb {
   position: absolute;
-  bottom: 10px;
+  top: 50%;
   left: 100px;
   display: block;
 }
@@ -86,8 +87,8 @@ fieldset {
 }
 #header_sub .inner .menuWeb .joinWeb {
   position: absolute;
-  bottom: 10px;
-  right: 20px;
+  top: 50%;
+  right: 2vw;
 }
 #header_sub .inner .menuWeb .joinWeb li {
   float: left;
@@ -2771,13 +2772,13 @@ fieldset {
   letter-spacing: 2px;
 }
 #header .inner .menuWeb {
+  width: 100%;
   display: block;
 }
 #header .inner .menuWeb #gnbWeb {
   position: absolute;
-  bottom: 50%;
+  top: 50%;
   left: 100px;
-  transform: translateY(50%);
   display: block;
 }
 #header .inner .menuWeb #gnbWeb li {
@@ -2811,9 +2812,8 @@ fieldset {
 }
 #header .inner .menuWeb .joinWeb {
   position: absolute;
-  bottom: 50%;
+  top: 50%;
   right: 2vw;
-  transform: translateY(50%);
 }
 #header .inner .menuWeb .joinWeb li {
   float: left;
@@ -2840,9 +2840,9 @@ fieldset {
   background: rgba(255, 255, 255, 0.9);
   position: fixed;
   z-index: 5;
-  top: 100px;
+  top: 80px;
   right: 0px;
-  transform: translateX(0px);
+  transform: translateX(280px);
   opacity: 0;
   transition: 1s;
 }
@@ -2920,6 +2920,7 @@ fieldset {
   transform-origin: center;
   opacity: 0;
   transition: 1.5s;
+  overflow: hidden;
 }
 #intro .inner.on {
   transform: scale(1) translate(-50%, -50%);
@@ -2928,6 +2929,7 @@ fieldset {
 #intro .inner .txt {
   width: 100%;
   text-align: center;
+  overflow: hidden;
 }
 #intro .inner .txt span {
   display: block;
@@ -3110,7 +3112,7 @@ fieldset {
 #review {
   width: 100%;
   height: 500px;
-  padding: 80px 0;
+  padding: 100px 0;
   background: #f8f8f8;
   overflow: hidden;
 }
@@ -3144,101 +3146,101 @@ fieldset {
 }
 #review .inner .con .swiper-next {
   width: 50px;
-  height: 50px;
+  height: 51px;
   position: absolute;
   top: 40%;
   right: 0%;
   cursor: pointer;
+  transition: 0.5s;
 }
-#review .inner .con .swiper-next:hover span {
-  left: 0%;
+#review .inner .con .swiper-next:hover {
+  right: -30px;
+}
+#review .inner .con .swiper-next::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: #777;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: rotate(30deg);
+  transform-origin: center right;
+}
+#review .inner .con .swiper-next::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: #777;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: rotate(-30deg);
+  transform-origin: right center;
 }
 #review .inner .con .swiper-next span {
   position: absolute;
   top: 50%;
-  left: -50%;
+  right: 0;
   width: 60px;
   height: 1px;
   background: #777;
-  transform: translate(0%, -50%);
-  transition: 0.5s;
-}
-#review .inner .con .swiper-next span::before {
-  content: "";
-  display: block;
-  width: 10px;
-  height: 1px;
-  background: #777;
-  position: absolute;
-  top: calc(50% - 1px);
-  right: 0px;
-  transform: rotate(30deg);
-  transform-origin: right center;
-}
-#review .inner .con .swiper-next span::after {
-  content: "";
-  display: block;
-  width: 10px;
-  height: 1px;
-  background: #777;
-  position: absolute;
-  top: calc(50% - 1px);
-  right: 0px;
-  transform: rotate(-30deg);
-  transform-origin: right center;
 }
 #review .inner .con .swiper-prev {
   width: 50px;
-  height: 50px;
+  height: 51px;
   position: absolute;
   top: 40%;
-  left: 20%;
+  left: 100px;
   cursor: pointer;
+  transition: 0.5s;
 }
-#review .inner .con .swiper-prev:hover span {
-  left: 0;
+#review .inner .con .swiper-prev:hover {
+  left: 70px;
+}
+#review .inner .con .swiper-prev::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: #777;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: rotate(30deg);
+  transform-origin: center left;
+}
+#review .inner .con .swiper-prev::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: #777;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: rotate(-30deg);
+  transform-origin: center left;
 }
 #review .inner .con .swiper-prev span {
   position: absolute;
   top: 50%;
-  left: 50%;
-  width: 30px;
+  left: 0;
+  width: 40px;
   height: 1px;
   background: #777;
-  transform: translate(0%, -50%);
-  transition: 0.5s;
-}
-#review .inner .con .swiper-prev span::before {
-  content: "";
-  display: block;
-  width: 10px;
-  height: 1px;
-  background: #777;
-  position: absolute;
-  top: calc(50% - 1px);
-  transform: rotate(30deg);
-  transform-origin: left center;
-}
-#review .inner .con .swiper-prev span::after {
-  content: "";
-  display: block;
-  width: 10px;
-  height: 1px;
-  background: #777;
-  position: absolute;
-  top: calc(50% - 1px);
-  transform: rotate(-30deg);
-  transform-origin: left center;
 }
 #review .inner .reviewSwiper {
   width: 75%;
   height: 100%;
   float: right;
-  padding: 0 10px;
+  padding: 10px;
 }
 #review .inner .reviewSwiper .swiper-wrapper .swiper-slide {
   width: 50%;
-  height: 300px;
+  height: 100%;
   background: rgba(255, 255, 255, 0.6);
   padding: 30px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
@@ -3477,19 +3479,15 @@ fieldset {
     font-size: 11px;
   }
 
-  #intro {
-    height: calc(100vh - 50px);
+  #intro .inner {
+    width: 100%;
+    transform: translate(-50%, -20%) scale(1.3);
   }
-  #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap {
-    width: 80vw;
-    padding: 50px 10px;
+  #intro .inner .txt h1 {
+    font-size: 60px;
   }
-  #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap .con h2 {
-    font: normal 32px/1.2 "Cantata One";
-    margin-bottom: 20px;
-  }
-  #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap .con p {
-    font: bold 15px/1.5 "Montserrat";
+  #intro .inner .txt p {
+    font-size: 16px;
   }
 
   #rooms {
@@ -3531,123 +3529,53 @@ fieldset {
     font: normal 11px/25px "arial";
   }
 
-  #review {
-    height: 500px;
-  }
   #review .inner {
     width: 100%;
     padding: 0 30px;
-  }
-  #review .inner .con {
-    width: 20%;
   }
   #review .inner .con h2 {
     font-size: 30px;
   }
   #review .inner .con .swiper-next {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 40%;
-    right: 0%;
-    cursor: pointer;
+    right: 20px;
   }
-  #review .inner .con .swiper-next:hover span {
-    left: 0%;
+  #review .inner .con .swiper-next:hover {
+    right: 0px;
+  }
+  #review .inner .con .swiper-next::before, #review .inner .con .swiper-next::after {
+    width: 15px;
   }
   #review .inner .con .swiper-next span {
-    position: absolute;
-    top: 50%;
-    left: -50%;
-    width: 60px;
-    height: 1px;
-    background: #777;
-    transform: translate(0%, -50%);
-    transition: 0.5s;
-  }
-  #review .inner .con .swiper-next span::before {
-    content: "";
-    display: block;
-    width: 10px;
-    height: 1px;
-    background: #777;
-    position: absolute;
-    top: calc(50% - 0px);
-    right: 0px;
-    transform: rotate(30deg);
-    transform-origin: right center;
-  }
-  #review .inner .con .swiper-next span::after {
-    content: "";
-    display: block;
-    width: 10px;
-    height: 1px;
-    background: #777;
-    position: absolute;
-    top: calc(50% - 0px);
-    right: 0px;
-    transform: rotate(-30deg);
-    transform-origin: right center;
+    width: 40px;
   }
   #review .inner .con .swiper-prev {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 40%;
-    left: 20%;
-    cursor: pointer;
+    left: 50px;
   }
-  #review .inner .con .swiper-prev:hover span {
-    left: 0;
+  #review .inner .con .swiper-prev:hover {
+    left: 30px;
+  }
+  #review .inner .con .swiper-prev::before, #review .inner .con .swiper-prev::after {
+    width: 15px;
   }
   #review .inner .con .swiper-prev span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
     width: 30px;
-    height: 1px;
-    background: #777;
-    transform: translate(0%, -50%);
-    transition: 0.5s;
-  }
-  #review .inner .con .swiper-prev span::before {
-    content: "";
-    display: block;
-    width: 10px;
-    height: 1px;
-    background: #777;
-    position: absolute;
-    top: calc(50% - 0px);
-    transform: rotate(30deg);
-    transform-origin: left center;
-  }
-  #review .inner .con .swiper-prev span::after {
-    content: "";
-    display: block;
-    width: 10px;
-    height: 1px;
-    background: #777;
-    position: absolute;
-    top: calc(50% - 0px);
-    transform: rotate(-30deg);
-    transform-origin: left center;
   }
   #review .inner .reviewSwiper {
-    width: 78%;
+    width: 75%;
+    padding: 10px 20px;
   }
   #review .inner .reviewSwiper .swiper-wrapper .swiper-slide {
-    height: 320px;
-    padding: 25px;
+    padding: 20px;
   }
   #review .inner .reviewSwiper .swiper-wrapper .swiper-slide .txt p {
-    font-size: 14px;
+    font-size: 12px;
   }
   #review .inner .reviewSwiper .swiper-wrapper .swiper-slide .profile img {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
   }
   #review .inner .reviewSwiper .swiper-wrapper .swiper-slide .profile h4 {
-    font-size: 18px;
+    font-size: 16px;
   }
   #review .inner .reviewMo {
     display: none;
@@ -3659,8 +3587,8 @@ fieldset {
   #insta .inner {
     width: 100%;
   }
-  #insta .inner h2 {
-    font: normal 30px/1 "Cantata One";
+  #insta .inner .title h2 {
+    font-size: 30px;
   }
   #insta .inner .wrap {
     width: 100%;
@@ -3707,207 +3635,20 @@ fieldset {
 }
 @media screen and (max-width: 949px) {
   #header {
-    position: fixed;
-    background: #fff;
-    z-index: 2;
+    height: 60px;
   }
-  #header .inner .menuWeb {
-    display: none;
+  #header .inner h1 a {
+    font-size: 22px;
   }
-  #header .inner .popup {
-    display: none;
-  }
-  #header .inner .btnCall {
-    position: absolute;
-    bottom: 10px;
-    right: 3vw;
-    width: 15px;
-    height: 15px;
-    display: block;
-    z-index: 5;
-  }
-  #header .inner .btnCall::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: top 0.5s 0s, transform 0.5s 0.5s;
-  }
-  #header .inner .btnCall::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #000;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: transform 0.5s 0.5s, bottom 0.5s 0s;
-  }
-  #header .inner .btnCall span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #000;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    margin-top: -1px;
-    text-indent: -999999px;
-    transition: all 1s;
-  }
-  #header .inner .btnCall.on::before {
-    top: 50%;
-    margin-top: -1px;
-    transform: rotate(-225deg);
-  }
-  #header .inner .btnCall.on::after {
-    bottom: 50%;
-    margin-bottom: -1px;
-    transform: rotate(225deg);
-  }
-  #header .inner .btnCall.on span {
-    transform: scale(0);
-    opacity: 0;
-  }
-  #header .inner .menuMo {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: -270px;
-    width: 270px;
-    height: 100vh;
-    background: #fff;
-    padding: 35px;
-    z-index: 100;
-    transition: 1s;
-  }
-  #header .inner .menuMo.on {
-    left: 0;
-    z-index: 10;
-  }
-  #header .inner .menuMo > h1 {
+  #header .inner .menuWeb .joinWeb .popup {
     top: 60px;
-    height: 30px;
-    margin-left: 10px;
-  }
-  #header .inner .menuMo > h1::after {
-    content: "";
-    display: block;
-    width: 200px;
-    height: 1px;
-    background: #999;
-    margin-top: 10px;
-    margin-left: -10px;
-  }
-  #header .inner .menuMo #gnbMo {
-    margin-top: 75px;
-    margin-left: 5px;
-  }
-  #header .inner .menuMo #gnbMo li {
-    transform-origin: left center;
-    transition: 1s;
-  }
-  #header .inner .menuMo #gnbMo li::after {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 1px;
-    background: #ddd;
-    opacity: 0;
-    transition: 0.5s;
-  }
-  #header .inner .menuMo #gnbMo li a {
-    display: block;
-    width: 100%;
-    padding: 20px 0;
-    font: bold 14px/1 "arial";
-    color: #555;
-    cursor: pointer;
-  }
-  #header .inner .menuMo #gnbMo li:hover {
-    transform: scaleX(1.1);
-  }
-  #header .inner .menuMo #gnbMo li:hover::after {
-    width: 100px;
-    opacity: 1;
-  }
-  #header .inner .menuMo .joinMo {
-    margin-left: 5px;
-  }
-  #header .inner .menuMo .joinMo li a {
-    display: block;
-    padding: 20px 0;
-    font: normal 14px/1 "arial";
-    color: #777;
-    cursor: pointer;
-  }
-  #header .inner .menuMo .joinMo li a:hover {
-    color: #111;
-  }
-  #header .inner .menuMo .snsMo {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 100px;
-    text-align: center;
-  }
-  #header .inner .menuMo .snsMo span {
-    font: normal 14px/1 "arial";
-    color: #777;
-    display: block;
-    margin-bottom: 15px;
-  }
-  #header .inner .menuMo .snsMo ul {
-    width: 60%;
-    height: 30px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-  }
-  #header .inner .menuMo .snsMo ul li {
-    float: left;
-    margin-right: 30px;
-    line-height: 30px;
-  }
-  #header .inner .menuMo .snsMo ul li:last-child {
-    margin-right: 0;
-  }
-  #header .inner .menuMo .snsMo ul li a {
-    font-size: 20px;
-    color: #777;
-    transition: 0.25s;
-    cursor: pointer;
-  }
-  #header .inner .menuMo .snsMo ul li a:hover {
-    color: #333;
-  }
-  #header .inner .menuMo p {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    font: 11px/1.1 "arial";
   }
 
-  #intro {
-    height: 100vh;
+  #intro .inner .txt h1 {
+    font-size: 50px;
   }
-  #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap {
-    width: 80vw;
-    padding: 50px 10px;
-  }
-  #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap .con h2 {
-    font: normal 30px/1.2 "Cantata One";
-    margin-top: 0px;
-  }
-  #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap .con p {
-    font: bold 12px/1.5 "Montserrat";
+  #intro .inner .txt p {
+    font-size: 14px;
   }
 
   #rooms {
@@ -3948,61 +3689,39 @@ fieldset {
   }
 
   #review {
-    height: 500px;
-  }
-  #review .inner {
-    width: 100%;
-    padding: 30px;
+    height: 550px;
+    padding: 50px 0;
   }
   #review .inner .con {
-    width: 20%;
-  }
-  #review .inner .con .swiper-next {
-    right: -20%;
-  }
-  #review .inner .con .swiper-next span {
-    width: 40px;
-  }
-  #review .inner .con .swiper-prev {
-    left: 10%;
-  }
-  #review .inner .con .swiper-prev span {
-    width: 20px;
-  }
-  #review .inner .reviewSwiper {
-    width: 70%;
-  }
-  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide {
     width: 100%;
-    padding: 25px;
+    height: 30%;
   }
-  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide .txt i {
-    font-size: 20px;
-  }
-  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide .txt p {
-    font-size: 14px;
-    line-height: 1.4;
-    margin-bottom: 0;
-    padding-top: 10px;
-  }
-  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide .profile {
-    height: auto;
-    padding: 10px;
-    padding-bottom: auto;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide .profile img {
-    width: 25px;
-    height: 25px;
-    margin-bottom: 5px;
-  }
-  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide .profile h4 {
-    width: 100%;
+  #review .inner .con p {
     font-size: 12px;
   }
-  #review .inner .reviewMo {
-    display: none;
+  #review .inner .con .swiper-next {
+    top: 70%;
+    right: auto;
+    left: 90px;
+  }
+  #review .inner .con .swiper-next:hover {
+    right: auto;
+    left: 120px;
+  }
+  #review .inner .con .swiper-next::before, #review .inner .con .swiper-next::after {
+    width: 15px;
+  }
+  #review .inner .con .swiper-prev {
+    top: 70%;
+    left: 30px;
+  }
+  #review .inner .con .swiper-prev:hover {
+    left: 0px;
+  }
+  #review .inner .reviewSwiper {
+    width: 100%;
+    height: 65%;
+    padding: 10px 5px;
   }
 
   #insta {
@@ -4013,11 +3732,11 @@ fieldset {
     width: 100%;
     height: 0px;
   }
-  #insta .inner h2 {
+  #insta .inner .title h2 {
     font: normal 30px/1 "Cantata One";
   }
-  #insta .inner p {
-    font: 15px/1 "arial";
+  #insta .inner .title p {
+    font: 12px/1 "arial";
   }
   #insta .inner .wrap {
     width: 100%;
@@ -4059,6 +3778,9 @@ fieldset {
   #footer .inner .wrap_util ul {
     margin-right: 50px;
   }
+  #footer .inner .wrap_util ul li a {
+    font-size: 12px;
+  }
   #footer .inner .wrap_news {
     width: 230px;
     right: 30px;
@@ -4067,31 +3789,49 @@ fieldset {
     display: none;
   }
 }
-@media screen and (max-width: 811px) {
-  #review .inner .reviewSwiper .swiper-wrapper .swiper-slide .txt p {
-    font-size: 12px;
-    line-height: 1.4;
-  }
-}
 @media screen and (max-width: 749px) {
   #header {
-    height: 35px;
-  }
-  #header .inner h1 {
-    bottom: 0;
+    height: 50px;
   }
   #header .inner h1 a {
     font-size: 18px;
   }
+  #header .inner .menuWeb {
+    display: none;
+  }
   #header .inner .btnCall {
-    bottom: 8px;
+    display: block;
+    width: 18px;
+    height: 19px;
+    position: absolute;
+    right: 3vw;
+    bottom: 10px;
   }
   #header .inner .btnCall::before, #header .inner .btnCall::after {
+    content: "";
+    display: block;
+    width: 100%;
     height: 1px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    transition: 1s;
+  }
+  #header .inner .btnCall::before {
+    top: 0;
+  }
+  #header .inner .btnCall::after {
+    bottom: 0;
   }
   #header .inner .btnCall span {
-    margin-top: -1px;
+    width: 100%;
     height: 1px;
+    background: #fff;
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transition: 1s;
   }
   #header .inner .btnCall.on::before {
     top: 50%;
@@ -4104,45 +3844,136 @@ fieldset {
     transform: rotate(135deg);
   }
   #header .inner .btnCall.on span {
-    transform: scale(0);
+    transform: translateX(50px);
     opacity: 0;
   }
-  #header .inner .menuMo #gnbMo li a {
-    font-size: 12px;
+  #header .inner .menuMo {
+    display: block;
+    position: fixed;
+    width: 240px;
+    height: 100vh;
+    background: rgba(75, 105, 100, 0.8);
+    top: 0;
+    left: -250px;
+    padding: 50px 40px;
+    transition: ease-in-out 1s;
   }
-  #header .inner .menuMo .joinMo {
-    margin-left: 5px;
+  #header .inner .menuMo.on {
+    left: 0px;
   }
-  #header .inner .menuMo .joinMo li a {
-    font-size: 12px;
+  #header .inner .menuMo > .wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
   }
-  #header .inner .menuMo .snsMo span {
+  #header .inner .menuMo > .wrap #gnbMo {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #header .inner .menuMo > .wrap #gnbMo li {
+    padding: 20px;
+    position: relative;
+    text-align: center;
+  }
+  #header .inner .menuMo > .wrap #gnbMo li a {
+    font: normal 14px/1 "arial";
+    color: #f3f3f3;
+  }
+  #header .inner .menuMo > .wrap #gnbMo li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    transition: 0.5s;
+  }
+  #header .inner .menuMo > .wrap #gnbMo li:hover::after, #header .inner .menuMo > .wrap #gnbMo li.on::after {
+    width: 58%;
+  }
+  #header .inner .menuMo > .wrap .joinMo {
+    width: 100%;
+  }
+  #header .inner .menuMo > .wrap .joinMo li {
+    padding: 10px 20px;
+    position: relative;
+    text-align: center;
+  }
+  #header .inner .menuMo > .wrap .joinMo li a {
     font: normal 12px/1 "arial";
+    color: #efefef;
   }
-  #header .inner .menuMo .snsMo ul {
-    justify-content: space-around;
+  #header .inner .menuMo > .wrap .joinMo li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    transition: 0.5s;
   }
-  #header .inner .menuMo .snsMo ul li a {
-    font-size: 15px;
+  #header .inner .menuMo > .wrap .joinMo li:hover::after, #header .inner .menuMo > .wrap .joinMo li.on::after {
+    width: 33%;
   }
-  #header .inner .menuMo p {
-    font: 10px/1.1 "arial";
-    color: #555;
+  #header .inner .menuMo > .wrap .snsMo {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 50px;
+  }
+  #header .inner .menuMo > .wrap .snsMo span {
+    font: normal 12px/1 "arial";
+    color: #ddd;
+    margin-bottom: 20px;
+    display: block;
+  }
+  #header .inner .menuMo > .wrap .snsMo::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  #header .inner .menuMo > .wrap .snsMo ul {
+    width: 100%;
+  }
+  #header .inner .menuMo > .wrap .snsMo ul li {
+    float: left;
+    width: 25%;
+  }
+  #header .inner .menuMo > .wrap .snsMo ul li a {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: 0.5s;
+  }
+  #header .inner .menuMo > .wrap .snsMo ul li:hover a {
+    color: #fff;
+  }
+  #header .inner .menuMo > .wrap p {
+    width: 100%;
+    text-align: center;
+    font: 10px/1.5 "arial";
+    color: #ddd;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
-  #intro {
-    height: 100vh;
+  #intro .inner .txt span {
+    font-size: 12px;
   }
-  #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap {
-    width: 80vw;
-    padding: 50px 10px;
+  #intro .inner .txt h1 {
+    font-size: 35px;
   }
-  #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap .con h2 {
-    font: normal 30px/1.2 "Cantata One";
-    margin-top: 0px;
-  }
-  #intro .swiper .swiper-wrapper .swiper-slide .inner .wrap .con p {
-    font: bold 12px/1.5 "Montserrat";
+  #intro .inner .txt p {
+    font-size: 12px;
   }
 
   #video .con {
@@ -4293,9 +4124,6 @@ fieldset {
   #footer .inner .wrap_util ul li {
     margin-bottom: 20px;
   }
-  #footer .inner .wrap_util ul li a {
-    font: normal 12px/1 "arial";
-  }
   #footer .inner .wrap_news {
     width: 200px;
   }
@@ -4323,11 +4151,47 @@ fieldset {
   }
 }
 @media screen and (max-width: 539px) {
-  #header .inner .btnCall {
-    bottom: 5px;
+  #header {
+    height: 40px;
   }
-  #header .inner .menuMo > h1 {
-    margin-left: 30px;
+  #header .inner .btnCall {
+    width: 15px;
+    height: 16px;
+  }
+  #header .inner .menuMo {
+    width: 220px;
+    padding: 40px 30px;
+  }
+  #header .inner .menuMo > .wrap #gnbMo li {
+    padding: 15px;
+    position: relative;
+    text-align: center;
+  }
+  #header .inner .menuMo > .wrap #gnbMo li a {
+    font-size: 12px;
+  }
+  #header .inner .menuMo > .wrap .joinMo li a {
+    font-size: 10px;
+  }
+  #header .inner .menuMo > .wrap .snsMo span {
+    font-size: 10px;
+  }
+  #header .inner .menuMo > .wrap .snsMo ul {
+    width: 100%;
+  }
+  #header .inner .menuMo > .wrap .snsMo ul li a {
+    font-size: 15px;
+  }
+
+  #intro .inner .txt span {
+    font-size: 12px;
+  }
+  #intro .inner .txt h1 {
+    line-height: 1.4;
+  }
+  #intro .inner .txt p {
+    width: 100%;
+    padding: 0 30px;
   }
 
   #rooms .inner article .wrap .pic .txt {

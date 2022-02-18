@@ -22,7 +22,7 @@ logIn.addEventListener("click", e=>{
     logPop.classList.toggle("on");
 })
 logIn.addEventListener("mouseenter", e=>{
-    logPop.classList.toggle("on");
+    logPop.classList.add("on");
 })
 
 window.addEventListener("load", ()=>{
