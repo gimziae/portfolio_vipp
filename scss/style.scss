@@ -264,7 +264,7 @@
         
         .title{
             width: 100%;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
 
             &::after{
                 content: '';
@@ -274,8 +274,8 @@
             h1{
                 width: calc((100%/3)*2);
                 float: left;
-                font: normal 40px/1 'cantata one';
-                
+                font: normal 40px/1.5 'cantata one';
+                letter-spacing: 2px;
             } 
             p{
                 width: calc(100%/3);
@@ -299,10 +299,15 @@
             position: relative;
             transition: 1s;
             overflow: hidden;
+            background: #111;
 
             &:hover{
                 .wrap{
-                    img{ transform: scale(1.1);}
+                    img{ 
+                        opacity: 1;
+                        transform: scale(1.1);
+                    }
+                    .con{opacity: 0;}
                 }
                 .back{ opacity: 1;}
             }
@@ -318,6 +323,7 @@
                     height: 100%;
                     object-fit: cover;
                     transition: .5s;
+                    opacity: .5;
                 }
                 .con{
                     width: 80%;
@@ -326,9 +332,10 @@
                     bottom: 30px;
                     left: 50%;
                     transform: translateX(-50%);
-                    background: #fefefe;
+                    background: #fefefee0;
                     padding: 30px;
                     text-align: center;
+                    transition: .5s;
                     h2{
                         font: bold 18px/1 'arial';
                         margin-bottom: 10px;
@@ -344,7 +351,7 @@
             .back{
                 width: 100%;
                 height: 100%;
-                background: rgba(17, 17, 17, 0.4);
+                background: transparent;
                 position: absolute;
                 top: 0; left: 0;
                 opacity: 0;
