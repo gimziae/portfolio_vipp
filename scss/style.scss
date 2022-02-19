@@ -249,115 +249,118 @@
     }
 }
 
-// rooms------------------------------
+// rooms------------------------------ 
 #rooms{
+  //  border: 1px solid red;
+    background: #fff;
     width: 100%;
-    height: 650px;
+    padding: 100px 0;
 
     .inner{
-        width: 100%;
-        height: 100%;
+        //border: 1px solid red;
+        width: 1180px;
+        margin: 0 auto;
         position: relative;
+        
+        .title{
+            width: 100%;
+            margin-bottom: 40px;
 
-        article{
-            float: left;
-            width: calc(100% / 3);
-            height: 100%;
-            background: rgba(255, 255, 255, 0.7);
-            position: relative;
-
-            &:nth-of-type(2){ 
-                background: #333; 
-                .wrap{
-                    .con1{
-                        p{color: #cdcdcd;}
-                        h2{color: #fff;}
-                    }
-                }
+            &::after{
+                content: '';
+                display: block;
+                clear: both;
             }
+            h1{
+                width: calc((100%/3)*2);
+                float: left;
+                font: normal 40px/1 'cantata one';
+                
+            } 
+            p{
+                width: calc(100%/3);
+                float: left;
+                padding: 0 15px;
+                font: normal 12px/2 'arial';
+                color: #777;
+            }           
+        }
+
+        &::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        article{
+            width: calc((100% - 40px)/3);
+            height: 450px;
+            float: left;
+            margin-right: 20px;
+            position: relative;
+            transition: 1s;
+            overflow: hidden;
+
+            &:hover{
+                .wrap{
+                    img{ transform: scale(1.1);}
+                }
+                .back{ opacity: 1;}
+            }
+
+            &:last-child{margin-right: 0;}
 
             .wrap{
                 width: 100%;
                 height: 100%;
-                position: relative;
-                overflow: hidden;
-                transition: 1s;
-                .con1{
-                    width: 100%;
-                    text-align: center;
-                    position: absolute;
-                    top: 80px;
-                    color: #333;
 
-                    p{
-                        font: normal 12px/1 'arial';
-                        margin-bottom: 15px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: .5s;
+                }
+                .con{
+                    width: 80%;
+                    height: 150px;
+                    position: absolute;
+                    bottom: 30px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: #fefefe;
+                    padding: 30px;
+                    text-align: center;
+                    h2{
+                        font: bold 18px/1 'arial';
+                        margin-bottom: 10px;
+                        color: #333;
+                    }
+                    span{
+                        font: normal 14px/1.2 'arial';
                         color: #777;
                     }
-                    >h2{
-                        font: bold 30px/1 'arial';
-                        margin-bottom: 50px;
-                        letter-spacing: 1px;
-                        color: #333;
-                    }                    
                 }
-                .pic{
-                    width: 70%;
-                    height: 280px;                        
-                    position: absolute;
-                    top: 50%; left: 50%;
-                    transform: translate(-50%,-50%);
-                    overflow: hidden;
-                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-                    &:hover{ .txt{bottom: 0%;}}
-                    img{    
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        transition: .5s;
-                    }             
-                    .txt{
-                        width: 100%;
-                        height: 50%;
-                        color: #f9f9f9;
-                        background: rgba(0, 0, 0, 0.4);
-                        padding: 30px;
-                        position: absolute;
-                        bottom: -100%;
-                        transition: 1s;
-                        text-align: center;
-                        span{
-                            font: bold 16px/1 'arial';
-                            letter-spacing: 1px;
-                            display: block;
-                            text-align: center;
-                        }
-                        p{
-                            padding: 15px 0;
-                            font: normal 12px/1.4 'arial';
-                        }
-                    }       
-                }
-                >a{
-                    width: 40%;
-                    height: 30px;
-                    position: absolute;
-                    bottom: 80px; left: 50%;
-                    transform: translateX(-50%);
-                    text-align: center;
-                    transition: .5s;
-                    display: inline-block;
-                    background: rgba(75, 105, 100, 0.85);
-                    font: normal 11px/30px 'arial';
-                    letter-spacing: 1px;
-                    color: rgba(255, 255, 255, 0.9);
-                    &:hover{
-                        color: #fff;
-                        background: rgba(75, 105, 100, 1);
-                    }
-                }
-                              
+
             }
+            .back{
+                width: 100%;
+                height: 100%;
+                background: rgba(17, 17, 17, 0.4);
+                position: absolute;
+                top: 0; left: 0;
+                opacity: 0;
+                transition: .5s;
+                
+                i{
+                    font-size: 50px;
+                    color: #fff;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                }
+            }
+
         }
     }
 }
@@ -854,30 +857,7 @@
     
 
     // rooms------------------------------
-    #rooms{
-        height: 600px;
-        .inner{
-            article{
-                .wrap{
-                    .con1{
-                        p{ font-size: 10px; }
-                        h2{ font-size: 24px; }                    
-                    }
-                    .pic{
-                        .txt{
-                            padding: 30px 20px;
-                            span{ font: bold 14px/1 'arial'; }
-                            p{
-                                padding: 10px;
-                                font: normal 11px/1.3 'arial';
-                                word-break: break-all;
-                            }                           
-                        }
-                    }
-                }
-            }
-        }
-    }
+
 
     // video------------------------------
     #video{
@@ -1018,28 +998,7 @@
     }
     
     // rooms------------------------------
-    #rooms{
-        height: 500px;
-    
-        .inner{
-            article{
-                width: 100%;
-    
-                .wrap{
-                    .con1{ top: 60px; }
-                    .pic{
-                        width: 60%;
-                        height: 240px;
-                        .txt{
-                            padding: 30px 60px;
-                            p{ padding:10px;}
-                        }  
-                    }    
-                    a{bottom: 60px;}    
-                }
-            }
-        }
-    }
+
 
     // video------------------------------
     #video{
@@ -1422,7 +1381,7 @@
         .inner{
             .wrap{
                 .instaSwiper{
-                    .swiper-wrapper{ width: 100%; }
+                    .swiper-wrapper{ width: 50%; }
                 }
             }
         }
@@ -1533,20 +1492,7 @@
     }
 
     // rooms------------------------------
-    #rooms{
-        .inner{
-            article{
-                .wrap{
-                    .pic{
-                        .txt{
-                            padding:20px 10px;
-                            p{ padding:10px;}
-                        }  
-                    }
-                }
-            }
-        }
-    }
+
 
     // video------------------------------
     #video{ display: none; }
@@ -1596,8 +1542,11 @@
                 .instaSwiper{
                     height: 350px;
                     .swiper-wrapper{
+                        width: 100%;
+                        height: 250px;
                         .swiper-slide{
-                            img{ height: 250px; }
+                            height: 100%;
+                            img{ height: 100%; }
                         }
                     }
     

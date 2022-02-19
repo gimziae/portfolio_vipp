@@ -1,6 +1,7 @@
 const dts = document.querySelectorAll("dt");
 const dds = document.querySelectorAll("dd");
 const dts_btn = document.querySelectorAll("dt a");
+console.log(dts_btn);
 
 const faq = document.querySelector(".tab_faq");
 const lis = faq.querySelectorAll("li");
@@ -12,6 +13,7 @@ lis.forEach((li,index)=>{
         e.preventDefault();
 
         if(li.classList.contains("on")){
+
             li.classList.remove("on");
 
         }else lis[index].classList.add("on");

@@ -119,7 +119,6 @@ fieldset {
   width: 100%;
   padding-bottom: 100px;
   overflow: hidden;
-  min-height: 100vh;
 }
 .content .sub_visual {
   width: 100%;
@@ -179,7 +178,7 @@ fieldset {
   margin: 0 auto;
   padding: 50px 0px;
   position: relative;
-  min-height: 80vh;
+  border: 1px solid red;
 }
 
 #footer {
@@ -613,12 +612,6 @@ fieldset {
     display: none;
   }
 }
-.community {
-  padding-bottom: 50px;
-}
-.community .inner {
-  padding: 50px 0;
-}
 .community .inner article {
   width: 100%;
   height: 250px;
@@ -663,6 +656,7 @@ fieldset {
   height: 1200px;
   padding: 100px 0;
   position: relative;
+  border: 1px solid red;
 }
 .community .inner #tab dt {
   position: absolute;
@@ -740,6 +734,7 @@ fieldset {
 }
 .community .inner #tab .tab_notice {
   width: 100%;
+  padding: 10px 0;
 }
 .community .inner #tab .tab_notice .checkBox {
   text-align: right;
@@ -853,6 +848,7 @@ fieldset {
 }
 .community .inner #tab .tab_faq {
   width: 100%;
+  border: 1px solid red;
 }
 .community .inner #tab .tab_faq > ul {
   width: 100%;
@@ -860,56 +856,80 @@ fieldset {
 }
 .community .inner #tab .tab_faq > ul li {
   border-bottom: 1px solid #bbb;
-  font: bold 20px/1 "arial";
-  color: rgba(85, 85, 85, 0.8);
   padding: 30px;
   transition: 0.5s;
+}
+.community .inner #tab .tab_faq > ul li h3 {
+  font: bold 20px/1 "arial";
+  color: rgba(85, 85, 85, 0.8);
+  display: inline-block;
 }
 .community .inner #tab .tab_faq > ul li:last-child {
   border-bottom: none;
 }
 .community .inner #tab .tab_faq > ul li.on {
-  background: #f9f9f9bb;
+  background: rgba(75, 105, 100, 0.1);
+}
+.community .inner #tab .tab_faq > ul li.on h3 {
   color: #333;
 }
-.community .inner #tab .tab_faq > ul li.on .open {
-  display: none;
-  opacity: 0;
+.community .inner #tab .tab_faq > ul li.on .arrow::before {
+  transform: rotate(-90deg);
 }
-.community .inner #tab .tab_faq > ul li.on .close {
-  display: inline-block;
+.community .inner #tab .tab_faq > ul li.on .arrow::after {
   opacity: 1;
 }
-.community .inner #tab .tab_faq > ul li.on p {
+.community .inner #tab .tab_faq > ul li.on .answer {
   display: block;
   opacity: 1;
   transform: translateY(0);
-}
-.community .inner #tab .tab_faq > ul li a i {
-  margin-right: 20px;
-  color: #66978f;
-  display: block;
-  transition: 0.5s;
-}
-.community .inner #tab .tab_faq > ul li .open {
-  display: inline-block;
-  opacity: 1;
-  transition: 0.5s;
-}
-.community .inner #tab .tab_faq > ul li .close {
-  display: none;
-  opacity: 0;
-  transition: 0.5s;
-}
-.community .inner #tab .tab_faq > ul li p {
-  display: none;
   font: normal 14px/2 "arial";
-  color: #777;
-  padding: 30px;
+}
+.community .inner #tab .tab_faq > ul li .arrow {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  transform: translateY(3px);
+}
+.community .inner #tab .tab_faq > ul li .arrow::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 100%;
+  background: #66978f;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(0);
+  transition: 0.5s;
+}
+.community .inner #tab .tab_faq > ul li .arrow::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: #66978f;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.5s;
+}
+.community .inner #tab .tab_faq > ul li:hover .answer {
+  opacity: 1;
+}
+.community .inner #tab .tab_faq > ul li .answer {
+  display: none;
+  width: 100%;
+  padding: 10px 30px;
   padding-bottom: 0px;
   opacity: 0;
   transform: translateY(-30px);
   transition: 0.5s;
+}
+.community .inner #tab .tab_faq > ul li .answer p {
+  font: normal 14px/2 "arial";
+  color: #777;
 }
 
 @media screen and (max-width: 1179px) {
@@ -2919,113 +2939,106 @@ fieldset {
 }
 
 #rooms {
+  background: #fff;
   width: 100%;
-  height: 650px;
+  padding: 100px 0;
 }
 #rooms .inner {
-  width: 100%;
-  height: 100%;
+  width: 1180px;
+  margin: 0 auto;
   position: relative;
+}
+#rooms .inner .title {
+  width: 100%;
+  margin-bottom: 40px;
+}
+#rooms .inner .title::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#rooms .inner .title h1 {
+  width: 66.6666666667%;
+  float: left;
+  font: normal 40px/1 "cantata one";
+}
+#rooms .inner .title p {
+  width: 33.3333333333%;
+  float: left;
+  padding: 0 15px;
+  font: normal 12px/2 "arial";
+  color: #777;
+}
+#rooms .inner::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 #rooms .inner article {
+  width: calc((100% - 40px) / 3);
+  height: 450px;
   float: left;
-  width: 33.3333333333%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.7);
+  margin-right: 20px;
   position: relative;
+  transition: 1s;
+  overflow: hidden;
 }
-#rooms .inner article:nth-of-type(2) {
-  background: #333;
+#rooms .inner article:hover .wrap img {
+  transform: scale(1.1);
 }
-#rooms .inner article:nth-of-type(2) .wrap .con1 p {
-  color: #cdcdcd;
+#rooms .inner article:hover .back {
+  opacity: 1;
 }
-#rooms .inner article:nth-of-type(2) .wrap .con1 h2 {
-  color: #fff;
+#rooms .inner article:last-child {
+  margin-right: 0;
 }
 #rooms .inner article .wrap {
   width: 100%;
   height: 100%;
-  position: relative;
-  overflow: hidden;
-  transition: 1s;
 }
-#rooms .inner article .wrap .con1 {
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  top: 80px;
-  color: #333;
-}
-#rooms .inner article .wrap .con1 p {
-  font: normal 12px/1 "arial";
-  margin-bottom: 15px;
-  color: #777;
-}
-#rooms .inner article .wrap .con1 > h2 {
-  font: bold 30px/1 "arial";
-  margin-bottom: 50px;
-  letter-spacing: 1px;
-  color: #333;
-}
-#rooms .inner article .wrap .pic {
-  width: 70%;
-  height: 280px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-}
-#rooms .inner article .wrap .pic:hover .txt {
-  bottom: 0%;
-}
-#rooms .inner article .wrap .pic img {
+#rooms .inner article .wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: 0.5s;
 }
-#rooms .inner article .wrap .pic .txt {
-  width: 100%;
-  height: 50%;
-  color: #f9f9f9;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 30px;
+#rooms .inner article .wrap .con {
+  width: 80%;
+  height: 150px;
   position: absolute;
-  bottom: -100%;
-  transition: 1s;
-  text-align: center;
-}
-#rooms .inner article .wrap .pic .txt span {
-  font: bold 16px/1 "arial";
-  letter-spacing: 1px;
-  display: block;
-  text-align: center;
-}
-#rooms .inner article .wrap .pic .txt p {
-  padding: 15px 0;
-  font: normal 12px/1.4 "arial";
-}
-#rooms .inner article .wrap > a {
-  width: 40%;
-  height: 30px;
-  position: absolute;
-  bottom: 80px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
+  background: #fefefe;
+  padding: 30px;
   text-align: center;
-  transition: 0.5s;
-  display: inline-block;
-  background: rgba(75, 105, 100, 0.85);
-  font: normal 11px/30px "arial";
-  letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.9);
 }
-#rooms .inner article .wrap > a:hover {
+#rooms .inner article .wrap .con h2 {
+  font: bold 18px/1 "arial";
+  margin-bottom: 10px;
+  color: #333;
+}
+#rooms .inner article .wrap .con span {
+  font: normal 14px/1.2 "arial";
+  color: #777;
+}
+#rooms .inner article .back {
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 17, 17, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+#rooms .inner article .back i {
+  font-size: 50px;
   color: #fff;
-  background: #4b6964;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #video {
@@ -3467,27 +3480,6 @@ fieldset {
     font-size: 16px;
   }
 
-  #rooms {
-    height: 600px;
-  }
-  #rooms .inner article .wrap .con1 p {
-    font-size: 10px;
-  }
-  #rooms .inner article .wrap .con1 h2 {
-    font-size: 24px;
-  }
-  #rooms .inner article .wrap .pic .txt {
-    padding: 30px 20px;
-  }
-  #rooms .inner article .wrap .pic .txt span {
-    font: bold 14px/1 "arial";
-  }
-  #rooms .inner article .wrap .pic .txt p {
-    padding: 10px;
-    font: normal 11px/1.3 "arial";
-    word-break: break-all;
-  }
-
   #video {
     height: 300px;
   }
@@ -3606,29 +3598,6 @@ fieldset {
   }
   #intro .inner .txt p {
     font-size: 14px;
-  }
-
-  #rooms {
-    height: 500px;
-  }
-  #rooms .inner article {
-    width: 100%;
-  }
-  #rooms .inner article .wrap .con1 {
-    top: 60px;
-  }
-  #rooms .inner article .wrap .pic {
-    width: 60%;
-    height: 240px;
-  }
-  #rooms .inner article .wrap .pic .txt {
-    padding: 30px 60px;
-  }
-  #rooms .inner article .wrap .pic .txt p {
-    padding: 10px;
-  }
-  #rooms .inner article .wrap a {
-    bottom: 60px;
   }
 
   #video .con {
@@ -3989,7 +3958,7 @@ fieldset {
   }
 
   #insta .inner .wrap .instaSwiper .swiper-wrapper {
-    width: 100%;
+    width: 50%;
   }
 
   #footer {
@@ -4084,13 +4053,6 @@ fieldset {
     padding: 0 30px;
   }
 
-  #rooms .inner article .wrap .pic .txt {
-    padding: 20px 10px;
-  }
-  #rooms .inner article .wrap .pic .txt p {
-    padding: 10px;
-  }
-
   #video {
     display: none;
   }
@@ -4133,8 +4095,15 @@ fieldset {
   #insta .inner .wrap .instaSwiper {
     height: 350px;
   }
-  #insta .inner .wrap .instaSwiper .swiper-wrapper .swiper-slide img {
+  #insta .inner .wrap .instaSwiper .swiper-wrapper {
+    width: 100%;
     height: 250px;
+  }
+  #insta .inner .wrap .instaSwiper .swiper-wrapper .swiper-slide {
+    height: 100%;
+  }
+  #insta .inner .wrap .instaSwiper .swiper-wrapper .swiper-slide img {
+    height: 100%;
   }
   #insta .inner .wrap .instaSwiper .swiper-pagination,
 #insta .inner .wrap .instaSwiper .swiper-pagination-progressbar,
