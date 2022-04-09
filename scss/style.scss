@@ -264,10 +264,6 @@
                 transform: rotate(-45deg);
             }
         }
-        .pagenum{
-            border: 1px solid red;
-            width: 100%;
-        }
     }
 
     // 메인 스와이퍼 배경 && 텍스트
@@ -294,7 +290,7 @@
                     top: 0;
                     left: 50%;
                     transform: translateX(-50%);
-
+                    
                     .txt{
                        // border: 3px solid coral;
                         width: 100%;
@@ -357,7 +353,7 @@
                 width: calc((100%/3)*2);
                 float: left;
                 font: normal 40px/1.5 'cantata one';
-                letter-spacing: 2px;
+                letter-spacing: 1px;
             } 
             p{
                 width: calc(100%/3);
@@ -426,6 +422,7 @@
                     span{
                         font: normal 14px/1.2 'arial';
                         color: #777;
+                        word-break: break-all;
                     }
                 }
 
@@ -457,7 +454,7 @@
 // video------------------------------
 #video{
     width: 100%;
-    height: 400px;
+    height: auto;
     overflow: hidden;
     position: relative;
 
@@ -933,21 +930,63 @@
     
     // intro------------------------------
     #intro{
+
+        // 스와이퍼 네비게이션 화살표
+        .controls{
+            width: 100%;
+            transform: translateX(-45%);
+        }
+
+        // 메인 스와이퍼 배경 && 텍스트
+        .introSwiper{
+            .swiper-wrapper{
+                .swiper-slide{
+                    .inner{
+                        width: 100%;
+                        
+                        .txt{
+                            padding: 0 7vw;
+
+                            p{ margin-bottom: 50px; }  
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // rooms------------------------------ 
+    #rooms{
+        padding: 100px 30px;
+
         .inner{
             width: 100%;
-            transform: translate(-50%, -20%) scale(1.3);
+            
+            .title{
+                width: 100%;
+                margin-bottom: 50px;
 
-            .txt{
-                h1{font-size: 60px;}
-                p{ font-size: 16px;}            
+                h1{
+                    width: calc((100%/2));
+                    font-size: 30px;
+                } 
+                p{width: calc(100%/2);}           
+            }
+
+            article{
+                height: 350px;
+
+                .wrap{
+                    .con{
+                        h2{font-size: 16px;}
+                        span{ font-size: 12px; }
+                    }
+
+                }
             }
         }
     }
     
-
-    // rooms------------------------------
-
-
     // video------------------------------
     #video{
         height: 300px;
@@ -1078,16 +1117,55 @@
     
     // intro------------------------------
     #intro{
-        .inner{
-            .txt{
-                h1{font-size: 50px;}
-                p{ font-size: 14px;}            
+
+        // 스와이퍼 네비게이션 화살표
+        .controls{ bottom: 22%; }
+
+        // 메인 스와이퍼 배경 && 텍스트
+        .introSwiper{
+            .swiper-wrapper{
+                .swiper-slide{
+                    .inner{ 
+                        .txt{
+                            p{ font-size: 12px; }  
+                        }
+                    }
+                }
             }
         }
     }
-    
-    // rooms------------------------------
 
+    // rooms------------------------------ 
+    #rooms{
+        padding: 100px 30px;
+
+        .inner{
+            width: 100%;
+            
+            .title{
+                width: 100%;
+                margin-bottom: 50px;
+
+                h1{
+                    width: calc((100%/2));
+                    font-size: 30px;
+                } 
+                p{width: calc(100%/2);}           
+            }
+
+            article{
+                height: 350px;
+
+                .wrap{
+                    .con{
+                        padding: 20px;
+                        span{ font: normal 12px/1.1 'arial'; }
+                    }
+
+                }
+            }
+        }
+    }
 
     // video------------------------------
     #video{
@@ -1360,11 +1438,62 @@
     
     // intro------------------------------
     #intro{
+
+        // 스와이퍼 네비게이션 화살표
+        .controls{ 
+            margin-left: 0;
+        }
+
+        // 메인 스와이퍼 배경 && 텍스트
+        .introSwiper{
+            .swiper-wrapper{
+                .swiper-slide{
+                    .inner{ 
+                        .txt{
+                            h1{font-size: 50px;}
+                            p{ width: 70%; }  
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // rooms------------------------------ 
+    #rooms{
+        padding: 50px 30px;
+
         .inner{
-            .txt{
-                span{ font-size: 12px;}
-                h1{font-size: 35px;}
-                p{ font-size: 12px;}            
+            width: 100%;
+            
+            .title{
+                width: 100%;
+                margin-bottom: 30px;
+
+                h1{
+                    width: calc((100%/1));
+                    font-size: 30px;
+                    margin-bottom: 10px;
+                } 
+                p{
+                    width: calc(100%/1);
+                    padding: 0;
+                    line-height: 1.5;
+                }           
+            }
+
+            article{
+                height: 300px;
+                width: 100%;
+                margin-bottom: 20px;
+
+                .wrap{
+                    .con{
+                        height: auto;
+                        padding: 30px 50px;
+                        span{ word-break: keep-all; }
+                    }
+                }
             }
         }
     }
@@ -1568,23 +1697,80 @@
 
     // intro------------------------------
     #intro{
-        .inner{
-            .txt{
-                span{ font-size: 12px;}
-                h1{line-height: 1.4;}
-                p{ 
-                    width: 100%;
-                    padding: 0 30px;
-                }            
+
+        // 스와이퍼 네비게이션 화살표
+        .controls{ 
+            margin-left: 0;
+            bottom: 10%;
+            transform: translateX(-55%);
+            .next{
+                width: 50px;
+                left: 120px;
+                &:hover{left: 150px;}
+                span{ width: 60px;}
+            }
+            .prev{
+                width: 50px;
+                span{
+                    width: 40px;
+                }
+            }
+        }
+
+        // 메인 스와이퍼 배경 && 텍스트
+        .introSwiper{
+            .swiper-wrapper{
+                .swiper-slide{
+                    .inner{ 
+                        .txt{
+                            h1{
+                                font-size: 30px;
+                                margin-bottom: 10px;
+                            }
+                            p{ width: 90%; }  
+                        }
+                    }
+                }
             }
         }
     }
 
-    // rooms------------------------------
+    // rooms------------------------------ 
+    #rooms{
+        .inner{
+            .title{
+                h1{ font-size: 25px; } 
+                p{
+                    line-height: 1.4;
+                    word-break: break-all;
+                }           
+            }
 
-
+            article{
+                .wrap{
+                    .con{
+                        padding: 20px 10px;
+                    }
+                }
+            }
+        }
+    }
     // video------------------------------
-    #video{ display: none; }
+    #video{ 
+        height: auto;
+        .con{
+            height: auto;
+            padding: 50px 10px;
+            
+            h1{
+                font-size: 25px;
+                letter-spacing: 2px;
+            }
+            a{
+                width: 60%;
+            }
+        }
+    }
     
     // review------------------------------
     #review{
