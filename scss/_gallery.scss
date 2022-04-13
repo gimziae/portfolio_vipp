@@ -1,9 +1,10 @@
 .gallery{
-    .sub_visual{
+    // .sub_visual{
 
-    }
+    // }
     .inner{
-        #rooms{
+        // 룸 미리보기
+        #rooms_preview{
             margin-top: 150px;
             margin-bottom: 100px;
             width: 100%;
@@ -15,7 +16,7 @@
                 display: block;
                 clear: both;
             }
-            ul{
+            .rooms_name{
                 width: 100%;
                 height: 30px;   
                 margin-bottom: 50px;
@@ -54,7 +55,7 @@
                     }
                 }
             }
-            div{
+            .box1, .box2, .box3{
                 width: 300px;
                 height: 100%;
                 float: left;
@@ -64,7 +65,7 @@
                 span{
                     display: block;
                     font: normal 80px/1 'Cantata One';
-                    color: rgb(70, 120, 100);
+                    color: rgba(75, 105, 100, 0.85);
                     position: absolute;
                     top: -60px;left: 50%;
                     transform: translateX(-50%);
@@ -87,7 +88,7 @@
                         display: block;
                         width: 1px;
                         height: 80px;
-                        background: rgba(70, 120, 100);
+                        background: rgba(75, 105, 100, 0.85);
                         position: absolute;
                         top: -90px; left: 5px;
                     }
@@ -95,6 +96,8 @@
             }
 
         }
+
+        // 검색박스
         #searchBox{
             width: 100%;
             padding: 20px 30px 0 30px;
@@ -121,6 +124,8 @@
                 vertical-align: top;
             }
         }
+
+        // 갤러리
         #wrap{
             width: 100%;
 
@@ -188,15 +193,68 @@
     }
 }
 
+aside{
+    width:100%; height:100vh; 
+    background:rgba(0,0,0,0.8);
+    position:fixed; top:0; left:0; 
+    padding:5vw; 
+    display:flex; justify-content:center; 
+    align-items:center; 
+
+    img{
+        height:100%; 
+        object-fit: cover;
+    }
+    span{
+        position:absolute; right:20px; top:20px; 
+        color:#fff; 
+        
+        &:hover{
+           cursor: pointer; 
+        }
+    }
+}
+
 @media screen and (max-width:1179px){
     .gallery{
         .inner{
             width: 100%;
-            padding: 30px 0 100px 0;
+            padding: 30px 0 80px 0;
 
+            // 룸 미리보기
+            #rooms_preview{
+                margin-bottom: 0;
+                .rooms_name{
+                    li{
+                        a{
+                            &::after{
+                                width: 120px;
+                                right: -150px;
+                            }                        
+                        }
+                    }
+                }
+
+                .box1, .box2, .box3{
+                    width: 30%;
+                    height: 90%;
+                    margin: 0 calc(10%/6);
+    
+                    span{
+                        font-size: 70px;
+                        top: -50px;
+                    }
+
+                    p{ font-size: 12px; }
+                }
+            }
+
+            // 검색박스
             #searchBox{  
                 #search{ width: 250px;}
             }
+
+            // 갤러리
             #wrap{
                 width: 100%;
 
@@ -215,11 +273,42 @@
     }
 }
 @media screen and (max-width:949px){
-    
+    .gallery{
+        .inner{
+            // 룸 미리보기
+            #rooms_preview{
+                height: 400px;
+                margin-bottom: 0px;
+                .rooms_name{
+                    li{
+                        a{
+                            &::after{
+                                width: 110px;
+                                right: -120px;
+                            }                        
+                        }
+                    }
+                }
+
+                .box1, .box2, .box3{
+                    width: 30%;
+                    height: 80%;
+                    margin: 0 calc(10%/6);
+                    span{
+                        font-size: 60px;
+                        top: -40px;
+                    }
+                }
+            }
+        }
+    }  
 }
 @media screen and (max-width:749px){
     .gallery{
         .inner{
+            #rooms_preview{
+                display: none;
+            }
             #searchBox{
                 padding: 20px 30px 0 20px;
                 #search{ width: 200px; }

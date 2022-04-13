@@ -178,7 +178,6 @@ fieldset {
   margin: 0 auto;
   padding: 50px 0px;
   position: relative;
-  border: 1px solid red;
 }
 
 #footer {
@@ -344,8 +343,6 @@ fieldset {
 
   .content {
     padding: auto;
-    padding-top: 40px;
-    padding-bottom: 50px;
   }
   .content .sub_visual {
     height: 180px;
@@ -555,9 +552,6 @@ fieldset {
     transform: translateX(-50%);
   }
 
-  .content {
-    padding-top: 35px;
-  }
   .content .sub_visual {
     height: 170px;
   }
@@ -615,8 +609,8 @@ fieldset {
 .community .inner article {
   width: 100%;
   height: 250px;
-  margin-bottom: 100px;
   position: relative;
+  margin-bottom: 50px;
 }
 .community .inner article i {
   position: absolute;
@@ -652,24 +646,16 @@ fieldset {
 }
 .community .inner #tab {
   width: 100%;
-  margin: 0 auto;
-  height: 1200px;
-  padding: 100px 0;
+  height: 1000px;
   position: relative;
-  border: 1px solid red;
 }
 .community .inner #tab dt {
-  position: absolute;
-  top: 0;
+  float: left;
   width: 50%;
   height: 60px;
   border: 1px solid #ddd;
-}
-.community .inner #tab dt:nth-of-type(1) {
-  left: 0%;
-}
-.community .inner #tab dt:nth-of-type(2) {
-  left: 50%;
+  border-bottom: 4px double rgba(75, 105, 100, 0.5);
+  margin-bottom: 100px;
 }
 .community .inner #tab dt a {
   display: block;
@@ -684,27 +670,26 @@ fieldset {
   cursor: pointer;
 }
 .community .inner #tab dt.on a {
-  background: rgba(75, 105, 100, 0.9);
-  border: 1px solid #4b6964;
-  color: #fff;
+  background: rgba(75, 105, 100, 0.3);
+  color: #4b6964;
 }
 .community .inner #tab dd {
   display: block;
   width: 100%;
   opacity: 0;
-  height: 900px;
   transform: translateY(15vh);
   transition: 0.5s ease-out;
   margin-top: 100px;
   opacity: 0;
   position: absolute;
+  overflow: hidden;
 }
 .community .inner #tab dd h2 {
   text-align: center;
   font: bold 40px/1 "arial";
   color: #333;
   letter-spacing: 2px;
-  margin-bottom: 30px;
+  margin: 30px 0;
   position: relative;
 }
 .community .inner #tab dd h2::before {
@@ -734,11 +719,13 @@ fieldset {
 }
 .community .inner #tab .tab_notice {
   width: 100%;
-  padding: 10px 0;
 }
 .community .inner #tab .tab_notice .checkBox {
   text-align: right;
   padding: 10px;
+}
+.community .inner #tab .tab_notice .checkBox input {
+  vertical-align: text-top;
 }
 .community .inner #tab .tab_notice table {
   width: 100%;
@@ -780,6 +767,7 @@ fieldset {
 .community .inner #tab .tab_notice table tr td:nth-of-type(2) a {
   font: normal 14px/1 "arial";
   color: #555;
+  word-break: break-all;
 }
 .community .inner #tab .tab_notice table tr td:nth-of-type(3) {
   text-align: center;
@@ -848,44 +836,48 @@ fieldset {
 }
 .community .inner #tab .tab_faq {
   width: 100%;
-  border: 1px solid red;
 }
-.community .inner #tab .tab_faq > ul {
+.community .inner #tab .tab_faq .faq {
   width: 100%;
-  padding: 30px 50px;
+  padding: 0 20px;
+  overflow: hidden;
 }
-.community .inner #tab .tab_faq > ul li {
+.community .inner #tab .tab_faq .faq details[open] {
+  background: rgba(75, 105, 100, 0.1);
+}
+.community .inner #tab .tab_faq .faq details[open] summary ~ * {
+  animation: sweep 0.5s ease-in-out;
+}
+.community .inner #tab .tab_faq .faq details[open] summary ~ * h3 {
+  color: #333;
+}
+.community .inner #tab .tab_faq .faq details[open] summary h3 {
+  color: #333;
+}
+.community .inner #tab .tab_faq .faq details[open] .arrow::before {
+  transform: rotate(-90deg);
+}
+.community .inner #tab .tab_faq .faq details[open] .arrow::after {
+  opacity: 1;
+}
+.community .inner #tab .tab_faq .faq details {
   border-bottom: 1px solid #bbb;
   padding: 30px;
   transition: 0.5s;
 }
-.community .inner #tab .tab_faq > ul li h3 {
+.community .inner #tab .tab_faq .faq details:last-child {
+  border-bottom: none;
+}
+.community .inner #tab .tab_faq .faq details summary::marker {
+  display: none;
+  content: "";
+}
+.community .inner #tab .tab_faq .faq details summary h3 {
   font: bold 20px/1 "arial";
   color: rgba(85, 85, 85, 0.8);
   display: inline-block;
 }
-.community .inner #tab .tab_faq > ul li:last-child {
-  border-bottom: none;
-}
-.community .inner #tab .tab_faq > ul li.on {
-  background: rgba(75, 105, 100, 0.1);
-}
-.community .inner #tab .tab_faq > ul li.on h3 {
-  color: #333;
-}
-.community .inner #tab .tab_faq > ul li.on .arrow::before {
-  transform: rotate(-90deg);
-}
-.community .inner #tab .tab_faq > ul li.on .arrow::after {
-  opacity: 1;
-}
-.community .inner #tab .tab_faq > ul li.on .answer {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-  font: normal 14px/2 "arial";
-}
-.community .inner #tab .tab_faq > ul li .arrow {
+.community .inner #tab .tab_faq .faq details .arrow {
   width: 25px;
   height: 25px;
   position: relative;
@@ -893,7 +885,7 @@ fieldset {
   margin-right: 20px;
   transform: translateY(3px);
 }
-.community .inner #tab .tab_faq > ul li .arrow::before {
+.community .inner #tab .tab_faq .faq details .arrow::before {
   content: "";
   display: block;
   width: 5px;
@@ -904,7 +896,7 @@ fieldset {
   transform: translateX(-50%) rotate(0);
   transition: 0.5s;
 }
-.community .inner #tab .tab_faq > ul li .arrow::after {
+.community .inner #tab .tab_faq .faq details .arrow::after {
   content: "";
   display: block;
   width: 100%;
@@ -915,192 +907,226 @@ fieldset {
   transform: translateY(-50%);
   transition: 0.5s;
 }
-.community .inner #tab .tab_faq > ul li:hover .answer {
+.community .inner #tab .tab_faq .faq details:hover .answer {
   opacity: 1;
 }
-.community .inner #tab .tab_faq > ul li .answer {
-  display: none;
+.community .inner #tab .tab_faq .faq details p {
   width: 100%;
   padding: 10px 30px;
   padding-bottom: 0px;
-  opacity: 0;
-  transform: translateY(-30px);
+  opacity: 1;
   transition: 0.5s;
-}
-.community .inner #tab .tab_faq > ul li .answer p {
   font: normal 14px/2 "arial";
   color: #777;
 }
 
+@keyframes sweep {
+  from {
+    opacity: 0;
+    margin-top: -10px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
 @media screen and (max-width: 1179px) {
   .community .inner {
     width: 100%;
-    padding: 50px 20px;
+    padding: 50px 30px;
   }
-  .community .inner #tab dt {
-    position: absolute;
-    width: 50%;
-    height: 60px;
-    top: 0;
-    border: 1px solid #ddd;
+  .community .inner article i {
+    font-size: 35px;
   }
-  .community .inner #tab dt:nth-of-type(1) {
-    left: 0%;
+  .community .inner article .con h2 {
+    font-size: 30px;
   }
-  .community .inner #tab dt:nth-of-type(2) {
-    left: 50%;
+  .community .inner article .con h2 strong {
+    font-size: 40px;
   }
-  .community .inner #tab dt a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: #f9f9f9;
-    font: bold 18px/60px "arial";
-    letter-spacing: 2px;
-    color: #ccc;
-    text-align: center;
-    transition: 1s;
-    cursor: pointer;
+  .community .inner #tab dd h2 {
+    font-size: 35px;
   }
-  .community .inner #tab dt.on a {
-    background: rgba(75, 105, 100, 0.9);
-    color: #fff;
+  .community .inner #tab .tab_notice .pagenation .prev {
+    margin-left: 180px;
   }
-  .community .inner #tab dd {
-    margin-top: 50px;
-    height: 900px;
-  }
-  .community .inner #tab dd .checkBox {
-    text-align: right;
-    padding: 10px;
-  }
-  .community .inner #tab dd table {
-    width: 100%;
-    margin-bottom: 50px;
-    border-bottom: 1px solid #ddd;
-    border-top: 1px double #ddd;
-    border-collapse: collapse;
-  }
-  .community .inner #tab dd table tr th {
-    text-align: center;
-    font: normal 14px/1 "arial";
-    letter-spacing: 2px;
-    background: rgba(75, 105, 100, 0.7);
-    color: #fff;
-    padding: 15px 0;
-  }
-  .community .inner #tab dd table tr th:nth-of-type(1) {
-    width: 10%;
-  }
-  .community .inner #tab dd table tr th:nth-of-type(3) {
-    width: 15%;
-  }
-  .community .inner #tab dd table tr th:nth-of-type(4) {
-    width: 15%;
-  }
-  .community .inner #tab dd table tr td {
-    font: 16px/1.5 "arial";
-    color: #777;
-    padding: 10px 20px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-  }
-  .community .inner #tab dd table tr td:nth-of-type(1) {
-    text-align: center;
-    color: #999;
-  }
-  .community .inner #tab dd table tr td:nth-of-type(2) {
-    text-align: left;
-  }
-  .community .inner #tab dd table tr td:nth-of-type(2) a {
-    font: normal 14px/1 "arial";
-    color: #555;
-  }
-  .community .inner #tab dd table tr td:nth-of-type(3) {
-    text-align: center;
-    color: #999;
-  }
-  .community .inner #tab dd table tr td:nth-of-type(4) {
-    text-align: center;
-    color: #999;
-  }
-  .community .inner #tab dd table tr:hover {
-    background: rgba(221, 221, 221, 0.6);
-  }
-  .community .inner #tab dd .pagenation .prev {
-    margin-left: 200px;
-  }
-  .community .inner #tab dd .pagenation .next {
-    margin-right: 200px;
+  .community .inner #tab .tab_notice .pagenation .next {
+    margin-right: 180px;
   }
 }
 @media screen and (max-width: 949px) {
   .community .inner {
     padding: 20px;
   }
-  .community .inner #tab dd table {
+  .community .inner article i {
+    font-size: 30px;
+  }
+  .community .inner article i:nth-of-type(1) {
+    left: 20%;
+  }
+  .community .inner article i:nth-of-type(2) {
+    right: 20%;
+  }
+  .community .inner article .con h2 {
+    font-size: 30px;
+  }
+  .community .inner article .con h2 strong {
+    font-size: 40px;
+  }
+  .community .inner article .con p {
+    padding: 0 100px;
+  }
+  .community .inner #tab .tab_notice h2::before, .community .inner #tab .tab_notice h2::after {
+    width: 35%;
+  }
+  .community .inner #tab .tab_notice table {
     margin-bottom: 30px;
   }
-  .community .inner #tab dd table tr th:nth-of-type(4) {
+  .community .inner #tab .tab_notice table tr th:nth-of-type(4) {
     display: none;
   }
-  .community .inner #tab dd table tr td:nth-of-type(4) {
+  .community .inner #tab .tab_notice table tr td:nth-of-type(4) {
     display: none;
   }
-  .community .inner #tab dd .pagenation .prev {
+  .community .inner #tab .tab_notice .pagenation .prev {
     margin-left: 100px;
   }
-  .community .inner #tab dd .pagenation .next {
+  .community .inner #tab .tab_notice .pagenation .next {
     margin-right: 100px;
   }
-  .community .inner #tab dd .pagenation .numbers a:nth-of-type(6) {
+  .community .inner #tab .tab_notice .pagenation .numbers a:nth-of-type(6) {
     display: none;
   }
-  .community .inner #tab dd .pagenation .numbers a:nth-of-type(7) {
+  .community .inner #tab .tab_notice .pagenation .numbers a:nth-of-type(7) {
     display: none;
   }
-  .community .inner #tab dd .pagenation .numbers a:nth-of-type(8) {
+  .community .inner #tab .tab_notice .pagenation .numbers a:nth-of-type(8) {
     display: none;
   }
-  .community .inner #tab dd .pagenation .numbers a:nth-of-type(9) {
+  .community .inner #tab .tab_notice .pagenation .numbers a:nth-of-type(9) {
     display: none;
   }
-  .community .inner #tab dd .pagenation .numbers a:nth-of-type(10) {
+  .community .inner #tab .tab_notice .pagenation .numbers a:nth-of-type(10) {
     display: none;
+  }
+  .community .inner #tab .tab_faq .faq details p {
+    line-height: 1.5;
   }
 }
 @media screen and (max-width: 749px) {
-  .community .inner #tab dd table tr th {
+  .community .inner article i:nth-of-type(1) {
+    left: 10%;
+  }
+  .community .inner article i:nth-of-type(2) {
+    right: 10%;
+  }
+  .community .inner article .con h2 {
+    font-size: 25px;
+  }
+  .community .inner article .con h2 strong {
+    font-size: 35px;
+  }
+  .community .inner article .con p {
+    font-size: 14px;
+    padding: 0 50px;
+  }
+  .community .inner #tab {
+    height: 900px;
+  }
+  .community .inner #tab dd h2 {
+    font-size: 30px;
+  }
+  .community .inner #tab dd h2::before, .community .inner #tab dd h2::after {
+    width: 30%;
+  }
+  .community .inner #tab .tab_notice h2::before, .community .inner #tab .tab_notice h2::after {
+    width: 25%;
+  }
+  .community .inner #tab .tab_notice table tr th {
     font: normal 12px/1 "arial";
   }
-  .community .inner #tab dd table tr th:nth-of-type(1) {
+  .community .inner #tab .tab_notice table tr th:nth-of-type(1) {
     display: none;
   }
-  .community .inner #tab dd table tr td {
+  .community .inner #tab .tab_notice table tr td {
     font: 14px/1.5 "arial";
   }
-  .community .inner #tab dd table tr td:nth-of-type(1) {
+  .community .inner #tab .tab_notice table tr td:nth-of-type(1) {
     display: none;
+  }
+  .community .inner #tab .tab_faq .faq details {
+    padding: 30px 0;
+    padding-left: 20px;
+  }
+  .community .inner #tab .tab_faq .faq details summary h3 {
+    font-size: 18px;
+  }
+  .community .inner #tab .tab_faq .faq details .arrow {
+    width: 18px;
+    height: 18px;
   }
 }
 @media screen and (max-width: 539px) {
-  .community .inner #tab dd table {
+  .community .inner {
+    padding: 30px 20px;
+  }
+  .community .inner article {
+    display: none;
+  }
+  .community .inner #tab dt {
+    height: 40px;
+  }
+  .community .inner #tab dt a {
+    font: bold 14px/40px "arial";
+    letter-spacing: 1px;
+  }
+  .community .inner #tab dd {
+    margin-top: 50px;
+  }
+  .community .inner #tab dd h2 {
+    font-size: 25px;
     margin-bottom: 20px;
   }
-  .community .inner #tab dd table tr th:nth-of-type(3) {
+  .community .inner #tab .tab_notice .checkBox {
+    font-size: 12px;
+  }
+  .community .inner #tab .tab_notice table {
+    margin-bottom: 20px;
+  }
+  .community .inner #tab .tab_notice table tr th:nth-of-type(3) {
     display: none;
   }
-  .community .inner #tab dd table tr td {
+  .community .inner #tab .tab_notice table tr td {
     font: 12px/1.2 "arial";
   }
-  .community .inner #tab dd table tr td:nth-of-type(3) {
+  .community .inner #tab .tab_notice table tr td:nth-of-type(3) {
     display: none;
   }
-  .community .inner #tab dd .pagenation .prev {
+  .community .inner #tab .tab_notice .pagenation .prev {
     margin-left: 0px;
   }
-  .community .inner #tab dd .pagenation .next {
+  .community .inner #tab .tab_notice .pagenation .next {
     margin-right: 0px;
+  }
+  .community .inner #tab .tab_faq .faq {
+    padding: 0;
+  }
+  .community .inner #tab .tab_faq .faq details {
+    padding: 20px 0;
+    padding-left: 5px;
+  }
+  .community .inner #tab .tab_faq .faq details summary h3 {
+    font-size: 14px;
+    display: inline-block;
+  }
+  .community .inner #tab .tab_faq .faq details .arrow {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+  }
+  .community .inner #tab .tab_faq .faq details p {
+    font-size: 12px;
+    padding: 10px 20px 0;
   }
 }
 .about > .inner {
@@ -1912,38 +1938,38 @@ fieldset {
     font-size: 11px;
   }
 }
-.gallery .inner #rooms {
+.gallery .inner #rooms_preview {
   margin-top: 150px;
   margin-bottom: 100px;
   width: 100%;
   height: 500px;
   position: relative;
 }
-.gallery .inner #rooms::after {
+.gallery .inner #rooms_preview::after {
   content: "";
   display: block;
   clear: both;
 }
-.gallery .inner #rooms ul {
+.gallery .inner #rooms_preview .rooms_name {
   width: 100%;
   height: 30px;
   margin-bottom: 50px;
   position: absolute;
   top: -120px;
 }
-.gallery .inner #rooms ul li {
+.gallery .inner #rooms_preview .rooms_name li {
   float: left;
   width: calc((100% - 180px) / 3);
   height: 100%;
   margin-right: 90px;
   text-align: center;
 }
-.gallery .inner #rooms ul li a {
+.gallery .inner #rooms_preview .rooms_name li a {
   font: 12px/30px "arial";
   color: #777;
   position: relative;
 }
-.gallery .inner #rooms ul li a::after {
+.gallery .inner #rooms_preview .rooms_name li a::after {
   content: "";
   display: block;
   width: 150px;
@@ -1953,38 +1979,38 @@ fieldset {
   top: 50%;
   right: -170px;
 }
-.gallery .inner #rooms ul li:nth-of-type(1) {
+.gallery .inner #rooms_preview .rooms_name li:nth-of-type(1) {
   text-align: right;
 }
-.gallery .inner #rooms ul li:last-child {
+.gallery .inner #rooms_preview .rooms_name li:last-child {
   text-align: left;
   margin-right: 0;
 }
-.gallery .inner #rooms ul li:last-child a::after {
+.gallery .inner #rooms_preview .rooms_name li:last-child a::after {
   display: none;
 }
-.gallery .inner #rooms div {
+.gallery .inner #rooms_preview .box1, .gallery .inner #rooms_preview .box2, .gallery .inner #rooms_preview .box3 {
   width: 300px;
   height: 100%;
   float: left;
   margin: 0 45px;
   position: relative;
 }
-.gallery .inner #rooms div span {
+.gallery .inner #rooms_preview .box1 span, .gallery .inner #rooms_preview .box2 span, .gallery .inner #rooms_preview .box3 span {
   display: block;
   font: normal 80px/1 "Cantata One";
-  color: #467864;
+  color: rgba(75, 105, 100, 0.85);
   position: absolute;
   top: -60px;
   left: 50%;
   transform: translateX(-50%);
 }
-.gallery .inner #rooms div img {
+.gallery .inner #rooms_preview .box1 img, .gallery .inner #rooms_preview .box2 img, .gallery .inner #rooms_preview .box3 img {
   width: 100%;
   height: 80%;
   object-fit: cover;
 }
-.gallery .inner #rooms div p {
+.gallery .inner #rooms_preview .box1 p, .gallery .inner #rooms_preview .box2 p, .gallery .inner #rooms_preview .box3 p {
   width: 40%;
   font: normal 14px/1.4 "arial";
   letter-spacing: 1px;
@@ -1992,12 +2018,12 @@ fieldset {
   transform: translate(40px, 50px);
   position: relative;
 }
-.gallery .inner #rooms div p::before {
+.gallery .inner #rooms_preview .box1 p::before, .gallery .inner #rooms_preview .box2 p::before, .gallery .inner #rooms_preview .box3 p::before {
   content: "";
   display: block;
   width: 1px;
   height: 80px;
-  background: #467864;
+  background: rgba(75, 105, 100, 0.85);
   position: absolute;
   top: -90px;
   left: 5px;
@@ -2081,10 +2107,55 @@ fieldset {
   text-align: center;
 }
 
+aside {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+aside img {
+  height: 100%;
+  object-fit: cover;
+}
+aside span {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #fff;
+}
+aside span:hover {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1179px) {
   .gallery .inner {
     width: 100%;
-    padding: 30px 0 100px 0;
+    padding: 30px 0 80px 0;
+  }
+  .gallery .inner #rooms_preview {
+    margin-bottom: 0;
+  }
+  .gallery .inner #rooms_preview .rooms_name li a::after {
+    width: 120px;
+    right: -150px;
+  }
+  .gallery .inner #rooms_preview .box1, .gallery .inner #rooms_preview .box2, .gallery .inner #rooms_preview .box3 {
+    width: 30%;
+    height: 90%;
+    margin: 0 1.6666666667%;
+  }
+  .gallery .inner #rooms_preview .box1 span, .gallery .inner #rooms_preview .box2 span, .gallery .inner #rooms_preview .box3 span {
+    font-size: 70px;
+    top: -50px;
+  }
+  .gallery .inner #rooms_preview .box1 p, .gallery .inner #rooms_preview .box2 p, .gallery .inner #rooms_preview .box3 p {
+    font-size: 12px;
   }
   .gallery .inner #searchBox #search {
     width: 250px;
@@ -2100,7 +2171,29 @@ fieldset {
     font: 11px/1 "arial";
   }
 }
+@media screen and (max-width: 949px) {
+  .gallery .inner #rooms_preview {
+    height: 400px;
+    margin-bottom: 0px;
+  }
+  .gallery .inner #rooms_preview .rooms_name li a::after {
+    width: 110px;
+    right: -120px;
+  }
+  .gallery .inner #rooms_preview .box1, .gallery .inner #rooms_preview .box2, .gallery .inner #rooms_preview .box3 {
+    width: 30%;
+    height: 80%;
+    margin: 0 1.6666666667%;
+  }
+  .gallery .inner #rooms_preview .box1 span, .gallery .inner #rooms_preview .box2 span, .gallery .inner #rooms_preview .box3 span {
+    font-size: 60px;
+    top: -40px;
+  }
+}
 @media screen and (max-width: 749px) {
+  .gallery .inner #rooms_preview {
+    display: none;
+  }
   .gallery .inner #searchBox {
     padding: 20px 30px 0 20px;
   }
@@ -3127,7 +3220,7 @@ fieldset {
 
 #video {
   width: 100%;
-  height: auto;
+  height: 400px;
   overflow: hidden;
   position: relative;
 }

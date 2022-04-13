@@ -3,21 +3,17 @@ const dds = document.querySelectorAll("dd");
 const dts_btn = document.querySelectorAll("dt a");
 console.log(dts_btn);
 
-const faq = document.querySelector(".tab_faq");
-const lis = faq.querySelectorAll("li");
-console.log(lis);
-
-lis.forEach((li,index)=>{
-
-    li.addEventListener("click", e=>{
-        e.preventDefault();
-
-        if(li.classList.contains("on")){
-
-            li.classList.remove("on");
-
-        }else lis[index].classList.add("on");
-        
+window.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('details').forEach(function(item){
+        item.addEventListener("toggle", e=>{
+            let toggled = e.target;
+            if(toggled.attributes.open){
+                document.querySelectorAll('details[open]').forEach(function(opened){
+                    if(toggled != opened)
+                    opened.removeAttribute('open');
+                })
+            }
+        })
     })
 })
 
